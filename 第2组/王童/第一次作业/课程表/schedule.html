@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table border='2'>
+        <caption>我的课表</caption>
+        <colgroup>
+            <col class="节次">
+            <col class="星期" span="7">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>   </th>
+                <th>周一</th>
+                <th>周二</th>
+                <th>周三</th>
+                <th>周四</th>
+                <th>周五</th>
+                <th>周六</th>
+                <th>周日</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>一二节</th>
+                <td>       </td>
+                <td>数字电路</td>
+                <td>       </td>
+                <td>数字电路</td>
+                <td>微链接原理</td>
+                <td rowspan="4">前端培训</td>
+                <td rowspan="4">happy</td>
+            </tr>
+            <tr>
+                <th>三四节</th>
+                <td>半导体工艺技术</td>
+                <td>信号与系统</td>
+                <td>微机原理</td>
+                <td>信号与系统</td>
+                <td>印刷电路板设计</td>
+
+            </tr>
+            <tr>
+                <th>五六节</th>
+                <td rowspan='2'>电子测试技术</td>
+                <td>材料成型理论</td>
+                <td>微连接原理</td>
+                <td rowspan='2'>       </td>
+                <td>材料成型理论</td>
+
+            </tr>
+            <tr>
+                <th>七八节</th>
+                <td>印刷电路设计</td>
+                <td>半导体工艺技术</td>
+                <td>微机原理</td>
+            </tr>
+        </tbody>
+    </table>
+    <style>
+        .节次 {background-color:rgb(255, 251, 0) }
+        .星期 {background-color:rgb(0, 119, 255) }
+    </style>
+</body>
+</html>
