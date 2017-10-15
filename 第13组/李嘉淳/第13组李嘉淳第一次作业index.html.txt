@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>¿Î³Ì±í</h1>
-    <table boarder="1">
+    <table border="1">
         <colgroup>
         <col class="browser">
     <col class="engine" span="6">
