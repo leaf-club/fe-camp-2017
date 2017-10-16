@@ -1,0 +1,27 @@
+#container {width: 900px}
+#basic {
+    width: 300px;
+    height: 1000px;
+    float: left;
+    background-color: rgb(134, 229, 255)
+}
+#detailed {
+    width: 600px;
+    height: 1000px;
+    float: left;
+    background-color: rgb(248, 247, 233)
+}
+#picture {
+    width:200px;
+    height: 320px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+#brief_into {
+    /*div位置不动！不论怎么改下列数值，只在picture块改变时有改变*/
+    width: 300px;
+    height: 450px;
+    border: 1px solid black;
+    padding-top: 50px;
+    padding-left: 20px;
+}
