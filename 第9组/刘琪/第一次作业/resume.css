@@ -1,4 +1,7 @@
-#container {width: 900px}
+#container {
+    margin: 0 auto;
+    width: 900px;
+}
 #basic {
     width: 300px;
     height: 1000px;
@@ -17,11 +20,8 @@
     margin-top: 80px;
     margin-left: 50px;
 }
-#brief_into {
-    /*div位置不动！不论怎么改下列数值，只在picture块改变时有改变*/
+#brief_intro {
     width: 300px;
     height: 450px;
-    border: 1px solid black;
-    padding-top: 50px;
-    padding-left: 20px;
+    margin-left: 20px;
 }
