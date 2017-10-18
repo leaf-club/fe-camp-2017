@@ -30,11 +30,11 @@
 }
 #yd1{
 	background:url(img/yd.png) no-repeat;
-	height: 300px;
+	height: 10%;
 	width: 97px;
 	position: relative;
 	left: 48%;
-	top: 50px;
+	top: 2%;
 	float: left;
 }
 #yd2{
@@ -43,7 +43,7 @@
 	width: 97px;
 	position: relative;
 	left: 12.7%;
-	top: 400px;
+	top: 13.5%;
 	float: left;
 }
 #yd3{
@@ -52,7 +52,7 @@
 	width: 97px;
 	position: relative;
 	left: -22.55%;
-	top: 750px;
+	top: 25%;
 	float: left;
 }
 #_2013{
@@ -73,11 +73,11 @@
 }
 #_2014{
 	background:url(img/jx_1.png) no-repeat;
-	height: 280px;
-	width: 560px;
+	height: 10%;
+	width: 30%;
 	float: left;
 	position:relative;
-	top: 360px;
+	top: 12.3%;
 	left: -24%;
 }
 #_2014 p{
@@ -94,7 +94,7 @@
 	width: 560px;
 	float: left;
 	position:relative;
-	top: 412px;
+	top: 13.8%;
 	left: 54%;
 }
 #_2015 p{
