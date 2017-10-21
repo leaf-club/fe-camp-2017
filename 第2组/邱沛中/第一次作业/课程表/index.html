@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>课程表</title>
+</head>
+<body>
+    <table border="1">
+        <colgroup>
+            <col class="class">
+            <col class="subject" span="6">
+        </colgroup>
+        <caption><h1>课程表</h1></caption>
+        <thead>
+            <tr>
+                <th>课程</th>
+                <th>星期一</th>
+                <th>星期二</th>
+                <th>星期三</th>
+                <th>星期四</th>
+                <th>星期五</th>
+                <th>星期六</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>第一、二节课</th>
+                <td>马原</td>
+                <td>离散</td>
+                <td>复变</td>
+                <td rowspan="4">电工实习</td>
+                <td>大学物理</td>
+                <td>电路理论</td>
+            </tr>
+            <tr>
+                 <th>第三、四节课</th>  
+                 <td>数据结构</td>
+                 <td>  </td>
+                 <td>概率论</td>
+                 <td>马原</td> 
+                 <td rowspan="3">   </td>
+            </tr>
+            <tr>
+                <th>第五、六节课</th>
+                <td rowspan="2">  </td>
+                <td>数据结构</td>
+                <td>电路理论</td>
+                <td>离散</td> 
+            </tr>
+            <tr>
+                <th>第七、八节课</th>
+                <td>数据结构</td>
+                <td>电路理论</td>
+                <td>离散</td> 
+            </tr>
+        </tbody>
+    </table>
+    <style>
+    .subject{background-color: grey}
+    .class{background-color: blue}
+    </style>
+</body>
+</html>
