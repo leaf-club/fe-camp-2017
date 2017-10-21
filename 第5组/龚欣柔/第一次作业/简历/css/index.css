@@ -1,0 +1,31 @@
+img{
+    position:absolute;
+    right:100px;
+    top:25px;
+}
+h2{
+    color: blue;
+    font-size: 23px;
+}
+h3{
+    color: blue;
+    font-size: 23px;
+}
+h4{
+    color: blue;
+    font-size: 23px;
+}
+h5{
+    color: blue;
+    font-size: 23px;
+}
+dl{
+    font-size: 16px;
+}
+ol{
+    font-size: 16px;
+}
+pre{
+    font-size: 16px;
+}
+

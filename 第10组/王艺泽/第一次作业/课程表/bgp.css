@@ -1,0 +1,45 @@
+body{
+    margin:0px;
+}
+
+.tablediv{
+    border: 0;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 5%;
+    margin-left: 10%;
+    width:80%;
+    height: 345px;
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.table{
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    margin: auto;
+    text-align: center;
+}
+
+caption{
+    font-family: SimSun;
+}
+
+th{
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    font-size: 15px;
+    font-family: SimSun;
+    width: auto;
+    height: 45px;
+}
+
+td{
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    font-size: 15px;
+    font-family: SimSun;
+    width: auto;
+    height: 45px;
+}
