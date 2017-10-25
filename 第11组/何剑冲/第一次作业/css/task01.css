@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+.article {
+    width:900px;
+    margin:0 auto;
+}
+
+.right {  
+    float:right;
+    padding:20px;
+}
+
+.left { 
+    padding-top: 20px;
+    height:250px;
+}
+
+article {
+    display:flex;
+}
+
+article > h2 {
+    padding-top: 20px;
+    padding-left: 10px;
+    width:300px;
+}
+
+article > ol,p,dl{
+    padding-top:35px;
+}
+
+.information {
+    text-decoration: underline;
+}

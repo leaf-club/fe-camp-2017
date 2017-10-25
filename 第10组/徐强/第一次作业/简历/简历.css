@@ -1,0 +1,32 @@
+h2{
+    margin: 10;
+}
+p{
+    margin: 5;
+}
+img{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 15px;
+    right: 800px;
+}
+hr{
+    width:50%;
+    position: absolute;
+    left: 15px;
+}
+.head{
+    margin: 15;
+    font-size: 18px;
+}
+.info{
+    position: relative;
+    bottom: 25px;
+    left: 160px;
+}
+#frame{
+    border: 3px solid black;
+    width: 55%;
+    height: 650px;
+}
