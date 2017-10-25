@@ -1,0 +1,112 @@
+/*设置所有链接a的样式*/
+._link{
+    text-decoration: none; /*去除链接的下划线*/
+    color: black;
+    font-size: 20px;
+}
+._button{
+    text-decoration: none; 
+    color: green;
+    font-size: 15px;
+}
+/*设置所有列表li的样式*/
+.list{
+    list-style-type: none;/*去除li的小黑点*/
+    float: left;  /*水平排放li*/
+    margin-left: 20px;/*让li有间距展开*/
+}
+/*设置Segmentfault的样式*/
+#title{
+    font-size: 20px;
+}
+/*设置全部的样式*/
+#all{
+    font-size: 18px;
+}
+#nav_title{
+    float: left;
+    position: relative;
+    left: 150px;
+}
+#tag_title{
+    float: left;
+    position: absolute;
+    left: 160px;
+    top: 50px;
+}
+#nav_ul_list{
+    float: left;
+    position: relative;
+    left: 120px;
+}
+#tag_ul_list{
+    float: left;
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+#answer_ul_list{
+    position: relative;
+    left: 120px;
+    top: 30px;
+}
+#nav_search{
+    float: left;
+    position: relative;
+    left: 150px;
+    top: 20px;
+}
+#search{
+    width: 400px;
+    height: 20px;
+}
+#login_in{
+    float: left;
+    position: relative;
+    left: 250px;
+    top: 20px;
+}
+.register{
+    height: 450px;
+    width:100%;
+    background-repeat:none;
+    background-size:100%,100%;
+    background-image:url(1.jpg);
+    float: left;
+    position: relative;
+    top:30px;
+}
+#guide{
+    color:gold;
+    position: relative;
+    left: 150px;
+    top: 60px;
+}
+.info{
+    color: gold;
+    position: relative;
+    left: 150px;
+    top: 70px;
+    font-size: 20px;
+}
+.infomation{
+    position: relative;
+    left: 60%;
+    bottom: 90px;
+}
+.c_info{
+    margin-bottom: 10px;
+    width: 380px;
+    height: 25px;
+}
+#submit{
+    position: relative;
+    left: 330px;
+}
+#ranking{
+    position: absolute;
+    right: 300px;
+    top: 550px;
+    color: red;
+    font-size: 20px;
+}
