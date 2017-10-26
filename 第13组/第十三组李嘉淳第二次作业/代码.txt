@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .div-inline {
+        display: inline
+    }
+</style>
+
+<body>
+    <form action="">
+        <p>代码改变世界
+            <div style="float:left;"></div>
+        </p>
+        <p>
+            <button type="submit" style="float:right">登陆</button>
+            <button type="" style="float:right">注册</button>
+        </p>
+    </form>
+    <p>
+        <img src="3.gif" alt="" style="float:left">
+        <br>
+    </p>
+    <img src="2.jpg" alt="" style="float:right">
+    <hr>
+    <br>
+    <br>
+    <br>
+    <p>园子 新闻 博问 闪存 小组 收藏 招聘 班级 找找看</p>
+    <div class="div-inline">网站分类 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </div>
+    <div class="div-inline">首页 &nbsp &nbsp &nbsp &nbsp</div>
+    <div class="div-inline">精华 &nbsp &nbsp &nbsp &nbsp </div>
+    <div class="div-inline">候选 &nbsp &nbsp &nbsp &nbsp </div>
+    <div class="div-inline">新闻 &nbsp &nbsp &nbsp &nbsp </div>
+    <div class="div-inline">我行 &nbsp &nbsp &nbsp &nbsp </div>
+    <div class="div-inline">我赞 &nbsp &nbsp &nbsp &nbsp </div>
+    <form action="">
+        <button style="float:right;width:100px;height:20px"></button>
+        <input type="text" style="float:right;width:150px;height:14px">
+        <br>
+        <button style="float:right;width:100px;height:20px"></button>
+        <input type="text" style="float:right;width:150px;height:14px">
+    </form>
+    <div class="div-inline">
+        <form action="">
+            <select name="" id="">
+                <option value="">java</option>
+                <option value="">c++</option>
+                <option value="">c语言</option>
+            </select>
+        </form>&nbsp &nbsp &nbsp &nbsp &nbsp</div>
+    <div class="div-inline"> &nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 【编辑推荐】从银行转账失败到分布式业务</div>
+    <div class="div-inline">
+        <img src="1.jpg" alt="" style="float:right;height:300px;width:300px">
+    </div>
+    <div class="div-inline">
+        <form action="">
+            <select name="" id="">
+                <option value="">php</option>
+                <option value="">asp</option>
+                <option value="">架构</option>
+            </select>
+        </form>
+    </div>
+    <div class="div-inline"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp 【新闻头条】三星手机又陷冒烟门</div>
+    <div class="div-inline">
+        <form action="">
+            <select name="" id="">
+                <option value="">数据库</option>
+                <option value="">php</option>
+            </select>
+        </form>
+    </div>
+    <div class="div-inline"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp 【推荐新闻】京东进入租赁市场，现已进入</div>
+    <div class="div-inline">
+        <form action="">
+            <select name="" id="">
+                <option value="">敏捷开发</option>
+                <option value="">项目团队管理</option>
+                <option value="">QX S</option>
+            </select>
+        </form>
+    </div>
+    <div class="div-inline"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp Q多标签浏览器（）
+        <img src="5.png" alt="" style="height:60px;width:60px">最近在用QT写个简单的浏览器，原来的版本是5.7，没有QWebView，
+        <br>
+        <form action="">
+            <select name="" id="">
+                <option value="">My SQL</option>
+                <option value="">Windows Server</option>
+                <option value="">Linux</option>
+            </select>
+        </form>
+    </div>
+    <div class="div-inline"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp 【新闻推荐】
+        <img src="4.png" alt="" style="height:60px;width:60px"> 近期准备好好的读一读 你不知道的JavaScript 而是使用QAxWidget加载</div>
+    <div class="div-inline"></div>
+    <div class="div-inline">
+        <form action="">
+            <select name="" id="">
+                <option value="">BPM</option>
+                <option value="">sharepoint</option>
+                <option value="">面向对象</option>
+            </select>
+        </form>
+    </div>
+    <div class="div-inline"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp 【新闻推荐】
+        <img src="6.png" alt="" style="height:60px;width:60px">手绘视频在创作后，最终会导出为视频文件，如 MP4,wmw </div>
+    <hr>
+    <div class="div-inline">
+        <p>链接 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 有幸作为讲师受邀参加InfoQ在上海举办的QCon2017，不得不说，不论是从讲师还是听众的角度衡量
+            <br>反馈与建议 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp但每一场分享都是目前的热门话题。并且Qcon的选题都是从实践出发，并没有
+            <br> 官方博客 &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 面几篇主要讲的是手绘视频的创作部分，今天讲一下手绘视频的导出问题。主要以
+            UWP 为例，另
+            <br>博客模板  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="http://www.cnblogs.com/shaomeng/p/7680210.html" class="herf">手绘视频最终的生成物</a>
+            <br>JAVA博客   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="http://www.cnblogs.com/huchong/p/7718393.html">视图层之视图函数(views)</a>
+            <br>C++博客   &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="http://www.cnblogs.com/aubin/p/7718739.html">lvs介绍 LVS的英文全名为“Linux Virtual Server”，即Linux虚拟服务器</a>
+            <br>手机版     &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp<a href="http://www.cnblogs.com/cyq1162/p/7717868.html">1024，你们加班吗？忘了当年是谁发起：程序员节</a>
+        </p>
+    </div>
+    <div class="div-inline">
+        <img src="7.jpg" alt="" style="float:right;height:300px;width:300px">
+    </div>
+</body>
+
+</html>

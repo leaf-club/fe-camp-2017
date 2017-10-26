@@ -1,0 +1,6 @@
+http://www.chinaz.com/news/
+1.headmenu不能跟着页面滑动，便利性不足。
+2.header设计单调，且选中某个模块后没有凸显出正在浏览此模块，缺乏观赏性。
+3.page-content中只有文章标题，没有内容前沿部分。
+4.使用了过多的无效div广告位。
+5.内嵌css太多。
