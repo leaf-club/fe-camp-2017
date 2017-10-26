@@ -1,0 +1,687 @@
+<center>
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a id="lnkBlogLogo" href="http://www.cnblogs.com/EmptyFS/"><img id="blogLogo" src="/Skins/LoveIsIntheAir/images/logo.gif" alt=""></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/EmptyFS/">AllEmpty</a></h1>
+<h2>只有将自己置空，才能装进更多的东西！</h2>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+	<li><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/EmptyFS/">首页</a></li>
+	<li><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+	<li><a id="blog_nav_contact" accesskey="9" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/AllEmpty">联系</a></li>
+	<li><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+	<li><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/EmptyFS/rss">订阅</a>
+	<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/EmptyFS/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅"></a></li>
+</ul>
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<!--done-->
+随笔- 77&nbsp;
+文章- 0&nbsp;
+评论- 1325&nbsp;
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div class="clear"></div>
+	<div id="topicList">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/EmptyFS/p/7682815.html">我的第一个python web开发框架（12）——工具函数包说明（三）</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body"><p><span style="font-size: 16px;">　　mail_helper.py是邮件操作包，用来发送邮件的。</span></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('0cf5a259-3536-483a-a2bd-3c95e2b1177a')"><img id="code_img_closed_0cf5a259-3536-483a-a2bd-3c95e2b1177a" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_0cf5a259-3536-483a-a2bd-3c95e2b1177a" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('0cf5a259-3536-483a-a2bd-3c95e2b1177a',event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_0cf5a259-3536-483a-a2bd-3c95e2b1177a" class="cnblogs_code_hide">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">#</span><span style="color: #008000;">!/usr/bin/evn python</span>
+<span style="color: #008080;"> 2</span> <span style="color: #008000;">#</span><span style="color: #008000;"> coding=utf-8</span>
+<span style="color: #008080;"> 3</span> 
+<span style="color: #008080;"> 4</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> smtplib
+</span><span style="color: #008080;"> 5</span> <span style="color: #0000ff;">from</span> email.mime.text <span style="color: #0000ff;">import</span><span style="color: #000000;"> MIMEText
+</span><span style="color: #008080;"> 6</span> <span style="color: #0000ff;">from</span> traceback <span style="color: #0000ff;">import</span><span style="color: #000000;"> format_exc
+</span><span style="color: #008080;"> 7</span> <span style="color: #0000ff;">from</span> config <span style="color: #0000ff;">import</span><span style="color: #000000;"> const
+</span><span style="color: #008080;"> 8</span> 
+<span style="color: #008080;"> 9</span> <span style="color: #008000;">#</span><span style="color: #008000;"> 初始化邮件参数</span>
+<span style="color: #008080;">10</span> smtp =<span style="color: #000000;"> const.SMTP
+</span><span style="color: #008080;">11</span> port =<span style="color: #000000;"> const.PORT
+</span><span style="color: #008080;">12</span> user =<span style="color: #000000;"> const.EMAIL_USER
+</span><span style="color: #008080;">13</span> passwd =<span style="color: #000000;"> const.EMAIL_PWD
+</span><span style="color: #008080;">14</span> email_list =<span style="color: #000000;"> const.EMAIL_LIST
+</span><span style="color: #008080;">15</span> err_title =<span style="color: #000000;"> const.EMAIL_ERR_TITLE
+</span><span style="color: #008080;">16</span> 
+<span style="color: #008080;">17</span> 
+<span style="color: #008080;">18</span> <span style="color: #0000ff;">def</span><span style="color: #000000;"> send_mail(subject, context, to_list):
+</span><span style="color: #008080;">19</span>     <span style="color: #800000;">'''</span>
+<span style="color: #008080;">20</span> <span style="color: #800000;">    发送邮件
+</span><span style="color: #008080;">21</span> <span style="color: #800000;">    接收参数：
+</span><span style="color: #008080;">22</span> <span style="color: #800000;">    subject 邮件主题
+</span><span style="color: #008080;">23</span> <span style="color: #800000;">    context 邮件内容
+</span><span style="color: #008080;">24</span> <span style="color: #800000;">    to_list 接收者邮件列表，每个邮件地址用","分隔
+</span><span style="color: #008080;">25</span>     <span style="color: #800000;">'''</span>
+<span style="color: #008080;">26</span>     <span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span> subject <span style="color: #0000ff;">or</span> <span style="color: #0000ff;">not</span> context <span style="color: #0000ff;">or</span> <span style="color: #0000ff;">not</span><span style="color: #000000;"> to_list:
+</span><span style="color: #008080;">27</span>         <span style="color: #0000ff;">return</span> <span style="color: #800000;">'</span><span style="color: #800000;">邮件发送失败，邮件主题、内容与收件人邮件都是必填项</span><span style="color: #800000;">'</span>
+<span style="color: #008080;">28</span> 
+<span style="color: #008080;">29</span>     <span style="color: #008000;">#</span><span style="color: #008000;"> 初始始化邮件相关参数</span>
+<span style="color: #008080;">30</span>     email = MIMEText(context, <span style="color: #800000;">'</span><span style="color: #800000;">html</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">utf-8</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+</span><span style="color: #008080;">31</span>     email[<span style="color: #800000;">'</span><span style="color: #800000;">To</span><span style="color: #800000;">'</span>] =<span style="color: #000000;"> to_list
+</span><span style="color: #008080;">32</span>     email[<span style="color: #800000;">'</span><span style="color: #800000;">Subject</span><span style="color: #800000;">'</span>] =<span style="color: #000000;"> subject
+</span><span style="color: #008080;">33</span>     email[<span style="color: #800000;">'</span><span style="color: #800000;">From</span><span style="color: #800000;">'</span>] =<span style="color: #000000;"> user
+</span><span style="color: #008080;">34</span> 
+<span style="color: #008080;">35</span>     <span style="color: #008000;">#</span><span style="color: #008000;"> QQ邮箱改为ssl方式发送了</span>
+<span style="color: #008080;">36</span>     <span style="color: #008000;">#</span><span style="color: #008000;"> s = smtplib.SMTP(smtp)</span>
+<span style="color: #008080;">37</span>     s =<span style="color: #000000;"> smtplib.SMTP_SSL(smtp)
+</span><span style="color: #008080;">38</span>     <span style="color: #0000ff;">try</span><span style="color: #000000;">:
+</span><span style="color: #008080;">39</span> <span style="color: #000000;">        s.login(user, passwd)
+</span><span style="color: #008080;">40</span> <span style="color: #000000;">        s.sendmail(user, email_list, email.as_string())
+</span><span style="color: #008080;">41</span> <span style="color: #000000;">        s.close()
+</span><span style="color: #008080;">42</span>         <span style="color: #0000ff;">return</span><span style="color: #000000;"> None
+</span><span style="color: #008080;">43</span>     <span style="color: #0000ff;">except</span><span style="color: #000000;"> Exception as e:
+</span><span style="color: #008080;">44</span> <span style="color: #000000;">        s.close()
+</span><span style="color: #008080;">45</span>         stacktrace =<span style="color: #000000;"> format_exc()
+</span><span style="color: #008080;">46</span>         <span style="color: #0000ff;">return</span> <span style="color: #800000;">'</span><span style="color: #800000;">邮件发送失败，出现异常：</span><span style="color: #800000;">'</span> + str(e.args) + stacktrace + <span style="color: #800000;">'</span><span style="color: #800000;">\n</span><span style="color: #800000;">'</span>
+<span style="color: #008080;">47</span> 
+<span style="color: #008080;">48</span> 
+<span style="color: #008080;">49</span> <span style="color: #0000ff;">def</span><span style="color: #000000;"> send_error_mail(context):
+</span><span style="color: #008080;">50</span>     <span style="color: #800000;">'''</span>
+<span style="color: #008080;">51</span> <span style="color: #800000;">    发送邮件
+</span><span style="color: #008080;">52</span> <span style="color: #800000;">    接收参数：
+</span><span style="color: #008080;">53</span> <span style="color: #800000;">    context 邮件内容
+</span><span style="color: #008080;">54</span>     <span style="color: #800000;">'''</span>
+<span style="color: #008080;">55</span>     <span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span><span style="color: #000000;"> context:
+</span><span style="color: #008080;">56</span>         <span style="color: #0000ff;">return</span> <span style="color: #800000;">'</span><span style="color: #800000;">邮件内容是必填项</span><span style="color: #800000;">'</span>
+<span style="color: #008080;">57</span> 
+<span style="color: #008080;">58</span>     send_mail(err_title, context, email_list)</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p><span style="font-size: 16px;">　　send_mail()函数只需要提交邮件标题、内容和收件人列表，就可以将邮件发送出去，使用的发件人是前面配置const.py里设置的帐号，如果没有在配置里设置好对应的账号密码，邮件将会发送不成功。</span></p>
+<p><span style="font-size: 16px;">　　send_error_mail()函数是用来发送异常日志信息的，它默认是给log_helper.py里的异常日志记录函数error()调用，这样当代码执行时出现异常，我们第一时间就会收到这封异常邮件，然后可以针对性的去进行处理。当然如果服务器出现故障时，有可能会一下子收到非常多的邮件，被邮件服务器封掉IP的。所以一般我都会用自己的邮箱给自己发，这样万一给封了IP还是可以收到发送不成功的邮件的。另外，前面说过，api文件夹里的__init__.py和其他文件夹的这个文件有点不一样，大家可以对比一下，它会帮我们解决很多很基本的问题，特别是更新线上代码时，有时会忘记提交新建的python文件，而这个文件又被其它文件所调用，这时python初始化就会发生异常，第一时间我们就会收到提醒邮件，避免线上服务挂了也不知道的情况发生。</span></p>
+<p><span style="font-size: 16px;">　　send_error_mail()函数的邮件标题可以在const.py配置中进行设置（见下面参数），一般我会分开发、测试、预生产、生产等标题，这样在收到邮件时方便我们区分是那一个环境出现了故障</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">## 邮件服务参数 ###</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> 邮件服务器</span>
+SMTP = <span style="color: #800000;">'</span><span style="color: #800000;">smtp.qq.com</span><span style="color: #800000;">'</span>
+<span style="color: #008000;">#</span><span style="color: #008000;"> 邮件服务器端口</span>
+PORT = 465
+<span style="color: #008000;">#</span><span style="color: #008000;"> email发送账号</span>
+EMAIL_USER = <span style="color: #800000;">'</span><span style="color: #800000;">xxxxxx@qq.com</span><span style="color: #800000;">'</span>
+<span style="color: #008000;">#</span><span style="color: #008000;"> email发送密码</span>
+EMAIL_PWD = <span style="color: #800000;">'</span><span style="color: #800000;">xxxxxxxxxxxxxxxxx</span><span style="color: #800000;">'</span>
+<span style="color: #008000;">#</span><span style="color: #008000;"> 系统异常邮件通知地址，多个地址用逗号分隔</span>
+EMAIL_LIST = <span style="color: #800000;">'</span><span style="color: #800000;">xxxxxx@qq.com</span><span style="color: #800000;">'</span>
+<span style="color: #008000;">#</span><span style="color: #008000;"> 异常邮件通知标题</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> ——由于我们有开发环境、测试环境、预生产环境、生产环境等多个不同的环境，</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> ——所以在发送异常通知时如果区分的话，可能就弄不清是那个环境出了问题，</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> ——我们可以通过设置邮件标题为：开发、测试、预生产、生产等标签来方便区分是那个环境发送的异常通知</span>
+EMAIL_ERR_TITLE = <span style="color: #800000;">'</span><span style="color: #800000;">系统异常通知-simple-开发</span><span style="color: #800000;">'</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><span style="font-size: 16px;">　　测试用例：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">!/usr/bin/evn python</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> coding=utf-8</span>
+
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> unittest
+</span><span style="color: #0000ff;">from</span> common <span style="color: #0000ff;">import</span><span style="color: #000000;"> mail_helper, except_helper
+
+
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> MailHelperTest(unittest.TestCase):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">邮件操作包测试类</span><span style="color: #800000;">"""</span>
+
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> setUp(self):
+        </span><span style="color: #800000;">"""</span><span style="color: #800000;">初始化测试环境</span><span style="color: #800000;">"""</span>
+        <span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">------ini------</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> tearDown(self):
+        </span><span style="color: #800000;">"""</span><span style="color: #800000;">清理测试环境</span><span style="color: #800000;">"""</span>
+        <span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">------clear------</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test(self):
+        mail_helper.send_mail(</span><span style="color: #800000;">'</span><span style="color: #800000;">test</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">test</span><span style="color: #800000;">'</span>, <span style="color: #800000;">'</span><span style="color: #800000;">1654937@qq.com</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        except_info </span>=<span style="color: #000000;"> except_helper.detailtrace()
+        mail_helper.send_error_mail(</span><span style="color: #800000;">'</span><span style="color: #800000;">出现异常，堆栈信息：</span><span style="color: #800000;">'</span> +<span style="color: #000000;"> except_info)
+
+
+</span><span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    unittest.main()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><span style="font-size: 16px;">　　执行结果：</span></p>
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017163426990-833628910.png" alt="" width="272" height="113"></p>
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017163433521-1272009819.png" alt="" width="560" height="56"></p>
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017163437052-1353562457.png" alt="" width="403" height="196"></p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">　　log_helper.py是日志操作包</span></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('47863d8e-11f9-4175-a7fb-3f9f05b804c3')"><img id="code_img_closed_47863d8e-11f9-4175-a7fb-3f9f05b804c3" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_47863d8e-11f9-4175-a7fb-3f9f05b804c3" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('47863d8e-11f9-4175-a7fb-3f9f05b804c3',event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_47863d8e-11f9-4175-a7fb-3f9f05b804c3" class="cnblogs_code_hide">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">#</span><span style="color: #008000;">!/usr/bin/evn python</span>
+<span style="color: #008080;"> 2</span> <span style="color: #008000;">#</span><span style="color: #008000;"> coding=utf-8</span>
+<span style="color: #008080;"> 3</span> 
+<span style="color: #008080;"> 4</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> logging
+</span><span style="color: #008080;"> 5</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> logging.handlers
+</span><span style="color: #008080;"> 6</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> traceback
+</span><span style="color: #008080;"> 7</span> 
+<span style="color: #008080;"> 8</span> <span style="color: #0000ff;">from</span> common <span style="color: #0000ff;">import</span><span style="color: #000000;"> mail_helper, except_helper
+</span><span style="color: #008080;"> 9</span> 
+<span style="color: #008080;">10</span> 
+<span style="color: #008080;">11</span> <span style="color: #0000ff;">def</span><span style="color: #000000;"> info(content):
+</span><span style="color: #008080;">12</span>     <span style="color: #800000;">"""</span><span style="color: #800000;">记录日志信息</span><span style="color: #800000;">"""</span>
+<span style="color: #008080;">13</span>     <span style="color: #0000ff;">if</span><span style="color: #000000;"> content:
+</span><span style="color: #008080;">14</span> <span style="color: #000000;">        logging.info(content)
+</span><span style="color: #008080;">15</span> 
+<span style="color: #008080;">16</span> <span style="color: #0000ff;">def</span> error(content = <span style="color: #800000;">''</span>, is_send_mail =<span style="color: #000000;"> True):
+</span><span style="color: #008080;">17</span>     <span style="color: #800000;">"""</span><span style="color: #800000;">记录错误日志信息</span><span style="color: #800000;">"""</span>
+<span style="color: #008080;">18</span>     <span style="color: #0000ff;">if</span><span style="color: #000000;"> traceback:
+</span><span style="color: #008080;">19</span>         content = content + <span style="color: #800000;">'</span><span style="color: #800000;">\n</span><span style="color: #800000;">'</span> + traceback.format_exc() + <span style="color: #800000;">'</span><span style="color: #800000;">\n</span><span style="color: #800000;">'</span>
+<span style="color: #008080;">20</span>     <span style="color: #008000;">#</span><span style="color: #008000;"> 获取程序当前运行的堆栈信息</span>
+<span style="color: #008080;">21</span>     detailtrace =<span style="color: #000000;"> except_helper.detailtrace()
+</span><span style="color: #008080;">22</span>     content = content + <span style="color: #800000;">'</span><span style="color: #800000;">程序调用堆栈的日志：</span><span style="color: #800000;">'</span> + detailtrace + <span style="color: #800000;">'</span><span style="color: #800000;">\n</span><span style="color: #800000;">'</span>
+<span style="color: #008080;">23</span> 
+<span style="color: #008080;">24</span> <span style="color: #000000;">    logging.info(content)
+</span><span style="color: #008080;">25</span> 
+<span style="color: #008080;">26</span>     <span style="color: #008000;">#</span><span style="color: #008000;"> 发送邮件通知相关人员</span>
+<span style="color: #008080;">27</span>     <span style="color: #0000ff;">if</span><span style="color: #000000;"> is_send_mail:
+</span><span style="color: #008080;">28</span>         info = mail_helper.send_error_mail(context=<span style="color: #000000;">content)
+</span><span style="color: #008080;">29</span>         <span style="color: #0000ff;">if</span> info: logging.info(info)</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p><span style="font-size: 16px;">　　info()函数用于记录程序执行过程中的一些信息，比如与第三方接口（最常见的是支付接口）通讯时，将提交的网址、参数和返回的结果记录下来，方便我们在需要时查看，排查出错问题；比如我们需要排查生产环境异常，定位错误信息位置时，在相关代码中间添加，然后将相关数据变量值记录下来，帮助我们定位问题所在......</span></p>
+<p><span style="font-size: 16px;">　　error()函数除了拥有info()函数的功能外，它在记录信息的同时，还会自动发送一封邮件到我们的邮箱。通过它放在try...except...中。</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">!/usr/bin/evn python</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> coding=utf-8</span>
+
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> logging
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> os
+</span><span style="color: #0000ff;">import</span><span style="color: #000000;"> unittest
+</span><span style="color: #0000ff;">from</span> common <span style="color: #0000ff;">import</span><span style="color: #000000;"> log_helper
+
+
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> LogHelperTest(unittest.TestCase):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">日志操作包测试类</span><span style="color: #800000;">"""</span>
+
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> setUp(self):
+        </span><span style="color: #800000;">"""</span><span style="color: #800000;">初始化测试环境</span><span style="color: #800000;">"""</span>
+        <span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">------ini------</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        </span><span style="color: #008000;">#</span><span style="color: #008000;"> 获取本脚本所在的上级路径（因为log_helper_text.py是在test目录下面，并不在根目录，而我们想将日志都记录在根据目录下的log目录里，所以需要获取test的上级目录）</span>
+        program_path = os.path.abspath(os.path.dirname(os.path.dirname(<span style="color: #800080;">__file__</span><span style="color: #000000;">)))
+        </span><span style="color: #008000;">#</span><span style="color: #008000;"> 初始化日志目录</span>
+        log_path = os.path.join(program_path, <span style="color: #800000;">'</span><span style="color: #800000;">log</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        </span><span style="color: #008000;">#</span><span style="color: #008000;"> 当日志目录不存在时创建日志目录</span>
+        <span style="color: #0000ff;">if</span> <span style="color: #0000ff;">not</span><span style="color: #000000;"> os.path.exists(log_path):
+            os.mkdir(log_path)
+        </span><span style="color: #008000;">#</span><span style="color: #008000;"> 定义日志输出格式</span>
+        logging.basicConfig(level=<span style="color: #000000;">logging.INFO,
+                            format</span>=<span style="color: #800000;">'</span><span style="color: #800000;">%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s</span><span style="color: #800000;">'</span><span style="color: #000000;">,
+                            filename</span>=<span style="color: #800000;">"</span><span style="color: #800000;">%s/info.log</span><span style="color: #800000;">"</span> %<span style="color: #000000;"> log_path,
+                            filemode</span>=<span style="color: #800000;">'</span><span style="color: #800000;">a</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> tearDown(self):
+        </span><span style="color: #800000;">"""</span><span style="color: #800000;">清理测试环境</span><span style="color: #800000;">"""</span>
+        <span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">------clear------</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test(self):
+        log_helper.info(</span><span style="color: #800000;">'</span><span style="color: #800000;">记录代码执行的相关记录或信息</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+
+        </span><span style="color: #0000ff;">try</span><span style="color: #000000;">:
+            result </span>= <span style="color: #800000;">'</span><span style="color: #800000;">0</span><span style="color: #800000;">'</span> / 10
+        <span style="color: #0000ff;">except</span><span style="color: #000000;"> Exception as e:
+            log_helper.error(</span><span style="color: #800000;">'</span><span style="color: #800000;">出现异常：</span><span style="color: #800000;">'</span> +<span style="color: #000000;"> str(e.args))
+
+
+</span><span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    unittest.main()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><span style="font-size: 16px;">　　执行结果：</span></p>
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017171502631-160273182.png" alt=""></p>
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017171516756-848195627.png" alt="" width="628" height="209"></p>
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017171506912-460610812.png" alt=""></p>
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017171841787-825608896.png" alt="" width="624" height="233"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">　　random_helper.py是随机数操作包，通过里面的函数，我们可以方便快捷的获取指定大小范围的数值型随机数；指定长度的数字、大小写字母、数字与字母混合型随机数；获取uuid随机码。</span></p>
+<div class="cnblogs_code" onclick="cnblogs_code_show('571d9e29-a4ea-4d17-a2f1-755be48332bc')"><img id="code_img_closed_571d9e29-a4ea-4d17-a2f1-755be48332bc" class="code_img_closed" src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt=""><img id="code_img_opened_571d9e29-a4ea-4d17-a2f1-755be48332bc" class="code_img_opened" style="display: none;" onclick="cnblogs_code_hide('571d9e29-a4ea-4d17-a2f1-755be48332bc',event)" src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="">
+<div id="cnblogs_code_open_571d9e29-a4ea-4d17-a2f1-755be48332bc" class="cnblogs_code_hide">
+<pre><span style="color: #008080;"> 1</span> <span style="color: #008000;">#</span><span style="color: #008000;">!/usr/bin/evn python</span>
+<span style="color: #008080;"> 2</span> <span style="color: #008000;">#</span><span style="color: #008000;"> coding=utf-8</span>
+<span style="color: #008080;"> 3</span> 
+<span style="color: #008080;"> 4</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> random
+</span><span style="color: #008080;"> 5</span> <span style="color: #0000ff;">import</span><span style="color: #000000;"> uuid
+</span><span style="color: #008080;"> 6</span> <span style="color: #0000ff;">from</span> common <span style="color: #0000ff;">import</span><span style="color: #000000;"> encrypt_helper
+</span><span style="color: #008080;"> 7</span> 
+<span style="color: #008080;"> 8</span> <span style="color: #008000;">#</span><span style="color: #008000;">## 定义常量 ###</span>
+<span style="color: #008080;"> 9</span> <span style="color: #008000;">#</span><span style="color: #008000;"> 小写字母</span>
+<span style="color: #008080;">10</span> lowercase_letters = <span style="color: #800000;">"</span><span style="color: #800000;">abcdefghijklmnopqrstuvwxyz</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">11</span> <span style="color: #008000;">#</span><span style="color: #008000;"> 大写字母</span>
+<span style="color: #008080;">12</span> majuscule = <span style="color: #800000;">"</span><span style="color: #800000;">ABCDEFGHIJKLMNOPQRSTUVWXYZ</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">13</span> <span style="color: #008000;">#</span><span style="color: #008000;"> 数字</span>
+<span style="color: #008080;">14</span> numbers = <span style="color: #800000;">"</span><span style="color: #800000;">0123456789</span><span style="color: #800000;">"</span>
+<span style="color: #008080;">15</span> <span style="color: #008000;">#</span><span style="color: #008000;">###############</span>
+<span style="color: #008080;">16</span> 
+<span style="color: #008080;">17</span> <span style="color: #0000ff;">def</span> <span style="color: #800080;">___get_randoms</span><span style="color: #000000;">(length, text):
+</span><span style="color: #008080;">18</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">19</span> <span style="color: #800000;">    内部函数，获取指定长度的随机字符
+</span><span style="color: #008080;">20</span> <span style="color: #800000;">    :param length: 将要生成的字符长度
+</span><span style="color: #008080;">21</span> <span style="color: #800000;">    :param text: 生成随机字符的字符池
+</span><span style="color: #008080;">22</span> <span style="color: #800000;">    :return: 生成好的随机字符串
+</span><span style="color: #008080;">23</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">24</span>     <span style="color: #0000ff;">return</span><span style="color: #000000;"> random.sample(text, length)
+</span><span style="color: #008080;">25</span> 
+<span style="color: #008080;">26</span> <span style="color: #0000ff;">def</span><span style="color: #000000;"> get_number(length):
+</span><span style="color: #008080;">27</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">28</span> <span style="color: #800000;">    获取指定长度的数字，类型是字符串
+</span><span style="color: #008080;">29</span> <span style="color: #800000;">    :param length: 将要生成的字符长度
+</span><span style="color: #008080;">30</span> <span style="color: #800000;">    :return: 生成好的随机字符串
+</span><span style="color: #008080;">31</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">32</span>     <span style="color: #0000ff;">return</span>  <span style="color: #800000;">''</span>.join(<span style="color: #800080;">___get_randoms</span><span style="color: #000000;">(length, numbers))
+</span><span style="color: #008080;">33</span> 
+<span style="color: #008080;">34</span> <span style="color: #0000ff;">def</span><span style="color: #000000;"> get_number_for_range(small, max):
+</span><span style="color: #008080;">35</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">36</span> <span style="color: #800000;">    获取指定大小的整形数值
+</span><span style="color: #008080;">37</span> <span style="color: #800000;">    :param small: 最小数值
+</span><span style="color: #008080;">38</span> <span style="color: #800000;">    :param max: 最大数值
+</span><span style="color: #008080;">39</span> <span style="color: #800000;">    :return: 生成好的随机数值
+</span><span style="color: #008080;">40</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">41</span>     <span style="color: #0000ff;">return</span><span style="color: #000000;"> random.randint(small, max)
+</span><span style="color: #008080;">42</span> 
+<span style="color: #008080;">43</span> <span style="color: #0000ff;">def</span><span style="color: #000000;"> get_string(length):
+</span><span style="color: #008080;">44</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">45</span> <span style="color: #800000;">    获取指定长度的字符串（大小写英文字母+数字）
+</span><span style="color: #008080;">46</span> <span style="color: #800000;">    :param length: 将要生成的字符长度
+</span><span style="color: #008080;">47</span> <span style="color: #800000;">    :return: 生成好的随机字符串
+</span><span style="color: #008080;">48</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">49</span>     <span style="color: #0000ff;">return</span>  <span style="color: #800000;">''</span>.join(<span style="color: #800080;">___get_randoms</span>(length, lowercase_letters + majuscule +<span style="color: #000000;"> numbers))
+</span><span style="color: #008080;">50</span> 
+<span style="color: #008080;">51</span> <span style="color: #0000ff;">def</span><span style="color: #000000;"> get_letters(length):
+</span><span style="color: #008080;">52</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">53</span> <span style="color: #800000;">    生成随机英文字母字符串（大小写英文字母）
+</span><span style="color: #008080;">54</span> <span style="color: #800000;">    :param length: 将要生成的字符长度
+</span><span style="color: #008080;">55</span> <span style="color: #800000;">    :return: 生成好的随机字符串
+</span><span style="color: #008080;">56</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">57</span>     <span style="color: #0000ff;">return</span>  <span style="color: #800000;">''</span>.join(<span style="color: #800080;">___get_randoms</span>(length, lowercase_letters +<span style="color: #000000;"> majuscule))
+</span><span style="color: #008080;">58</span> 
+<span style="color: #008080;">59</span> <span style="color: #0000ff;">def</span><span style="color: #000000;"> get_uuid():
+</span><span style="color: #008080;">60</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">61</span> <span style="color: #800000;">    随机生成uuid
+</span><span style="color: #008080;">62</span> <span style="color: #800000;">    :return: 生成好的uuid
+</span><span style="color: #008080;">63</span>     <span style="color: #800000;">"""</span>
+<span style="color: #008080;">64</span>     <span style="color: #0000ff;">return</span> str(uuid.uuid4()).replace(<span style="color: #800000;">'</span><span style="color: #800000;">-</span><span style="color: #800000;">'</span>, <span style="color: #800000;">''</span>)</pre>
+</div>
+<span class="cnblogs_code_collapse">View Code</span></div>
+<p><span style="font-size: 16px;">　　因为比较简单，所以不一一说明，直接看测试用例</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre><span style="color: #008000;">#</span><span style="color: #008000;">!/usr/bin/evn python</span><span style="color: #008000;">
+#</span><span style="color: #008000;"> coding=utf-8</span>
+
+<span style="color: #0000ff;">import</span><span style="color: #000000;"> unittest
+</span><span style="color: #0000ff;">from</span> common <span style="color: #0000ff;">import</span><span style="color: #000000;"> random_helper
+
+
+</span><span style="color: #0000ff;">class</span><span style="color: #000000;"> RandomHelperTest(unittest.TestCase):
+    </span><span style="color: #800000;">"""</span><span style="color: #800000;">随机数操作包测试类</span><span style="color: #800000;">"""</span>
+
+    <span style="color: #0000ff;">def</span><span style="color: #000000;"> setUp(self):
+        </span><span style="color: #800000;">"""</span><span style="color: #800000;">初始化测试环境</span><span style="color: #800000;">"""</span>
+        <span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">------ini------</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> tearDown(self):
+        </span><span style="color: #800000;">"""</span><span style="color: #800000;">清理测试环境</span><span style="color: #800000;">"""</span>
+        <span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">------clear------</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+
+    </span><span style="color: #0000ff;">def</span><span style="color: #000000;"> test(self):
+        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">获取0到100之间的随机数</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">print</span>(random_helper.get_number_for_range(0, 100<span style="color: #000000;">))
+        </span><span style="color: #0000ff;">print</span>(random_helper.get_number_for_range(0, 100<span style="color: #000000;">))
+
+        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">获取长度为5的数字随机码</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">print</span>(random_helper.get_number(5<span style="color: #000000;">))
+        </span><span style="color: #0000ff;">print</span>(random_helper.get_number(5<span style="color: #000000;">))
+
+        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">获取长度为6的英文随机码</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">print</span>(random_helper.get_letters(6<span style="color: #000000;">))
+        </span><span style="color: #0000ff;">print</span>(random_helper.get_letters(6<span style="color: #000000;">))
+
+        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">获取长度为6的数字与英文随机码</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">print</span>(random_helper.get_string(6<span style="color: #000000;">))
+        </span><span style="color: #0000ff;">print</span>(random_helper.get_string(6<span style="color: #000000;">))
+
+        </span><span style="color: #0000ff;">print</span>(<span style="color: #800000;">'</span><span style="color: #800000;">获取uuid</span><span style="color: #800000;">'</span><span style="color: #000000;">)
+        </span><span style="color: #0000ff;">print</span><span style="color: #000000;">(random_helper.get_uuid())
+        </span><span style="color: #0000ff;">print</span><span style="color: #000000;">(random_helper.get_uuid())
+</span><span style="color: #0000ff;">if</span> <span style="color: #800080;">__name__</span> == <span style="color: #800000;">'</span><span style="color: #800000;">__main__</span><span style="color: #800000;">'</span><span style="color: #000000;">:
+    unittest.main()</span></pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<p><span style="font-size: 16px;">　　执行结果：</span></p>
+<div class="cnblogs_code"><div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div>
+<pre>------ini------<span style="color: #000000;">
+获取0到100之间的随机数
+</span>54
+21<span style="color: #000000;">
+获取长度为5的数字随机码
+</span>20156
+58132<span style="color: #000000;">
+获取长度为6的英文随机码
+BqQCZP
+ybFIaB
+获取长度为6的数字与英文随机码
+FZfEgd
+GAslRy
+获取uuid
+2aba0e946414434ea6b7f2e425d8b41b
+52fe4545b09443a088ce460453d909fa
+</span>------clear------</pre>
+<div class="cnblogs_code_toolbar"><span class="cnblogs_code_copy"><a href="javascript:void(0);" onclick="copyCnblogsCode(this)" title="复制代码"><img src="//common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></span></div></div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">　　<span style="background-color: #ffff00; color: #ff0000;"><strong><a href="http://pan.baidu.com/s/1dEMc593" target="_blank"><span style="background-color: #ffff00; color: #ff0000;">本文对应的源码下载</span></a></strong></span></span></p>
+<p><span style="font-size: 16px;">&nbsp;</span></p>
+<p><span style="font-size: 16px; color: #0000ff;"><strong>作者：AllEmpty</strong></span><br><span style="font-size: 16px; color: #0000ff;"><strong>出处：http://www.cnblogs.com/EmptyFS/<br>有兴趣的朋友可以加加python开发QQ群：669058475 ，大家一起探讨。大家有问题的话可以在群里发问，当然我平时工作也非常繁忙不一定会及时回复。</strong></span></p>
+<p><span style="font-size: 16px; color: #0000ff;"><strong>本文为AllEmpty原创，欢迎转载，但未经同意必须保留此段声明，且在文章页面明显位置给出原文连接，否则保留追究法律责任的权利。</strong></span></p></div><div id="MySignature" style="display: block;"><div style="background-color: #F8F8EE; border: solid 1px #E8E7D0; padding: 10px; margin-bottom: 10px; font-size: 16px; font-weight: bold; color: #06A">只有将自己置空，才能装进更多的东西！我是陈焕，资深IT码农，爱分享爱学习，一位奔跑在求知路上的践行者。
+<br><br>
+</div></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/EmptyFS/category/910653.html" target="_blank">我的第一个python web开发框架</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/EmptyFS/tag/python/">python</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(7682815,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow('b4073d05-a751-df11-ba8f-001cf0cd104b');" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="//common.cnblogs.com/images/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="//common.cnblogs.com/images/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/EmptyFS/" target="_blank"><img src="//pic.cnblogs.com/face/129385/20140408130141.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/EmptyFS/">AllEmpty</a><br>
+            <a href="http://home.cnblogs.com/u/EmptyFS/followees">关注 - 64</a><br>
+            <a href="http://home.cnblogs.com/u/EmptyFS/followers">粉丝 - 1548</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('b4073d05-a751-df11-ba8f-001cf0cd104b');return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(7682815,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(7682815,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/EmptyFS/p/7659902.html" class="p_n_p_prefix">? </a> 上一篇：<a href="http://www.cnblogs.com/EmptyFS/p/7659902.html" title="发布于2017-10-24 11:58">我的第一个python web开发框架（11）——工具函数包说明（二）</a><br><a href="http://www.cnblogs.com/EmptyFS/p/7687691.html" class="p_n_p_prefix">? </a> 下一篇：<a href="http://www.cnblogs.com/EmptyFS/p/7687691.html" title="发布于2017-10-26 13:07">我的第一个python web开发框架（13）——工具函数包说明（四）</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2017-10-25 12:57</span> <a href="http://www.cnblogs.com/EmptyFS/">AllEmpty</a> 阅读(<span id="post_view_count">222</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=7682815" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(7682815);return false;">收藏</a></div>
+	</div>
+	<script type="text/javascript">var allowComments=true,cb_blogId=157885,cb_entryId=7682815,cb_blogApp=currentBlogApp,cb_blogUserGuid='b4073d05-a751-df11-ba8f-001cf0cd104b',cb_entryCreatedDate='2017/10/25 12:57:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login('commentform');">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://www.gcpowertools.com.cn/products/activereports_overview.htm?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=AR&amp;utm_campaign=community" target="_blank">【推荐】报表开发有捷径：快速设计轻松集成，数据可视化和交互</a><br><a href="https://cloud.tencent.com/act/free?fromSource=gwzcw.562633.562633.562633" target="_blank">【推荐】腾讯云 普惠云计算 0门槛体验</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="http://activity.huaweicloud.com/mobiletest/index.html?utm_source=cnblogs&amp;utm_medium=MediaB&amp;utm_campaign=%E5%8D%8E%E4%B8%BA%E4%BA%91-10%E6%9C%88%E5%B9%BF%E5%91%8A%E6%8A%95%E6%94%BE&amp;utm_content=%E5%8D%9A%E5%AE%A2%E5%9B%AD%E5%86%85%E9%A1%B5C1%E7%9F%A9%E5%BD%A2&amp;utm_term=%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%BA%91-mobiletest" target="_blank"><img width="300" height="250" src="https://images2017.cnblogs.com/news/24442/201710/24442-20171024183729457-421799845.jpg" alt="华为云C2_1024"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/581054/" target="_blank">人到中年，职场半坡</a><br> ·  <a href="http://news.cnblogs.com/n/581053/" target="_blank">2017“华为系”离职员工创业榜，华为“编外”军团暗中崛起</a><br> ·  <a href="http://news.cnblogs.com/n/581056/" target="_blank">2017年度Linux内核开发报告</a><br> ·  <a href="http://news.cnblogs.com/n/581055/" target="_blank">黑钱好赚？研究表明，勒索软件销售额疯长</a><br> ·  <a href="http://news.cnblogs.com/n/581052/" target="_blank">程序猿脱单必备指南，约会中有哪些绝不能犯的「致命硬伤」？</a><br>? <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="http://click.aliyun.com/m/22446/" target="_blank"><img width="468" height="60" src="https://images2017.cnblogs.com/news/24442/201710/24442-20171001085719794-417760373.jpg" alt="阿里云1001"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/579480/" target="_blank">实用VPC虚拟私有云设计原则</a><br> ·  <a href="http://kb.cnblogs.com/page/576251/" target="_blank">如何阅读计算机科学类的书</a><br> ·  <a href="http://kb.cnblogs.com/page/578103/" target="_blank">Google 及其云智慧</a><br> ·  <a href="http://kb.cnblogs.com/page/575829/" target="_blank">做到这一点，你也可以成为优秀的程序员</a><br> ·  <a href="http://kb.cnblogs.com/page/566880/" target="_blank">写给立志做码农的大学生</a><br></div>? <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: topicList 文章列表容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><a href="http://www.cnzz.com/stat/website.php?web_id=1000228226" target="_blank" title="站长统计">站长统计</a>
+<br>
+GitHub：<a href="https://github.com/AllEmpty" target="_blank">https://github.com/AllEmpty</a><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/EmptyFS/">AllEmpty</a><br>园龄：<a href="http://home.cnblogs.com/u/EmptyFS/" title="入园时间：2010-04-27">7年5个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/EmptyFS/followers/">1548</a><br>关注：<a href="http://home.cnblogs.com/u/EmptyFS/followees/">64</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow('b4073d05-a751-df11-ba8f-001cf0cd104b')">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar('2017/09/01');return false;">&lt;</a></td><td align="center">2017年10月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar('2017/11/01');return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">24</td><td class="CalOtherMonthDay" align="center">25</td><td class="CalOtherMonthDay" align="center">26</td><td class="CalOtherMonthDay" align="center">27</td><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td></tr><tr><td class="CalWeekendDay" align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td class="CalWeekendDay" align="center">7</td></tr><tr><td class="CalWeekendDay" align="center">8</td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/09.html"><u>9</u></a></td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/10.html"><u>10</u></a></td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/11.html"><u>11</u></a></td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/12.html"><u>12</u></a></td><td align="center">13</td><td class="CalWeekendDay" align="center">14</td></tr><tr><td class="CalWeekendDay" align="center">15</td><td align="center">16</td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/17.html"><u>17</u></a></td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/18.html"><u>18</u></a></td><td align="center">19</td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/20.html"><u>20</u></a></td><td class="CalWeekendDay" align="center">21</td></tr><tr><td class="CalWeekendDay" align="center">22</td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/23.html"><u>23</u></a></td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/24.html"><u>24</u></a></td><td align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/25.html"><u>25</u></a></td><td class="CalTodayDay" align="center"><a href="http://www.cnblogs.com/EmptyFS/archive/2017/10/26.html"><u>26</u></a></td><td align="center">27</td><td class="CalWeekendDay" align="center">28</td></tr><tr><td class="CalWeekendDay" align="center">29</td><td align="center">30</td><td align="center">31</td><td class="CalOtherMonthDay" align="center">1</td><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/EmptyFS/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/EmptyFS/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/EmptyFS/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/EmptyFS/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/EmptyFS/tag/" title="我的博客的标签列表">我的标签</a></li>
+<li><a id="itemListLink" onclick="this.blur();WarpClass('itemListLink', 'itemListLin_con');return false;" href="#">更多链接</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_recentposts" class="sidebar-block">
+<div class="catListEssay">
+<h3 class="catListTitle">最新随笔</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/EmptyFS/p/7687691.html">1. 我的第一个python web开发框架（13）——工具函数包说明（四）</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7682815.html">2. 我的第一个python web开发框架（12）——工具函数包说明（三）</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7659902.html">3. 我的第一个python web开发框架（11）——工具函数包说明（二）</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7615752.html">4. 我的第一个python web开发框架（10）——工具函数包说明（一）</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7607546.html">5. 我的第一个python web开发框架（9）——目录与配置说明</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7598928.html">6. 我的第一个python web开发框架（8）——项目结构与RESTful接口风格说明</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7494816.html">7. 我的第一个python web开发框架（7）——本地部署前端访问服务器</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7491949.html">8. 我的第一个python web开发框架（6）——第一个Hello World</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7647162.html">9. 架构相关概念——学习笔记</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/7488816.html">10. 我的第一个python web开发框架（5）——开发前准备工作（了解编码前需要知道的一些常识）</a></li>
+</ul>
+</div>
+</div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/EmptyFS/tag/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%BC%96%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84C%23%E6%A1%86%E6%9E%B6/">从零开始编写自己的C#框架</a>(29)</li><li><a href="http://www.cnblogs.com/EmptyFS/tag/python/">python</a>(22)</li><li><a href="http://www.cnblogs.com/EmptyFS/tag/subsonic3.0/">subsonic3.0</a>(13)</li><li><a href="http://www.cnblogs.com/EmptyFS/tag/%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/">技术总结</a>(9)</li><li><a href="http://www.cnblogs.com/EmptyFS/tag/%E4%B8%AA%E4%BA%BA%E6%80%BB%E7%BB%93/">个人总结</a>(4)</li><li><a href="http://www.cnblogs.com/EmptyFS/tag/subsonic3.0%E6%BA%90%E7%A0%81/">subsonic3.0源码</a>(4)</li><li><a href="http://www.cnblogs.com/EmptyFS/tag/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8/">服务器安全</a>(2)</li><li><a href="http://www.cnblogs.com/EmptyFS/tag/%E6%9E%B6%E6%9E%84/">架构</a>(2)</li><li><a href="http://www.cnblogs.com/EmptyFS/tag/%E7%BC%93%E5%AD%98%E6%8A%80%E6%9C%AF/">缓存技术</a>(1)</li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类<span style="font-size:11px;font-weight:normal">(122)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/EmptyFS/category/862148.html">Java</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/EmptyFS/category/933466.html">nginx(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/EmptyFS/category/919812.html">python(8)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/EmptyFS/category/499563.html">SubSonic(18)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/EmptyFS/category/565358.html">从零开始编写自己的C#框架(29)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/EmptyFS/category/557156.html">服务器安全(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/EmptyFS/category/924413.html">个人总结(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/EmptyFS/category/541536.html">技术总结(38)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/EmptyFS/category/870113.html">架构(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/EmptyFS/category/910653.html">我的第一个python web开发框架(17)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案<span style="font-size:11px;font-weight:normal">(78)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/EmptyFS/archive/2017/10.html">2017年10月 (11)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/EmptyFS/archive/2017/09.html">2017年9月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/EmptyFS/archive/2017/05.html">2017年5月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/EmptyFS/archive/2017/03.html">2017年3月 (3)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/EmptyFS/archive/2017/01.html">2017年1月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_5" href="http://www.cnblogs.com/EmptyFS/archive/2016/12.html">2016年12月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_6" href="http://www.cnblogs.com/EmptyFS/archive/2016/08.html">2016年8月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_7" href="http://www.cnblogs.com/EmptyFS/archive/2015/07.html">2015年7月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_8" href="http://www.cnblogs.com/EmptyFS/archive/2015/04.html">2015年4月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_9" href="http://www.cnblogs.com/EmptyFS/archive/2015/01.html">2015年1月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_10" href="http://www.cnblogs.com/EmptyFS/archive/2014/12.html">2014年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_11" href="http://www.cnblogs.com/EmptyFS/archive/2014/11.html">2014年11月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_12" href="http://www.cnblogs.com/EmptyFS/archive/2014/07.html">2014年7月 (6)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_13" href="http://www.cnblogs.com/EmptyFS/archive/2014/06.html">2014年6月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_14" href="http://www.cnblogs.com/EmptyFS/archive/2014/05.html">2014年5月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_15" href="http://www.cnblogs.com/EmptyFS/archive/2014/04.html">2014年4月 (11)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_16" href="http://www.cnblogs.com/EmptyFS/archive/2014/03.html">2014年3月 (4)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_17" href="http://www.cnblogs.com/EmptyFS/archive/2013/12.html">2013年12月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_18" href="http://www.cnblogs.com/EmptyFS/archive/2013/09.html">2013年9月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_19" href="http://www.cnblogs.com/EmptyFS/archive/2013/08.html">2013年8月 (7)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_20" href="http://www.cnblogs.com/EmptyFS/archive/2013/07.html">2013年7月 (4)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_scorerank" class="sidebar-block">
+<div class="catListBlogRank">
+<h3 class="catListTitle">积分与排名</h3>
+<ul>
+	<li class="liScore">
+		积分 -	162547
+	</li><li class="liRank">
+		排名 -	1482
+	</li>
+</ul>
+</div>
+
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div id="RecentCommentsBlock"><ul>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/EmptyFS/p/7687691.html#3822235">1. Re:我的第一个python web开发框架（13）——工具函数包说明（四）</a></li>
+        <li class="recent_comment_body">之前只掌握net，现在想学习python，博主的文章很不错！！</li>
+        <li class="recent_comment_author">--张君度</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/EmptyFS/p/7494816.html#3813231">2. Re:我的第一个python web开发框架（7）——本地部署前端访问服务器</a></li>
+        <li class="recent_comment_body">留名</li>
+        <li class="recent_comment_author">--夜里码代码</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/EmptyFS/p/5208498.html#3813138">3. Re:我的第一个python web开发框架（1）——前言</a></li>
+        <li class="recent_comment_body">建议博主少用大段的加粗字体，看起来比较难受。</li>
+        <li class="recent_comment_author">--张泰峰</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/EmptyFS/p/6558800.html#3811526">4. Re:python服务器环境搭建（2）——安装相关软件</a></li>
+        <li class="recent_comment_body">@AllEmpty是的 昨天看了下，已经了解了些。拜读文章，受益匪浅，感谢了！...</li>
+        <li class="recent_comment_author">--760687932</li>
+        <li class="recent_comment_title"><a href="http://www.cnblogs.com/EmptyFS/p/6558800.html#3811509">5. Re:python服务器环境搭建（2）——安装相关软件</a></li>
+        <li class="recent_comment_body">@760687932你要熟悉一下linux的命令才行，因为你输入的rm删除命令没有带-rf参数，所以删除时系统问你是否要删除这个链接文件，你输入y然后按回车就可以了...</li>
+        <li class="recent_comment_author">--AllEmpty</li>
+</ul>
+</div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/EmptyFS/p/3621484.html">1. 从零开始编写自己的C#框架（1）——前言(28637)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3636815.html">2. 从零开始编写自己的C#框架（5）——三层架构介绍(17994)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3626080.html">3. 从零开始编写自己的C#框架（2）——开发前准备工作(17272)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3684288.html">4. 从零开始编写自己的C#框架（8）——后台管理系统功能设计(15916)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3634660.html">5. 从零开始编写自己的C#框架（3）——开发规范(14513)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3690870.html">6. 从零开始编写自己的C#框架（9）——数据库设计与创建(13929)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3659679.html">7. 从零开始编写自己的C#框架（6）——SubSonic3.0插件介绍（附源码）(11166)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3653934.html">8. 从零开始编写自己的C#框架（7）——需求分析(10404)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/4105713.html">9. 从零开始编写自己的C#框架（27）——什么是开发框架(9573)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3636800.html">10. 从零开始编写自己的C#框架（4）——文档编写说明(9275)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"><ul><li><a href="http://www.cnblogs.com/EmptyFS/p/3621484.html">1. 从零开始编写自己的C#框架（1）——前言(112)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3547796.html">2. 服务器安全部署文档(96)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3626080.html">3. 从零开始编写自己的C#框架（2）——开发前准备工作(80)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3659679.html">4. 从零开始编写自己的C#框架（6）——SubSonic3.0插件介绍（附源码）(72)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/4199961.html">5. 2014年终总结(69)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/4552913.html">6. 2015年半年小结(61)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3436111.html">7. 开发人员解决不熟悉领域技术难题总结(51)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3634660.html">8. 从零开始编写自己的C#框架（3）——开发规范(50)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3684288.html">9. 从零开始编写自己的C#框架（8）——后台管理系统功能设计(50)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/4092616.html">10. 从零开始编写自己的C#框架（26）——小结(44)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div class="RecentComment">
+	<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/EmptyFS/p/3621484.html">1. 从零开始编写自己的C#框架（1）——前言(170)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3547796.html">2. 服务器安全部署文档(105)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3626080.html">3. 从零开始编写自己的C#框架（2）——开发前准备工作(96)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3636800.html">4. 从零开始编写自己的C#框架（4）——文档编写说明(50)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3634660.html">5. 从零开始编写自己的C#框架（3）——开发规范(48)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3653934.html">6. 从零开始编写自己的C#框架（7）——需求分析(45)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3684288.html">7. 从零开始编写自己的C#框架（8）——后台管理系统功能设计(44)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3854315.html">8. 从零开始编写自己的C#框架（25）——网站部署(43)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3690870.html">9. 从零开始编写自己的C#框架（9）——数据库设计与创建(32)</a></li><li><a href="http://www.cnblogs.com/EmptyFS/p/3436111.html">10. 开发人员解决不熟悉领域技术难题总结(31)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+		<div class="clear"></div>
+		<div id="footer">
+			
+<!--done-->
+Copyright ?2017 AllEmpty
+		</div><!--end: footer -->
+	</div><!--end: sideBar 侧边栏容器 -->
+</div><!--end: home 自定义的最大容器 -->
+</center>
+1其中，博客园里的这个页面排版中，错误的讲div的右侧网页内容隶属于了网页的开头的标题Div中，而左侧的主页面内容却没有隶属于标题栏的模块中。
+2
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017171841787-825608896.png" alt="" width="624" height="233"></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-size: 16px;">　　random_helper.py是随机数操作包，通过里面的函数，我们可以方便快捷的获取指定大小范围的数值型随机数；指定长度的数字、大小写字母、数字与字母混合型随机数；获取uuid随机码。</span></p>
+另外代码里还出现了累赘的表达形式<p>&nbsp;</p><p>&nbsp;</p>
+可以用pre标签进行直接囊括两个
+<pre>&nbsp;
+&nbsp;</pre>
+3，
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017171506912-460610812.png" alt=""></p>
+<p><img src="http://images2017.cnblogs.com/blog/129385/201710/129385-20171017171841787-825608896.png" alt="" width="624" height="233"></p>
+图片可以采取并行防止而不是直接罗列下去，这样网页显得太空旷不美观。
