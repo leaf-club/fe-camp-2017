@@ -1,0 +1,1010 @@
+<!--
+    博客网址：https://segmentfault.com/
+说明：
+    1、表单背景图片没有找到，所以用一个背景颜色替代了；
+    2、最新问答、热门问答下面的文本，为了减少工作量，直接做了二十个一样的消息；
+    3、右侧图片广告、讲堂推荐、排行榜，用户信息来源于真实的用户，数字为杜撰的；
+    4、本次作业过程中，参考了网页源代码，另外各种百度，翻看W3C，但本次作业代码都是自己亲手敲打的。
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SegmentFault</title>
+    <link rel="stylesheet" href="segmentfault.css">
+</head>
+<body>
+    <!--网页头部-->
+    <div id="head">
+        <div id="div_logo">
+            <br>
+            <strong>
+            <a href="">segment<span style="color:green">fault</span></a>
+            </strong>
+        </div>
+        <div id="div_nav">
+            <br>
+            <nav>
+            <a href="">问答</a>
+            <a href="">头条</a>
+            <a href="">专栏</a>
+            <a href="">讲堂</a>
+            <a href="">发现</a>
+            </nav>
+        </div>
+        <div id="div_search">
+            <br>
+            <input type="text" class="search_box" placeholder="搜索问题或关键字">
+        </div>
+        <div id="div_log">
+            <br>
+            <a href="" class="sign_in">立即登录</a>
+            &nbsp;
+            <a href="" class="sign_up">免费注册</a>
+        </div>
+        <!--子头部-->
+        <div id="subhead">
+            <div id="languages">
+            <nav>
+                <span><a href="">全部</a></span>
+                <span><a href="">javascript</a></span>
+                <span><a href="">php</a></span>
+                <span><a href="">python</a></span>
+                <span><a href="">java</a></span>
+                <span><a href="">mysql</a></span>
+                <span><a href="">ios</a></span>
+                <span><a href="">android</a></span>
+                <span><a href="">node.js</a></span>
+                <span><a href="">html5</a></span>
+                <span><a href="">linux</a></span>
+                <span><a href="">c++</a></span>
+                <span><a href="">git</a></span>
+                <span><a href="">golang</a></span>
+                <span><a href="">ruby</a></span>
+                <span><a href="">vim</a></span>
+                <span><a href="">docker</a></span>
+                <span><a href="">mongodb</a></span>
+            </div>
+            <div id="hot_labels">
+                <span><a href="">热门标签</a></span>
+            </div>
+            </nav>
+        </div>
+    </div>
+
+    <!--表单部分-->
+    <div id="container_form">
+        <div id="des_form">
+            <div id="description">
+                <br>
+                <h1>在SegmentFault,解决技术问题</h1>
+                <span>每个月，我们帮助1000万的开发者解决各种各样的技术问题。并助力他们在技术能力、
+                职业生涯、影响力上获得提升。</span>
+                <p>一线的工程师、著名开源项目的作者们，都在这里：</p>
+                <img src=".\images\websites.png" alt="websites" width="500px" height="50px">
+            </div>
+            <div id="form_part">
+                <form action="">
+                    <div id="text_name">
+                        <input type="text" class="form_text" name="name" placeholder="真实姓名或常用昵称">
+                    </div>
+                    <div id="text_tel">
+                        <input type="tel" class="form_text" name="telephone" placeholder="手机号（仅支持大陆手机号）">
+                    </div>
+                    <div id="text_verti_code_show">
+                        <input type="text" class="form_text" name="vertification_code" 
+                        placeholder="请输入下方的验证码后，再点击获取验证码">
+                    </div>
+                    <div id="verti_code">
+                        <img src=".\images\verti_code.jpg" alt="验证码" width="350px" height="60px">
+                    </div>
+                    <div id="text_verti_code_tel">
+                        <input type="tel" name="code_got"
+                          id="id_text_verti_code_tel" placeholder="短信验证码">
+                        <button style="width:96px;" id="button_verti_code" type="submit">
+                            <a href="">获取验证码</a>
+                        </button>
+                    </div>
+                    <div id="text_password">
+                        <input type="password" class="form_text" name="password" placeholder="密码（不少于6位）">
+                    </div>
+                    <div id="button_signup">
+                        <button type="submit"><a href="">注册</a></button>
+                    </div>
+                    <div id="tips">
+                        <span style="color:white">已有账号？</span>
+                        <a href=""><span style="color:green">立即登录</span></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!--主体部分-->
+    <div id="news-sidebar">
+        <!--动态消息部分-->
+        <div id="news">
+            <!--导航栏-->
+            <div id="news_nav">
+                <ul>
+                    <li><a href="">最新问答</a></li>
+                    <li><a href="">热门问答</a></li>
+                    <li><a href="">等待回答</a></li>
+                    <li><a href="">最新动态</a></li>
+                    <li><a href="">付费回答</a></li>
+                </ul>
+            </div>
+            <!--body部分-->
+            <div id="news_body">
+                <!--第一条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第二条-->
+                <section id="section_2">
+                        <div id="vo_an_vi">
+                            <div class="votes">
+                                0
+                                <br><small>得票</small>
+                            </div>
+                            <div class="answers">
+                                1
+                                <br><small>回答</small>
+                            </div>
+                            <div class="views">
+                                74
+                                <br><small>浏览</small>
+                            </div>
+                        </div>
+                        <div id="summary">
+                            <div class="author">
+                                <a href=""><small>哔哔胥</small></a>
+                                <span><small>刚刚回答</small></span>
+                            </div>
+                            <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                            <ul class="summary_tags">
+                                    <li><a href=""><small>html5</small></a></li>
+                                    <li><a href=""><small>css</small></a></li>
+                                    <li><a href=""><small>javascript</small></a></li>
+                            </ul>
+                        </div>
+                    </section>
+                <!--第三条-->
+                <section id="section_3">
+                        <div id="vo_an_vi">
+                            <div class="votes">
+                                0
+                                <br><small>得票</small>
+                            </div>
+                            <div class="answers">
+                                1
+                                <br><small>回答</small>
+                            </div>
+                            <div class="views">
+                                74
+                                <br><small>浏览</small>
+                            </div>
+                        </div>
+                        <div id="summary">
+                            <div class="author">
+                                <a href=""><small>哔哔胥</small></a>
+                                <span><small>刚刚回答</small></span>
+                            </div>
+                            <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                            <ul class="summary_tags">
+                                    <li><a href=""><small>html5</small></a></li>
+                                    <li><a href=""><small>css</small></a></li>
+                                    <li><a href=""><small>javascript</small></a></li>
+                            </ul>
+                        </div>
+                </section>
+                <!--第四条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第五条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第六条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第七条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第八条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第九条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十一条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十二条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十三条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十四条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十五条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十六条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十七条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十八条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第十九条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--第二十条-->
+                <section id="section_1">
+                    <div id="vo_an_vi">
+                        <div class="votes">
+                            0
+                            <br><small>得票</small>
+                        </div>
+                        <div class="answers">
+                            1
+                            <br><small>回答</small>
+                        </div>
+                        <div class="views">
+                            74
+                            <br><small>浏览</small>
+                        </div>
+                    </div>
+                    <div id="summary">
+                        <div class="author">
+                            <a href=""><small>哔哔胥</small></a>
+                            <span><small>刚刚回答</small></span>
+                        </div>
+                        <div class="summary_title">移动端如何实现输入框放在弹起的软键盘上</div>
+                        <ul class="summary_tags">
+                                <li><a href=""><small>html5</small></a></li>
+                                <li><a href=""><small>css</small></a></li>
+                                <li><a href=""><small>javascript</small></a></li>
+                        </ul>
+                    </div>
+                </section>
+
+            </div>
+
+            <!--部分提示-->
+            <div id="news_foot">
+                <p>以上是部分更新,你还可以查看
+                    <button><a href="">全部问题</a></button>
+                    或者
+                    <button><a href="">热门问题</a></button>
+                    列表
+                </p>
+            </div>
+        </div>
+
+        <!--课堂推荐、排行榜等-->
+        <div id="sidebar">
+            <div id="sidebar_words">
+                <a href="">SF技术圈2.0上线你的圈中好友在找你~</a>
+            </div>
+            <div id="ad_1">
+                <a href=""><img src=".\images\threejs.png" alt="three.js可视化入门系列"
+                    height="80px" width="250px"></a>
+            </div>
+            <div id="ad_2">
+                <a href=""><img src=".\images\java.png" alt="Java微服务实践"
+                    height="80px" width="250px"></a>
+            </div>
+
+            <!--讲堂推荐-->
+            <div id="headofranking_list">
+                <span>讲堂推荐<img src=".\images\course.png" alt=""></span>
+                <a href="" id="more_courses"><span >更多</span></a>
+                <div id="rlist">
+                    <div class="line">
+                        <img src=".\images\line.png" alt="" height="350px" width="15px">
+                    </div>
+                    <div id="list_items">
+                        <div id="item">
+                            <span style="color:green"><small>本周二</small></span>
+                            <br>
+                            <div id="profile">
+                                <a href="">
+                                    <img src=".\images\course_1.jpg" alt="" height="40px" width="40px">
+                                </a>
+                            </div>
+                            <div id="item_word">
+                                <a href="">
+                                <div id="course_name">
+                                    Java微服务实践-Spring Cloud系列（一）云原生应用
+                                </div>
+                                </a>
+                                <p>
+                                <span class="authorname">mercyblitz</span>
+                                <span>168人参与</span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div id="item">
+                            <span style="color:green"><small>本周五</small></span>
+                            <br>
+                            <div id="profile">
+                                <a href="">
+                                    <img src=".\images\course_2.jpg" alt="" height="40px" width="40px">
+                                </a>
+                            </div>
+                            <div id="item_word">
+                                <a href="">
+                                <div id="course_name">
+                                    Java微服务实践-Spring Cloud系列（二）配置客户端
+                                </div>
+                                </a>
+                                <p>
+                                <span class="authorname">mercyblitz</span>
+                                <span>166人参与</span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div id="item">
+                            <span style="color:green"><small>本周日</small></span>
+                            <br>
+                            <div id="profile">
+                                <a href="">
+                                    <img src=".\images\course_3.jpg" alt="" height="40px" width="40px">
+                                </a>
+                            </div>
+                            <div id="item_word">
+                                <a href="">
+                                <div id="course_name">
+                                    PHP进阶之路-零基础构建自己的服务治理框架（下）
+                                </div>
+                                </a>
+                                <p>
+                                <span class="authorname">周梦康</span>
+                                <span>58人参与</span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                        <div id="item">
+                            <span style="color:green"><small>本周三</small></span>
+                            <br>
+                            <div id="profile">
+                                <a href="">
+                                    <img src=".\images\course_4.png" alt="" height="40px" width="40px">
+                                </a>
+                            </div>
+                            <div id="item_word">
+                                <a href="">
+                                <div id="course_name">
+                                    用图形数据库处理数十亿复杂、互连接、低结构化的数
+                                </div>
+                                </a>
+                                <p>
+                                <span class="authorname">Michael</span>
+                                <span>6人参与</span>
+                                </p>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--排行榜-->
+            <div id="users_rank_list">
+                <span>排行榜</span>
+                <ul>
+                    <li><a href="" class="a_today">今天·</a></li>
+                    <li><a href="" class="a_notoday">本周·</a></li>
+                    <li><a href="" class=a_notoday>更多</a></li>
+                </ul>
+                <ol id="users_items">
+                    <li>
+                        <img src=".\images\user1.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">精进吧Aaron</a>
+                        <span class="quantity">+79</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user2.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">mindjet</a>
+                        <span class="quantity">73</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user3.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">linshuai</a>
+                        <span class="quantity">68</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user4.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">Tony_Zby</a>
+                        <span class="quantity">+66</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user5.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">zwwill</a>
+                        <span class="quantity">+61</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user6.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">carl_zhao</a>
+                        <span class="quantity">+53</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user7.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">Chaos</a>
+                        <span class="quantity">+48</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user8.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">CRIMX</a>
+                        <span class="quantity">+44</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user9.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">xialeistudio</a>
+                        <span class="quantity">+39</span>
+                    </li>
+                    <li>
+                        <img src=".\images\user10.png" alt="" width="24px" height="24px">
+                        <a href="" class="username">forget</a>
+                        <span class="quantity">+30</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <!--订阅本页-->
+    <div id="subscribe">
+        <span>
+        <a href="">
+        <img src=".\images\wifi.png" alt="">
+        订阅本页RSS
+        </a>
+        </span>
+    </div>
+
+    <!--footer部分-->
+    <div id="bigfoot">
+        <div id="foot">
+                <div class="foot_thin">
+                    <dl>
+                        <dt>网站相关</dt>
+                        <dd><a href="">关于我们</a></dd>
+                        <dd><a href="">服务条款</a></dd>
+                        <dd><a href="">帮助中心</a></dd>
+                        <dd><a href="">声望与权限</a></dd>
+                        <dd><a href="">编辑器语法</a></dd>
+                        <dd><a href="">每周精选</a></dd>
+                        <dd><a href="">社区服务中心</a></dd>
+                    </dl>
+                </div>
+                <div class="foot_thin">
+                    <dl>
+                        <dt>联系合作</dt>
+                        <dd><a href="">联系我们</a></dd>
+                        <dd><a href="">加入我们</a></dd>
+                        <dd><a href="">合作伙伴</a></dd>
+                        <dd><a href="">媒体报道</a></dd>
+                        <dd><a href="">建议反馈</a></dd>
+                    </dl>
+                </div>
+                <div class="foot_thin">
+                    <dl>
+                        <dt>常用链接</dt>
+                        <dd><a href="">笔记插件:Chrome</a></dd>
+                        <dd><a href="">笔记插件:Firefox</a></dd>
+                        <dd><a href="">订阅:问答/文章</a></dd>
+                        <dd><a href="">文档镜像</a></dd>
+                        <dd><a href="">D-Day技术沙龙</a></dd>
+                        <dd><a href="">黑客马拉松Hackathon</a></dd>
+                        <dd><a href="">域名搜索注册</a></dd>
+                        <dd><a href="">周边店铺</a></dd>
+                    </dl>
+                </div>
+                <div class="foot_thin">
+                    <dl>
+                        <dt>社区日志</dt>
+                        <dd><a href="">产品技术日志</a></dd>
+                        <dd><a href="">社区运营日志</a></dd>
+                        <dd><a href="">市场运营日志</a></dd>
+                        <dd><a href="">团队日志</a></dd>
+                        <dd><a href="">社区访谈</a></dd>
+                        <dd>
+                            <a href=""><img src=".\images\Wechat.png" alt="" 
+                                width="28px" height="28px"></a>
+                            <a href=""><img src=".\images\Sina_Microblog.png" alt=""
+                                width="28px" height="28px"></a>
+                            <a href=""><img src=".\images\Github.png" alt=""
+                                width="28px" height="28px"></a>
+                            <a href=""><img src=".\images\Skype.png" alt=""
+                                width="28px" height="28px"></a>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="foot_big">
+                    <dl>
+                        <dt>内容许可</dt>
+                        <dd><span>除特别说明外，用户内容均采用知识共享署名-非商业性使
+                            用-禁止演绎4.0国际许可协议进行许可</span></dd>
+                        <dd><span>本站由 又拍云 提供CDN存储服务</span></dd>
+                        <dd>
+                            <div id="td_code">
+                                <img src=".\images\two-dimension_code.png" alt="">
+                            </div>
+                            <div id="td_code_text">
+                                <p>手机扫一扫</p>
+                                <p>下载官方App</p>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+        </div>
+        <!--Copyright......-->
+        <div class="copyright">
+                <span>Copyright © 2011-2017 SegmentFault. 当前呈现版本 17.06.16</span>
+                <br>
+                <a href="">浙ICP备 15005796号-2&nbsp;</a>
+                <a>浙公网安备&nbsp;33010602002000号&nbsp;</a>
+                <span>杭州堆栈科技有限公司版权所有</span>
+        </div>
+    </div>
+    
+</body>
+</html>

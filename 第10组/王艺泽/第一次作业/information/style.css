@@ -1,0 +1,165 @@
+body{
+    margin: 0;
+}
+
+.div{
+    width: 50%;
+    height: auto;
+    margin: 30px auto;
+    padding: 0px;
+}
+
+.info{
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+
+.infoword{
+    padding: 5px;
+    width: 70%;
+}
+
+img{
+    width: 130px;
+    height: auto;
+    box-shadow: 5px 5px 5px #234624;
+}
+
+.img{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    margin: 5px;
+    width: 130px;
+    height: auto;
+}
+
+.info p, .info h1{
+    font-family: SimSun;
+    margin: 8px;
+}
+
+.selfinfo{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.selfinfo1{
+    padding: 5px;
+    width: 20%;
+    float: left;
+}
+
+.selfinfo1 p{
+    font-family: SimSun;
+    margin: 5px;
+}
+
+.selfinfo2{
+    padding: 5px;
+    width: 75%;
+    float: left;
+}
+
+.selfinfop{
+    font-family: SimSun;
+    margin: 5px;
+    text-decoration: underline;
+}
+
+.skill{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.skill1{
+    padding: 5px;
+    width: 20%;
+    float: left;
+}
+
+.skill1 p{
+    font-family: SimSun;
+    margin: 5px;
+}
+
+.skill2{
+    padding: 5px;
+    width: 75%;
+    float: left;
+}
+
+.skill2 ol{
+    counter-reset: li;
+    list-style: none;
+    font-family: SimSun;
+    margin: 5px;
+}
+
+.skill2 ol li::before{
+    content: "("counter(li)")、";
+    counter-increment: li;
+}
+
+
+.study{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.study1{
+    padding: 5px;
+    width: 20%;
+    float: left;
+}
+
+.study1 p{
+    font-family: SimSun;
+    margin: 5px;
+}
+
+.study2{
+    padding: 5px;
+    width: 75%;
+    float: left;
+}
+
+.study2 ol{
+    font-family: SimSun;
+    margin: 5px;
+}
+
+.comment{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.comment1{
+    padding: 5px;
+    width: 20%;
+    float: left;
+}
+
+.comment1 p{
+    font-family: SimSun;
+    margin: 5px;
+}
+
+.comment2{
+    padding: 5px;
+    width: 75%;
+    float: left;
+}
+
+.comment2 p{
+    font-family: SimSun;
+    margin: 5px;
+}
+
+.hr{
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+}
