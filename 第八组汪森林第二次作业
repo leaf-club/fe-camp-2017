@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>博客</title>
+</head>
+<body background="D:\我\women\messi.jpg" bgproperties="fixed">
+<div id="header" style="background-color:black;width: 1880px;height: 20px">
+	<form style="float: right;">
+		<select name="ex"  onChange="window.open(this.value)">
+			<option value="http://www.shangc.net/news/a/201601/13885.html" selected>messi's prize</option>
+			<option value="https://www.86kx.com/html/2014/0704/56474.html">messi's families</option>
+			<option value="http://ent.qianzhan.com/ent/star/efc17484.html">messi's friend and opponent :cristiao</option>
+		</select>
+<	/form>
+</div>
+<div id="menu" style="background-color:yellow;height:870px;width:300px;float:left;">
+	<img src=" D:\我\women\messi1.jpg" alt="messi" width="300" height="300">
+	<dl> 
+		<dt>梅西:</dt>
+		<dd>--the best football player in the world!!!</dd>
+	</dl>
+</div>
+<div id="container" style="position:absolute;width:500px;height:200px;top:300px;left:700px;background-color: yellow">
+	<div id="container-inner">
+		<div id="header">
+			<div id="header-inner">
+				<div id="header-content">
+					<h1>梅西</h1>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div id="content">
+			<div id="content-inner">
+				<div id="alpha">
+					<div id="alpha-inner">
+						<div id="page-alpha" style="margin-bottom: 2em;">
+							<p>
+							>>梅西
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div id="footer">
+			<div id="footer-content">
+				<p>meixi</p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
