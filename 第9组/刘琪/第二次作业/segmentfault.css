@@ -1,0 +1,453 @@
+/*#foot a,p,span的属性会影响到别的div吗*/
+a {text-decoration: none;color: black;}
+ul {list-style-type: none;margin: 0;padding: 0;}
+
+/*头部属性*/
+#head {
+    width: 1100px;
+    height: 125px;
+    margin:0 auto;
+}
+#div_logo {
+    width:160px;height:80px;float:left;
+}
+#div_logo a {
+    font-size: 1.2em
+}
+#div_nav {
+    /*头部导航栏（nav标签）*/
+    width: 350px;height: 80px;float: left;
+}
+#div_nav a {
+    /*设置成dispaly为block，可以调整水平间距*/
+    font-size: 1.1em;
+    color: grey;
+    width: 60px;
+    display: block;
+    float: left;
+}
+#div_search {
+    width:320px;height: 80px;
+    float: left;height: 80px;
+}
+.search_box {
+    /*在搜索文本框右侧添加放大镜icon*/
+    /*url中路径的\字符需要用转义字符\*/
+    font-size: 1em;
+    background-image: url(.\\images\\magnify_lens.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    border-radius: 5px;
+    padding: 5px 0px;
+}
+#div_log {
+    width:200px;height: 80px;
+    text-align: right;
+    float: right;
+}
+#div_log a {
+    font-size: 1em;
+}
+.sign_in {
+    color: green;
+}
+.sign_up{
+    color: white;
+    background-color: green;
+    padding: 5px 13px;
+    border-radius: 5px;
+}
+/*子头部*/
+#subhead {
+    height: 30px;
+}
+#subhead a{
+    color: grey;
+}
+#languages {
+    width: 900px;
+    float: left;
+}
+#hot_labels {
+    width: 80px;
+    float: right;
+}
+
+
+/*介绍及表单*/
+#container_form {
+    width: 100%;
+    background-color:rgb(2, 59, 38);
+}
+#des_form {
+    width:1100px;
+    height: 430px;
+    margin: 0 auto;
+}
+#description {
+    width: 500px;
+    height: 210px;
+    float: left;
+}
+#description h1 {
+    color: white;
+}
+#description span {
+    color: white;
+}
+#description p {
+    color: white;
+}
+#form_part {
+    /*表单块*/
+    width: 600px;
+    float: right;
+}
+#form_part form {
+    /*表单在块中位置*/
+    position: relative;
+    width: 350px;
+    float: right;
+    top: 20px;
+}
+#form_part div {
+    /*设置文本框上下间隔*/
+    margin: 10px 0px;
+}
+.form_text {
+    /*表单文本框属性*/
+    width: 346px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 8px 0px;
+}
+#id_text_verti_code_tel {
+    width:250px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 8px 0px;
+    margin: 8px 0px;
+    float: left;
+}
+#button_verti_code {
+    height: 36px;
+    margin: 8px 0px;
+    border-radius: 5px;
+}
+#button_signup button {
+    /*注册按钮*/
+    height: 35px;
+    width: 60px;
+    float: right;
+    background-color: green;
+    border: 0px;
+    border-radius: 5px;
+}
+#button_signup a {
+    color: white;
+}
+
+
+/*新闻动态及边幅部分*/
+#news-sidebar {
+    width: 1100px;
+    height: 1600px;
+    margin: 0 auto;
+}
+#news {
+    width: 800px;
+    height: 1600px;
+    float: left;
+}
+/*动态导航栏(ul)属性*/
+#news_nav {
+    width: 800px;
+    margin-top: 20px;
+    margin-left: 0px; 
+}
+#news_nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+#news_nav li {
+    float: left;
+}
+#news_nav a {
+    display: block;
+    padding: 10px 10px;
+    width: 70px;
+    color: green;
+}
+
+/*动态消息得票、回答、浏览*/
+#news_body {
+    width: 800px;
+    height: 1400px;
+}
+section {
+    width: 800px;
+    height: 60px;
+    margin: 10px 0px;
+}
+#vo_an_vi {
+    width: 180px;
+    height: 60px;
+    float: left;
+}
+.votes {
+    width: 60px;
+    float: left;
+    text-align: center;
+}
+.answers {
+    width: 60px;
+    float: left;
+    text-align: center;
+    color: white;
+    background-color: green;
+}
+.views {
+    width: 60px;
+    float: left;
+    text-align: center;
+}
+
+/*简略预览Summary*/
+#summary {
+    width: 620px;
+    height: 60px;
+    float: left;
+}
+.author {
+    width: 200px;
+    height: 18px;
+}
+.author a{
+    color: grey;
+}
+.author span {
+    color: grey;
+}
+.summary_title {
+    height: 42px;
+    width: 380px;
+    font-size: 16px; 
+    float: left;
+    padding: 10px 0px;
+}
+.summary_tags li{
+    float: left;
+}
+.summary_tags a {
+    text-align: center;
+    display: block;
+    color: grey;
+    padding: 10px 0px;
+    width: 40px;
+}
+/*新闻主体底部文字*/
+#news_foot {
+    width: 800px;
+    height: 50px;
+    text-align: center;
+}
+#news_foot button {
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+#news_foot a {
+    color: green;
+    font-size: 14px;
+}
+
+
+/*Sidebar部分*/
+#sidebar {
+    width: 300px;
+    float: right;
+    margin-top: 20px;
+}
+#sidebar_words {
+    width: 220px;
+    height: 50px;
+    background-color: rgb(243, 239, 178);
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+#ad_1 {
+    width: 250px;
+    margin: 10px 25px;
+}
+#ad_2 {
+    width: 250px;
+    margin: 10px 25px;
+}
+/*课堂推荐*/
+#headofranking_list {
+    width: 250px;
+    height: 400px;
+    margin:20px 25px;
+}
+#more_courses {
+    color: green;
+    font-size: 13px;
+    float: right;
+}
+#rlist {
+    height: 350px;
+    margin:20px 0;
+}
+.line {
+    width: 15px;
+    height: 340px;
+    float: left;
+    margin: 5px 0px;
+}
+#list_items {
+    width: 230px;
+    float: left;
+    padding-left: 5px;
+}
+#item {
+    width: 230px;
+    height: 80px;
+    margin-bottom: 9px;
+}
+#profile {
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+#item_word {
+    width: 180px;
+    height: 60px;
+    float: left;
+    padding-left: 10px;
+}
+#item_word a {
+    font-size: 14px;
+}
+#item_word span {
+    font-size: 12px;
+}
+.authorname {
+    color: orange;
+}
+#course_name {
+    width: 180px;
+    float: left;
+}
+
+/*用户排行榜*/
+#users_rank_list {
+    width: 250px;
+    margin: 20px 25px;
+}
+#users_rank_list ul {
+    float: right;
+}
+#users_rank_list li {
+    float: left;
+}
+#users_rank_list a {
+    font-size: 13px;
+    width: 30px;
+}
+.a_today {
+    color: grey;
+}
+.a_notoday {
+    color: green;
+}
+#users_items {
+
+}
+#users_items li {
+    width: 210px;
+    font-size: 14px;
+}
+.username {
+    color: green;
+}
+.quantity {
+    color: grey;
+    float: right;
+    position: relative;
+    top: 10px;
+}
+
+/*订阅本页*/
+#subscribe {
+    width: 1100px;
+    margin: 0 auto;
+    text-align: right;
+}
+#subscribe a {
+    color: grey;
+}
+
+
+/*网页底部*/
+#foot {
+    width: 1100px;
+    height: 300px;
+    margin: auto;
+
+}
+.foot_thin {
+    width: 190px;
+    height: 250px;
+    float: left;
+}
+.foot_big {
+    width: 340px;
+    float: left;
+}
+
+#foot dt {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+#foot dd {
+    font-size: 13px;
+    margin: 6px 0px;
+    width: 340px;
+}
+#foot a {
+    color: grey;
+}
+#foot p {
+    color: grey;
+}
+#foot span {
+    color: grey;
+}
+#td_code {
+   float: left;
+}
+#td_code_text {
+    float: left;
+    margin-left: 10px;
+ }
+ #td_code_text p {
+    color: grey;
+ }
+ 
+ /*Copyright*/
+ .copyright {
+     width: 1100px;
+     margin: auto;
+     text-align: center;
+ } 
+ .copyright span {
+     color: grey;
+     font-size: 13px;
+ }
+ .copyright a {
+    color: grey;
+    font-size: 13px;
+}

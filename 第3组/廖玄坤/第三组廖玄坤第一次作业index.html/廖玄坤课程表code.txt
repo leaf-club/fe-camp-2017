@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/index.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>课程表</title>
+</head>
+<body>
+ <table border="1" bordercolor="blue">
+     <caption>课程表</caption>
+    <colgroup>
+    <col class="dayzore">
+    <col calss="dayone">
+    <col class="daytwo">
+    <col class="daythree">
+    <col class="dayfour">
+    <col class="freeday" span="2">
+   </colgroup>
+   <thead>
+       <tr>
+           <th>日期</th>
+           <th>周一</th>
+           <th>周二</th>
+           <th>周三</th>
+           <th>周四</th>
+           <th>周五</th>
+           <th>周六</th>
+       </tr>
+   </thead>
+   <tbody>
+       <tr>
+           <th>1-2</th>
+           <td>马原</td>
+           <td rowspan="2">大物实验</td>
+           <td colspan="4">无课</td>
+       </tr>
+       <tr>
+           <th>3-4</th>
+           <td>数电</td>
+           <td>复变</td>
+           <td>大物</td>
+           <td colspan="2">无课</td>
+       </tr>
+       <tr>
+           <th>5-6</th>
+           <td>复变</td>
+           <td>大物</td>
+           <td colspan="4无课</td>
+       </tr>
+       <tr>
+           <th>7-8</th>
+           <td>模电</td>
+           <td>无课</td>
+           <td>数电</td>
+           <td colspan="3">无课</td>
+       </tr>
+       <tr>
+           <th>9-12</th>
+           <td>无课</td>
+           <td>电路实验</td>
+           <td>无课</td>
+           <td>模电</td>
+           <td colspan="2"></td>无课
+       </tr>
+   </tbody>
+</table>
+<style>
+    .dayzore{background-color: limegreen}
+    .dayone{background-color:darkmagenta }
+    .daytwo{background-color:aqua }
+    .daythree{background-color:aqua }
+    .dayfour{background-color:aqua }
+    .freeday{background-color:aqua }
+</style>
+ 
+</body>
+</html>

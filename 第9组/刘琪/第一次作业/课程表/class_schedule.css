@@ -1,0 +1,63 @@
+/*使用th时，周一到周日的单元格宽度不按照设定的宽度变化
+原因：
+    或许是表格宽度不够单元格宽度之和
+疑问：在有合并行或合并列的情况下，如何可控地设置百分比宽度或既含有百分比，又含有像素的宽度设置？
+}*/
+body {
+    width: 100%;
+    background-image: url('class_schedule.jpg');
+    background-repeat: repeat-x;
+    background-size: 50% 400px;
+}
+table {
+    height: 60%;
+    width: 1000px;
+    margin:auto;
+    border-collapse: collapse;
+}
+th,td {
+    border: 1px solid #03a5c2;
+    padding:5px 5px 5px 5px;
+    text-align: center;
+}
+caption {
+    font-size: 1.5em;
+}
+.bantian {
+    width: 30px;
+    background-color: rgba(254, 255, 195, 0.8)
+}
+.time {
+    width: 120px;
+    background-color: rgba(254, 255, 195, 0.8)
+}
+.Monday {
+    width: 140px;
+    background-color: rgba(253, 194, 247, 0.815)
+}
+.Tuesday {
+    width: 140px;
+    background-color: rgba(195, 252, 252, 0.87)
+}
+.Wednesday {
+    width: 140px;
+    background-color: rgba(253, 194, 247, 0.815)
+}
+.Thursday {
+    width: 140px;
+    background-color: rgba(195, 252, 252, 0.87)
+}
+.Friday {
+    width: 140px;
+    background-color: rgba(253, 194, 247, 0.815)
+}
+.Saturday {
+    width: 140px;
+    background-color: rgba(195, 252, 252, 0.87)
+}
+.Sunday {
+    width: 140px
+}
+.firstrow {
+    background-color: rgb(166, 255, 166)
+}

@@ -1,0 +1,4 @@
+http://xg.hust.edu.cn:7071/xg/home/login.do
+1.一个背景图拆成了几块分别上传
+2.用的table布局
+3.没有任何注释
