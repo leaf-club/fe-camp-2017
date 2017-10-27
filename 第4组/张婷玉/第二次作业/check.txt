@@ -1,0 +1,5 @@
+网址：http://weibo.com/
+小问题：head中添加过多script导致网页图片出来过慢
+
+网址：https://toefl-registration.ets.org/TOEFLWeb/profile/createProfile.do?reset=Y
+小问题：部分表单应用table编程
