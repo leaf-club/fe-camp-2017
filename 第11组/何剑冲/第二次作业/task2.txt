@@ -1,0 +1,10 @@
+http://www.cnblogs.com/yyfyl/
+1.博文列表<div class="maincontent">部分为了实现布局用了太多无意义的DIV嵌套
+2.<div class="sidebarMain"> 内又嵌套 <div id="leftcontentcontainer"> 
+  内又嵌套其他 DIV 其实完全可以同 newsitem calender并列 无须再嵌套
+3.为了消除浮动有了很多无意义的div clear 其实可以用：after解决 或者甚至用flex布局
+
+http://hubs.hust.edu.cn/
+*账号登入后的页面，不是登录那个页面
+1.将css代码直接写在了html中内联
+2.没有使用语义化标签、大部分直接使用div

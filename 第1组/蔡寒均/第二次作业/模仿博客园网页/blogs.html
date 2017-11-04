@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>南三号博客</title>
+    <style>
+        body{
+            margin: 0;
+            background-color:#f0eef5;
+        }
+        nav{
+            background-color: #169fe6;
+            line-height: 60px;
+            border-style: solid;
+            border: 8px;
+            border-color: #333333;
+
+        }
+        nav ul{
+            margin: 0;
+            width: 1200px;
+            margin:0 auto;
+            padding: 0;
+        }
+        nav ul li{
+            display:inline-block;
+            padding:0 20px 0 20px;
+            color: white;
+        }
+        nav ul li:hover{
+            background-color:#ffffff ;
+            color: #169fe6;
+        }
+        nav ul li a{
+            font-size: 16px;
+            color: inherit;
+            text-decoration: none;
+        }
+        header div a:hover{
+            text-decoration: underline;
+        }
+
+        .blog{
+            background-image: url(header.png);
+            height: 210px;
+            width: 100%;
+            background-repeat: no-repeat;
+            padding-top:105px;
+            padding-left: 460px;
+        }
+        .main{
+            width: 1200px;
+            margin:20px auto ;
+        }
+        .blog-container{
+            margin-left: 0;
+            width: 850px;
+            background-color: #ffffff;
+            padding: 20px;
+        }
+        aside{
+            float: right;
+            width: 290px;
+
+        }
+        section {
+            border-top: 0px;
+            border-bottom: 0px  ;
+            border-left: 0;
+            border-right: 3px;
+            border-color: transparent;
+            border-style: solid;
+        }
+        section:hover{
+            border-color: #ff5e52;
+        }
+        .time{
+            background-color: #45bcf9;
+            color:white;
+            padding: 8px;
+            font-size: 12px;
+        }
+        .time:hover{
+            background-color: #ff5e52;
+        }
+        .content a{
+            color: #9ab26b;
+        }
+        hr{
+            border-width: 1px;
+            color:#bcbcbc;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .table li{
+            display: inline-block;
+            color: #bcbcbc;
+            font-size: 12px;
+        }
+        .table li a{
+            color: #999;
+        }
+        .table{
+            padding: 0;
+        }
+        .notice{
+            background-color: #ffffff;
+        }
+        .notice header{
+            padding-left: 20px;
+            background-color: #169fe6;
+            line-height: 50px;
+            color: white;
+            font-size: 18px;
+        }
+        .top header{
+            padding-left: 20px;
+            background-color: #169fe6;
+            line-height: 50px;
+            color: white;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+        .top ul{
+            background-color: white;
+            padding: 20px;
+            margin: 0;
+        }
+        .top ul li{
+            list-style: none;
+        }
+        .top ul li a {
+            display: block;
+            font-size: 16px;
+            color: #7e8c8d;
+            text-decoration: none;
+            margin-top:10px;
+            margin-bottom: 10px  ;
+            font-family: "Adobe 宋体 Std L";
+        }
+        .top a:hover{
+            color: #ff5e52;
+            text-decoration:underline ;
+        }
+        .notice pre{
+            font-size: 16px;
+            color: #7e8c8d;
+            /*line-height: 20px;*/
+            padding: 20px;
+            font-family: "Adobe 宋体 Std L";
+        }
+        .content a{
+            text-decoration: none;
+        }
+        .content a:hover{
+            text-decoration: underline;
+        }
+        footer{
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 30px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <div class="blog">
+    </div>
+</header>
+<nav>
+    <ul>
+        <li><a href="">博客园</a></li>
+        <li><a href="">首页</a></li>
+        <li><a href="">新随笔</a></li>
+        <li><a href="">管理</a></li>
+    </ul>
+</nav>
+<div class="main">
+    <aside>
+        <div class="notice">
+            <header>公告</header>
+            <pre>昵称：南三号
+园龄：6年6个月
+粉丝：6
+关注：49</pre>
+        </div>
+
+        <div class="top">
+            <header>阅读排行榜</header>
+            <ul>
+                <li><a href="#">1.HTML中用自定义字体实现小图标icon(不是原作, 只是一个研究笔记)(3873)</a></li><hr>
+                <li><a href="#">2.[笔记]ul>li>a做分布时, 让其居中显示效果(2248)</a></li><hr>
+                <li><a href="#">3.【笔记】单步跟踪法与UPX的脱壳理解(757)</a></li><hr>
+                <li><a href="#">4.对类HelloWorld程序中添加一个MessageBox弹窗(228)</a></li><hr>
+                <li><a href="#">5.[兴趣] 改造公交卡(164)</a></li>
+            </ul>
+        </div>
+
+
+    </aside>
+    <div class="blog-container">
+        <section>
+            <h3 class="title"><span class="time">2017年10月14日</span>&nbsp;&nbsp; C# log4net相关配置说明</h3>
+            <p class="content">摘要: 添加相关文件到工程 链接: https://pan.baidu.com/s/1o83Juo6 密码: inkg 下载附件, 把里的log4net.dll 和 log4net.config 复制到工程目录下 添加log4net.dll 引用->添加引用, 把log4net.dll添加到工程下...<a href="#">>阅读全文</a> </p>
+            <ul class="table">
+                <li><span>posted @ 2017-10-14 23:31 南三号</span></li>
+                <li><span>阅读(5)</span></li>
+                <li><span>评论(0)</span></li>
+                <li><a href="#">编辑</a></li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h3 class="title"><span class="time">2016年8月15日</span>&nbsp;&nbsp; [笔记]ul>li>a做分布时, 让其居中显示效果</h3>
+            <p class="content">摘要: 结构: css语法: 关键说明: 1 li的display必须为inline, 这样, 有两个好处, 一个是不用float:left, li就可以是一行显示, 另外发现一个问题, 如果display为inline-block时, chrome和火狐的没问题, 但在IE内核上运行...<a href="#">>阅读全文</a> </p>
+            <ul class="table">
+                <li><span>posted @ 2016-08-15 10:42 南三号</span></li>
+                <li><span>阅读(2)</span></li>
+                <li><span>评论(8)</span></li>
+                <li><a href="#">编辑</a></li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h3 class="title"><span class="time">2016年8月15日</span>&nbsp;&nbsp; 向PE文件中添加一个Section</h3>
+            <p class="content">摘要: 背景之前说过直接向类HelloWorld.exe的可执行文件添加一个MessageBox弹窗, 但有时候, 需要添加的内容太多了, 因为数据与代码一起插入, 以至于可执行文件本身没有足够的空闲空间存放这些内容时, 就需要添加一个Section.确认节区头后面还有空间用工具查看一下最后一个节区头后面是否还有多余的空间, 一般情况都会有的. 但若没有的话, 就要移动节区头后面的文件内容, 这个比较复杂...<a href="#">>阅读全文</a> </p>
+            <ul class="table">
+                <li><span>posted @ 2015-12-21 21:56 南三号</span></li>
+                <li><span>阅读(2)</span></li>
+                <li><span>评论(8)</span></li>
+                <li><a href="#">编辑</a></li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h3 class="title"><span class="time">2016年8月15日</span>&nbsp;&nbsp; [兴趣] 改造公交卡</h3>
+            <p class="content">摘要: 把材料买回来后, 放了一个星期吧, 因为最开始是想着把里面的钱用完了再弄的, 但实在等不及了,就等星期六晚上弄. 好吧, 开始了, 先来张遗照吧在买材料的时候, 得知, 好像羊城通14下半年后发的卡不好改, 因为那些卡的感应能力差了来个全家照第一步 撕掉两面的膜因为后面还需要把芯片浸泡在取芯药水里, 有这两层膜效果会不好哦第二步 找芯片位置两面的膜撕掉后, 就可以用强光照着, 找出芯片的位置, 因...<a href="#">>阅读全文</a> </p>
+            <ul class="table">
+                <li><span>posted @ 2016-03-13 10:07 南三号</span></li>
+                <li><span>阅读(164)</span></li>
+                <li><span>评论(81)</span></li>
+                <li><a href="#">编辑</a></li>
+            </ul>
+        </section>
+        <hr>
+        <section>
+            <h3 class="title"><span class="time">2016年8月15日</span>&nbsp;&nbsp; [笔记] 单步跟踪法与UPX的脱壳理解</h3>
+            <p class="content">摘要: 用PEiD查壳 UPX v0.89.6 - v1.02 / v1.05 - v1.22 这个是入门的壳，只是一个简单的压缩壳用Stud_PE查看PE文件头信息 主要是看一下ImageBase的值 00400000，这是一个16进制数。在后面OD载入后，可以用这个值在内存映像中查看PE文件加载到内存后的情况。 还有EntryPoint的值： 0000E8C0 程序...<a href="#">>阅读全文</a> </p>
+            <ul class="table">
+                <li><span>posted @ 2016-05-31 20:03 南三号</span></li>
+                <li><span>阅读(21)</span></li>
+                <li><span>评论(75)</span></li>
+                <li><a href="#">编辑</a></li>
+            </ul>
+        </section>
+    </div>
+
+</div>
+<footer>
+    Copyright ©2017 南三号
+</footer>
+
+
+</body>
+</html>

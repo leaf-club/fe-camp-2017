@@ -1,0 +1,20 @@
+http://xg.hust.edu.cn:7071/xg/desktop/index.do?tab=index&_tsp_=1509003080053
+点击链接登录后的首页（学工系统首页）
+
+问题一：
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+这段代码中，viewport属性设置了最大最小缩放比，并且user-scalable=no，禁止用户对页面进行缩放，当将浏览器的宽度缩小到一定程度时，虽然下面的内容能换行显示出来，但是页面最上方黑色框框里的
+“首页”“获奖记录”“常用服务”等内容却无法显示，这就导致了在手机上打开学工系统时无法进行操作，很不方便。
+
+问题二：
+代码的<head>部分写了14个script标签，HTML解析器要这所有的script标签中的JS代码都执行完才会将页面加载出来，这样做加载页面的速度就会很慢，会给用户带来不好的体验
+
+
+
+
+http://www.sina.com.cn/
+问题一：
+用了很多的内联样式，代码看起来很乱、很复杂
+
+问题二：
+HTML的布局与script标签嵌得很乱，页面加载时用户体验不好，

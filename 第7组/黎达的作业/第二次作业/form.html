@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <p>*姓名</p>
+    <p>
+   <input required type="text" name="fullname">
+    </p>
+    <p>*性别</p>
+    <p>
+        <input type="radio" name="sex" value="nan">男
+        <input type="radio" name="sex" value="nv">女
+    </p>
+    <p>*出生年月</p>
+    <p>
+    <input required type="month">
+    </p>
+    <p>身高</p>
+    <p>
+    <input type="numble">CM
+    </p>
+    <p>*最高学历</p>
+    <p>
+        <select name="study">
+            <option value="1">本科</option>
+            <option value="2">专科</option>
+            <option value="3">高中</option>
+        </select>
+    </p>
+    <P>婚姻情况</P>
+    <p>
+        <input type="radio" name="marry" value="yi">已婚
+        <input type="radio" name="marry" value="wei">未婚
+    </p>
+    <p>户口所在地</p>
+    <p>
+        <select name="place">
+            <option value="1">北京</option>
+            <option value="2">上海</option>
+            <option value="3">武汉</option>
+            <option value="4">其他</option>
+        </select>
+    </p>
+    <p>*目前居住地</p>
+    <p>
+         <input required>
+    </p>
+    <p>*参加工作时间</p>
+    <p>
+        <input type="date">
+    </p>
+    <p>海外工作经历</p>
+    <p>
+        <input type="radio" name="work" value="wu">无
+        <input type="radio" name="work" value="you">有
+    </p>
+    <p>驾驶证</p>
+    <p>
+        <select name="drive">
+            <option value="1">有</option>
+            <option value="2">无</option>
+        </select>
+    </p>
+    <p>海外生活经验</p>
+    <p>
+        <select name="live">
+            <option value="1">有</option>
+            <option value="2">无</option>
+        </select>
+    </p>
+    <p>*手机</p>
+    <P>
+        <input required pattern="1\d{10}" placeholder="请输入手机号">
+    </P>
+    <p>*电子邮箱</p>
+    <P>
+        <input required type="email">
+    </P>
+    <p>微信</p>
+    <p>
+        <input type="text">
+    </p>
+    <p>QQ</p>
+    <p>
+        <input type="number">
+    </p>
+    <p>一句话介绍</p>
+     <P>
+         <textarea cols="40" row="8"></textarea>
+     </P>
+     <p>
+         <button type="submit">保存</button>
+         <button type="button">取消</button>
+     </p>
+</body>
+</html>
