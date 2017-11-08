@@ -1,0 +1,27 @@
+
+.photo{
+	position: absolute;
+	left: 20px;
+	top: 20px;
+}
+.items{
+	line-height: 20px;
+	margin-left: 300px;
+	color:#09C7F7;
+	font-size: 30px;
+	margin-bottom: 0px;
+	padding: 0px;
+}
+.date{
+	color:#09C7F7;
+	margin-left: 300px;
+	font-size: 20px;
+	margin-bottom: 0px;
+	line-height: 20px;
+	height: 30px;
+}
+.details{
+	margin-left: 330px;
+	margin-bottom:0px;
+	line-height: 15px;
+}
