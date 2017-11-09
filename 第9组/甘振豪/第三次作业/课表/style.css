@@ -1,0 +1,80 @@
+body {
+    background: #92f0eb;
+    text-align: center;
+}
+
+.main {
+    margin: 70px auto 70px auto;
+    width: 1110px;
+    box-shadow: 20px 20px 5px #888888e1;
+    color: white;
+}
+
+caption {
+    background-color: #613be9;
+    line-height: 40px;
+    height: 40px;
+}
+
+.timetable {
+    margin: auto;
+    width: 1110px;
+    border-collapse: collapse;
+    background: url(a.jpg) 100% 100%;
+}
+
+.timetable th {
+    color: rgb(255, 0, 170);
+}
+
+.timetable th:hover {
+    background-color: rgb(103, 17, 129);
+}
+
+.timetable th,
+td {
+    width: 140px;
+    height: 40px;
+}
+
+.timetable,
+th,
+td {
+    border: 1px solid rgba(77, 76, 76, 0.4);
+}
+
+.class-01 {
+    background-color: #7b59f5;
+}
+
+.class-02 {
+    background-color: #59f5c6;
+}
+
+.class-03 {
+    background-color: #a4f844;
+}
+
+.class-04 {
+    background-color: #db59f5;
+}
+
+.class-05 {
+    background-color: #f559c1;
+}
+
+.class-06 {
+    background-color: #ff9900;
+}
+
+.class-07 {
+    background-color: #345f59;
+}
+
+.class-08 {
+    background-color: #9a7dd1;
+}
+.classes:hover{
+    background-color: #1f3862;
+    color: #fff;
+}
