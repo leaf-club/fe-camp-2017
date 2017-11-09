@@ -1,0 +1,27 @@
+#container {
+    margin: 0 auto;
+    width: 900px;
+}
+#basic {
+    width: 300px;
+    height: 1000px;
+    float: left;
+    background-color: rgb(134, 229, 255)
+}
+#detailed {
+    width: 600px;
+    height: 1000px;
+    float: left;
+    background-color: rgb(248, 247, 233)
+}
+#picture {
+    width:200px;
+    height: 320px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+#brief_intro {
+    width: 300px;
+    height: 450px;
+    margin-left: 20px;
+}
