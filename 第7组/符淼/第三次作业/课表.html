@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="课表.css">
+    <title>课表</title>
+</head>
+<body>
+    <header class="main">
+        <h1>课表</h1>
+    </header>
+    <table border="1">
+        <thead class="parts">
+            <tr class="part1">
+                <th>空格</th>
+                <th>周一</th>
+                <th>周二</th>
+                <th>周三</th>
+                <th>周四</th>
+                <th>周五</th>
+            </tr>
+            <tr class="part2">
+                <th class="small">第一二节课</th>
+                <td colspan="3" class="other">思修</td>
+                <td colspan="2" class="other">高数</td>
+            </tr>
+            <tr class="part2">
+                <th class="small">第三四节课</th>
+                <td rowspan="3" class="other">综合英语</td>
+                <td class="other">现代汉语</td>
+                <td colspan="3" class="other">语言学</td>
+            </tr>
+            <tr class="part2">
+                <th class="small" class="other">第五六节课</th>
+                <td colspan="4" class="other">学术概论</td>
+            </tr>
+            <tr class="part2">
+                <th class="small">第七八节课</th>
+                <td colspan="4" class="other">微积分</td>
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>
