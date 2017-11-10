@@ -1,0 +1,68 @@
+body{ 
+    height: 1000px;
+    width: 100%;
+    margin: auto;
+    background-image: url(../img/b.jpg);
+    background-size:120% 120%;
+    background-repeat: no-repeat;
+}
+.resume{
+    background: rgba(205, 220, 57, 0.69);
+    display: block;
+    position: relative;
+    top: 15%;
+    width: 80%;
+    margin: auto;
+}
+header{
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    border-bottom-style: dashed;
+    border-bottom-color: #f1c490;
+
+}
+h1{
+    margin: auto;
+    background-image: url(../img/resume1.jpg);
+    background-size: 105% 540%;
+    background-repeat: no-repeat;
+    background-position-y: -38px;
+    background-position-x: -30px;
+
+}
+.mes{
+    display: inline-flex;
+    margin: auto;
+}
+.left{
+    display: block;
+    padding-left: 20px;
+    padding-right: 100px;
+}
+.right{
+    display: block;
+    padding-left: 110px;
+    padding-right: 20px;
+    position: relative;
+}
+h2{
+    position: relative;
+    background: rgb(74, 74, 74);
+    width: 150px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+img{
+    padding-left: 90px;
+}
+.text
+{
+    padding-left: 20px;
+}
+#tet{
+    padding-left: 20px;
+}
+section{
+    
+}
