@@ -1,0 +1,12 @@
+在网上找了些博客网站作为参考：
+http://www.cnblogs.com/rubylouvre/   司徒正美-博客园
+
+http://www.cnblogs.com/zhongwencool/p/blog_theme.html    
+
+另外参考了此书：
+
+《HTML5网页前端设计》
+-从零开始学习的Web前端开发，无须任何基础，从入门到精通
+作者:周文洁
+出版社:清华大学出版社
+出版时间:2017年06月 

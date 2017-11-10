@@ -1,0 +1,7 @@
+				找茬网址：https://y.qq.com/
+
+   QQ音乐首页是DIV布局，就我目前的水平看来，大体上是挺合理的。但有几处我心存疑惑：
+1、每一个大的版块比如“歌单推荐”、“新歌首发”、“精彩推荐”等这类层级的div下，有两个子版块<div class="section_innner">和<div class="mod_slide_action">。前者是内部各个小块的容器；后者在页面内的显示，其width整个页面的宽度，比其父div的宽度大，这是我认为的不合理之一。
+（当然，我还不清楚mod_slide_action的作用，该div又分为左右两个子版块width相等各占页面一半，这点也是迷惑之处）
+
+2、在“新碟首发”部分，<div class="section_inner">块下的前三个为<div class="index_hd">、<a>和<div class="mod_index_tab">，这是我认为的不合理之二。我认为  <a>更多</a>  放在<div class="mod_index_tab">更加合理，因为在页面的布局上，看起来“更多”与“内地”、“港台”、“欧美”、“日本”、“韩国”在同一个块内<div class="mod_index_tab">。

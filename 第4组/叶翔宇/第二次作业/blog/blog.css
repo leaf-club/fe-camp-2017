@@ -1,0 +1,119 @@
+a{
+    text-decoration : none;
+    color: #333;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+#head{
+    padding: 0 8px;
+    margin: 0 0 0 0;
+    line-height: 22px;
+    font-size: 12px;
+}
+#head_left{
+    float: left;
+    color: #666;
+}
+#head_right{
+    text-align: right;
+}
+#head_right a{
+    color: #5b5b5b;
+    text-decoration : none
+}
+#logo{
+    border: 1px solid #d8dfea;
+    height: 65px;
+    margin: 0px 8px;
+}
+#menu{
+    background-color: #2b6695;
+    margin: 8px 8px;
+    padding: auto;
+    height: 30px;
+    line-height: 30px;
+}
+#menu a{
+    font-size: 14px;
+    padding-left: 24px;
+    text-decoration : none;
+    color: rgb(230, 238, 247);
+}
+#side{
+    position: absolute;
+    left: 10px;
+    top: 142px;
+    width: 160px;
+    margin-top: 0;
+    padding-top: 0;
+    border-right: 1px;
+    border-top: 2px;
+    border-bottom: 2px;
+    border-left: 5px;
+    border-color: #82abc6;
+    border-style: solid;
+}
+#catetitle{
+    background-color: #eff5fc;
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #83abc6;
+}
+#titlename{
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    padding-left: 32px;
+    line-height: 30px;
+}
+#cateitem{
+    background-color: #b9e5ffe5;
+    padding-left: 20px;
+}
+#cateitem li{
+    color: #00003a;
+    font-size: 12px;
+    height: 27px;
+    line-height: 27px;
+    border-bottom: 1px dotted #83abc6;
+    padding-left: 8px;
+    border-right-width: 0;
+}
+#search{
+    position: absolute;
+    right: 7px;
+    width: 300px;
+    top: 174px;
+    background-color: #eef;
+}
+#zhaozhaokan{
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+#google{
+    margin-bottom: 1px;
+    font-size: 14px;
+}
+#choose{
+    border-bottom: 1px solid #c8d3de;
+    font-size: 14px;
+    line-height: 1.5em;
+    background-color: #fff;
+    margin: 10px 320px 0 180px;
+    float: left;
+}
+#chooselist li{
+    margin-left: 5px;
+    border: 1px solid #c8d3de;
+    float: left;
+    width: 50px;
+}
+#footer{
+    position: absolute;
+    bottom: -300px;
+    margin: 0px 320px 0px 180px;
+    border: 1px solid rgb(63, 61, 61);
+    padding-right: 600px;
+}

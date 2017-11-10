@@ -1,0 +1,23 @@
+body{
+    background-color: #dad8d8;
+}
+a{
+    text-decoration: none;
+}
+.input{
+    width: 350px;height:50px;font:24px 宋体;margin-top:8%;
+}
+.login{
+    height:200;width:300;
+}
+#logingo{
+    margin-left:20% ;margin-top:10%;
+}
+#navigation-bar{
+    color:white;
+    text-decoration: none;
+}
+#htmlcourse{
+    background-color: white;
+    width: 20%;
+}
