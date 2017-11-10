@@ -10,14 +10,11 @@ body {
 
 }
 .box1 .resumebox {
-    /*position: absolute;
-    left: 130px;*/
     position: relative;
     margin: 0 auto;
     height: 80%;
     width: 1080px;
-    padding: 30px 40px 30px 40px;
-    /*margin: 0px 20px 0px 20px;*/     
+    padding: 30px 40px 30px 40px;   
 }
 .box1 .resumebox .leftpart {
     width: 500px;
