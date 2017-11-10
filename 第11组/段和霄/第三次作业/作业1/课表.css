@@ -1,0 +1,66 @@
+html,
+body{
+    width: 100%;
+    height:100%;
+    margin:0;
+    background:url(bg.jpg);
+    
+}
+table{
+    font-size: 20px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 50px;
+    font-family: cursive;
+    border-collapse:collapse;
+    width: 80%;
+    
+}
+.top{
+   
+    background:rgb(178, 180, 184);
+    font-family: 'Indie Flower', cursive;
+    height: 80px;
+}
+
+.left{
+ 
+    background:rgb(184, 178, 178);
+    
+    text-align: center;
+}
+th{
+    height: 50px;
+}
+.title{
+    font-size: 50px;
+    font-family:Microsoft Yahei;
+}
+.subjects{
+    border: 2px solid chocolate;
+    font-family: Microsoft Yahei;
+    background: rgb(231, 231, 152);
+}
+a:link,a:visited{
+display:block;
+font-weight:bold;
+margin-left:auto;
+margin-right:auto;
+font-size: 25px;
+font-family: 'Indie Flower', cursive;
+color:rgb(74, 74, 236);
+
+width:120px;
+text-align:center;
+padding:4px;
+text-decoration:none;
+}
+
+a:hover,a:active{
+background-color:#7A991A;
+}
+
+.time{
+    font-family:'Pacifico', cursive;
+    background: yellowgreen;
+}
