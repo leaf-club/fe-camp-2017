@@ -1,0 +1,87 @@
+body{
+    height: 800px;
+    width: 100%;
+    margin: auto;
+    background-image:url(../img/timetable.jpg), url(../img/border-bottom.jpg);
+    display: block;
+    /* height: 100%; */
+    background-size: 100% 100%;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+}
+.timetable{
+    top: 25%;
+    margin: auto;
+    position: relative; 
+}
+/* 调整课表位置 */
+.timetable .tab{
+    margin: auto;
+    position: relative;
+    width: 930px;
+    height: 350px;
+}
+/* 边缘表格格式 */
+th{
+    background: rgba(43, 163, 220, 0.4);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: 100px;
+    height: 45px;
+}
+/* 调整课表表格格式 */
+td{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    height: 45px;
+}
+#am {
+    background: rgba(43, 163, 220, 0.4);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#pm{
+    background: rgba(43, 163, 220, 0.4);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+#mid{
+    background: rgba(43, 163, 220, 0.4);
+    
+}
+.mornig{
+    text-align: center;
+}       
+/* 信号与系统 */
+.sig{
+    background: rgba(180, 187, 46, 0.4);
+}
+/* 复变函数与积分变换 */
+.math{
+    background: rgba(107, 162, 224, 0.4);
+}
+/* 马克思主义基本原理 */
+.max{
+    background: rgb(235, 29, 15);
+}
+/* 应用光学 */
+.ray{
+    background: rgba(255, 255, 25, 0.4)
+}
+/* 大学物理 */
+.phy{
+    background: rgba(80, 162, 195, 0.4);
+}
+/* 电路理论 */
+.ele{
+    background: rgba(36, 241, 127, 0.4);
+}
