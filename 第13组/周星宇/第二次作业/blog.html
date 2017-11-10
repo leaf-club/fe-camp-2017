@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .body {
+            background: rgba(138, 124, 128, 0.507);
+            margin: 0;
+        }
+
+        .title-bar {
+            background: gray;
+            position: relative;
+            height: 50px;
+        }
+
+        .title {
+            background: black;
+            color: brown;
+            position: absolute;
+            height: 50px;
+            width: 70px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        .title-word {
+
+            height: 50px;
+            margin: auto;
+
+        }
+
+        .user {
+            position: absolute;
+            left: 1100px;
+            height: 50px;
+            line-height: 50px;
+
+        }
+
+        .log-register {
+            width: 100px;
+            margin: 0;
+        }
+
+        .log-register li {
+            display: inline;
+            padding: 5px;
+
+        }
+
+
+
+        .menu {
+            background: white;
+            margin: 0;
+            padding: 0;
+            height: 40px;
+            line-height: 40px;
+        }
+
+        .menu li {
+            display: inline;
+            padding: 10px;
+        }
+
+        .blog-list {
+            position: relative;
+            left: 50px;
+            width: 850px;
+            margin: 20px 0;
+        }
+
+        .blog {
+            position: relative;
+            border-color: rgb(202, 200, 200);
+            border-width: 1px;
+            border-style: solid;
+            background: white;
+            width: 850px;
+            height: 200px;
+            margin: 5px 0;
+
+        }
+
+        .blog dt {
+            position: absolute;
+            top: 25px;
+
+            height: 150px;
+            width: 200px;
+            border-right: 2px gray dashed;
+            text-align: center;
+        }
+
+        .blog dd {
+            margin: 0 250px;
+        }
+
+        .expert {
+            position: relative;
+            border-color: rgb(202, 200, 200);
+            border-width: 1px;
+            border-style: solid;
+            background: white;
+            left: 920px;
+            bottom: 429px;
+            width: 300px;
+            height: 300px;
+
+        }
+
+        .classify {
+            position: relative;
+            border-color: rgb(202, 200, 200);
+            border-width: 1px;
+            border-style: solid;
+            background: white;
+            left: 920px;
+            bottom: 423px;
+            width: 300px;
+            height: 200px;
+
+        }
+
+        .classify dt {
+            position: absolute;
+            left: 25px;
+            border-bottom: 2px gray dashed;
+            width: 250px;
+        }
+
+        .classify dd {
+            position: absolute;
+
+            top: 65px;
+            width: 250px;
+            left: 15px;
+        }
+
+        .book {
+            position: relative;
+            border-color: rgb(202, 200, 200);
+            border-width: 1px;
+            border-style: solid;
+            background: white;
+            left: 920px;
+            bottom: 417px;
+            width: 300px;
+            height: 320px;
+        }
+
+        .book-dt {
+            position: absolute;
+            left: 25px;
+            border-bottom: 2px gray dashed;
+            width: 250px;
+        }
+
+        .book-dl {
+            position: relative;
+            height: 120px;
+            margin: 0px;
+            top: 60px;
+        }
+
+        .bookpicture {
+            position: relative;
+            width: 100px;
+            border-right: 2px gray dashed;
+        }
+
+        .bookname {
+            position: relative;
+            bottom: 100px;
+            margin: 0 150px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .newexpert {
+            position: relative;
+            border-color: rgb(202, 200, 200);
+            border-width: 1px;
+            border-style: solid;
+            background: white;
+            left: 920px;
+            bottom: 410px;
+            width: 300px;
+            height: 320px;
+        }
+
+        .newexpert-dt {
+            position: absolute;
+            left: 25px;
+            border-bottom: 2px gray dashed;
+            width: 250px;
+        }
+
+        .newexpert-dl {
+            position: relative;
+            height: 120px;
+            margin: 0px;
+            top: 60px;
+        }
+
+        .newexpertpicture {
+            position: relative;
+            width: 100px;
+            border-right: 2px gray dashed;
+        }
+
+        .newexperttext {
+            position: relative;
+            bottom: 100px;
+            margin: 0 150px;
+            width: 50px;
+            text-align: center;
+        }
+
+        .repository {
+            position: relative;
+            border-color: rgb(202, 200, 200);
+            border-width: 1px;
+            border-style: solid;
+            background: white;
+            left: 920px;
+            bottom: 402px;
+            width: 300px;
+            height: 220px;
+        }
+
+        .repository-dt {
+            position: absolute;
+            left: 25px;
+            border-bottom: 2px gray dashed;
+            width: 250px;
+        }
+
+        .repository-dd {
+            position: absolute;
+            top: 50px;
+            width: 300px;
+        }
+
+        .repository-ul {
+            padding: 10px;
+        }
+
+        .repository-list {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 200px;
+            border-bottom: 2px gray dashed;
+            list-style-type: none;
+        }
+
+        .ranking {
+            position: relative;
+            border-color: rgb(202, 200, 200);
+            border-width: 1px;
+            border-style: solid;
+            background: white;
+            left: 920px;
+            bottom: 394px;
+            width: 300px;
+            height: 220px;
+        }
+
+        .ranking-dt {
+            position: absolute;
+            left: 25px;
+            border-bottom: 2px gray dashed;
+            width: 250px;
+        }
+
+        .ranking-dd {
+            position: absolute;
+            top: 50px;
+            width: 300px;
+        }
+
+        .ranking-ol {
+            padding: 10px;
+        }
+
+        .ranking-list {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            width: 200px;
+            border-bottom: 2px gray dashed;
+        }
+
+        .contact {
+            position: relative;
+            border-color: rgb(202, 200, 200);
+            border-width: 1px;
+            border-style: solid;
+            background: white;
+            left: 920px;
+            bottom: 385px;
+            width: 300px;
+            height: 220px;
+        }
+
+        .contact-dt {
+            position: absolute;
+            left: 25px;
+            border-bottom: 2px gray dashed;
+            width: 250px;
+        }
+
+        .contact-dd {
+            position: absolute;
+            top: 55px;
+            width: 300px;
+        }
+    </style>
+    <title>Blog</title>
+</head>
+
+<body class="body">
+    <!--标题栏-->
+    <div class="title-bar">
+        <div class="title">
+            <h2 class="title-word">博客</h2>
+        </div>
+        <div class="user">
+            <ul class="log-register">
+                <li>
+                    <a>登录</a>
+                </li>
+                |
+                <li>
+                    <a>注册</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--菜单栏-->
+    <div>
+        <ul class="menu">
+            <li>
+                <a>首页</a>
+            </li>|
+            <li>
+                <a>博客专栏</a>
+            </li>|
+            <li>
+                <a>博客专家</a>
+            </li>|
+            <li>
+                <a>行家</a>
+            </li>|
+            <li>
+                <a>观点</a>
+            </li>|
+            <li>
+                <a>排行榜</a>
+            </li>|
+            <li>
+                <a>我的博客</a>
+            </li>
+        </ul>
+    </div>
+    <!--博客列表-->
+    <div class="blog-list">
+        <dl class="blog">
+            <dt>
+                <p style="margin:0">
+                    <img src="picture.jpg" width="150px" height="100px">
+                </p>
+                <p style="margin:0">用户名</p>
+            </dt>
+            <dd>
+                <h4>标题</h4>
+                <p style="width:500px">内容</p>
+            </dd>
+        </dl>
+        <dl class="blog">
+            <dt>
+                <p style="margin:0">
+                    <img src="picture.jpg" width="150px" height="100px">
+                </p>
+                <p style="margin:0">用户名</p>
+            </dt>
+            <dd>
+                <h4>标题</h4>
+                <p style="width:500px">内容</p>
+            </dd>
+        </dl>
+    </div>
+    <!--专家推荐-->
+    <div class="expert">
+        <dl>
+            <dt>
+                <p style="margin:0;position:relative;top:10px;text-align: center">
+                    <img src="picture.jpg" width="200px" height="150px">
+                </p>
+                <h4 style="text-align: center">专家名</h4>
+                <p style="width:250px;margin:5px 30px">内容</p>
+            </dt>
+            <dd></dd>
+        </dl>
+    </div>
+
+    <!--博文分类-->
+    <div class="classify">
+        <dl>
+            <dt>
+                <h4 style="margin:10px">博文分类</h4>
+            </dt>
+            <dd>
+                <table>
+                    <tr>
+                        <td>
+                            <a>移动开发</a>
+                        </td>
+                        <td>
+                            <a>架构</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>云计算/大数据</a>
+                        </td>
+                        <td>
+                            <a>互联网</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>运维</a>
+                        </td>
+                        <td>
+                            <a>数据库</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>前端</a>
+                        </td>
+                        <td>
+                            <a>编程语言</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a>研发管理</a>
+                        </td>
+                        <td>
+                            <a>综合</a>
+                        </td>
+                    </tr>
+                </table>
+            </dd>
+        </dl>
+    </div>
+
+    <!--专家图书推荐-->
+    <div class="book">
+        <dl>
+            <dt class="book-dt">
+                <h4 style="margin:10px">专家图书推荐</h4>
+            </dt>
+            <dd>
+                <dl class="book-dl">
+                    <dt class="bookpicture">
+                        <img src="picture.jpg" width=90px height=100>
+                    </dt>
+                    <dd class="bookname">
+                        <p>书名</p>
+                    </dd>
+                </dl>
+                <dl class="book-dl">
+                    <dt class="bookpicture">
+                        <img src="picture.jpg" width=90px height=100>
+                    </dt>
+                    <dd class="bookname">
+                        <p>书名</p>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+    </div>
+    <!--最新专家-->
+    <div class="newexpert">
+        <dl>
+            <dt class="newexpert-dt">
+                <h4 style="margin:10px">最新专家</h4>
+            </dt>
+            <dd>
+                <dl class="newexpert-dl">
+                    <dt class="newexpertpicture">
+                        <img src="picture.jpg" width=90px height=100>
+                    </dt>
+                    <dd class="newexperttext">
+                        <p>作者</p>
+                        <p style="font-size:smaller">简介</p>
+                    </dd>
+                </dl>
+                <dl class="newexpert-dl">
+                    <dt class="newexpertpicture">
+                        <img src="picture.jpg" width=90px height=100>
+                    </dt>
+                    <dd class="newexperttext">
+                        <p>作者</p>
+                        <p style="font-size:smaller">简介</p>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+    </div>
+    <!--推荐知识库-->
+    <div class="repository">
+        <dl>
+            <dt class="repository-dt">
+                <h4 style="margin:10px">推荐知识库</h4>
+            </dt>
+            <dd class="repository-dd">
+                <ul class="repository-ul">
+                    <li class="repository-list">
+                        <a>标题</a>
+                    </li>
+                    <li class="repository-list">
+                        <a>标题</a>
+                    </li>
+                    <li class="repository-list">
+                        <a>标题</a>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+    </div>
+    <!--热文排行榜-->
+    <div class="ranking">
+        <dl>
+            <dt class="ranking-dt">
+                <h4 style="margin:10px">推荐知识库</h4>
+            </dt>
+            <dd class="ranking-dd">
+                <ol class="ranking-ol">
+                    <li class="ranking-list">
+                        <a>标题</a>
+                    </li>
+                    <li class="ranking-list">
+                        <a>标题</a>
+                    </li>
+                    <li class="ranking-list">
+                        <a>标题</a>
+                    </li>
+                    </ul>
+            </dd>
+        </dl>
+    </div>
+    <!--联系我们-->
+    <div class="contact">
+        <dl>
+            <dt class="contact-dt">
+                <h4 style="margin:10px">联系我们</h4>
+                <dd class="contact-dd">
+                    <p><a>首页投稿</a></p>
+                    <p><a>官方博客</a></p>
+                    <p><a>客服</a></p>
+                    <p><a>QQ群号</a></p>
+                </dd>
+        </dl>
+    </div>
+</body>
+
+</html>

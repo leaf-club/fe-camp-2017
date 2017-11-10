@@ -1,0 +1,382 @@
+<!--
+    博客网址：https://blog.dandyweng.com/
+-->
+<!doctype html>
+<html lang="zh-cmn-Hans">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="user-scalable=no,width=device-width,initial-scale=1">
+	<link rel="icon" href="https://raw.githubusercontent.com/azstaylorswift13/The-Great-Gatsby/master/favicon.png" />
+	<title>静态仿Dandy's Blog</title>
+	<style>
+		html,
+		body,
+		h4 {
+			margin: 0;
+			padding: 0;
+		}
+
+		.left-side {
+			float: left;
+			width: 40%;
+			background-image: url(./img/background.jpg);
+			background-size: cover;
+			color: #000;
+			font-size: 12px;
+		}
+
+		.right-side {
+			float: right;
+			width: 60%;
+			margin-bottom: 10px;
+		}
+
+		.head-portrait,
+		.travel-pictures,
+		.widget-footer,
+		.more,
+		.location,
+		.left_side,
+		.url_image,
+		.url_image img {
+			text-align: center;
+		}
+
+		.head-portrait img {
+			width: 100px;
+			height: 100px;
+			border-radius: 100px;
+		}
+
+		.travel-pictures {
+			margin-top: 20px;
+		}
+
+		.news {
+			margin-bottom: 30px;
+		}
+
+		.url_image {
+			text-align: right;
+		}
+
+		.url_div {
+			float: left;
+			width: 60%;
+			margin-bottom: 32px;
+		}
+
+		li {
+			list-style-type: none;
+			display: inline
+		}
+
+		a img {
+			width: 24%;
+			height: auto;
+		}
+
+		a:link {
+			text-decoration: none;
+			color: #000;
+		}
+
+		.left-side a:visited {
+			color: white;
+		}
+
+		.right-side a:visited {
+			color: #000;
+		}
+
+		.url_image {
+			float: right;
+			width: 40%;
+		}
+
+		.url_image img {
+			margin: 10px 20px 10px 20px;
+			width: 80%;
+			height: 160px;
+			border-radius: 4px;
+		}
+
+		.left_side {
+			float: left;
+			width: 10%;
+		}
+
+		.left_side img {
+			width: 50%;
+			height: 50%;
+			border-radius: 50%;
+		}
+
+		.right_side {
+			float: left;
+			width: 90%;
+		}
+
+		.travel-pictures {
+			margin-top: 80px;
+		}
+
+		.comments-list {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="left-side">
+			<div style="margin:5% 5% 0 5%;">
+				<div class="head-portrait">
+					<img src="./img/square.jpg">
+					<h2>
+						<a href="https://blog.dandyweng.com/">翁天信的博客</a>
+					</h2>
+					<h3>Dandy's Blog</h3>
+				</div>
+
+				<div class="introduction">
+					<section class="intro">
+						<p>我是一个 21 岁的 homeschooler，爱好旅行以及一切富有创造性的事物，尤其是摄影、设计和编程。这个世界就是我的学校。学自己之所想所爱。自由的身心定能使我成为一个一直朝前行走的行者。</p>
+					</section>
+
+					<section class="location">
+						<span>旅行途中，最近出现在</span>
+						<p>Châteauponsac, Limousin, France</p>
+					</section>
+
+					<section class="comments">
+						<div class="comments-list">
+							<li id="comment-5" title="七小时前在山东济南发布">
+								<div class="left_side">
+									<img src="./img/default.png" class="comment" alt="翁某涛的头像">
+								</div>
+								<div class="right_side">
+									<h4>翁某涛</h4>
+									<p>很羡慕你有很多时间做自己想做的事情，我也一直想写一个微信小程序作为自己的博客，无奈课业负担比较大。你的主页和小程序设计很好，不小程… </p>
+								</div>
+							</li>
+							<li id="comment-4" title="九小时前在江苏南通发布">
+								<div class="left_side">
+									<img src="./img/default.png" class="comment" alt="Slash的头像">
+								</div>
+								<div class="right_side">
+									<h4>slashyouth</h4>
+									<p>iPhoneX出来你会不会去买下它 体验一下 你现在用的好像是7 吧 还有个问题 你的外语水平咋样 包括任何语言 你都可以说说… </p>
+								</div>
+							</li>
+							<li id="comment-3" title="昨天下午在成都发布">
+								<div class="left_side">
+									<img src="./img/default.png" class="comment" alt="May的头像">
+								</div>
+								<div class="right_side">
+									<h4>May</h4>
+									<p>活出了生活的态度！！！！哈哈哈哈哈哈哈哈哈！！！！！！ </p>
+								</div>
+							</li>
+							<li id="comment-2" title="昨天下午在成都发布">
+								<div class="left_side">
+									<img src="./img/default.png" class="comment" alt="二呆的头像">
+								</div>
+								<div class="right_side">
+									<h4>二呆</h4>
+									<p>你好呀 我看了你的摄影网站 你最后的地图是直接SVG画的 还是用的d3之类的js啊。 </p>
+								</div>
+							</li>
+							<li id="comment-1" title="昨天下午在澳大利亚  Burwood 发布">
+								<div class="left_side">
+									<img src="./img/default.png" class="comment" alt="刘颜的头像">
+								</div>
+								<div class="right_side">
+									<h4>刘颜</h4>
+									<p>你好，请问你的个人简历scroll down这一块是怎么实现的？是不是用到scroll事件和mousewheel事件？谢谢 </p>
+								</div>
+							</li>
+						</div>
+						<div class="more">
+							<a href="#/messages/">查看更多</a>&nbsp;&nbsp;&nbsp;
+							<a href="#/messages/">写新留言</a>
+						</div>
+					</section>
+
+					<section class="widget-gallery">
+						<div class="travel-pictures">
+							<a href="http://camarts.cn/4235">
+								<img src="./img/01.jpg">
+							</a>
+							<a href="http://camarts.cn/3430">
+								<img src="./img/02.jpg">
+							</a>
+							<a href="http://camarts.cn/1427">
+								<img src="./img/03.jpg">
+							</a>
+							<a href="http://camarts.cn/1241">
+								<img src="./img/04.jpg">
+							</a>
+							<a href="http://camarts.cn/3785">
+								<img src="./img/05.jpg">
+							</a>
+							<a href="http://camarts.cn/1503">
+								<img src="./img/06.jpg">
+							</a>
+							<a href="http://camarts.cn/2851">
+								<img src="./img/07.jpg">
+							</a>
+							<a href="http://camarts.cn/461">
+								<img src="./img/08.jpg">
+							</a>
+							<a href="http://camarts.cn/2787">
+								<img src="./img/09.jpg">
+							</a>
+							<a href="http://camarts.cn/1374">
+								<img src="./img/10.jpg">
+							</a>
+							<a href="http://camarts.cn/523">
+								<img src="./img/11.jpg">
+							</a>
+							<a href="http://camarts.cn/1271">
+								<img src="./img/12.jpg">
+							</a>
+							<a href="http://camarts.cn/858">
+								<img src="./img/13.jpg">
+							</a>
+							<a href="http://camarts.cn/2146">
+								<img src="./img/14.jpg">
+							</a>
+							<a href="http://camarts.cn/549">
+								<img src="./img/15.jpg">
+							</a>
+							<a href="http://camarts.cn/3940">
+								<img src="./img/16.jpg">
+							</a>
+							<a href="http://camarts.cn/549">
+								<img src="./img/17.jpg">
+							</a>
+							<a href="http://camarts.cn/3940">
+								<img src="./img/18.jpg">
+							</a>
+						</div>
+						<p style="text-align:center">以上作品精选自我的摄影网站 Camarts。
+							<a href="http://www.camarts.cn/" target="_blank">浏览更多</a>
+						</p>
+					</section>
+
+					<footer class="widget-footer">
+						<p>© Dandy's Blog 2011 - 2017
+							<br>Powered by WordPress.
+							<a href="https://blog.dandyweng.com/changelogs" title="查看网页开发更新日志" style="color:white">Designed and developed by Dandy Weng.</a>
+						</p>
+					</footer>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="right-side">
+			<div style="margin:1% 1% 0 5%;">
+				<div class="news">
+					<div class="url_div">
+						<h2>
+							<a href="https://blog.dandyweng.com/2017/10/experiencing-wechat-mini-program/">微信小程序初体验</a>
+						</h2>
+						<p>今年微信总算是对个人开发者开放了小程序的部分功能，虽然有着诸多限制，但总算允许以个人名义发布了，于是我开始给自己开发一个小程序版的博客。</p>
+						<br>
+						<span>
+							<time datetime="2017 年 10 月 1 日 08:28">三个星期前</time>发布 | 12 条评论</span>
+					</div>
+					<div class="url_image">
+						<a href="https://blog.dandyweng.com/2016/09/develop-a-geolocation-checkin-app-with-workflow/">
+							<img src="./img/a1.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="news">
+					<div class="url_div">
+						<h2>
+							<a href="https://blog.dandyweng.com/2017/09/build-a-diy-iot-device-with-arduino-and-raspberry-pi/">自己动手打造智能物联网设备</a>
+						</h2>
+						<p>自从前段时间研究了智能家居设备之后，我便迷上了物联网和开源硬件。玩遍了市面上各种常见的物联网产品，总觉得各有不足，于是我突发奇想：干脆自己做一个！</p>
+						<br>
+						<span>
+							<time datetime="2017 年 9 月 10 日 15:00">一个月前</time>发布 | 18 条评论</span>
+					</div>
+					<div class="url_image">
+						<a href="https://blog.dandyweng.com/2016/09/develop-a-geolocation-checkin-app-with-workflow/">
+							<img src="./img/a2.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="news">
+					<div class="url_div">
+						<h2>
+							<a href="https://blog.dandyweng.com/2017/08/my-smart-home-experiences-and-hacks-with-apple-homekit/">HomeKit 智能家居深入体验</a>
+						</h2>
+						<p>作为一个从小就爱捣腾数码产品的人，我对智能家居自然有着浓厚的兴趣。最近家里重新装修，便换上了批智能家居设备，我也借此机会对这个新兴领域深入研究了一番。</p>
+						<br>
+						<span>
+							<time datetime="2017 年 8 月 8 日 16:55">三个月前</time>发布 | 20 条评论</span>
+					</div>
+					<div class="url_image">
+						<a href="https://blog.dandyweng.com/2016/09/develop-a-geolocation-checkin-app-with-workflow/">
+							<img src="./img/a3.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="news">
+					<div class="url_div">
+						<h2>
+							<a href="https://blog.dandyweng.com/2017/02/nine-months-of-work/">九个月的努力</a>
+						</h2>
+						<p>在过去九个月里，我一直在忙着做个小项目。经常关注我动态的朋友们应该已经知道我做的是一个社交 App，但至于它是什么样的，我一直有意保密，所以真正了解细节的人屈指可数。不过随着第一个版本的开发工作即将完成，现在是时候揭开它的神秘面纱了。</p>
+						<br>
+						<span>
+							<time datetime="2017 年 2 月 28 日 15:10">八个月前</time>发布 | 132 条评论</span>
+					</div>
+					<div class="url_image">
+						<a href="https://blog.dandyweng.com/2016/09/develop-a-geolocation-checkin-app-with-workflow/">
+							<img src="./img/a4.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="news">
+					<div class="url_div">
+						<h2>
+							<a href="https://blog.dandyweng.com/2016/09/develop-a-geolocation-checkin-app-with-workflow/">Workflow 实现签到应用客户端</a>
+						</h2>
+						<p>Workflow 是 iOS 平台里一个扩展性极强的自动流程 app，经过一段时间的体验，我发现可以用它实现一些原本需要真正的编程语言才能实现的东西，比如一个记录当前地理位置的应用。</p>
+						<br>
+						<span>
+							<time datetime="2016 年 9 月 13 日 10:41"> 2016 年 9 月 13 日</time>发布 | 53 条评论</span>
+					</div>
+					<div class="url_image">
+						<a href="https://blog.dandyweng.com/2016/09/develop-a-geolocation-checkin-app-with-workflow/">
+							<img src="./img/a5.jpg">
+						</a>
+					</div>
+				</div>
+				<div>
+					<nav class="url_div">
+						<button type="button">
+							<a href="https://blog.dandyweng.com/page/2/">下一页</a>
+						</button>
+						<br>
+						<br>
+					</nav>
+					<footer class="url_image">
+						<br>
+						<br>
+						<br>
+						<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">沪 ICP 备 14026031 号</a>
+					</footer>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

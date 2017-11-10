@@ -1,0 +1,271 @@
+body {
+    background-color: #f5f5d5;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style-type: square;
+}
+
+/*实现浏览器界面横向收缩时先收缩到一定比例之后再overflow hidden*/
+/*
+width：...
+min-width: ...
+max-width: ...
+*/
+
+#page {
+    width: 85%;
+    min-width: 780px;
+    max-width: 1260px;
+    padding: 10px;
+    margin: auto;
+}
+
+header {
+    height: 50px;
+    border-bottom: solid#e3e3d8 1px;
+    margin: 10px; 
+}
+
+header h3 {
+    height: 50px;
+    line-height: 50px;
+    margin: 0px;
+    float: left;
+    color: #556677;
+    font-family: Georgia, serif;
+    /*letter-spacing:1px;*/
+}
+
+header a {
+    float: right;
+    padding: 9px 0px;
+    margin-right: 20px; 
+    height: 32px;
+    width: 32px; 
+    background: url('static/feed.png') 0px 9px;
+    background-repeat: no-repeat;
+    color: transparent;
+}
+
+header form {
+    float: right;
+    height: 26px;
+    padding: 12px;
+}
+
+header #text {
+    width: 180px;
+    height: 22px;
+    padding: 1px 0px;;
+    position: relative;
+    top: -9.5px;
+    border-bottom: solid #e3e3d8 1px; 
+    border-left: solid #e3e3d8 1px;
+    border-top: solid #e3e3d8 1px;
+    border-right-width: 0px;
+}
+
+header #submit {
+    height: 24px;
+    border-bottom: solid #e3e3d8 1px; 
+    border-right: solid #e3e3d8 1px;
+    border-top: solid #e3e3d8 1px;
+    padding: 0px;
+    width: 27px;
+    position: relative;
+    right: 5px;
+} 
+
+main {
+    min-width: 780px;
+    max-width: 1260px;
+    height: 861.4px;
+}
+
+main #main_content {
+    width: 64%;
+    min-width: 470px;
+    max-width: 740px;
+    position: relative;
+    margin-left: 3%;
+    float: left;
+    font-family: Georgia, serif;
+}
+main #main_content #top h2 {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', Arial, 'Lucida Grande', Verdana, Lucida, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 50px;
+    margin: 15px 0px 10px;   
+    border-bottom: solid #e3e3d8 1px;
+}
+
+main #main_content #top_content {
+    margin-bottom: 30px;
+}
+
+main #main_content #top_content p {
+    line-height: 35px;
+    margin: 0px;
+    margin-left: 20px;
+}
+
+main #main_content #label {
+    position: absolute;
+    right: 0px;
+    margin: 0px 30px 0px 0px;
+    font-size: 18px;
+    font-family: Georgia, serif;
+}
+
+main #main_content #label a {
+    color: orange;
+}
+
+main #main_content #label a:hover {
+    text-decoration: underline;
+}
+
+main #main_content #abstract {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    position: relative;
+}
+
+main #main_content #link a {
+    font-size: 18px;
+    color: green;
+}
+
+main #main_content #link a:hover {
+    color: black;
+}
+
+main #main_content #time {
+    padding: 5px 0px 0px 20px;
+    border-top: solid #e3e3d8 1px;
+    font-size: 14px;
+}
+
+main #main_content #articles {
+    margin-top: 44px;
+    font-family: Georgia, serif;
+}
+
+main #main_content #articles h2 {
+    font-weight: 500;
+    margin: 0px 0px 4px;
+    border-bottom: solid #e3e3d8 1px; 
+}
+
+main #main_content #articles ul {
+    list-style-type: square;
+    margin: 0px 0px 0px 40px;
+    padding: 0px;
+}
+main #main_content #articles li {
+    line-height: 35px;
+    height: 35px;
+    font-size: 18px;
+}
+
+main #main_content #articles span {
+    color: #7a7a6a;
+}
+
+main #main_content #articles a {
+    color: #556677;
+}
+
+main #main_content #articles a:hover {
+    color: black;
+}
+
+main #main_content #ads {
+    margin:20px 0px; 
+}
+
+main #main_content #ads img {
+    width: 100%;
+    max-width: 100%;
+    height: 78px;
+}
+
+main #main_content #ads p {
+    margin: 0px;
+}
+
+main #aside {
+    margin-right: 33px;
+    padding: 6px;
+    float: right;
+    font-family: Georgia, serif;
+    max-width: 300px;
+    min-width: 180px;
+    width: 24%;
+}
+
+main #aside a {
+    text-decoration: underline;
+}
+
+main #aside .sidecolumn {
+    background-color: #DEEBF7;
+    padding: 10px;
+    margin-bottom: 10px; 
+    border-radius: 1em;
+}
+
+main #aside h2 {
+    line-height: 24px;
+    font-weight: 500;
+    font-size: 19px;
+    padding: 0px 0px 3.6px;
+    border-bottom: solid #e3e3d8 1px;
+    margin: 7.2px 0px 3.6px 0px;
+}
+
+main #aside ul {
+    padding: 0px;
+    margin: 0px 0px 0px 10px;
+}
+
+main #aside li {
+    margin: 0px 0px 0px 14.4px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 15px;
+}
+
+main #about img {
+    width: 80px;
+    height: 106px;
+    border: 2px solid #00398a;
+    margin-left: 24.4px;
+}
+
+footer {
+    height: 45px;   
+    border-top: solid 1px #e3e3d8;
+}
+
+footer p {
+    float: right;
+    height: 35px;
+    line-height: 35px;
+    padding: 5px; 
+    margin: 0px 33px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: grey
+}
+
+footer a {
+    color: grey;
+}

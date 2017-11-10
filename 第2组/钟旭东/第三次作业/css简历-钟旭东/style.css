@@ -1,0 +1,345 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 自定义字体 */
+@font-face{
+    font-family: "brandongrotesque";
+    src: url(fonts/BrandonGrotesque-Regular.ttf)
+}
+@font-face {
+    font-family: "museo100";
+    src: url(fonts/Museo100-Regular.otf);
+}
+/* 对header设置flex布局 */
+header .nav{
+    display: flex;
+    justify-content: space-between;
+    background-image: url(images/grunge_wall.png);
+    background-repeat: repeat-x;
+}
+header .nav .item:nth-child(1){
+    display: block;
+    padding: 0.7em 1em 0.7em 8em;
+    position: relative;
+}
+header .nav .item h1{
+    font-family: "brandongrotesque";
+    line-height: 30px;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+/* 添加装饰icon */
+header .nav .item:nth-child(1)::before{
+    display:block;
+    position: absolute;
+    left: 80px;
+    top: 2.5px;
+    content: "";
+    height: 45px;
+    width: 45px;
+    background-image: url(images/icons.png);
+    background-position: -90px -45px;
+}
+/* 对第二个item设置flex布局 */
+header .nav .item:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.7em 1em 0 0;
+}
+header .nav .item a.socialicon{
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin: 0 0 0 3px;
+    background-image: url(images/social.png)
+}
+/* 调整背景位置 */
+header .nav .item a.facebook{
+    background-position: -210px 0px;
+}
+header .nav .item a.facebook:hover{
+    background-position: -210px -30px;
+}
+header .nav .item a.twitter{
+    background-position: -90px 0px;
+}
+header .nav .item a.twitter:hover{
+    background-position: -90px -30px;
+}
+header .nav .item a.gplus{
+    background-position: -180px 0px; 
+}
+header .nav .item a.gplus:hover{
+    background-position: -180px -30px; 
+}
+header .nav .item a.youtube{
+    background-position: -30px 0px;
+}
+header .nav .item a.dribble{
+    background-position: -150px 0px;
+    margin-right: 60px;
+    overflow: hidden;        
+}
+header .nav .item a.youtube:hover{
+    background-position: -30px -30px;
+}
+header .nav .item a.dribble:hover{
+    background-position: -150px -30px;
+}
+/*圣杯布局 */
+.wrap .container{
+    display: flex;
+    align-items: stretch;
+    padding: 50px 80px;
+    background-image:url(images/soft_wallpaper.png);
+    background-repeat: repeat;
+}
+.wrap .container .leftside{
+    flex: 0;
+}
+.wrap .container .maincontainer{
+    flex: 1;
+}
+.wrap .container .leftside .sidelist{
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+.wrap .container .leftside .sidelist li{
+    display: block;
+    flex-basis: 100%;
+}
+.wrap .container .leftside .sidelist li img{
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.wrap .container .leftside .sidelist li a{
+    text-decoration: none;
+    font-family: "museo100", sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: rgb(77, 63, 63)
+}
+#zone, #about, #contact{
+    padding: 7px 55px;
+    position: relative;
+}
+#zone:hover, #about:hover, #contact:hover{
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px gray;
+}
+#zone:hover a, #about:hover a, #contact:hover a{
+    color: white;
+    font-style: italic;
+}
+
+.wrap .container .leftside .sidelist li a::before{
+    content: "";
+    display: block;
+    width:45px;
+    height:45px;
+    position: absolute;
+    top: -1px;
+    left: 0px;
+    background-image: url(images/icons.png)
+}
+#zone a::before{
+    background-position: -135px 0px;
+}
+#about a::before{
+    background-position: -90px 0px;
+}
+#contact a::before{
+    background-position: -45px -45px;
+}
+/* 右侧主内容 */
+.wrap .container .maincontainer{
+    padding: 0px 60px;
+    margin: 0px 200px;
+}
+.wrap .container .maincontainer h1{
+    text-transform: uppercase;
+    font-family: "brandongrotesque",monospace;
+    font-size: 1.5em;
+    line-height: 0.65em;
+    margin-left: -60px;
+    padding-left: 8px;
+    color: #444;
+    border-left: 52px solid #444;
+}
+/* information */
+.wrap .container .maincontainer .information h1{
+    margin-bottom: 20px;
+}
+.wrap .container .maincontainer .information p{
+    font-family: "museo100",monospace;
+    font-weight: 700;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+/* skills */
+.wrap .container .maincontainer .skills h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.wrap .container .maincontainer .skills ul li{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+.wrap .container .maincontainer .skills ul li:hover p{
+    background-color: #222;
+}
+.wrap .container .maincontainer .skills ul li p{
+    display: block;
+    text-transform: uppercase;
+    flex:0 0 80%;
+    color: #fff;
+    background-color: #444;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-left: 8px;
+    padding-top: 2px;
+}
+.wrap .container .maincontainer .skills ul li p.skill1{
+    flex-basis: 65%
+}
+.wrap .container .maincontainer .skills ul li p.skill2{
+    flex-basis: 70%
+}
+.wrap .container .maincontainer .skills ul li p.skill3{
+    flex-basis: 50%
+}
+.wrap .container .maincontainer .skills ul li p.skill4{
+    flex-basis: 60%
+}
+.wrap .container .maincontainer .skills ul li p.skill5{
+    flex-basis: 70%
+}
+.wrap .container .maincontainer .skills ul li p.skill6{
+    flex-basis: 30%
+}
+/* experience */
+.wrap .container .maincontainer .experience h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.wrap .container .maincontainer .experience .expbox{
+    display: flex;
+    flex-wrap: wrap;
+}
+.wrap .container .maincontainer .experience .expbox .exp{
+    flex-basis: 100%;
+    display: flex;
+    padding-bottom: 10px;
+}
+.wrap .container .maincontainer .experience .expbox .exp .pattern1{
+    flex: none;
+    width: 43%;
+}
+.wrap .container .maincontainer .experience .expbox .exp .pattern2{
+    flex:1;
+}
+.wrap .container .maincontainer .experience .expbox h3{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.2em;
+    font-family: sans-serif;
+    color: #444;
+}
+.wrap .container .maincontainer .experience .expbox h4{
+    font-weight: normal;
+    font-size: 13px;
+    color: #444;
+}
+.wrap .container .maincontainer .experience .expbox h5{
+    font-style: italic;
+    font-weight: normal;
+    font-size: 10px;
+    color: #444;
+}
+.wrap .container .maincontainer .experience p{
+    font-size: 15px;
+    font-family: sans-serif;
+    line-height: 19px;
+}
+/* contact */
+.wrap .container .maincontainer .contact-me h1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.wrap .container .maincontainer .contact-me .formall{
+    display: flex;
+    justify-content: space-between;
+}
+.wrap .container .maincontainer .contact-me .button{
+    display: flex;
+    justify-content: flex-end;
+}
+.wrap .container .maincontainer .contact-me label{
+    font-size: 13px;
+    color: #444;
+    line-height: 1.2em;
+}
+.wrap .container .maincontainer .contact-me .required{
+    color: red;
+}
+.wrap .container .maincontainer .contact-me input{
+    width: 250px;
+    padding: 8px;
+    margin: 5px 0px 10px 0px;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #666;
+    font-size: 12px;
+}
+.wrap .container .maincontainer .contact-me textarea{
+    height: 150px;
+    width: 380px;
+    margin-bottom: 20px;
+    padding: 8px;
+    margin: 5px 0px 10px 0px;
+    background-color: #fcfcfc;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    color: #666;
+    font-size: 12px;
+}
+.wrap .container .maincontainer .contact-me button{
+    width: 17%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    line-height: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    height: 30px;
+    padding: 0 15px;
+    margin: 0;
+    background: #444;
+    border-radius: 3px;
+}
+.wrap .container .maincontainer .contact-me button:hover{
+    background-color: #000;
+}
+footer{
+    background-image: url(images/grunge_wall.png);
+    background-repeat: repeat;
+}
+footer p{
+    text-align: center;
+    font-family: sans-serif;
+    color: #444;
+    font-size: 15px;
+    padding:20px 0 30px;
+    text-shadow: 1px 1px 1px #fff;
+}

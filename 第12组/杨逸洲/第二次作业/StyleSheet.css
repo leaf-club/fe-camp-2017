@@ -1,0 +1,54 @@
+﻿body {
+
+}
+
+
+.all {
+    width: 800px;
+    margin: 0px auto;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.head_t{
+    color:blue;
+}
+.text{
+    text-decoration:none ;
+    color :dodgerblue;
+}
+
+.photo
+{
+    position :relative ;
+    text-align:center ;
+   height :300px;
+
+}
+#photo1{
+    position :relative ;
+   text-align :left ;
+    display :block  ;
+}
+.submit{
+
+    position:absolute;
+    width:200px;
+    height:160px;
+    background-color:cadetblue;
+    top:0px;
+    left:500px;
+}
+#tittle{
+    height:26px;
+    line-height:26px;
+    text-align:center ;
+    font-size:14px;
+    font-weight:bold;
+}
+
+
+.sub{
+    text-align:left;
+    line-height:26px;
+}
