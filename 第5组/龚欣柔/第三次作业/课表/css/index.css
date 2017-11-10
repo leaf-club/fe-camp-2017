@@ -1,0 +1,31 @@
+body{
+    height: 600px ;
+    background: url(../img/kebiao.jpg )no-repeat ;
+    background-size: 100%;
+    
+}
+h1{
+    font-family: 'Microsoft YaHei', Arial, Simsun, sans-serif;
+    font-size: 36px;
+    color: rgb(142, 35, 175);
+    text-align: center;
+    height: 70px;
+}
+thead {
+    color: rgb(199, 76, 158);
+}
+table thead,tbody{
+    font-family: 'Microsoft YaHei', Arial, Simsun, sans-serif;
+    font-size: 26px;
+}
+th,td{
+    font-family: 'Microsoft YaHei', Arial, Simsun, sans-serif;
+    font-size: 32px;
+    color: rgb(157, 102, 175);
+    text-align: center;
+    width: 140px;
+    height: 80px;
+}
+thead tr,.three,.seven{
+    background: rgba(140, 140, 140, 0.4)
+}
