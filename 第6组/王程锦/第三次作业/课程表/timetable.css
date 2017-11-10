@@ -1,0 +1,54 @@
+html,
+.body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: url(kcb.jpg);
+}
+
+.name {
+    float: left;
+}
+
+.nameofmain {
+    color: #8BC34A;
+    font-size: 100px;
+    font-style: italic;
+    padding-top: 55px;
+    padding-right: 30px;
+    padding-bottom: 1px;
+}
+
+.main .mainoftable{
+    margin-top: 50px;
+    margin-right: 100px;
+    margin-left: 200px;
+    padding: 100px;
+    width: 1200px;
+    height: 350px;
+}
+td.course {
+    height: 40px;
+    width: 700px;
+    color: rgb(26, 209, 102);
+    font-size: 20px;
+}
+.day {
+    height: 40px;
+    color: rgb(26, 209, 102);
+}
+.jie {
+    width: 30px;
+    height: 40px;
+    margin-right: 20px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    color: rgb(26, 209, 102);
+}
+.from {
+    margin-left: 850px;
+    font-size: 30px;
+    width: 1000px;
+    color: rgb(26, 209, 102);
+}

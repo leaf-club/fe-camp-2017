@@ -1,0 +1,73 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: url(A/jl.jpg);
+}
+img {
+    width: 130px;
+    height: 150px;
+    display: flex;
+    padding-left: 33px;
+    margin-top: -70px;
+}
+#lef {
+    margin-left: 100px;
+    background: rgb(142, 206, 15);
+    float: left;
+    margin-top: -150px;
+    padding-top: 100px;
+}
+#rt {
+    margin-left: 300px;
+}
+#rb {
+    margin-left: 0px;
+}
+#rt .cname {
+    font-size: 40px;
+    height: 90px;
+    margin-left: 20px;
+    padding-top: 20px;
+    
+}
+#rt .ename {
+    padding-left: 10px;
+    font-size: 25px;
+    margin-left: 40px;
+    margin-top: -25px;
+    font-family: fantasy;
+}
+.jbziliao, .lianxi, .mywilling {
+    background: rgb(8, 7, 10);
+    color: white;
+    text-align: center;
+    
+}
+
+.fundmtl ,.lianxixi, .detailwilling{
+    font-size: 15px;
+
+}
+
+.ziliao , .contact, .willing{
+    margin: 15px;
+}
+
+.mybgd, .myexp, .myskill, .myjudgemt{
+    margin-bottom: -20px;
+    margin-left: 295px;
+    padding-left: 50px;
+    border-top: 3px solid rgb(142, 206, 15);
+}
+.bgd, .exp {
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding-left: 50px;
+    margin-left: 395px;
+}
+.deskill, .dejudge{
+    padding-left: 50px;
+    margin-left: 395px;
+}
