@@ -1,0 +1,41 @@
+h1 {
+    color: red;
+}
+.sum{
+
+}
+table{
+border-collapse: collapse;
+}
+tr{
+
+    color: rgb(0, 0, 0);
+    background: url(bg.jpg);
+    border: 1px solid rgb(0, 0, 0);
+    border-width:medium;
+    border-style:bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(iii.jpg);
+    margin:5em;
+}
+.q{
+    background-color: rgb(28, 201, 51);
+}
+.w{
+    background-color: rgb(189, 81, 18);
+}
+.e{
+
+    font-family:"楷体";
+    font-size : 2em;
+    color: rgb(10, 209, 216);
+    justify-content: center;
+}
