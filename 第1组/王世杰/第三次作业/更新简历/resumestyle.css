@@ -1,0 +1,124 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+}
+.box1 {
+    height: 1200px;
+    width: 100%;
+    background-image: url(640.jpg);
+
+}
+.box1 .resumebox {
+    position: relative;
+    margin: 0 auto;
+    height: 80%;
+    width: 1080px;
+    padding: 30px 40px 30px 40px;   
+}
+.box1 .resumebox .leftpart {
+    width: 500px;
+    height: 980px;    
+    background-color: rgb(182, 173, 165);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.box1 .resumebox .leftpart .photo {
+    width: 500px;
+    padding: 20px 135px 0px 135px;
+}
+.box1 .resumebox .leftpart .photo img {
+    width: 230px;
+    height: 250px;
+}
+.box1 .resumebox .leftpart .job {
+    width: 160px;
+    height: 40px;
+    padding: 0px 170px 0px 170px;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 33px;
+    color: red;
+}
+.box1 .resumebox .leftpart .title1 {
+    width: 160px;
+    height: 47px;
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 35px;
+    color: rgb(37, 36, 36);
+}
+.box1 .resumebox .leftpart .nav {
+    padding-bottom: 20px;
+}
+.box1 .resumebox .leftpart .nav .item {
+    font-family: cursive;
+    font-size: 25px;
+}
+.box1 .resumebox .rightpart {
+    position: absolute;
+    left: 540px;
+    top: 30px;
+    width: 500px;
+    height: 980px;    
+    background-color: rgb(219, 216, 198);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.box1 .resumebox .rightpart .smallphoto {
+    width: 470px;
+    height: 105px;
+    background-image: url(777.jpg);
+    background-repeat: no-repeat;
+    background-position: -72px -125px;
+    border-radius: 20px;
+    margin-left: 15px;
+}
+.box1 .resumebox .rightpart .title2 {
+    width: 160px;
+    height: 47px;
+    padding: 0px 10px 0px 10px;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 35px;
+    color: rgb(37, 36, 36);
+}
+.box1 .resumebox .rightpart .information {
+    font-family: cursive;
+    font-size: 25px;
+    padding: 5px 20px 5px 30px;
+}
+.box1 .resumebox .rightpart .experience {
+    font-family: cursive;
+    font-size: 25px;
+    padding: 5px 20px 5px 30px;
+}
+.box1 .resumebox .rightpart .language .lname {
+    font-family: cursive;
+    font-size: 20px;
+    padding: 5px 20px 5px 30px;
+}
+.box1 .resumebox .rightpart .language .rail {
+    border: 3px solid black;
+    margin-left: 30px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+.box1 .resumebox .rightpart .language .rail .col1 {
+    background: red;
+    height: 20px;
+    width: 390px;
+}
+.box1 .resumebox .rightpart .language .rail .col2 {
+    background: red;
+    height: 20px;
+    width: 240px;
+}
+.box1 .resumebox .rightpart .evaluate {
+    font-family: cursive;
+    font-size: 18px;
+    padding: 5px 20px 5px 30px;
+}

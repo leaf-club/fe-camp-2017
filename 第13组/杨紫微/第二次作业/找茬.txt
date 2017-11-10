@@ -1,0 +1,8 @@
+返利网：
+1.文字大多固定在图片内，与所在图片绑定同一网址：
+<a href="http://super.fanli.com/zc-2503?spm=event.h5.adid-130639" data-ubtindex="1" data-id="130639" target="_blank" class="fa-link">
+<img src="http://l2.51fanli.net/event/attach/image/2017/10/59eef50823bf6.jpg" data-expo="page-fanlihomepc~module-sfad~adid-130639" data-id="130639" alt="1025户外运动品类日" class="fa-img J_need_exposure">
+</a>
+但我认为文字说明部分应单独与链接绑定，以提高用户体验。
+
+2.部分i标签使用不规范，标签i内文字内容非斜体

@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <!--标题-->
+    <section style="background-color:burlywood">
+        <h4>首页</h4>
+        <h4>专栏</h4>
+        <h4>收藏集</h4>
+        <h4>我的博客</h4>
+    </section>
+    <form style="margin-right:10px;background-color:rgb(210, 140, 245)"action="#" method="post">
+        在站内搜索<input type="text">
+        <button>提交</button>
+    </form>
+    <!--用户登陆信息处-->
+    <form style="color:rgb(235, 243, 243);margin-left:520px;background-color:#7ba7e9" action="#">
+        <fieldset>
+            <legend>个人信息</legend>
+             <div class="formgroup">
+                 用户名<input type="text" name="name" id="xingming">
+                 <label for="xingming"></label>
+            </div>
+            <br>
+            <div class="formgroup">
+                电子邮箱<input type="email" name="E-mail" id="ema">
+                <label for="ema"></label>
+            </div>
+            <br>
+           <div class="formgroup">
+                 密码<input type="password"name="password"id="pass">
+                <label for="pass"></label>
+                </div>
+                <br>
+            <button :onclick="alert" type="submit">进入</button>
+        </fieldset>
+    </form>
+    <!--博客内容-->
+    <section>
+        <h4>近期文章</h4>
+        <h4>论坛分享</h4>
+        <h4>资源与应用</h4>
+        <img src="1.jpg" alt="风景插图" height="150px">
+    </section>
+    <!--网页意见-->
+    <section>
+        请留下您的宝贵意见<textarea name="opinion" id="op" cols="30" rows="10"></textarea>
+    </section>
+    
+
+</body>
+</html>
