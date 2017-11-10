@@ -1,0 +1,202 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.all-content{
+    width: 820px;
+    height: 772px;
+    margin: 0 auto;
+    border:5px solid rgba(198, 255, 0, 0.83);
+}
+
+.left-content{
+    width: 320px;
+    height: 772px;
+    background-color: rgb(243,195,61);
+    float: left;
+}
+
+.right-content{
+    width: 500px;
+    height: 772px;
+    float: left;
+}
+/* 左右两边内容整体布局 */
+
+.left-content .picture-out{
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-color: white;
+    margin: 100px 50px 20px 50px;
+}
+/* 照片部分样式 */
+.left-content .picture-in{
+    width: 164px;
+    height: 164px;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+    margin: 0 10px;
+    position: relative;
+    top: 10px;
+    border-style: solid;
+    border-width: 8px;
+    border-color:rgb(243,195,61);
+}
+
+.left-content .picture-in img{
+    width: 103px;
+    height: 120px;
+    position: relative;
+    left: 31px;
+    top: 22px;
+}
+
+.left-content h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.left-content .web{
+    height: 36px;
+    background-color: rgb(56, 56, 56);
+    font-size: 17px;
+    font-style: italic;
+    color: rgb(243,195,61);
+    line-height: 36px;
+    text-align: center;
+}
+
+.left-content h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 30px 0;
+}
+/* 个人信息部分样式 */
+.left-content .information{
+    height: 30px; 
+    margin-bottom: 10px;
+}
+
+.left-content .information .logo{
+    height: 30px; 
+    width: 70px;
+    background-color: rgb(56, 56, 56);
+    float: left;
+}
+
+.left-content .information .logo img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 42px;
+    top: 4px;
+}
+
+.left-content .information p{
+    margin-left: 15px;
+    font-size: 5px;
+    float: left;
+}
+
+.clear-float{
+    clear: both;
+}
+/* 左边样式结束 */
+.right-content .rcontent-logo{
+    width: 75px;
+    height: 772px;
+    float: left;
+}
+
+.right-content .rcontent-logo .logo1 img{
+    width: 30px;
+    height: 45px;
+    margin: 135px 22px 0 22px;
+}
+
+.right-content .rcontent-logo .logo2 img{
+    width: 35px;
+    height: 30px;
+    margin: 135px 20px 0 20px;
+}
+
+.right-content .rcontent-logo .logo3 img{
+    width: 13px;
+    height: 150px;
+    margin: 45px 31px 0 31px;
+}
+
+.right-content .rcontent-logo .logo4 img{
+    width: 47px;
+    height: 40px;
+    margin: 20px 14px 0 14px;
+}
+
+.right-content .rcontent-logo .logo5 img{
+    width: 11px;
+    height: 78px;
+    margin: 8px 32px 0 32px;
+}
+
+.right-content .rcontent-logo .logo6 img{
+    width: 48px;
+    height: 43px;
+    margin: 17px 14px 0 15px;
+}
+/* 右边logo部分样式结束 */
+/* 右边main部分样式开始 */
+.right-content .rcontent-main{
+    width: 425px;
+    height: 772px;
+    float: left;
+}
+
+.right-content .rcontent-main h2{
+    font-size: 28px;
+    margin: 100px 0 15px 0;
+}
+
+.right-content .rcontent-main .title{
+    height: 36px;
+    line-height: 36px;
+    text-indent: 8px;
+    background-color: rgb(56, 56, 56);
+    margin-bottom:  20px;
+}
+
+.introduction-content p{
+    width: 375px;
+    margin-left: 4px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.right-content .rcontent-main .honor li{
+
+    height: 40px;
+    margin: 0 0 20px 5px;
+    list-style: none;
+}
+
+.right-content .rcontent-main .experience{
+    width: 390px;
+    margin-bottom: 25px;
+}
+
+.right-content .rcontent-main .experience h4{
+    font-size: 14px;
+    text-indent: 8px;
+}
+
+.right-content .rcontent-main .experience p{
+    margin-left: 4px;
+}
+/* 右边样式结束 */
