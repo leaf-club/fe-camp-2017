@@ -1,0 +1,132 @@
+.three_ball{
+    width:15px;
+    height:15px;
+    background:rgba(0,0,0,0);
+    border-radius:50%;
+    margin:100px auto;
+    position:absolute;
+    left:25px;
+    top:125px;
+    animation:three_ball 3s ease-in-out infinite;
+  }
+  @keyframes three_ball {
+    0% {box-shadow:15px 15px 0 0 #fff, -15px 15px 0 0 #fff, -15px -15px 0 0 #ff0;}
+    8% {box-shadow:15px -15px 0 0 #fff, -15px 15px 0 0 #fff, -15px -15px 0 0 #f0f;}
+    17% {box-shadow:15px -15px 0 0 #fff, 15px 15px 0 0 #fff, -15px -15px 0 0 #0ff;}
+    25% {box-shadow:15px -15px 0 0 #fff, 15px 15px 0 0 #fff, -15px 15px 0 0 #f00;}
+    33% {box-shadow:-15px -15px 0 0 #fff, 15px 15px 0 0 #fff, -15px 15px 0 0 #fff;}
+    42% {box-shadow:-15px -15px 0 0 #fff, 15px -15px 0 0 #fff, -15px 15px 0 0 #ff0;}
+    50% {box-shadow:-15px -15px 0 0 #fff, 15px -15px 0 0 #fff, 15px 15px 0 0 #fff;}
+    58% {box-shadow:-15px 15px 0 0 #fff, 15px -15px 0 0 #fff, 15px 15px 0 0 #f00;}
+    67% {box-shadow:-15px 15px 0 0 #fff, -15px -15px 0 0 #fff, 15px 15px 0 0 #00f;}
+    75% {box-shadow:-15px 15px 0 0 #fff, -15px -15px 0 0 #fff, 15px -15px 0 0 #f0f;}
+    83% {box-shadow:15px 15px 0 0 #fff, -15px -15px #fff 0 0, 15px -15px 0 0 #ff0;}
+    92% {box-shadow:15px 15px 0 0 #fff, -15px 15px 0 0 #fff, 15px -15px 0 0 #0ff;}
+    100% {box-shadow:15px 15px 0 0 #fff, -15px 15px 0 0 #fff, -15px -15px 0 0 #f00;}
+  }
+
+header{
+    background-color: rgb(189, 52, 10)
+    dispaly: block
+    color: silver
+  }
+h1{
+    font-size:40px;
+    margin:0px;
+    color:rgb(0, 0, 0)
+}
+h2{
+    font-size:24px;
+    margin:0px;
+    text-align:center;
+}
+h3{
+    font-size:25px;
+    margin:0px;
+    text-aligin:center;
+}
+#daohang{
+    border-width:3px;
+    border-style:dashed;
+}
+#tupian{
+    background-image: url(beijing2.jpg);
+    background-repeat: repeat;
+    background-attachment: scroll;
+}
+ 
+
+#zhuwen{
+    background-color:lightskyblue;
+    border-style:outset;
+}
+
+#tuijian{
+    background-color:lightskyblue;
+    border-style:outset;
+}
+
+aside nav{
+         
+        display:block;
+        width:20%;
+        float:left;
+        
+}
+aside p{
+    margin:15px;
+    font-weight:bold;
+}
+ 
+section{
+    display:block;
+    width:60%;
+    float:left;
+}
+article{
+    
+    display:block;
+    margin: 10px;
+    padding: 10px;
+}
+article header{
+    padding:5px;
+}
+article footer{
+    padding:5px;
+}
+article h1{
+    font-size:18px;
+}
+
+aside{
+    display:block;
+    width:20%
+    float:left;
+}
+
+aside h3 {
+    font-size:20px;
+    margin:15px;
+}
+aside p{
+    margin:15px;
+    font-weight:bold;
+}
+
+footer {
+    clear:both;
+    display: block;
+    background-color: rgb(16, 121, 241);
+    color:rgb(19, 1, 1);
+    text-align:center;
+    padding:15px;
+}
+footer h2{
+    font-size:14px;
+    color:rgb(10, 1, 14);
+}
+aside a{
+    color:rgb(150, 22, 133)
+}
+

@@ -1,0 +1,80 @@
+.aa{
+	background-image:url("kebiao.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	filter: opacity(50%);
+}
+td{
+	border-style: solid;
+	border-radius: 10px;
+}
+.bb{
+	font-family: serif;
+	font-size: 40px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+}
+.cc{
+	font-family: serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+}
+.dd{
+	font-family: serif;
+	font-family: serif;
+	font-size: 60px;
+	font-weight: bold;
+	color: black;
+	text-align: center;
+}
+.ee{
+	font-family: serif;
+	font-size: 50px;
+	width: 10px;
+	line-height: 80px;
+	font-weight:300 ;
+	color: black;
+	text-align: center;
+}
+.ff{
+	font-family: serif;
+	font-size: 50px;
+	width: 10px;
+	line-height: 150px;
+	font-weight:300 ;
+	color: black;
+	text-align: center;
+}
+.gg{
+	font-family: serif;
+	font-size: 50px;
+	width: 10px;
+	line-height: 200px;
+	font-weight:300 ;
+	color: black;
+	text-align: center;
+}
+.ee.hh{
+	background-color: #FF88C2;
+	color: white;
+}
+.ee.ii{
+	background-color: #008866;
+	color: white;
+}
+.ee.jj{
+	background-color: #FFFF00;
+	color: white;
+}
+.ee.kk{
+	background-color: #990099;
+	color: white;
+}
+.ee.ll{
+	background-color: #008866;
+	color: white;
+}

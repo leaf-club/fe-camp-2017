@@ -1,0 +1,5 @@
+http://www.kanunu8.com/
+1.网站大部分使用table标签，简单粗暴，不够美观。
+2.<div align="center"> 在标签div中使用align，这在html5中应该是不允许的。
+3.很少地方使用了class属性，即使有地方使用了class属性，也是不能表达语义。
+4.颜色与背景应该加以改善。
