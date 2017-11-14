@@ -1,3 +1,203 @@
-a:hover{
-  clodr:#31c27c;
+/*reset*/
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div,
+dl,
+dt,
+dd,
+input,
+figure
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-size: 14px;
+}
+img
+{
+    border: none;
+}
+li
+{
+    list-style: none;
+}
+input,
+select,
+textarea
+{
+    border: none;
+    outline: none;
+    background: none;
+}
+textarea
+{
+    resize: none;
+}
+a
+{
+    text-decoration: none;
+
+    color: #656565;
+}
+
+a:hover
+{
+    color: #31c27c;
+}
+.sprite{
+    background-image: url(img/icon_sprite.png);
+}
+body
+{
+    font-family: poppin,Tahoma,Arial,微软雅黑,sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+
+    color: #333;
+    background-color: #fff;
+}
+header
+{
+    position: relative;
+    z-index: 4;
+
+    background-color: #fff;
+}
+.section_inner
+{
+    position: relative;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+.section_inner .qqmusic_logo
+{
+    position: absolute;
+    top: 22px;
+    left: 0;
+}
+
+/*目录*/
+.section_inner .top_nav
+{
+    position: absolute;
+    top: 0;
+    left: 198px;
+}
+.section_inner .box
+{
+    display: flex;
+}
+.section_inner .top_nav .top_nav_item a
+{
+    font-size: 18px;
+    line-height: 90px;
+
+    display: block;
+
+    height: 90px;
+    padding: 0 20px;
+
+    text-align: center;
+}
+.section_inner .top_nav .action
+{
+    background-color: #31c27c;
+}
+.section_inner .top_nav .action a:hover
+{
+    color: #656565;
+}
+
+/*子目录*/
+.section_inner .top_subnav{
+    height: 51px;
+    padding-left: 230px;
+    line-height: 51px;
+    border-top: 1px solid #f2f2f2;
+}
+.section_inner .top_subnav .top_nav_item{
+    margin-right: 47px;
+    font-size: 15px;
+    color: #c1c1c1;
+}
+.section_inner .top_subnav .action a{
+    color: #31c27c;
+}
+
+/*搜索框*/
+.section_inner .top_search{
+    position: absolute;
+    top: 0;
+    right: 284px;
+}
+.section_inner .search_input{
+    position: relative;
+    border: 1px solid #c9c9c9;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 33px 0 11px;
+    margin-top: 26px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.section_inner .search_input .search_input__input{
+    width: 174px;
+    height: 36px;
+    font-size: 14px;
+    background: 0 ;
+}
+.section_inner .search_input .search_input_button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0 none;
+    width: 38px;
+    height: 35px;
+    background: 0 0;
+}
+.section_inner .search_input .search_input_button .icon_search{
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background-position: 0 -40px;
+}
+.section_inner .search_input .search_input_button .icon_search:hover{
+    background-position: 0 -60px;
+}
+
+/*登录*/
+.section_inner .header_opt{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90px;
+    line-height: 90px;
+}
+.section_inner .header_opt .top_login_buttom{
+    position: relative;
+    font-size: 16px;
+    width: 38px;
+    margin-right: 10px;
+    text-align: center;
 }
