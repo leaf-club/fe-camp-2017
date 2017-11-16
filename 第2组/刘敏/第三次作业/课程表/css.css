@@ -1,0 +1,43 @@
+*{padding: 0; margin: 0;border: 0px; font-family: "微软雅黑"}
+div{
+	background: url(img/背景.jpg);
+	width: 800px;
+	height: 450px;
+	margin: 50px auto;
+}
+table{
+	width: 800px;
+	height: 400px;
+	margin: 0 auto;
+	border-collapse:collapse; 
+}
+table thead{
+	font-size: 18px;
+	height: 50px;
+	background: rgba(3,169,244,0.7);
+}
+table thead tr{
+	height: 50px;
+
+}
+table thead tr th{
+	border: 1px solid white;
+}
+caption{
+	line-height: 50px;
+	font-size: 20px;
+	background: rgba(165, 69, 69, 0.34);
+	color: white;
+
+}
+tbody th{
+	border: 1px solid white;
+	background: rgba(3,169,244,0.7);
+}
+tbody td{
+		text-align: center;
+		border: 1px solid white;
+		font-size: 18px;
+		width: 135px;
+		background: rgb(0, 188, 212);
+}

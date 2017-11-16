@@ -1,0 +1,75 @@
+html {
+    background-image: url(4.jpg);   
+    background-size: contain;
+    background-repeat: round;
+    height: auto;
+}
+body {
+    height: 2050px;
+    width: 750px;
+    margin: auto;
+    margin-top: 200px;  
+}
+header {
+    text-align: center;
+    color: #841b41b5;
+    font-family: fantasy;
+    font-size: x-large;
+}
+.smallhead .smallhead-2 {
+    font-family: "华文行楷";
+    text-align: right;
+}
+.smallhead .smallhead-3 {
+    font-family: "华文行楷";
+    text-align: left;
+    font-size: 27px;
+    background-color: #79abd6b3;
+}
+.smallhead .smallhead-4 {
+    float: right;
+}
+.introduction .item2 {
+    font-family: "华文仿宋";
+    font-size: 20px;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    background-image: url(1.jpg);
+}
+.skill .skill-2 {
+    font-family: "华文仿宋";
+    font-size: 20px;
+    background-image: url(1.jpg);
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+.experience .experience-2 {
+    font-family: "华文仿宋";
+    font-size: 20px;
+    background-image: url(1.jpg);
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+.summary .summary-2 {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+.summary .summary-2 .summary-2-1 {
+    font-family: "华文仿宋";
+    font-size: 20px;
+    background-image: url(1.jpg);
+    text-indent: 2em;
+}
+.summary .summary-2 .summary-2-2 {
+    font-family: "华文行楷";
+    font-size: 30px;
+}
+.line {
+    height: 10px;
+    border: none;
+    border-top: 10px dotted sandybrown;
+    }
