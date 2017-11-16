@@ -28,6 +28,7 @@ figure
 body
 {
     font-size: 14px;
+    background: url(img/bg_detail.jpg) 50% 90px repeat-x
 }
 img
 {
@@ -60,7 +61,8 @@ a:hover
 {
     color: #31c27c;
 }
-.sprite{
+.sprite
+{
     background-image: url(img/icon_sprite.png);
 }
 body
@@ -101,9 +103,10 @@ header
     top: 0;
     left: 198px;
 }
-.section_inner .box
+.box
 {
     display: flex;
+    flex-wrap: wrap;
 }
 .section_inner .top_nav .top_nav_item a
 {
@@ -121,83 +124,491 @@ header
 {
     background-color: #31c27c;
 }
-.section_inner .top_nav .action a:hover
+.section_inner .top_nav .action a
 {
-    color: #656565;
+    color: #fff;
 }
 
 /*子目录*/
-.section_inner .top_subnav{
+.section_inner .top_subnav
+{
+    line-height: 51px;
+
     height: 51px;
     padding-left: 230px;
-    line-height: 51px;
+
     border-top: 1px solid #f2f2f2;
 }
-.section_inner .top_subnav .top_nav_item{
-    margin-right: 47px;
+.section_inner .top_subnav .top_nav_item
+{
     font-size: 15px;
+
+    margin-right: 47px;
+
     color: #c1c1c1;
 }
-.section_inner .top_subnav .action a{
+.section_inner .top_subnav .action a
+{
     color: #31c27c;
 }
 
 /*搜索框*/
-.section_inner .top_search{
+.section_inner .top_search
+{
     position: absolute;
     top: 0;
     right: 284px;
 }
-.section_inner .search_input{
-    position: relative;
-    border: 1px solid #c9c9c9;
-    height: 36px;
+.section_inner .search_input
+{
     line-height: 36px;
-    padding: 0 33px 0 11px;
+
+    position: relative;
+
+    height: 36px;
     margin-top: 26px;
+    padding: 0 33px 0 11px;
+
+    border: 1px solid #c9c9c9;
     border-radius: 3px;
     background-color: #fff;
 }
-.section_inner .search_input .search_input__input{
+.section_inner .search_input .search_input__input
+{
+    font-size: 14px;
+
     width: 174px;
     height: 36px;
-    font-size: 14px;
+
     background: 0 ;
 }
-.section_inner .search_input .search_input_button{
+.section_inner .search_input .search_input_button
+{
     position: absolute;
     top: 0;
     right: 0;
-    border: 0 none;
+
     width: 38px;
     height: 35px;
+
+    border: 0 none;
     background: 0 0;
 }
-.section_inner .search_input .search_input_button .icon_search{
+.section_inner .search_input .search_input_button .icon_search
+{
     position: absolute;
     top: 50%;
     right: 11px;
-    margin-top: -8px;
+
     width: 16px;
     height: 16px;
+    margin-top: -8px;
+
     background-position: 0 -40px;
 }
-.section_inner .search_input .search_input_button .icon_search:hover{
+.section_inner .search_input .search_input_button .icon_search:hover
+{
     background-position: 0 -60px;
 }
 
 /*登录*/
-.section_inner .header_opt{
+.section_inner .header_opt
+{
+    line-height: 90px;
+
     position: absolute;
     top: 0;
     right: 0;
+
     height: 90px;
-    line-height: 90px;
 }
-.section_inner .header_opt .top_login_buttom{
-    position: relative;
+.section_inner .header_opt .top_login
+{
+    height: 90px;
+}
+.section_inner .header_opt .top_login_button
+{
     font-size: 16px;
+
+    position: relative;
+
     width: 38px;
     margin-right: 10px;
+
     text-align: center;
+}
+.section_inner .header_opt .top_login_button_vip
+{
+    line-height: 39px;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    height: 39px;
+    margin: 24px 0 0 10px;
+    padding: 0 9px;
+
+    color: #fff;
+    border: 1px solid #31c27c;
+    border-radius: 2px;
+    background: #31c27c;
+}
+.section_inner .header_opt .top_login_button_vip:hover
+{
+    background-color: #2caf6f;
+    border-color: #2caf6f;
+    color: #fff;
+}
+.section_inner .header_opt .top_login_button_music
+{
+    font-size: 13px;
+    line-height: 39px;
+
+    display: inline-block;
+
+    box-sizing: border-box;
+    height: 38px;
+    margin: 24px 0 0 10px;
+    padding: 0 9px;
+
+    border: 1px solid #c9c9c9;
+    border-radius: 2px;
+}
+
+/*header结束*/
+
+/*网页主体*/
+.main
+{
+    position: relative;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+/*歌单分类标签*/
+.playlist_tag{
+    position: relative;
+    padding: 60px 0 32px 0;
+    margin-right: -24px;
+}
+.playlist_tag_list{
+    position: relative;
+    line-height: 26px;
+    width: 238px;
+    margin-right: 22px;
+}
+.playlist_tag .lang{
+    width: 160px;
+}
+.playlist_tag_list h3{
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+    padding-left: 8px;
+    margin: -6px 0 8px
+}
+.playlist_tag_list>i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 108px;
+    background: #eeeef0;
+}
+.playlist_tag_list .playlist_tag_itembox{
+    width: 76px;
+    height: 26px;
+    margin-bottom: 4px;
+    float: left;
+}
+.playlist_tag_list .playlist_tag_item{
+    max-width: 68px;
+    display: inline-block;
+    padding: 0 8px;
+}
+.playlist_tag_list .playlist_tag_item .playlist_tag_arrow{
+    display: inline-block;
+    width: 10px;
+    height: 6px;
+    background-position: -120px -260px;
+    margin-left: 3px;
+    vertical-align: 1px;
+}
+.detail{
+    position: relative;
+    margin-bottom: 30px;
+}
+.detail .detail_hd{
+    height: 60px;
+    position: relative;
+}
+.detail .detail_hd h2{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 58px;
+}
+.detail .detail_hd .switch{
+    position: absolute;
+    top: 7px;
+    right: 0;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 2px;
+}
+.detail .detail_hd .switch a{
+    display: inline-block;
+    padding: 0 16px;
+    height: 38px;
+    position: relative;
+    font-size: 14px;
+    border: 1px solid #eee;
+}
+.detail .detail_hd .switch .switch_item_left{
+    right: -6px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: #31c27c;
+    color: #fff;
+    border-color: #31c27c;
+    z-index: 2;
+}
+.detail .detail_hd .switch .switch_item_right{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-color: #c9c9c9;
+}
+.detail .playlist{
+    overflow: hidden;
+    font-size: 0;
+}
+.detail .playlist_list{
+    margin-right: -20px;
+}
+.detail .playlist_list .playlist_item{
+    display: inline-block;
+    width: 20%;
+    padding-bottom: 44px;
+    font-size: 14px;
+    vertical-align: top;
+}
+.detail .playlist_list .playlist_item .playlist_item_box{
+    position: relative;
+    margin-right: 20px;
+}
+.detail .playlist_list .playlist_item .playlist_item_box .playlist_cover{
+    position: relative;
+    margin-bottom: 15px;
+    zoom: 1;
+}
+.detail .playlist_list .playlist_item .playlist_item_box>h4{
+    overflow: hidden;
+}
+.detail .playlist_list .playlist_item .playlist_item_box .playlist_title_txt{
+    max-width: 100%;
+    font-weight: 400;
+    line-height: 22px;
+    max-height: 44px;
+}
+.detail .playlist_list .playlist_item .playlist_item_box .playlist_author,
+.detail .playlist_list .playlist_item .playlist_item_box .playlist_author a,
+.detail .playlist_list .playlist_item .playlist_item_box .playlist_other
+{
+    color: #999;
+    height: 22px;
+}
+.detail .page_nav{
+    text-align: center;
+    margin-bottom: 60px;
+    clear: both;
+}
+.detail .page_nav .current,
+.detail .page_nav a:hover
+{
+    color: #fff;
+    background-color: #31c27c;
+}
+.detail .page_nav strong,
+.detail .page_nav a
+{
+    font-size: 16px;
+    font-weight: 400;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+    box-sizing: border-box;
+    min-width: 24px;
+}
+footer{
+    color: #999;
+    background-color: #333;
+    clear: both;
+}
+footer a{
+    color: #999;
+}
+footer .section_inner{
+    padding-top: 0px;
+}
+footer .footer_info{
+    border-bottom: 1px solid #353535;
+    position: relative;
+    padding-bottom: 45px;
+    flex-wrap: wrap;
+}
+
+footer .footer_info h3{
+    font-size: 15px;
+    font-weight: 400;
+    padding: 80px 0 64px;
+}
+/*下载QQ音乐客户端*/
+.footer_download{
+    width: 357px;
+}
+.footer_download .footer_download_list{
+    margin-left: -29px;
+}
+.footer_download .footer_download_list_item{
+    text-align: center;
+    position: relative;
+}
+.footer_download .footer_download_list_item i{
+    display: block;
+    margin: 0 29px 12px;
+    width: 48px;
+    height: 48px;
+    background: url(img/footer.png);
+}
+.footer_download .footer_download_list_item .icon_qm_pc{
+    width: 37px;
+    background-position: -2px 0;
+}
+.footer_download .footer_download_list_item a:hover .icon_qm_pc{
+    background-position: -2px -49px;
+}
+.footer_download .footer_download_list_item .icon_qm_mac{
+    width: 46px;
+    background-position: -92px 0;
+}
+.footer_download .footer_download_list_item a:hover .icon_qm_mac{
+    background-position: -92px -49px;
+}
+.footer_download .footer_download_list_item .icon_qm_android{
+    width: 37px;
+    background-position: -190px 0;
+}
+.footer_download .footer_download_list_item a:hover .icon_qm_android{
+    background-position: -190px -49px;
+}
+.footer_download .footer_download_list_item .icon_qm_iphone{
+    width: 34px;
+    background-position: -279px 0;
+}
+.footer_download .footer_download_list_item a:hover .icon_qm_iphone{
+    background-position: -279px -49px;
+}
+/*特色产品*/
+.footer_product{
+    width: 304px;
+    margin-left: 119px;
+}
+.footer_product .footer_product_list {
+    margin-left: -25px;
+}
+.footer_product .footer_product_list .footer_product_list_item{
+    margin-bottom: 18px;
+    text-indent: 25px;
+    margin-right: 5px;
+}
+.footer_product .footer_product_list .footer_product_list_item.pic{
+    text-align: center;
+    position: relative;
+    margin-right: 0;
+    text-indent: 0;
+}
+.footer_product .footer_product_list_item i{
+    display: block;
+    margin: 0 29px 12px;
+    width: 48px;
+    height: 48px;
+    background-image: url(img/footer.png);
+}
+.footer_product .footer_product_list_item .icon_qm_kg{
+    width: 41px;
+    background-position: -370px 0;
+}
+.footer_product .footer_product_list_item a:hover .icon_qm_kg{
+    background-position: -370px -49px;
+}
+.footer_product .footer_product_list_item .icon_qm_ss{
+    width: 41px;
+    background-position: -463px 0;
+}
+.footer_product .footer_product_list_item a:hover .icon_qm_ss{
+    background-position: -463px -49px;
+}
+.footer_product .footer_product_list_item .icon_qm_qp{
+    margin-right: 23px;
+    width: 41px;
+    background-position: -563px 0;
+}
+.footer_product .footer_product_list_item a:hover .icon_qm_qp{
+    background-position: -563px -49px;
+}
+/*合作链接*/
+.footer_link{
+    width: 300px;  
+    margin-left: 120px;
+}
+.footer_link .footer_link_list_item{
+    min-width: 100px;
+    margin-bottom: 12px;
+}
+/*开放平台*/
+.footer_platform .footer_platform_list_item{
+    margin: 0 30px 12px 0;
+    min-width: 100px;
+}
+/*版权声明*/
+.footer_copyright{
+    text-align: center;
+    line-height: 28px;
+    padding: 24px 0;
+    font-size: 12px;
+}
+
+
+.btn_bottom{
+    position: fixed;
+    right: 34px;
+    width: 38px;
+    height: 38px;
+    z-index: 4;
+    background-color: #fff;
+    border: 1px solid #c9c9c9;
+}
+.btn_bottom:hover{
+    background-color: #ededed;
+}
+.btn_bottom.top{
+    bottom: 124px;
+    background: url(img/less.png) center;
+    background-size: 90%;
+}
+.btn_bottom.feedback{
+    bottom: 82px;
+    line-height: 38px;
+    font-size: 14px;
+    text-align: center;
+}
+.btn_bottom.player{
+    bottom: 40px;
+    background: url(img/player.png) center;
+    background-size: 90%;
 }
