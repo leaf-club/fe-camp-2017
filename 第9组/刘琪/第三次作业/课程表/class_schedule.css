@@ -1,0 +1,19 @@
+table {
+    height: 300px;
+    margin:0 auto;
+    border-collapse: collapse;
+    margin-top: 50px;
+}
+th,td { 
+    width: 140px;
+    border: 1px solid #03a5c2;
+    padding:5px 0;
+    text-align: center;
+}
+caption {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+.firstrow {
+    background-color: rgb(166, 255, 166)
+}
