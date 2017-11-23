@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>博客首页</title>
+	<style type="text/css">
+		*{padding: 0;margin: 0;border: 0;}
+		#login{
+			text-align: right;
+			color: black;
+			font-size: 14px;
+		}
+		#top{
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+		#top p{
+			float: left;
+			line-height: 22px;
+			font-size: 14px;
+		}
+		#logo{
+			clear: both;
+			margin-left: 10px;
+			padding-left: 7px;
+			padding-top: 7px;
+			border: 1px solid #d8dfea;
+		}
+		#logo img{
+			height: 55px;
+		}
+		#one ul{
+			list-style-type:none;
+			margin:8px 7px 0px 10px;
+			padding:0;
+			height: 30px;
+			background-color: #2b6695;
+		}
+		#one ul li{
+			display: inline;
+			padding-left: 24px;
+			line-height: 30px;
+		}
+		#tow{
+			overflow: hidden;
+			zoom:1;
+			margin-top: 10px;
+		}
+		#tow ul{
+			margin-left: 5px;
+		}
+		#tow ul li{
+			display: inline;
+			background-color: #e8edf0;
+			border: 1px solid #c8d3de;
+			display: block;
+			float: left;
+			margin-left: 5px;
+		}
+		#tow ul li a{
+			line-height: 30px;
+			padding:4px 10px;
+			color: black;
+		}
+		#one a:visited {color:#eee;}
+		#one a:hover {color: #fff;}
+		a{
+			text-decoration: none;
+		}
+		#web_class{
+			border-left: 4px solid #146eb4;
+			border-right: 1px solid #83abc6; 
+			border-bottom: 1px solid #83abc6; 
+			border-top: 1px solid #83abc6;
+			float: left;
+			background-color: #eef;
+			margin-left: 10px;
+			margin-top: 10px;
+			width: 110px;
+		}
+		#title{
+			border-bottom:1px solid #83abc6;
+			line-height: 30px;
+			padding-left: 10px;
+		}
+		#web_class ul li{
+			line-height: 27px;
+			padding-left: 10px;
+		}
+		li{list-style-type:none;}
+		.tj ul{
+			margin-top:10px;
+		}
+		.tj ul li p{
+			font-size: 18px;
+			margin-left:130px;
+		}
+		.tj ul li a{
+			margin-left:10px;
+			line-height: 30px;
+			color: #105cb6;
+			font-size: 14px;
+		}
+		#right{
+			float: right;
+			width: 300px;
+			position: relative;
+			top: -140px;
+			padding-right:10px; 
+		}
+		#search{		
+			background-color: #dcdcdc;
+			
+		}
+		.s{
+			padding: 10px;
+		}
+		#s_1{
+			width: 180px;
+			height: 20px;
+			border: 1px solid black;
+		}
+		#s_2{
+			width: 80px;
+			height: 26px;
+			background-color: #e9e9e9;
+			border: 1px solid black;
+		}
+		#right img{
+			width: 300px;
+			height: 250px;
+		}
+		#r_tj ul li a{
+			font-size: 12px;
+			line-height: 20px;
+			margin-left: 0px;
+		}
+		#r_tj ul li{
+			line-height: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="top">
+		<p>代码改变世界</p>
+		<div id="login">
+		[<a href="#">登录</a>·<a href="#">注册</a>]
+		</div>
+	</div>
+	<div id="logo"><img src="img/logo.png"></div>
+	<div class="menu" id="one">
+		<ul>
+			<li><a href="#">园子</a></li>
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">博客</a></li>
+			<li><a href="#">闪存</a></li>
+			<li><a href="#">小组</a></li>
+			<li><a href="#">收藏</a></li>
+			<li><a href="#">招聘</a></li>
+			<li><a href="#">班级</a></li>
+			<li><a href="#">找找看</a></li>
+		</ul>
+	</div>
+	<div id="web_class">
+		<div id="title"><span>网站分类</span></div>
+		<ul>
+			<li><a href="#">.NET技术</a></li>
+			<li><a href="#">编程语言</a></li>
+			<li><a href="#">软件技术</a></li>
+			<li><a href="#">web前端</a></li>
+			<li><a href="#">企业信息化</a></li>
+			<li><a href="#">手机开发</a></li>
+			<li><a href="#">软件工程</a></li>
+			<li><a href="#">数据库技术</a></li>
+			<li><a href="#">操作系统</a></li>
+			<li><a href="#">其他分类</a></li>
+			<li><a href="#">所有随笔</a></li>
+			<li><a href="#">所有评论</a></li>
+		</ul>
+	</div>
+	<div class="menu" id="tow">
+		<ul>
+			<li><a href="#">首页</a></li>
+			<li><a href="#">精华</a></li>
+			<li><a href="#">候选</a></li>
+			<li><a href="#">新闻</a></li>
+			<li><a href="#">关注</a></li>
+			<li><a href="#">我评</a></li>
+			<li><a href="#">我赞</a></li>
+		</ul>
+	</div>
+	<div class="tj">
+		<ul>
+			<li><p>【编辑推荐】.NET下使用HTTP请求的正确姿势 (23/2353)</p></li>
+			<li><a href="#">[最多推荐].Net Web开发技术栈(17/1023)</a></li>
+			<li><a href="#">[最多评论]跟着弦哥学人工智能——序(40/2238)</a></li>
+			<li><a href="#">[新闻头条]共享快递盒“双11”启用：每个用千次 单次成本仅0.025元(5/1813)</a></li>
+			<li><a href="#">[推荐新闻]龙芯CPU首席科学家：龙芯已用于北斗卫星 正迈向中高端(6/526)</a></li>
+		</ul>
+	</div>
+	<div id="right">
+		<div id="search">
+			<div class="s">
+			<input type="text" id="s_1">
+			<input type="button" value="找找看" id="s_2">
+			</div>
+			<div class="s">
+			<input type="text" id="s_1">
+			<input type="button" value="Google" id="s_2">
+			</div>
+		</div>	
+		<div><img src="img/tx.jpg"></div>
+		<div class="tj" id="r_tj">
+			<ul>
+				<li><a href="#">【推荐】HTML5拓扑3D机房，电力工控Web SCADA</a></li>
+				<li><a href="#">【推荐】腾讯云 成都新区开服特惠8.5折</a></li>
+				<li><a href="#">【推荐】9年ASP.NET控件库，CSS3动画惊艳登场！</a></li>
+				<li><a href="#">【推荐】Vuejs在线交互实战编程,深入浅出全面掌握</a></li>
+				<li><a href="#">【推荐】荣耀9邀你玩转华为云博客，秀出你freestyle</a></li>
+				<li><a href="#">【最新】40+篇服务器操作及运维基础知识</a></li>
+			</ul>
+		</div>
+	</div>
+	
+</body>
+</html>

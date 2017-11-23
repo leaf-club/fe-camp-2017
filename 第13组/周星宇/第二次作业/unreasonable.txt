@@ -1,0 +1,2 @@
+steam首页缩小页面后左侧栏会隐藏
+网址：http://store.steampowered.com/

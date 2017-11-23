@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>blog</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<!--  说明 begin  -->
+<!--  原网页http://www.ruanyifeng.com/blog/  -->
+<!--  尝试使用HTML5引入的语义化标签代替原先的<div>标签  -->
+<!--  说明 end  -->
+
+<body>
+
+    <div id="page">
+
+        <header>
+            <h3>阮一峰的网络日志</h3>
+            <form action="">
+                    <input id="text" name="srh_content" type="text">
+                    <input id="submit" name="srh_button" type="image" src="static/search.png" alt="搜索">
+            </form>
+            <a href="#">feed</a>
+        </header>
+
+        <main>
+
+            <article id="main_content">
+
+                <!--  [推荐文章部分] begin  -->
+                <!--  [说明]此区域由三部分组成：标题、内容及时间。依次对应：h2、section、p 标签  -->
+                <section class="maincolumn" id="top">
+                    <!--  推荐文章标题  -->
+                    <h2><a href="#">CSS 框架 Bulma 教程</a></h2>
+                    <!--  推荐文章内容（分类标签、摘要、read more链接）  -->
+                    <section id="top_content">
+                        <p id="label"><span>分类：</span><span><a href="#">开发者手册</a></span></p>
+                        <p id="abstract"><br><br>网页样式需要大量时间开发，最省事的方法就是使用 CSS 框架。</p>
+                        <br>
+                        <p id="link"><a href="#">继续阅读全文 »</a></p>
+                    </section>
+                    <!--  发表时间以及留言次数  -->
+                    <p id="time"><span>2017年10月24日 07:48 | </span><a href="#">留言(20)</a></p>  
+                </section>
+                <!--  [推荐文章]部分 end  -->
+
+                <!--  [最新文章]部分 begin  -->
+                <!--  [说明]此区域由两部分组成：标题、文章列表。依次对应：h2、ul 标签  -->
+                <section class="maincolumn" id="articles">
+                    <!--  标题  -->
+                    <h2>最新文章</h2>
+                    <!--  文章列表  -->
+                    <ul>
+                        <li><span>2017年10月17日 » </span><a href="#">换头术</a></li>
+                        <li><span>2017年10月11日 » </span><a href="#">开源许可证教程</a></li>
+                        <li><span>2017年09月26日 » </span><a href="#">如何读懂火焰图？</a></li>
+                        <li><span>2017年09月19日 » </span><a href="#">《ES6 标准入门（第3版）》上市了！</a></li>
+                        <li><span>2017年09月12日 » </span><a href="#">卡辛斯基的警告</a></li>
+                        <li><span>2017年09月 7日 » </span><a href="#">asm.js 和 Emscripten 入门教程</a></li>
+                        <li><span>2017年08月29日 » </span><a href="#">如何使用 Issue 管理软件项目？</a></li>
+                        <li><a href="#">更多文章……</a></li>
+                    </ul>
+                </section>
+                <!--  [最新文章]部分 end  -->
+
+                <!--  [广告]部分 begin  -->
+                <!--  [说明]此区域由两幅图构成的链接组成，依次对应两个a标签  -->
+                <section class="maincolumn" id="ads">
+                    <a href="#"><img src="static/ad1.png" alt="广告1"></a>
+                    <p><br></p>
+                    <a href="#"><img src="static/ad2.png" alt="广告2"></a>
+                </section>
+                <!--  [广告]部分 end  -->
+
+            </article>
+
+            <article id="aside">
+
+                <!--  [留言]部分 begin  -->
+                <!--  [说明]此区域由两部分组成：标题、留言列表。依次对应：h2、ul 标签  -->
+                <section class="sidecolumn" id="comment">
+                    <!--  标题  -->
+                    <h2>最新留言</h2>
+                    <!--  留言列表  -->
+                    <ul>
+                        <li><a href="#">helloworld!</a></li>
+                        <li><a href="#">爱吃鱼的猫</a></li>
+                        <li><a href="#">kevin</a></li>
+                        <li><a href="#">Jasery</a></li>
+                        <li><a href="#">我的名字里也有峰哦</a></li>
+                        <li><a href="#">zhaoyufei</a></li>
+                        <li><a href="#">jian</a></li>
+                        <li><a href="#">Clarencec</a></li>
+                    </ul>
+                </section>
+                <!--  [留言]部分 end  -->
+
+                <!--  [FOLLOW]部分 begin  -->
+                <!--  [说明]此区域由两部分组成：标题、链接列表。依次对应：h2、ul 标签  -->
+                <section class="sidecolumn" id="follow">
+                    <!--  标题  -->
+                    <h2>Follow me</h2>
+                    <!--  链接列表  -->
+                    <ul>
+                        <li>
+                            <a href="#">微博</a>, 
+                            <a href="#">推特</a>, 
+                            <a href="#">Feed</a>
+                        </li>
+                        <li><a href="#">Github</a></li>
+                    </ul>
+                </section>
+                <!--  [FOLLOW]部分 end  -->
+
+                <!--  [关于]部分 begin  -->
+                <!--  [说明]此区域由三部分组成：标题、链接（图片）、列表。依次对应：h2、a、ul 标签  -->
+                <section class="sidecolumn" id="about">
+                    <!--  标题  -->
+                    <h2>关于</h2>
+                    <!--  图片链接  -->
+                    <a href="#"><img src="static/person.jpg" alt="阮一峰"></a>
+                    <!--  列表  -->
+                    <ul>
+                        <li>
+                            <a href="#">个人简介</a>，
+                            <a href="#">访谈</a>
+                        </li>
+                        <li>
+                            <span>文章：</span>
+                            <a href="#">1668</a>
+                            <span>，留言：45100</span>
+                        </li>
+                    </ul>
+                </section>
+                <!--  [关于]部分 end  -->
+
+            </article>
+
+        </main>
+
+        <footer>
+            <p><a href="#">联系方式</a> | 2003 - 2017   </p>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

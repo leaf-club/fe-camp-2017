@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="referrer" content="always" />
+    <title>博客园 - 开发者的网上家园</title>
+    <meta name="keywords" content="开发者,博客园,开发者,程序猿,程序媛,极客,编程,代码,开源,IT网站,Developer,Programmer,Coder,Geek,技术社区" />
+        <meta name="description" content="博客园是一个面向开发者的知识分享社区。自创建以来，博客园一直致力并专注于为开发者打造一个纯净的技术交流社区，推动并帮助开发者通过互联网分享知识，从而让更多开发者从中受益。博客园的使命是帮助开发者用代码改变世界。" />
+    <link rel="shortcut icon" href="//common.cnblogs.com/favicon.ico" type="image/x-icon" />
+    <link rel="Stylesheet" type="text/css" href="/bundles/aggsite.css?v=IhfFDNk6saBQuSizNqMno4eFb5L3OoXlsUCqkaSgNvA1" />
+    <link id="RSSLink" title="RSS" type="application/rss+xml" rel="alternate" href="http://feed.cnblogs.com/blog/sitehome/rss" />
+</head>
+<body>
+    <div id="wrapper">
+        <div id="hd_info">
+            <div id="cnts">
+                <div>代码改变世界</div>
+                <div><span id="span_userinfo"></span></div>
+                <div class="clear"></div>
+            </div>
+        </div><!标题信息介绍>
+        <div id="header">
+                <div>
+                    <h1>
+                        <a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="/images/logo_small.gif" alt="博客园Logo" width="142" height="55" /></a>
+                    </h1>
+                </div>
+        </div>
+        <div id="nav_menu">
+            <a href="https://home.cnblogs.com/">园子</a>
+            <a href="https://news.cnblogs.com">新闻</a>
+            <a href="https://q.cnblogs.com/">博问</a>
+            <a href="https://ing.cnblogs.com/">闪存</a>
+            <a href="https://group.cnblogs.com/">小组</a>
+            <a href="https://wz.cnblogs.com/">收藏</a>
+            <a href="https://job.cnblogs.com/">招聘</a>
+            <a href="https://edu.cnblogs.com/">班级</a>
+            <a href="http://zzk.cnblogs.com/">找找看</a>
+        </div>
+        <div id="main">
+            <div class="post_nav_block_wrapper">
+                <ul>
+                    <li><a href="/"  class="current_nav" >首页</a></li>
+                    <li><a href="/pick/"   title="编辑精选博文">精华</a></li>
+                    <li><a href="/candidate/"   title="候选区的博文">候选</a></li>
+                    <li><a href="/news/"   title="新闻频道最新新闻">新闻</a></li>
+                    <li><a href="/following"   title="我关注博客的最新博文">关注</a></li>
+                    <li><a href="/aggsite/mycommented"   title="我评论过的博文">我评</a></li>
+                    <li><a href="/aggsite/mydigged"   title="我推荐过的博文">我赞</a></li>
+                </ul>
+            </div>
+            <div>
+                <span id="posts_refresh_tips"></span>
+                <a id="posts_refresh" href="#" class="refresh" title="刷新博文列表" 
+                onclick="aggSite.loadCategoryPostList();return false">刷新</a>  
+                 <a href="http://feed.cnblogs.com/blog/sitehome/rss">
+                    <img src="//common.cnblogs.com/images/icon_rss.gif" alt="点击订阅" 
+                    style="position:relative;top:2px;" title="订阅博客园文章" />
+                </a>            
+            </div>
+            <div id="headline_block" class="headline">
+                <ul>
+                    <li class="editor_pick">
+                        <a href="http://www.cnblogs.com/xybaby/p/7465816.html" id="editor_pick_lnk" target="_blank">
+                            【编辑推荐】从银行转账失败到分布式事务：总结与思考
+                            <span id="editor_pick_count"></span></a> 
+                            <a href="/aggsite/headline" title="查看更多编辑推荐" class="right_more">»
+                        </a>
+                    </li>
+                    <li><a href="http://www.cnblogs.com/cyq1162/p/7717868.html" target="_blank" title="阅读590, 评论20, 推荐24">
+                        [最多推荐]站在宇宙中心呼唤：程序员节(10月24日)今年不加班，明年不上班！(20/590)</a> 
+                        <a href="/aggsite/topdigged24h" title="查看24小时推荐排行" class="right_more">»</a>
+                    </li>   
+                    <li><a href="http://www.cnblogs.com/smallSevens/p/7710373.html" target="_blank" title="阅读2512, 评论23, 推荐19">
+                        [最多评论]程序员如何打造属于自己的云笔记服务(23/2512)</a> 
+                        <a href="/aggsite/topcommented24h" title="查看24小时评论排行" class="right_more">»</a>
+                    </li>
+                    <li><a href="http://news.cnblogs.com/n/580705/" target="_blank" title="阅读2190, 评论15, 推荐7">
+                        [新闻头条]三星手机又陷“冒烟门”：航班起飞后Galaxy J7冒烟(15/2190)</a> 
+                        <a href="http://news.cnblogs.com/" title="查看更多新闻" class="right_more">»</a>
+                    </li>
+                    <li><a href="http://news.cnblogs.com/n/580741/" target="_blank" title="阅读554, 评论0, 推荐3">
+                        [推荐新闻]霍金公开自己1966年的博士论文《宇宙膨胀的属性》(0/554)</a> 
+                        <a href="http://news.cnblogs.com/n/recommend" title="查看更多推荐新闻" class="right_more">»</a>
+                    </li>
+                </ul>
+            </div>
+            <div id="pager_top" style="display:none"></div>
+            <div id="post_list_tips" class="hide"></div>
+            <div id="post_list"><!列举了两个评论>
+                <div class="post_item">
+                    <div class="digg">
+                        <div class="diggit" onclick="DiggPost('cyq1162',7717868,20967,1)"> 
+	                      <span class="diggnum" id="digg_count_7717868">24</span>
+	                    </div>
+	                    <div class="clear"></div>
+	                    <div id="digg_tip_7717868" class="digg_tip"></div>
+                    </div>      
+                    <div class="post_item_body">
+                        <h3><a class="titlelnk" href="http://www.cnblogs.com/cyq1162/p/7717868.html" target="_blank">
+                            站在宇宙中心呼唤：程序员节(10月24日)今年不加班，明年不上班！</a>
+                        </h3>               	
+                        <p class="post_item_summary">
+                            <a href="http://www.cnblogs.com/cyq1162/" target="_blank">
+                                <img width="48" height="48" class="pfs" src="//pic.cnblogs.com/face/u17408.jpg?id=06142122" alt=""/>
+                            </a>1024，你们加班吗？忘了当年是谁发起：程序员节，不过从博客园看到到现在，已有好几个年头了！
+                            往年的这个节，虽然属于程序员，但：这一天，依旧是有一大波程序员不仅不能准时下班，还要苦BB的加着班。
+                            这个节，除了自我安慰，真的，真的，还缺少那么一点质感！！！ ...
+                        </p>              
+                        <div class="post_item_foot">
+                            <a href="http://www.cnblogs.com/cyq1162/" class="lightblue">路过秋天</a> 发布于 2017-10-23 19:10 
+                            <span class="article_comment">
+                                <a href="http://www.cnblogs.com/cyq1162/p/7717868.html#commentform" title="2017-10-23 20:01" class="gray">
+                                    评论(20)a></span><span class="article_view">
+                                        <a href="http://www.cnblogs.com/cyq1162/p/7717868.html" class="gray">阅读(616)</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="post_item">
+                    <div class="digg">
+                        <div class="diggit" onclick="DiggPost('ihardcoder',7718392,173153,1)"> 
+	                         <span class="diggnum" id="digg_count_7718392">0</span>
+	                    </div>
+	                    <div class="clear"></div>
+	                    <div id="digg_tip_7718392" class="digg_tip"></div>
+                    </div>      
+                    <div class="post_item_body">
+	                    <h3><a class="titlelnk" href="http://www.cnblogs.com/ihardcoder/p/7718392.html" target="_blank">上海2017QCon个人分享总结</a></h3>               	
+                        <p class="post_item_summary">
+                            <a href="http://www.cnblogs.com/ihardcoder/" target="_blank">
+                                <img width="48" height="48" class="pfs" src="//pic.cnblogs.com/face/595796/20170818094542.png" alt=""/>
+                            </a> 有幸作为讲师受邀参加InfoQ在上海举办的QCon2017，不得不说，不论是从讲师还是听众的角度衡量，QCon进一步扩大了技术视野。
+                            虽然前端专题只有四场，但每一场分享都是目前的热门话题。
+                            并且Qcon的选题都是从实践出发，并没有一些看起来很炫但是尚未经过实践检验的新技术，即使是目前刚刚起步且相对来说比 ...
+                        </p>              
+                        <div class="post_item_foot">
+                            <a href="http://www.cnblogs.com/ihardcoder/" class="lightblue">才子锅锅</a>发布于 2017-10-23 19:07 
+                            <span class="article_comment">
+                                <a href="http://www.cnblogs.com/ihardcoder/p/7718392.html#commentform" title="" class="gray">评论(0)</a>
+                            </span>
+                            <span class="article_view">
+                                <a href="http://www.cnblogs.com/ihardcoder/p/7718392.html" class="gray">阅读(119)</a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                
+            </div>
+            <div id="pager_bottom">
+                <div id="paging_block">
+                    <div class="pager">
+                        <a href="/" class="p_1 current" onclick="aggSite.loadCategoryPostList(1,20);buildPaging(1);return false;">1</a>
+                        <a href="/sitehome/p/2" class="p_2 middle" onclick="aggSite.loadCategoryPostList(2,20);buildPaging(2);return false;">2</a>
+                        <a href="/sitehome/p/3" class="p_3 middle" onclick="aggSite.loadCategoryPostList(3,20);buildPaging(3);return false;">3</a>
+                        <a href="/sitehome/p/4" class="p_4 middle" onclick="aggSite.loadCategoryPostList(4,20);buildPaging(4);return false;">4</a>
+                        <a href="/sitehome/p/5" class="p_5 middle" onclick="aggSite.loadCategoryPostList(5,20);buildPaging(5);return false;">5</a>
+                        <a href="/sitehome/p/6" class="p_6 middle" onclick="aggSite.loadCategoryPostList(6,20);buildPaging(6);return false;">6</a>
+                        <a href="/sitehome/p/7" class="p_7 middle" onclick="aggSite.loadCategoryPostList(7,20);buildPaging(7);return false;">7</a>
+                        <a href="/sitehome/p/8" class="p_8 middle" onclick="aggSite.loadCategoryPostList(8,20);buildPaging(8);return false;">8</a>
+                        <a href="/sitehome/p/9" class="p_9 middle" onclick="aggSite.loadCategoryPostList(9,20);buildPaging(9);return false;">9</a>
+                        <a href="/sitehome/p/10" class="p_10 middle" onclick="aggSite.loadCategoryPostList(10,20);buildPaging(10);return false;">10</a>
+                        <a href="/sitehome/p/11" class="p_11 middle" onclick="aggSite.loadCategoryPostList(11,20);buildPaging(11);return false;">11</a>
+                        <span class="ellipsis">···</span><a href="/sitehome/p/200" class="p_200 last" onclick="aggSite.loadCategoryPostList(200,20);buildPaging(200);return false;">200</a>
+                        <a href="/sitehome/p/2" onclick="aggSite.loadCategoryPostList(2,20);buildPaging(2);return false;">Next &gt;</a>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    var pagingBuider=
+                    {"OnlyLinkText":false,"TotalCount":4000,"PageIndex":1,"PageSize":20,"ShowPageCount":5,
+                    "SkipCount":0,"UrlFormat":"/sitehome/p/{0}","OnlickJsFunc":"aggSite.loadCategoryPostList()",
+                    "FirstPageLink":"/","AjaxUrl":"/mvc/ToolkitPaging/load.aspx",
+                    "AjaxCallbak":null,"TopPagerId":"pager_top","IsRenderScript":true};
+                    function buildPaging(pageIndex){pagingBuider.PageIndex=pageIndex;
+                    $.ajax({url:pagingBuider.AjaxUrl,data:JSON.stringify(pagingBuider),
+                    type:'post',dataType:'text',contentType:'application/json; charset=utf-8',
+                    success:function (data) { $('#paging_block').html(data); 
+                    var pagerTop=$('#pager_top');if(pageIndex>1){$(pagerTop).html(data).show();}
+                    else{$(pagerTop).hide();}}});}
+                </script>
+            </div><!页面底部页数>
+            <div id="side_nav"> <!left aside 信息>       
+                <div id="cate_title_block">
+                    <div id="cate_title_title">
+                        <div class="cate_title">网站分类</div>
+                    </div>
+                    <ul id="cate_item">
+                        <li id="cate_item_108698" onmouseover="cateShow(108698)" onmouseout="cateHidden(108698)">
+                            <a href="/cate/108698/">.NET技术(7)</a>
+                        </li>
+                        <li id="cate_item_2" onmouseover="cateShow(2)" onmouseout="cateHidden(2)">
+                            <a href="/cate/2/">编程语言(53)</a>
+                        </li>
+                        <li id="cate_item_108701" onmouseover="cateShow(108701)" onmouseout="cateHidden(108701)">
+                            <a href="/cate/108701/">软件设计(4)</a>
+                        </li>
+                        <li id="cate_item_108703" onmouseover="cateShow(108703)" onmouseout="cateHidden(108703)">
+                            <a href="/cate/108703/">Web前端(22)</a>
+                        </li>
+                    </ul>
+                    <div class="cate_bottom"></div>
+                    <div id="cate_sub_block"></div>;//网站分类的边框
+                    <script type="text/javascript">var cateIdList = '108698,2,108701,108703,108704,108705,108709,108712,108724,4';aggSite.loadSubCategories();</script>
+                </div>
+                <div class="l_s"></div>
+                <p class="r_l_3"></p>
+                <p class="r_l_2"></p>
+                <p class="r_l_1"></p>
+                <div class="w_l">
+                    <h4>链接</h4>        
+                    <ul>
+                        <li><a href="http://space.cnblogs.com/forum/public" target="_blank">反馈或建议</a></li> 
+                        <li><a href="http://www.cnblogs.com/cmt/" target="_blank">官方博客</a></li>
+                        <li><a href="/skins.aspx" target="_blank">博客模板</a></li>
+                        <li><a href="http://www.blogjava.net/">Java博客</a></li>
+                        <li><a href="http://www.cppblog.com/">C++博客</a></li>
+                        <li><a href="http://www.cnblogs.com/cmt/archive/2009/09/26/1574616.html">手机版</a></li>
+                    </ul>
+                </div>
+                <p class="r_l_1"></p>
+                <p class="r_l_2"></p>
+                <p class="r_l_3"></p>
+                <div class="l_s"></div>
+                <div id="user_stats"></div>
+                    <div class="l_s"></div>        
+                    <p class="r_l_3"></p>
+                    <p class="r_l_2"></p>
+                    <p class="r_l_1"></p>
+                    <div class="w_l">                
+                        <h4>统计信息</h4>
+                        <div id="site_stats"></div>      
+                    </div>
+                    <p class="r_l_1"></p>
+                    <p class="r_l_2"></p>
+                    <p class="r_l_3"></p>
+                </div>
+            <div id="side_right"><!right aside 信息>
+                <div id="search_block">
+                    <div class="side_search">
+                        <input type="text" id="zzk_q" class="search_input" onkeydown="return zzk_go_enter(event);" tabindex="3" /><input onclick="zzk_go()" type="button" class="search_btn" value="找找看" />
+                    </div>
+                    <div id="google_search" class="side_search">
+                        <input type="text" id="google_search_q" class="search_input" onkeydown="return google_search_enter(event);" /><input type="button" value="Google" class="search_btn" onclick="return google_search();" />
+                    </div>
+                </div>
+                <div id="cnblogs_a1"></div>                                           
+                <div id="cnblogs_b1" class="sidebar-image"></div>
+                <div id="ad_right_text" class="ad_right_text"></div>
+                <div id="side_right_block"></div>
+            </div>
+        </div>
+        <div id="footer"><!友情链接>
+            <div class="footer_block">
+                <p class="r_b_3"></p>
+                <p class="r_b_2"></p>
+                <p class="r_b_1"></p>
+                <div id="friend_link">
+                    友情链接：<a href="http://click.aliyun.com/m/994/" target="_blank"><img src="//common.cnblogs.com/images/friend_link/aliyun.png" alt="阿里云" /></a><a href="http://www.hujiang.com" target="_blank">沪江网</a><a href="http://www.chinaz.com/" target="_blank">站长之家</a><a href="http://dev.yesky.com" target="_blank">天极网</a><a href="http://down.admin5.com" target="_blank">A5源码下载</a><a href="http://www.gcpowertools.com.cn" target="_blank">葡萄城控件</a><a href="https://www.upyun.com/?md=cnblogs" target="_blank">又拍云存储</a><a href="http://zt.cnblogs.com/tingyun/" target="_blank">听云APP</a><a href="http://www.rongcloud.cn/" target="_blank">融云IM云</a><a href="http://www.hightopo.com/cn-index.html" target="_blank">图扑软件</a><a href="https://yq.aliyun.com/" target="_blank">阿里云栖社区</a><a href="http://www.cnblogs.com/mipengine/" target="_blank">百度MIP博客</a><a href="http://www.easemob.com" target="_blank">环信IM</a><a href="http://wetest.qq.com/?from=links_cnblogs" target="_blank">腾讯WeTest</a><a href="http://www.feige.ee?fm=cnblogs" target="_blank">飞鸽传书短信平台</a><a href="https://www.mtyun.com/" target="_blank">美团云</a><a href="https://www.163yun.com" target="_blank">网易云</a><a href="http://cloud.baidu.com" target="_blank">百度云</a>
+                </div>
+                <p class="r_b_1"></p>
+                <p class="r_b_2"></p>
+                <p class="r_b_3"></p>
+            </div>
+        </div>
+        <div id="footer_bottom"><!页尾>
+            <div><a href="/AboutUS.aspx">关于博客园</a><a href="/ContactUs.aspx">联系我们</a>&copy;2004-2017<a href="http://www.cnblogs.com/">博客园</a>保留所有权利<a href="http://www.miitbeian.gov.cn" target="_blank">沪ICP备09004260号</a></div>
+            <div><a href="https://ss.knet.cn/verifyseal.dll?sn=e131108110100433392itm000000&amp;ct=df&amp;a=1&amp;pa=0.25787803245785335" rel="nofollow" target="_blank"><img id="cnnic_img" src="//common.cnblogs.com/images/cnnic.png" alt="" width="64" height="23" /></a><a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502001144" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="//common.cnblogs.com/images/ghs.png" alt="" /><span style="float:left;height:20px;line-height:20px;margin: 0 5px 0 5px; color:#939393;">沪公网安备 31011502001144号</span></a></div>
+        </div>
+    </div>
+</body>
+</html>

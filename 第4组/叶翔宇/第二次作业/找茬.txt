@@ -1,0 +1,5 @@
+网页：http://www.cnblogs.com/invoker-/
+问题：使用键盘tab键操作时不能显示当前选中项目，给使用键盘的用户带来不好的体验。可能是tabindex属性设置问题。
+
+网页：http://zhan.renren.com/home?checked=true
+问题：搜索框只能使用Enter键搜索，没有可视化按钮供鼠标操作。

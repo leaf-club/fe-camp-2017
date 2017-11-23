@@ -1,0 +1,45 @@
+#head{
+    height:60px;
+}
+#head img{
+    position:absolute;
+    left:84%;
+}
+#head form{
+    display:inline;
+    position:absolute;
+    right:4%;
+
+}
+#second,#third,#forth{
+
+    width:60%;
+}
+#rightFirst{
+position:absolute;
+right:20%;
+top:90px;
+border:1px gray solid;
+background-color:rgb(200, 200, 230);
+width:150px;
+}
+
+#rightSecond{
+    position:absolute;
+    right:20%;
+    top:350px;
+    border:1px gray solid;
+    background-color:rgb(200, 200, 230);
+    width:150px;
+}
+#rightThird{
+    position:absolute;
+    right:20%;
+    top:520px;
+    border:1px gray solid;
+    background-color:rgb(200, 200, 230);
+    width:150px;
+}
+body{
+    background-color:rgb(231, 231, 209);
+}

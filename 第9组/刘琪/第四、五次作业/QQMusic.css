@@ -1,0 +1,519 @@
+body,h1,ul {
+    margin: 0;
+    padding: 0;
+  /*font-family:Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;*/
+/*为何h1,ul的margin不能从bodymargin属性中继承？*/
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:hover {
+    color: #31c27c;
+    text-decoration: none;
+}
+/*头部START*/
+header {
+    background-color: white;
+}
+.top_div {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+.top_div h1 {
+   position: absolute;
+   top: 22px;
+}
+.top_nav {
+    position: absolute;
+    top:0;/*若不加此项，则导航栏随父容器下移。*/
+    left: 200px;
+    /*display: inline-block;无用？*/
+    list-style: none;
+}
+.top_nav li {
+    float: left;
+/*左浮动使导航栏水平。若只有ul设置了inline-block，
+    而li没有浮动，导航栏不会水平。*/
+}
+.top_nav a {
+    display: block;
+/*此处若不声明为block，则line-height:90px不起作用，
+    从音乐馆背景色填充可知。*/
+    padding: 0 20px;
+    height: 90px;
+    line-height: 90px;
+    /*height元素高度，line-height一行文字高度*/
+    text-align: center;
+    font-size: 18px;
+}
+.top_nav_current {
+    background-color: #31c27c;
+    color:white;
+}
+.top_nav_current:hover {
+    background-color: #31c27c;
+    color:white;
+}
+.top_subnav {
+    height: 51px;
+    line-height: 51px;
+    padding-left: 230px;
+    border-top: 1px solid #f2f2f2;
+    list-style: none;
+}
+.top_subnav li {
+    float: left;
+    font-size: 15px;
+    color: #c1c1c1;
+    margin-right: 47px;
+}
+.top_subnav a {
+    display: block;
+}
+.top_subnav_current {
+    color: #31c27c;
+}
+.top_subnav_current:hover {
+    color: #31c27c;
+}
+.top_search {
+    position: absolute;
+    top: 0;
+    right: 284px;
+}
+.top_search_input {
+    border: 1px solid #c9c9c9;
+    padding: 0 33px 0 11px;
+    line-height: 36px;
+    margin-top: 26px;
+    position: relative;
+    border-radius: 3px;
+}
+.top_search_input_input {
+    width: 174px;
+    height: 36px;
+    border: 0;
+    font-size: 14px;
+}
+.top_search_btn {
+    position: absolute;
+/*为什么绝对定位时右边与父块右边平齐，而top为0时却与body顶部平齐？*/
+    top: 26px;
+    right: 0;
+    border: 0;
+    width: 38px;
+    height: 40px;
+    overflow: visible;
+}
+.top_search_btn_logo {
+    position: absolute;
+/*此处的定位不是很清楚，只是满足了视觉效果罢了原网页上top50%，在我这位置不正确*/
+    top: 8px;
+    right: 15px;
+    width: 16px;
+    height: 16px;
+}
+.top_btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 90px;
+    line-height: 90px;
+}
+.top_btn_login {
+    margin-right: 10px;
+    text-align: center;
+    display: inline-block;
+}
+.top_btn_vip {
+    background-color: #2caf6f;
+    color: white;
+    margin-top: 24px;
+    margin-left: 10px;
+    padding: 0 9px;
+    border: 1px;
+    border-radius: 3px;
+    line-height: 39px;
+    height: 39px;
+    font-size: 13px;
+    display: inline-block;
+}
+.top_btn_vip:hover {
+    background-color: #269e60;
+    color: white;
+}
+.top_btn_pay {
+    border: 1px solid #c9c9c9;
+    border-radius: 3px;
+    margin-left: 10px;
+    padding: 0 9px;
+    font-size: 13px;
+    line-height: 39px;
+    height: 39px;
+    display: inline-block;
+}
+.top_btn_pay:hover {
+    background-color:#ededed ;
+}
+/*头部END*/
+/*歌单推荐START*/
+.part_body {
+    position: relative;
+    background-color: rgba(221, 221, 221, 0.3);
+}
+.item_body {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+}
+.index_hd {
+    position: relative;
+    text-align: center;
+    padding-top: 4.2%;
+    padding-bottom:2%;
+    font-size: 32px;
+}
+.slide {
+    height: 50px;
+    text-align: center;
+}
+.slide a {
+    margin: 0 24px;
+    font-size: 15px;
+}
+.slide_current {
+    color: #31c27c;
+}
+.slide_current:hover {
+    color: #31c27c;
+}
+.plr_rank {
+    background-color: white;
+    height: 320px;
+    padding-bottom: 20px;
+}
+.plr_rank_item {
+/*display:block会让item块下移一定的距离，但是开发工具上
+margin并没有距离(这是在.plr_rank未定高度的时候)*/
+    float: left;
+    width: 224px;
+    height: 310px;
+    margin-right: 20px;
+    position: relative;
+}
+.plr_rank_item5 {
+    margin-right: 0;
+}
+.plr_rank_pic {
+    width: 224px;
+    height: 224px;
+    margin-bottom: 15px;
+}
+.plr_rank_item_intro{
+    font-size: 14px;
+    line-height: 22px;
+}
+.played_num {
+/*当歌单介绍只有一行时，QQ音乐网页上播放量一行会上移，我用绝对定位方式固定了播放量的位置*/
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #999;
+    height: 22px;
+    font-size: 14px;
+}
+.switch {
+    text-align: center;
+    background-color: white;
+    padding:10px 0;
+}
+.switch:hover {
+}
+/*歌单推荐END*/
+/*新歌首发START*/
+.newsong_btn {
+    position: absolute;
+    left: 0;
+    top: 100px;
+    padding: 8px 23px 8px 40px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: url(images/play.png) no-repeat 20px 8px;
+}
+.newsong_items {
+    margin: 10px 0;
+}
+.newsong_ul {
+    list-style: none;
+}
+.newsong_ul li {
+    position: relative;
+    float: left;
+    width: 380px;
+    height: 86px;
+    margin: 0 30px 13px 0;
+    padding-top: 2px;
+}
+#newsong_item3 {
+    margin: 0 0 13px 0;
+}
+.newsong_ul li img {
+    width: 86px;
+    height: 86px;
+}
+.newsong_name {
+    position: absolute;
+    top: 22px;
+    left: 100px;
+}
+.song,.singer {
+    font-size: 14px;
+}
+.singer a {
+    color: #999;
+}
+.singer a:hover {
+    color: #31c27c;
+}
+.newsong_time {
+    position: absolute;
+    top: 22px;
+    right: 0;
+    color:#999;
+}
+/*新歌首发END*/
+/*精彩推荐START*/
+.highlight_recom {
+    background-color: white;
+    margin-top: 10px;
+    padding-bottom: 20px;
+}
+.highlight_recom img {
+    width: 590px;
+    height: 236px;
+}
+.highlight1 {
+    float: left;
+    width: 590px;
+    height: 236px;
+    margin-right: 20px;
+}
+.highlight1 {
+    float: left;
+    width: 590px;
+    height: 236px;
+}
+/*精彩推荐END*/
+/*新碟首发START*/
+.more {
+    float: right;
+    /*background: url(images/more.png) no-repeat right center;*/
+} 
+.newCD {
+    height: 600px;
+    background-color: white;
+}
+.newCD ul {
+    list-style: none;
+}
+.newCD_item {
+    float: left;
+    width: 224px;
+    height: 283px;
+    margin-right: 20px;
+}
+#newCD_item5 {
+    margin-right: 0;
+}
+.newCD_item img {
+    width: 224px;
+    height: 224px;
+}
+/*新碟首发END*/
+/*排行榜START*/
+.rank_lists {
+    height: 540px;
+    background-color: white;
+}
+.rank_list {
+    float: left;
+    width: 224px;
+    height: 480px;
+    margin: 0 20px 20px 0;
+    position: relative;
+}
+.rank_list1 {
+    background-color: rgba(167, 70, 107, 0.829);
+    color: white;
+}
+.rank_list2 {
+    background-color: rgb(91, 151, 165);
+    color:white;
+}
+.rank_list3 {
+    background-color: lightseagreen;
+    color:white;
+}
+.rank_list4 {
+    background-color: rgb(59, 141, 150);
+    color:white;
+}
+#rank_list5 {
+    background-color:lightsalmon ;
+    color: white;
+    margin-right: 0;
+}
+.rank_list h3 {
+    text-align: center;
+}
+.rank_list_head {
+    font-weight: 200;
+}
+.rank_list_sort {
+    font-weight: 400;
+    font-size: 26px;
+}
+.rank_list_line {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 70px;
+}
+.rank_list li {
+    margin-bottom: 27px;
+}
+/*排行榜END*/
+/*MV START*/
+.MVs {
+    height: 450px;
+    background-color: white;
+}
+.MVs ul {
+    list-style: none;
+}
+.MVs_item {
+    float: left;
+    width: 224px;
+    margin-right: 20px;
+}
+#MVs_item5 {
+    margin-right: 0;
+}
+.MVs_item a img {
+    width: 224px;
+    height: 150px;
+}
+.MV_played {
+    font-size: 14px;
+    color: #999;
+    padding-left: 30px;
+    background: url(images/play2.png) no-repeat left center;
+}
+/*MV END*/
+/*footer START*/
+footer {
+    position: relative;
+    color: #999;
+    height: 580px;
+    font-size: 14px;
+    background-color: #333;
+}
+footer a {
+    color: #999;
+}
+.footer_info {
+    position: relative;
+    width: 1200px;
+    height: 400px;
+    margin: 0 auto;
+}
+.footer_download {
+    position: absolute;
+    left: 10px;
+    width: 380px;
+}
+.footer_download p {
+    font-size: 15px;
+    margin: 0;
+    padding: 80px 0 46px 0;
+}
+footer figure {
+    float: left;
+    margin: 0 29px 20px 0;
+    text-align: center;
+}
+footer figure img {
+    height: 48px;
+}
+.feature_pro {
+    position: absolute;
+    top: 0;
+    left: 480px;
+    width: 300px;
+}
+.feature_pro p {
+    font-size: 15px;
+    margin: 0;
+    padding: 80px 0 46px 0;
+}
+.f_pro_a {
+    display: inline-block;
+    margin-right: 29px;
+}
+.footer_co_link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+}
+.footer_co_link p {
+    font-size: 15px;
+    margin: 0;
+    padding: 80px 0 46px 0;
+}
+.footer_co_link ul {
+    list-style: none
+}
+.co_link_item {
+    float: left;
+    width: 100px;
+    margin-bottom: 12px;
+}
+.open_platform {
+    position: absolute;
+    margin: 230px 0 0 10px;
+}
+.open_platform p {
+    margin: 0;
+    padding: 80px 0 46px 0;
+}
+.open_platform ul {
+    list-style: none;
+}
+.open_platform li {
+    float: left;
+    margin-right: 30px;
+}
+.footer_copyright {
+    margin: 80px auto 0;
+    width: 1200px;
+    font-size: 12px;
+    text-align: center;
+}
+.footer_copyright_info {
+    width: 60px;
+    padding: 0 3px;
+    text-align: center;
+    border-right: 1px solid;
+}
+.footer_copyright p a {
+    cursor: pointer;
+}
+.footer_copyright span a {
+    cursor: pointer;
+}
+/*footer END*/
