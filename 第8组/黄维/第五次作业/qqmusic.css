@@ -1,0 +1,453 @@
+
+body{
+ 
+    width:1350px;
+    overflow-y: scroll;
+}
+html,
+body{
+
+    color: #333;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: poppin,Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+.head{
+    background-color: #fff;
+    position: relative;
+    z-index: 4;
+}
+h1{
+    float:left;
+    margin-top: -10px;
+    margin-left:20px;
+    margin-bottom: -5px;
+}
+.top1{
+    position: absolute;
+    left: 198px;
+    top: 0;
+}
+.item1{
+    list-style:none;
+    float:left;
+    margin-right: -5px;
+    margin-top: -20px;
+}
+.set0{
+    display: block;
+    padding: 0 20px;
+    line-height: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #31c27c;
+    color:#fff;
+}
+.set1:hover{
+    color:#31c27c;
+}
+.set1{
+    display: block;
+    padding: 0 20px;
+    line-height: 90px;
+    height: 90px;
+    text-align: center;
+    font-size: 18px;
+}
+.search_input{
+    border: 1px solid #c9c9c9;
+    padding: 0 33px 0 11px;
+    line-height: 36px;
+    height: 36px;
+    margin-top: 23px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left:450px;
+}
+.search_but{
+    margin-left: -45px;
+    margin-top: 24px;
+    position: absolute;
+    border: 0 none;
+    width: 38px;
+    height: 35px;
+    overflow: visible;
+    background: 0 0;
+}
+.login{
+    position: absolute;
+    top:0;
+    margin-left: 910px;
+    height: 90px;
+    line-height: 90px;
+}
+
+.login1{
+    position: relative;
+    font-size: 16px;
+    float: left;
+    width: 38px;
+    margin-right: 10px;
+    text-align: center;
+}
+.login1:hover{
+    color:#31c27c;
+}
+.tip1{
+    margin-top: 24px;
+    margin-left: 10px;
+}
+.back_green{
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 23px;
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    white-space: nowrap;
+ 
+    border: 1px solid #31c27c;
+    background-color: #31c27c;
+    color: #fff;
+}
+.tip1:hover{
+    background-color: #246948;
+}
+.tip2{
+    margin-top: 24px;
+    margin-left: 10px;
+}
+.border_1{
+    border: 1px solid #c9c9c9;
+    color: #333;
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 1px 23px;
+    height: 34px;
+    line-height: 35px;
+    display: inline-block;
+    white-space: nowrap;
+}
+.tip2:hover{
+    background-color: rgb(185, 181, 181);
+}
+.top2{
+    clear: both;
+    list-style: none;
+    height: 51px;
+    line-height: 51px;
+    border-top: 1px solid #f2f2f2;
+    padding-left: 270px;
+    margin-right: -50px;
+}
+.item2{
+    float: left;
+    font-size: 15px;
+    color: #c1c1c1;
+    margin-right: 47px;
+}
+.item2 a:hover{
+    color:#31c27c;
+}
+.color_1{
+    color:#31c27c;
+}
+.recommend{
+    position: relative;
+    padding-top: 3.7%;
+    padding-bottom: 2%;
+    background:url(img/bg_detail.jpg)50% 0 repeat-x;
+}
+.recommend_title{
+    display: block;
+    margin: 0 auto;
+    width: 196px;
+    height: 40px;
+}
+.recommend_title a{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+.recommend_list{
+    height: 50px;
+    text-align: center;
+    padding-left:400px;
+    padding-top: 20px;
+}
+.item3{
+    list-style: none;
+    float: left;
+    font-size: 15px;
+    color: #c1c1c1;
+    margin-right: 47px;
+}
+.item3 a:hover{
+    color:#31c27c;
+}
+.playlist{
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+}
+.list_enter{
+    list-style:none;
+    position: relative;
+    float:left;
+    padding-left: 20px;
+}
+.list_img{
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width:224px;
+    height:229px;
+}
+.list_name{
+    float: left;
+    max-width: 224px;
+    font-weight: 400;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 22px;
+    max-height: 44px;
+    white-space: normal;
+}
+.list_playnumber a{
+    color:#999;
+}
+.newsong{
+    position: relative;
+    padding-top: 3.7%;
+    padding-bottom: 2%;
+    background:url(img/bg_detail.jpg)50% 0 repeat-x;
+}
+.newsong_title{
+    display: block;
+    margin: 0 auto;
+    width: 196px;
+    height: 40px;
+}
+.newsong_title a{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+.play_all{
+    position: absolute;
+    left: 0;
+    top: initial;
+    border:0px;
+    background: 0 0;
+    margin: 23px 0 0 56px;
+}
+
+.newsong_class{
+    height: 50px;
+    text-align: center;
+    padding-left:480px;
+    padding-top: 20px;
+}
+.item4{
+    list-style: none;
+    float: left;
+    font-size: 15px;
+    color: #c1c1c1;
+    margin-right: 47px;
+}
+.item4 a:hover{
+    color:#31c27c;
+}
+.newsong_list{
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    margin-left: 5px;
+} 
+.item5{
+    list-style:none;
+    position: relative;
+    float:left;
+    width:386px;
+    height:92px;
+    padding-left: 20px;
+} 
+.wonder{
+    position: relative;
+    padding-top: 3.7%;
+    padding-bottom: 2%;
+    background:url(img/bg_detail.jpg)50% 0 repeat-x;
+} 
+.wonder_title{
+    display: block;
+    margin: 0 auto;
+    width: 196px;
+    height: 40px;
+}
+.wonder_title a{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+.wonderlist{
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    margin-left: 15px;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+.item6{
+    list-style:none;
+    position: relative;
+    float:left;
+    padding-left: 10px;
+} 
+.charts{
+    position: relative;
+    padding-top: 3.7%;
+    padding-bottom: 2%;
+    background:url(img/bg_detail.jpg)50% 0 repeat-x;
+}
+.charts_name{
+    display: block;
+    margin: 0 auto;
+    width: 155px;
+    height: 40px;
+}
+.charts_name a{
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 20px;
+}
+.more{
+    position: absolute;
+    top:52px;
+    right:88px;
+    height: 40px;
+    line-height: 40px;
+    border:0px;
+    background: 0 0;
+}
+.toplist{
+    overflow: hidden;
+    margin-bottom: 20px;
+    position: relative;
+    margin-left:20px;
+    padding-top: 15px;
+    margin-top: 15px;
+}
+.toplist_lv2{
+    display: inline-block;
+    z-index: 2;
+    width: 17%;
+    zoom: 1;
+    list-style: none;
+    overflow: hidden;
+    position: relative;
+    margin-right: 20px;
+    height: 500px;
+    overflow: hidden;
+}
+.toplist_box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 567px;
+    background-position: 0 0;
+    background-image: url(img/bg_index_top.jpg)
+}
+.pos1{
+    background-position: 0 0;
+}
+.pos2{
+    background-position: -224px 0;
+}
+.pos3{
+    background-position:-448px 0;
+}
+.pos4{
+    background-position:-672px 0;
+}
+.pos5{
+    background-position:-896px 0;
+}
+.toplist_name0{
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 200;
+}
+.toplist_name{
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    text-align: center;
+    font-size: 26px;
+    color: #fff;
+    font-weight: 400;
+}
+.toplist_lv3{
+    list-style: none;
+    position: absolute;
+    top: 188px;
+    left: 0px;
+    right: 30px;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 14px;
+}
+.toplist_song{
+    position: relative;
+    padding-left: 10px;
+    margin-bottom: 27px;
+}
+.song_number{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.song_name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 5px;
+}
+.song_songer{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}   
+.footer{
+    color: #999;
+    background-color: #333;
+    clear: both;
+}
+.footer a{
+    color:#999;
+    text-decoration: none;
+}
+.footer_copyright{
+    text-align: center;
+    line-height: 28px;
+    padding: 24px 0;
+}
+.footer_copyright a:hover{
+    color: #31c27c;
+}
