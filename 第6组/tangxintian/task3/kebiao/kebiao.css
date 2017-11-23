@@ -1,0 +1,66 @@
+/* CSS Document */
+
+/*reset*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input{margin:0;padding:0;}
+body{font-size:14px;}
+img{border:none;}
+li{list-style:none;}
+input,select,textarea{outline:none;border:none; background:none;}
+textarea{resize:none;}
+a{text-decoration:none; color:#656565;}
+
+.wrapper{
+  width: 600px;
+  margin: 0 auto;
+}
+body{
+  background: url(background.jpg) -125px -180px;
+}
+table{
+  border-collapse:collapse;
+  text-align: center;
+  color:#FFF;
+  background-color:rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin-top: 55px;
+}
+table,td,th{
+  border: 1px solid #777;
+  border-width: 1px 0 1px 0;
+}
+td{
+  width: 80px;
+  border-radius:10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+th{
+  background-color:rgba(255, 238, 159, 0.83);
+  color:#666;
+  border-radius:10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+}
+#header{
+  height: 40px;
+  font-size: 1.2em;
+  background-color:rgba(255, 255, 255, 0.3);
+  color: #666;
+}
+#kaoshi,#header th{
+  background-color:transparent;
+}
+thead th a{
+  color: #70ecf3;
+}
+.yunchou{background-color: rgba(192, 174, 112, 0.9);}
+.jingongshixi{background-color:rgba(214, 155, 155, 0.9);}
+.mayuan{background-color: rgba(108, 173, 173, 0.9);}
+.juece{background-color: rgba(213, 228, 167, 0.9);}
+.gailvlun{background-color: rgba(197, 220, 125, 0.9);}
+.wangqiu{background-color: rgba(163, 212, 224, 0.9);}
+.zexue{background-color:rgba(195, 145, 195, 0.9);}
+.hongjing{background-color: rgba(128, 173, 232, 0.9);}
+.mantan{background-color: rgba(134, 226, 180, 0.9);}
+.qianduan{background-color: rgba(154, 161, 183, 0.9);}
