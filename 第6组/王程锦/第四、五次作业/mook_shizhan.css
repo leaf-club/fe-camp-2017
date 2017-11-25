@@ -1,0 +1,295 @@
+html,
+body{
+    margin:0;
+    padding: 0;
+    font-size:100px;
+}
+#header{
+    font-size: 0.16rem;
+    width: 100%;
+    height: 0.72rem;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0, 0, 0);
+}
+#header a{
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+}
+#header>a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 30px;
+}
+#header ul{
+    list-style: none;
+}
+#header .opt1{
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -170px;
+}
+#header .opt1 .nnow>a{
+    color: white;
+}
+#header .opt1>li>a:hover{
+    color: white;
+}
+#header .opt2{
+    display: flex;
+    font-size: 14px;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+    margin-right:50px;
+}
+#header .opt2 .cz>a:hover{
+    color: white;
+}
+#header .opt2 .login_reg>a:hover{
+    color: red;
+}
+.hmain{
+    border-bottom: 2px rgba(194, 46, 46, 0.6);
+    height: 0.6rem;
+    margin-bottom: 5px;
+}
+.hmain input{
+    background: black;
+    position: absolute;
+    margin-top: -25px;
+    height: 30px;
+    color: white;
+    border-right-color: black;
+    border-left-color: black;
+    border-top-color: black;
+    border-bottom-color: rgba(255, 255, 255, 0.6);
+}
+.hmain .hfen a{
+    background: rgb(170, 152, 152);
+    display: inline-block;
+    border-radius: 6px;
+    padding: 2px 2px 2px 2px;
+    font-size: 10px;
+    height: 17px;
+    text-align: center;
+    margin-top: 30px;
+}
+#main{
+    background: rgba(165, 202, 212, 0.274);
+    position: relative;
+    font-size: 0.18rem;
+}
+#main .shouofmain{
+    display: flex;
+    justify-content: center;
+}
+#main .shouofmain .shouofmainz{
+    margin-top:20px;
+    margin-right: 20px;
+    background: url(image/1.jpg);
+    height: 108px;
+    width: 567px;
+    border-radius: 8px;
+}
+#main .shouofmain .shouofmainy{
+    margin-top:20px;
+    background: url(image/2.jpg);
+    height: 108px;
+    width:567px;
+    border-radius: 8px;
+}
+#main .leike{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 150px;
+    margin-right:150px;
+    margin-top:35px;
+}
+#main .leike .nnnow{
+    color: red;
+    background: rgb(255, 255, 255);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding-bottom: 20px;
+    width:70px ;
+    margin-top: -10px;
+    text-align: center;
+    padding-top: 10px;
+}
+#main .leike .detailhan:hover{
+    color: red;
+}
+#main .leikede{
+    box-shadow: 0px 10px 5px rgba(165, 202, 212, 0.274);
+    background: rgb(255, 255, 255);
+    height: 184px;
+    border-radius: 8px;
+    font-size: 0.14rem;
+    padding: 20px 20px;
+    margin-top: 0px;
+    word-spacing: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#main .leikede .detailen{
+    margin-right: 42px;
+    height:32px;
+    padding: 0px 5px 0px 5px;
+    line-height: 32px;
+}
+#main .leikede .nnnnow{
+    background: red;
+    color: white;
+    width:52px;
+    height:32px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+#main .leikede .detailen:hover{
+    color: red;
+    background: rgb(202, 155, 155);
+    border-radius: 5px;
+}
+#main .fenlei{
+    display: flex;
+    margin-left: 110px;
+    margin-top: 30px;
+}
+#main .fenlei>a{
+    text-decoration: none;
+    font-size: 15px;
+    margin-right: 40px;
+    color: rgba(114, 150, 167, 0.6);
+}
+#main .fenlei .nnooww{
+    color: red !important;
+}
+#main .fenlei>a:hover{
+    color: rgba(15, 104, 146, 0.6);
+}
+#main .firstde{
+    margin-top: 20px;
+    display: flex;
+    margin-left: 100px;
+    margin-right: 90px;
+    justify-content: space-between; 
+}
+#main .firstde .first{
+    height: 148px;
+    width: 270px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+#main .firstde .defirstde1{
+    background: url(image/3.jpg);
+    
+}  
+#main .firstde .defirstde2{
+    background: url(image/10.jpg);
+}
+#main .firstde .defirstde3{
+    background: url(image/4.jpg);
+}
+#main .firstde .defirstde4{
+    background: url(image/6.jpg);
+}
+#main .firstjiang .firstjiangde>a{
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 20px;
+    color: black;
+}
+#main .firstjiang{
+    display: flex;
+    margin-left: 115px;
+    margin-right: 105px;
+    justify-content: space-between;
+}
+#main .firstjiang .firstjiangde .firstaf{
+    width: 250px;
+}
+#main .firstjiang .firstjiangde>a{
+    text-decoration: none;
+}
+#main .firstjiang .firstjiangde .firstp2{
+    font-size: 10px;
+    color: rgba(114, 150, 167, 0.6);
+}
+#main .firstjiang .firstjiangde .firstp3{
+    color: rgba(114, 150, 167, 0.6);
+    font-size: 10px;
+    line-height: 18px;
+}
+#main .firstjiang .firstjiangde .firstp4{
+    font-size: 10px;
+    color: black;
+} 
+#main .mainfo{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    padding-bottom: 50px; 
+}
+#main .mainfo .mainfode{
+    margin-right: 30px;
+    text-decoration: none;
+}
+#main .mainfo .bbf{
+    color: rgba(114, 150, 167, 0.6);
+}
+#main .mainfo .aaf{
+    color: black;
+}
+#main .mainfo .nnnow{
+
+border-radius: 50%;
+background: black;
+color: white;
+}
+#main .mainfo .num{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+}
+#main .mainfo .num:hover{
+    border-radius: 50%;
+    background: rgb(66, 61, 61);
+    color: white;
+}
+#footer{
+    background: black;
+    font-size: 14px;
+    padding-top: 30px;
+}
+#footer .footf{
+    margin-left: 120px;
+    display: flex;
+    color: rgba(255, 255, 255, 0.6);
+    flex-direction: flex-begin;
+}
+#footer .footf .footde:hover{
+    color: white;
+}
+#footer .footf .footde{
+    margin-right: 20px;
+}
+#footer .rright{
+    margin-top: 10px;
+    padding-bottom: 50px;
+    margin-left: 120px;
+    color: rgba(163, 152, 152, 0.6);
+}
