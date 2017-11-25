@@ -1,0 +1,11 @@
+/*reset*/
+body,ul,p,h3,html{margin: 0;padding: 0}
+ul{list-style: none;}
+ul{padding: 0;}
+a{
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+i{font-style: normal;}

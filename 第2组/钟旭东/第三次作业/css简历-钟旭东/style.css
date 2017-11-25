@@ -17,6 +17,8 @@ header .nav{
     justify-content: space-between;
     background-image: url(images/grunge_wall.png);
     background-repeat: repeat-x;
+    position: fixed;
+    width: 100%;
 }
 header .nav .item:nth-child(1){
     display: block;
@@ -93,7 +95,7 @@ header .nav .item a.dribble:hover{
 .wrap .container{
     display: flex;
     align-items: stretch;
-    padding: 50px 80px;
+    padding: 100px 80px 50px;
     background-image:url(images/soft_wallpaper.png);
     background-repeat: repeat;
 }
@@ -179,6 +181,7 @@ header .nav .item a.dribble:hover{
     font-weight: 700;
     font-size: 1em;
     line-height: 1.4em;
+    color: #444;
 }
 /* skills */
 .wrap .container .maincontainer .skills h1{
@@ -270,6 +273,7 @@ header .nav .item a.dribble:hover{
     font-size: 15px;
     font-family: sans-serif;
     line-height: 19px;
+    color: #444;
 }
 /* contact */
 .wrap .container .maincontainer .contact-me h1{

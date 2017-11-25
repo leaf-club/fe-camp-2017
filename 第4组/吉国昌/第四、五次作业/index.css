@@ -1,0 +1,1310 @@
+body {
+  margin: 0px;
+}
+a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+#warpper header {
+  height: 72px;
+  width: 100%;
+  line-height: 72px;
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 100px rgb(215, 218, 226);
+  overflow: hidden;
+}
+#warpper header #icon, #searchbar, #menu, #login {
+  display: inline-block;
+}
+#warpper header #icon {
+  height: 72px;
+}
+#warpper header #icon a img {
+  display: block;
+  height: 72px;
+  margin-left: 25px;
+  margin-right: 28px;
+}
+#warpper header #menu {
+  position: relative;
+  top: -30px;
+  margin-top: 0px;
+}
+#warpper header #menu a {
+  display: inline-block;
+  padding-left: 18px;
+  padding-right: 18px;
+  color: rgb(77, 85, 93);
+}
+#warpper header #menu a:hover {
+  color: rgb(0, 0, 0);
+}
+#warpper header #menu img {
+  position: relative;
+  top: -10px;
+}
+#warpper header #searchbar {
+  height: 72px;
+  width: 230px;
+  min-width: 180px;
+  margin-left: 20px;
+}
+#warpper header #searchbar form {
+  float: left;
+  width: 200px;
+  min-width: 150px;
+  margin-right: 0px;
+}
+#warpper header #searchbar input {
+  height: 24px;
+  width: 200px;
+  min-width: 150px;
+  line-height: 24px;
+  margin: 13px 0px;
+  padding: 12px 0px;
+  border: none;
+  border-bottom: 1px solid rgb(217, 221, 225);
+}
+#warpper header #searchbar input:focus {
+  outline: none;
+}
+#warpper header #searchbar a {
+  float: left;
+  height: 24px;
+  width: 24px;
+  padding: 12px 0px 14px;
+  margin: 13px 0px;
+  border-bottom: 1px solid rgb(217, 221, 225);
+}
+#warpper header #searchbar a img {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: -17px;
+}
+#warpper header #login {
+  float: right;
+  width: 330px;
+}
+#warpper header #login ul {
+  height: 72px;
+  margin: 0px;
+  padding: 0px;
+}
+#warpper header #login ul li {
+  line-height: 36px;
+  float: left;
+  margin: 18px 0px;
+  text-align: center;
+  font-size: 14px;
+}
+#warpper header #login ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: rgb(77, 85, 93);
+}
+#warpper header #login ul li a:hover {
+  color: rgb(255, 0, 0);
+}
+#warpper header #login ul #dl {
+  width: 85px;
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#warpper header #login ul #dl a {
+  line-height: 72px;
+}
+#warpper header #login ul #dl #dl-menu {
+  width: 240px;
+  height: 108px;
+  padding: 25px;
+  position: absolute;
+  top: 72px;
+  right: 130px;
+  font-size: 0px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: none;
+}
+#warpper header #login ul #dl #dl-menu div {
+  display: inline-block;
+  width: 108px;
+  height: 108px;
+  vertical-align: top;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+#warpper header #login ul #dl #dl-menu img {
+  width: 108px;
+  height: 108px;
+}
+#warpper header #login ul #dl #dl-menu p {
+  font-size: 12px;
+  color: rgb(77, 85, 93);
+  margin: 0px 0px 10px;
+  line-height: 20px;
+}
+#warpper header #login ul #dl #dl-menu a {
+  display: block;
+  width: 108px;
+  height: 30px;
+  margin: 9px 0px 0px;
+  background: rgb(77, 85, 93);
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  border-radius: 15px;
+  line-height: 30px;
+}
+#warpper header #login ul #dl:hover>#dl-menu {
+  display: block;
+  z-index: 999;
+}
+#warpper header #login ul #dl #dl-menu a:hover {
+  background: #07111B;
+}
+#warpper header #login ul #cart {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  height: 72px;
+}
+#warpper header #login ul #cart a {
+  line-height: 30px;
+  display: block;
+  width: 66px;
+  height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 20px auto;
+  border: 1px solid rgb(217, 221, 225);
+  border-radius: 16px;
+}
+#warpper header #login ul #cart:hover {
+  cursor: pointer;
+}
+#warpper header #login ul #cart:hover>a {
+  background: #f8fafc;
+  color: rgb(255, 0, 0);
+}
+#warpper header #login ul #cart #cart-menu {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  padding: 0px 10px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 5px 10px rgba(7, 17, 27, 0.2);
+  right: 35px;
+  top: 72px;
+  z-index: 999;
+  display: none;
+}
+#warpper header #login ul #cart:hover #cart-menu {
+  display: block;
+}
+#warpper header #login ul #cart #cart-menu span {
+  display: inline-block;
+  line-height: 60px;
+}
+#warpper header #login ul #cart #cart-menu p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-1 {
+  width: 280px;
+  padding: 0px 10px;
+  height: 59px;
+  border-bottom: solid 1px rgb(217, 221, 225);
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-1 #span1 {
+  font-size: 16px;
+  float: left;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-1 #span2 {
+  font-size: 12px;
+  float: right;
+  color: #93999f;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-2 {
+  width: 300px;
+  height: 120px;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-2 img {
+  width: auto;
+  height: 100px;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-2 p {
+  width: 150px;
+  margin: auto;
+  position: relative;
+  bottom: 25px;
+  font-size: 14px;
+  color: #4d555d;
+  padding-bottom: 10px;
+  border-bottom: solid 1px rgb(217, 221, 225);
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-3 {
+  width: 300px;
+  height: 135px;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-3 p {
+  font-size: 12px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-3 #p-1 {
+  color: rgb(147, 153, 159);
+  margin-top: 25px;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-3 .inner {
+  display: block;
+  width: 100px;
+  height: 30px;
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  color: rgba(240, 20, 20, 0.6);
+  border: none;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-3 .inner:hover {
+  color: rgb(240, 20, 20);
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-4 {
+  width: 280px;
+  padding: 0px 10px;
+  height: 59px;
+  font-size: 0px;
+  border-top: solid 1px rgb(217, 221, 225);
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-4 a {
+  display: inline-block;
+  border: none;
+  width: 100px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 12px;
+  vertical-align: top;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-4 #a-1 {
+  color: rgb(147, 153, 159);
+  float: left;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-4 #a-1:hover {
+  color: #4d555d;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-4 #a-2 {
+  float: right;
+  font-size: 0px;
+  background: rgba(240, 20, 20, 0.8);
+  color: rgb(255, 255, 255);
+  font-weight: 700px;
+  height: 30px;
+  margin: 15px 0px;
+}
+#warpper header #login ul #cart #cart-menu #cart-menu-4 #span4 {
+  font-size: 12px;
+  height: 100%;
+  line-height: 30px;
+}
+#warpper header #login ul #ss {
+  color: rgb(217, 221, 225);
+}
+#warpper header #login ul .log {
+  width: 52px;
+}
+#warpper main #cate {
+  width: 1200px;
+  height: 420px;
+  position: relative;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px 0 rgba(7, 17, 27, 0.2);
+}
+#warpper main #cate #lside {
+  width: 200px;
+  height: 100%;
+}
+#warpper main #cate #lside, #rside {
+  float: left;
+}
+#warpper main #cate #lside>div>a {
+  display: block;
+  width: 200px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: rgb(43, 51, 59);
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s, background 0.2s;
+}
+#warpper main #cate #lside>div>a:hover {
+  background: rgba(43, 51, 59, 0.75);
+  color: rgb(255, 255, 255);
+}
+#warpper main #cate #lside>div:hover .hide {
+  display: block;
+}
+#warpper main #cate #lside #a {
+  border-radius: 10px 0 0 0;
+}
+#warpper main #cate #lside #g {
+  border-radius: 0 0 0 10px;
+}
+#warpper main #cate #lside a:hover .hide {
+  display: block;
+}
+#warpper main #cate .hide {
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  width: 750px;
+  height: 370px;
+  padding: 25px;
+  background: rgb(255, 255, 255);
+  border-radius: 0px 10px 10px 0px;
+  display: none;
+}
+#warpper main #cate .hide .basic {
+  width: 750px;
+  height: 100px;
+}
+#warpper main #cate .hide .adv {
+  width: 750px;
+  height: 100px;
+}
+#warpper main #cate .hide .relate-class {
+  background: rgb(248, 250, 252);
+  width: 750px;
+  height: 170px;
+}
+#warpper main #cate .hide .p--1 {
+  margin: 5px 0px 5px 20px;
+  width: 50px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+#warpper main #cate .hide hr {
+  width: 608px;
+  position: relative;
+  top: 4px;
+}
+#warpper main #cate .hide .p--1, #warpper main #cate .hide hr {
+  display: inline-block;
+}
+#warpper main #cate .hide .p--2 {
+  margin: 5px 0px 5px 20px;
+  width: 750px;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+#warpper main #cate #lside .hide .p--2 a {
+  color: rgb(77, 85, 93);
+}
+#warpper main #cate .hide .p--2 a:hover {
+  color: rgb(240, 20, 20);
+}
+#warpper main #cate .hide .relate-class div {
+  width: 360px;
+  height: 70px;
+  margin: 7.5px;
+  float: left;
+}
+#warpper main #cate .hide .relate-class div a {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#warpper main #cate .hide .relate-class div a .leftinfo {
+  width: 40%;
+  float: left;
+  margin: 0px;
+  text-align: center;
+  line-height: 70px;
+  background: lightblue;
+  border-radius: 10px;
+  color: rgb(43, 51, 59);
+}
+#warpper main #cate .hide .relate-class div a .rightinfo {
+  width: 55%;
+  float: right;
+  margin: 0px 10px 0px 0px;
+  text-align: center;
+  line-height: 70px;
+  background: lightgreen;
+  border-radius: 10px;
+  color: rgb(43, 51, 59);
+}
+#warpper main #cate #rside {
+  width: 1000px;
+  height: 100%;
+}
+#warpper main #cate #rside #imgs {
+  width: 1000px;
+  height: 320px;
+}
+#warpper main #cate #rside #imgs img {
+  width: 1000px;
+  height: 320px;
+  border-top-right-radius: 10px;
+}
+#warpper main #cate #rside #items {
+  width: 1000px;
+  height: 100px;
+}
+#warpper main #cate #rside #items ul {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+}
+#warpper main #cate #rside #items li {
+  float: left;
+  width: 200px;
+  height: 100px;
+}
+#warpper main #cate #rside #items li a {
+  display: block;
+  height: 100px;
+  width: 200px;
+}
+#warpper main #cate #rside #items li a p {
+  margin: 0px;
+  text-align: center;
+}
+#warpper main #cate #rside #items li a .tag {
+  color: transparent;
+  width: 36px;
+  height: 36px;
+  margin: auto;
+  margin-top: 12px;
+  transition: margin-top 0.1s;
+}
+#warpper main #cate #rside #items li a:hover .tag {
+  margin-top: 9px;
+}
+#warpper main #cate #rside #items li a #tg01 {
+  background: url('img/icons.png') no-repeat;
+  background-size: 36px auto;
+}
+#warpper main #cate #rside #items li a #tg02 {
+  background: url('img/icons.png') 0px -72px no-repeat;
+  background-size: 36px auto;
+}
+#warpper main #cate #rside #items li a #tg03 {
+  background: url('img/icons.png') 0px -108px no-repeat;
+  background-size: 36px auto;
+}
+#warpper main #cate #rside #items li a #tg04 {
+  background: url('img/icons.png') 0px -36px no-repeat;
+  background-size: 36px auto;
+}
+#warpper main #cate #rside #items li a #tg05 {
+  background: url('img/icons.png') 0px -144px no-repeat;
+  background-size: 36px auto;
+}
+#warpper main #cate #rside #items li a .p1 {
+  margin-top: 2px;
+  font-size: 14px;
+}
+#warpper main #cate #rside #items li a .p2 {
+  margin-top: 2px;
+  font-size: 12px;
+  color: rgb(147, 153, 159)
+}
+#warpper main .odd {
+  width: 100%;
+  box-shadow: 0 5px 7px rgba(7, 17, 27, .08);
+  margin-top: 5px;
+}
+#warpper main .even {
+  width: 100%;
+  background: rgb(248, 250, 252);
+  box-shadow: 0 5px 7px rgba(7, 17, 27, .08);
+  margin-top: 5px;
+}
+#warpper main #recommend {
+  width: 1200px;
+  height: 300px;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+#warpper main .title {
+  height: 50px;
+  position: relative;
+  top: -10px;
+}
+#warpper main .title .left {
+  display: inline-block;
+  width: 56px;
+  height: 36px;
+  margin-top: 10px;
+  margin-left: 445px;
+  margin-right: 24px;
+}
+#warpper main .title .right {
+  display: inline-block;
+  width: 56px;
+  height: 36px;
+  margin-top: 10px;
+  margin-left: 24px;
+}
+#warpper main .title .mid {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  vertical-align: top;
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(77, 85, 93);
+}
+#warpper main #recommend .left {
+  background: url('img/decorations.png') 0px 0px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #recommend .right {
+  background: url('img/decorations.png') 0px -36px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #new .left {
+  background: url('img/decorations.png') 0px -72px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #new .right {
+  background: url('img/decorations.png') 0px -108px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #beginner .left {
+  background: url('img/decorations.png') 0px -144px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #beginner .right {
+  background: url('img/decorations.png') 0px -180px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #improve .left {
+  background: url('img/decorations.png') 0px -216px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #improve .right {
+  background: url('img/decorations.png') 0px -252px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #tech .left {
+  background: url('img/decorations.png') 0px -288px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #tech .right {
+  background: url('img/decorations.png') 0px -324px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #faq .left {
+  background: url('img/decorations.png') 0px -360px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #faq .right {
+  background: url('img/decorations.png') 0px -396px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #teacher .left {
+  background: url('img/decorations.png') 0px -432px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #teacher .right {
+  background: url('img/decorations.png') 0px -468px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #star .left {
+  background: url('img/decorations.png') 0px -504px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main #star .right {
+  background: url('img/decorations.png') 0px -540px no-repeat;
+  background-size: 56px auto;
+}
+#warpper main .classes {
+  font-size: 0px;
+  /* 消除inline-block的水平间隙 */
+}
+#warpper main #recommend .classes {
+  height: 250px;
+}
+#warpper main .cls {
+  width: 220px;
+  height: 250px;
+  margin: 0px 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+}
+#warpper main .cls a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+#warpper main .cls a:hover .description {
+  color: #f01414;
+}
+#warpper main .cls a img {
+  width: 220px;
+  height: 120px;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+#warpper main .cls a .stack1 {
+  background: url('img/31.jpg');
+  background-size: 220px auto;
+}
+#warpper main .cls a .stack2 {
+  background: url('img/32.jpg');
+  background-size: 220px auto;
+}
+#warpper main .cls a .stack5 {
+  background: url('img/35.jpg');
+  background-size: 220px auto;
+}
+#warpper main .cls a .stack6 {
+  background: url('img/36.jpg');
+  background-size: 220px auto;
+}
+#warpper main .cls a .stack12 {
+  background: url('img/42.jpg');
+  background-size: 220px auto;
+}
+#warpper main .cls a .images {
+  width: 220px;
+  height: 120px;
+}
+#warpper main .cls a div.img1 {
+  position: absolute;
+  width: 204px;
+  height: 120px;
+  left: 8px;
+  top: 8px;
+  opacity: 0.2;
+  z-index: 1;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+#warpper main .cls a div.img2 {
+  position: absolute;
+  width: 212px;
+  height: 120px;
+  left: 4px;
+  top: 4px;
+  opacity: 0.4;
+  z-index: 2;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+#warpper main .cls a div.img3 {
+  position: absolute;
+  width: 220px;
+  height: 120px;
+  left: 0px;
+  top: 0px;
+  opacity: 1;
+  z-index: 3;
+  border-radius: 7px;
+  transition: all 0.3s;
+}
+#warpper main .cls a:hover img {
+  box-shadow: 0 6px 6px rgb(215, 218, 226)
+}
+#warpper main .cls a:hover .img1 {
+  top: 10px;
+  width: 188px;
+  left: 16px;
+}
+#warpper main .cls a:hover .img2 {
+  top: 0px;
+  width: 204px;
+  left: 8px;
+}
+#warpper main .cls a:hover .img3 {
+  top: -10px;
+}
+#warpper main .cls a p.description {
+  max-height: 46px;
+  /* 借鉴原网页 */
+  font-size: 16px;
+  line-height: 23px;
+  margin: 10px 10px 7px 10px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  /* 借鉴原网页 */
+}
+#warpper main .cls a p.level {
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  margin: 0px 10px 10px 10px;
+  color: rgb(147, 153, 159);
+}
+#warpper main .cls a p.price {
+  font-size: 12px;
+  color: rgb(77, 85, 93);
+  margin: 0px 10px 10px 10px;
+}
+#warpper main #new {
+  width: 1200px;
+  height: 550px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#warpper main .new span, ._new span, .hot span, ._hot span {
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  font-size: 10px;
+  height: 20px;
+  line-height: 20px;
+  padding: 0px 8px;
+  border: 2px white solid;
+  border-radius: 12px;
+  color: white;
+  z-index: 4;
+  transition: all 0.3s;
+}
+#warpper main ._hot a span {
+  background: linear-gradient(-90deg, #ffcb7b 0, #ffa01a);
+}
+#warpper main .hot a span {
+  background: linear-gradient(-90deg, #ffcb7b 0, #ffa01a);
+}
+#warpper main ._new a span {
+  background: linear-gradient(-90deg, #f68688 0, #f02930);
+}
+#warpper main .new a span {
+  background: linear-gradient(-90deg, #f68688 0, #f02930);
+}
+#warpper main ._hot a:hover span {
+  top: -18px;
+}
+#warpper main ._new a:hover span {
+  top: -18px;
+}
+#warpper main .free a p.price {
+  color: #f01414;
+}
+#warpper main .format2 {
+  width: 1200px;
+  height: 670px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#warpper main .banners {
+  width: 1200px;
+  height: 110px;
+  margin: auto;
+  margin-bottom: 30px;
+  font-size: 0px;
+}
+#warpper main .banners a {
+  display: inline-block;
+  width: 580px;
+  height: 110px;
+  margin: 0px 10px 10px;
+  border-radius: 10px;
+}
+#warpper main .banners .lbanner, #warpper main .banners .rbanner {
+  text-align: center;
+  display: inline-block;
+  width: 580px;
+  height: 110px;
+  margin: 0px;
+  border-radius: 10px;
+  background: rgba(7, 17, 27, .4);
+}
+#warpper main .banners .bnr-p1 {
+  margin: 30px 0px 0px 0px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 2px rgba(7, 17, 27, .4);
+  color: rgb(255, 255, 255);
+}
+#warpper main .banners .bnr-p2 {
+  margin: 4px 0px 0px 0px;
+  font-size: 12px;
+  text-shadow: 0 2px 2px rgba(7, 17, 27, .4);
+  color: rgb(255, 255, 255);
+}
+#warpper main #beginner .banners .la {
+  background: url('img/ban1.jpg') no-repeat;
+  background-size: 580px 110px;
+}
+#warpper main #beginner .banners .ra {
+  background: url('img/ban2.jpg') no-repeat;
+  background-size: 580px 110px;
+}
+#warpper main #improve .banners .la {
+  background: url('img/ban3.jpg') no-repeat;
+  background-size: 580px 110px;
+}
+#warpper main #improve .banners .ra {
+  background: url('img/ban4.jpg') no-repeat;
+  background-size: 580px 110px;
+}
+#warpper main #tech .banners .la {
+  background: url('img/ban5.jpg') no-repeat;
+  background-size: 580px 110px;
+}
+#warpper main #tech .banners .ra {
+  background: url('img/ban6.jpg') no-repeat;
+  background-size: 580px 110px;
+}
+#warpper main #faq {
+  width: 1200px;
+  height: 400px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#warpper main #faq .title .mid {
+  width: 300px;
+}
+#warpper main #faq .title .left {
+  margin-left: 370px;
+}
+#warpper main #faq #columns {
+  height: 350px;
+  font-size: 0px;
+}
+#warpper main #faq #columns #lcols, #warpper main #faq #columns #mcols, #warpper main #faq #columns #rcols {
+  display: inline-block;
+  vertical-align: top;
+  width: 360px;
+  height: 100%;
+  margin: 0px 20px;
+}
+#warpper main .block2 {
+  display: block;
+  padding: 30px;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(7, 17, 27, 0.05);
+  transition: all 0.3s;
+}
+#warpper main .block2:hover {
+  box-shadow: 0px 7px 20px rgba(7, 17, 27, 0.2);
+}
+#warpper main .block2 .p1 {
+  font-size: 12px;
+  color: rgba(0, 140, 200, 0.6);
+  margin: 0px 0px 8px 0px;
+}
+#warpper main .block2 a {
+  display: inline-block;
+  vertical-align: top;
+  max-height: 48px;
+  line-height: 24px;
+  width: 208px;
+  margin-right: 20px;
+  font-size: 16px;
+  color: rgb(7, 17, 27);
+}
+#warpper main .block2 img {
+  width: 72px;
+  height: 48px;
+}
+#warpper main .block2 .p2 {
+  font-size: 12px;
+  margin: 8px 0px 0px 0px;
+  color: rgb(77, 85, 93);
+  line-height: 24px;
+  font-weight: 200;
+  word-break: break-all;
+}
+#warpper main .block2 .p3 {
+  margin-top: 8px;
+}
+#warpper main .block2 .p3 span {
+  display: inline-block;
+  font-size: 12px;
+  color: rgb(147, 153, 159);
+  line-height: 24px;
+  margin-right: 20px;
+}
+#warpper main .block2 .p3 span.more {
+  color: rgba(0, 140, 200, 0.6);
+  line-height: 24px;
+  float: right;
+  margin-right: 0px;
+}
+#warpper main #teacher {
+  width: 100%;
+  height: 400px;
+  background: url('img/bg.jpg') center;
+  background-size: 100% auto;
+}
+#warpper main #teacher #content {
+  width: 1200px;
+  height: 310px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+#warpper main #teacher .title .mid {
+  width: 240px;
+  color: rgb(255, 255, 255);
+}
+#warpper main #teacher .title .left {
+  margin-left: 400px;
+}
+#warpper main #teacher .title #more {
+  vertical-align: top;
+  line-height: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  float: right;
+}
+#warpper main #teacher .title a:hover #more {
+  color: rgb(255, 255, 255);
+}
+#warpper main #teacher #people {
+  font-size: 0px;
+}
+#warpper main .block3 {
+  display: inline-block;
+  vertical-align: top;
+  width: 220px;
+  height: 235px;
+  margin: 35px 10px 0px;
+}
+#warpper main .block3 a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: rgba(211, 213, 219, 0.8);
+  border-radius: 15px;
+  transition: all 0s;
+  /* 无延迟返回 */
+}
+#warpper main .block3 a img {
+  height: 80px;
+  width: 80px;
+  position: relative;
+  left: 70px;
+  top: -36px;
+  border-radius: 40px;
+  transition: all 0s;
+  /* 无延迟返回 */
+}
+#warpper main .block3 a .p01 {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(7, 17, 27);
+  line-height: 24px;
+  text-align: center;
+  width: 144px;
+  margin: 0px 38px;
+  position: relative;
+  top: -20px;
+}
+#warpper main .block3 a .p02 {
+  font-size: 12px;
+  color: rgb(77, 85, 93);
+  line-height: 24px;
+  text-align: center;
+  width: 144px;
+  margin: 0px 38px;
+  position: relative;
+  top: -20px;
+}
+#warpper main .block3 a .p03 {
+  font-size: 12px;
+  font-weight: 200;
+  /*-----------------*/
+  text-align: justify;
+  word-break: break-all;
+  /*自动调节字间距填满一行而且拆分单词*/
+  color: rgb(77, 85, 93);
+  line-height: 24px;
+  width: 144px;
+  margin: 0px 38px;
+  max-height: 72px;
+  overflow: hidden;
+  position: relative;
+  top: 0px;
+  transition: all 0s;
+  /* 无延迟返回 */
+}
+#warpper main .block3 a:hover {
+  background: rgb(255, 255, 255);
+  transition: all 0.3s;
+}
+#warpper main .block3 a:hover img {
+  height: 64px;
+  width: 64px;
+  position: relative;
+  left: 78px;
+  top: -36px;
+  border-radius: 32px;
+  transition: all 0.3s;
+}
+#warpper main .block3 a:hover .p01 {
+  visibility: hidden;
+}
+#warpper main .block3 a:hover .p02 {
+  visibility: hidden;
+}
+#warpper main .block3 a:hover .p03 {
+  position: relative;
+  top: -70px;
+  max-height: 168px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+#warpper main #star {
+  width: 1200px;
+  height: 200px;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+#warpper main #star .title .mid {
+  width: 240px;
+}
+#warpper main #star .title .left {
+  margin-left: 400px;
+}
+#warpper main #box {
+  width: 560px;
+  height: 150px;
+  margin: auto;
+  font-size: 0px;
+}
+#warpper main .user {
+  position: relative;
+  display: inline-block;
+  width: 140px;
+  height: 100px;
+  margin: 25px 0px;
+}
+#warpper main .user #crn1 {
+  position: absolute;
+  left: 57px;
+  top: -15px;
+  width: 26px;
+  height: 18px;
+  background: url('img/crown.png') 0px 0px;
+  background-size: 26px auto;
+}
+#warpper main .user #crn2 {
+  position: absolute;
+  left: 57px;
+  top: -15px;
+  width: 26px;
+  height: 18px;
+  background: url('img/crown.png') 0px -18px;
+  background-size: 26px auto;
+}
+#warpper main .user #crn3 {
+  position: absolute;
+  left: 57px;
+  top: -15px;
+  width: 26px;
+  height: 18px;
+  background: url('img/crown.png') 0px -36px;
+  background-size: 26px auto;
+}
+#warpper main .user #crn4 {
+  position: absolute;
+  left: 57px;
+  top: -15px;
+  width: 26px;
+  height: 18px;
+  background: url('img/crown.png') 0px -54px;
+  background-size: 26px auto;
+}
+#warpper main .user img {
+  width: 56px;
+  height: 56px;
+  margin: 0px 42px;
+  border-radius: 28px;
+  box-shadow: 0 8px 16px 0 rgba(7, 17, 27, .1);
+}
+#warpper main .user .p001 {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  color: rgb(7, 17, 27);
+}
+#warpper main .user .p002 {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 0px;
+  color: rgb(147, 153, 159);
+}
+#warpper footer {
+  margin-top: 5px;
+  height: 60px;
+  padding: 35px 0px;
+  background: rgb(248, 250, 252);
+}
+#warpper footer #footer-content {
+  width: 1200px;
+  height: 100%;
+  margin: auto;
+  font-size: 0px;
+}
+#warpper footer #footer-content #left-part {
+  vertical-align: top;
+  display: inline-block;
+  width: 1000px;
+  height: 100%;
+}
+#warpper footer #link {
+  height: 28px;
+}
+#warpper footer ul {
+  padding: 0px;
+}
+#warpper footer li {
+  line-height: 28px;
+  float: left;
+  font-size: 14px;
+  margin: 0px 15px;
+}
+#warpper footer li a {
+  display: block;
+  color: rgb(153, 161, 166);
+  line-height: 28px;
+}
+#warpper footer li a:hover {
+  color: rgb(0, 0, 0);
+}
+#warpper footer #copyright {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+#warpper footer #copyright p {
+  font-size: 12px;
+  color: rgb(153, 161, 166);
+  line-height: 24px;
+}
+#warpper footer #footer-content #right-part {
+  position: relative;
+  display: inline-block;
+  margin-left: 50px;
+  width: 150px;
+  height: 60px;
+  font-size: 0px;
+}
+#warpper footer #footer-content #right-part .contact-icon {
+  display: inline-block;
+  width: 60px;
+  height: 100%;
+  margin: 0px 7.5px;
+}
+#warpper footer #right-part #qr {
+  width: 180px;
+  height: 212px;
+  position: absolute;
+  top: -240px;
+  left: -50px;
+  background: url('img/qr.png') 0px 0px;
+  visibility: hidden;
+}
+#warpper footer #right-part #a1:hover #qr {
+  visibility: visible;
+}
+#warpper footer #right-part #weixin {
+  width: 32px;
+  height: 32px;
+  margin: auto;
+  background: url('img/icon2.png') -52px -220px;
+}
+#warpper footer #right-part #weibo {
+  width: 32px;
+  height: 32px;
+  margin: auto;
+  background: url('img/icon2.png') 0px -220px;
+}
+#warpper footer #right-part p {
+  font-size: 12px;
+  color: rgb(77, 85, 93);
+  text-align: center;
+  margin-top: 10px;
+}
+#warpper #sidebar {
+  position: fixed;
+  right: 0px;
+  bottom: 20%;
+  width: 50px;
+  height: 250px;
+  box-shadow: 0 4px 12px 0 rgba(7, 17, 27, .1);
+  background: rgb(255, 255, 255);
+}
+#warpper #sidebar a>div {
+  width: 50px;
+  height: 50px;
+}
+#warpper #sidebar a>div>img {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: block;
+}
+#warpper #sidebar a>div>div {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  margin: 13px;
+  font-size: 12px;
+  display: none;
+}
+#warpper #sidebar a:hover>div>div {
+  display: block;
+}
+#warpper #sidebar a:hover>div>img {
+  display: none;
+}
+#warpper #sidebar #pic1 {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  transition: all 0.2s;
+  background: url('img/elevator.png') 0px -222px;
+}
+#warpper #sidebar #pic2 {
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background: url('img/elevator.png') 0px 0px;
+  transition: all 0.2s;
+}
+#warpper #sidebar #sa1:hover #pic1 {
+  width: 180px;
+  height: 222px;
+  bottom: 0px;
+  left: -180px;
+  transition: all 0.5s;
+}
+#warpper #sidebar #sa2:hover #pic2 {
+  width: 180px;
+  height: 222px;
+  bottom: 0px;
+  left: -180px;
+  transition: all 0.5s;
+}
