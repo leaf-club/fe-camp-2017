@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gif</title>
+    <link rel="stylesheet" href="gif.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gifs">
+            <div class="gif1 gif1-1"></div>
+            <div class="gif1 gif1-2"></div>
+            <div class="gif1 gif1-3"></div>
+            <div class="gif1 gif1-4"></div>
+            <div class="gif1 gif1-5"></div>
+        </div>
+        <div class="gifs">
+            <div class="gif2 gif2-1"></div>
+            <div class="gif2 gif2-2"></div>
+            <div class="gif2 gif2-3"></div>
+            <div class="gif2 gif2-4"></div>
+            <div class="gif2 gif2-5"></div>
+        </div>
+        <div class="gifs">
+            <!-- 因为flex-items:center属性居中，当圆点大小变化的时候
+                位置会发生变化，在center块中用absolute固定水平位置 
+            补充：fle-basis或许可以解决这个问题，不用添加父容器？？-->
+            <div class="center">
+                <div class="gif3 gif3-1"></div>
+                <div class="gif3 gif3-2"></div>
+                <div class="gif3 gif3-3"></div>
+                <div class="gif3 gif3-4"></div>
+                <div class="gif3 gif3-5"></div>
+            </div>
+        </div>
+        <div class="gifs">
+            <div class="gif4 gif4-1"></div>
+            <div class="gif4 gif4-2"></div>
+            <div class="gif4 gif4-3"></div>
+            <div class="gif4 gif4-4"></div>
+            <div class="gif4 gif4-5"></div>
+        </div>
+        <div class="gifs">
+            <div class="center">
+                <div class="gif5 gif5-1"></div>
+                <div class="gif5 gif5-2"></div>
+                <div class="gif5 gif5-3"></div>
+                <div class="gif5 gif5-4"></div>
+                <div class="gif5 gif5-5"></div>
+                <div class="gif5 gif5-6"></div>
+                <div class="gif5 gif5-7"></div>
+                <div class="gif5 gif5-8"></div>
+            </div>
+        </div>
+        <div class="gifs">
+            <div class="center">
+                <!-- 增加内部div的原因：
+                径向圆点位置用到rotate，tranform-origin百分比当圆点大小变化时，旋转中心也会变化。
+                增加inner块，外部块定位置，内部块变大小。-->
+                <div class="gif6 gif6-1"><div class="inner inner1"></div></div>
+                <div class="gif6 gif6-2"><div class="inner inner2"></div></div>
+                <div class="gif6 gif6-2"><div class="inner inner2"></div></div>
+                <div class="gif6 gif6-3"><div class="inner inner3"></div></div>
+                <div class="gif6 gif6-4"><div class="inner inner4"></div></div>
+                <div class="gif6 gif6-5"><div class="inner inner5"></div></div>
+                <div class="gif6 gif6-6"><div class="inner inner6"></div></div>
+                <div class="gif6 gif6-7"><div class="inner inner7"></div></div>
+                <div class="gif6 gif6-8"><div class="inner inner8"></div></div>
+            </div>
+        </div>
+        <div class="gifs">
+            <div class="gif7b">
+                <div class="gif7f"></div>
+            </div>
+        </div>
+        <div class="gifs">
+            <div class="center">
+                <div class="gif8 gif8-1"></div>
+                <div class="gif8 gif8-2"></div>
+                <div class="gif8 gif8-3"></div>
+                <div class="gif8 gif8-4"></div>
+                <div class="gif8 gif8-5"></div>
+                <div class="gif8 gif8-6"></div>
+                <div class="gif8 gif8-7"></div>
+                <div class="gif8 gif8-8"></div>
+            </div>
+        </div>
+        <div class="gifs">
+            <div class="center">
+                <div class="gif9 gif9-1"></div>
+                <div class="gif9 gif9-2"></div> 
+                <div class="gif9 gif9-3"></div>
+                <div class="gif9 gif9-4"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

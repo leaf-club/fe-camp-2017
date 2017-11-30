@@ -1,0 +1,107 @@
+body,html{
+    margin: 0;
+    padding: 0;
+}
+.container {
+    width: 900px;
+    margin: 0 auto;
+    overflow: hidden;/*BFC清除浮动*/
+}
+.basic {
+    width: 33.34%;
+    float: left;
+    background-color: rgb(134, 229, 255);
+    padding-bottom: 3000px;
+    margin-bottom: -3000px;
+}
+.picture {
+    width:100%;
+    height: 320px;
+    position: relative;
+}
+.picture .img {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.img img{
+    width: 100%;
+}
+.brief_intro {
+    width: 100%;
+}
+.detailed {
+    width: 66.66%;
+    float: left;
+    background-color: rgb(248, 247, 233)
+}
+.detailed h3 {
+    line-height: 2;
+    border-bottom: 2px dotted lightskyblue;
+    margin: 0;
+}
+@media screen and (max-width: 960px){
+    .container{
+        width: 650px;
+        margin: 0 auto;
+    }
+    .basic{
+        width: 100%;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+    }
+    .picture{
+        float: left;
+        width: 35%;
+        margin: 0 3%;
+    }
+    .picture .img{
+        width: 100%;
+    }
+    .brief_intro{
+        float: left;
+        width: 59%;
+        font-size: 14px;
+        margin-top: 8%;
+    }
+    .brief_intro h3{
+        display: none;
+    }
+    .brief_intro ul{
+        list-style: none;
+        padding-left: 0;
+        word-wrap: break-word;
+    }
+    .detailed{
+        width: 90%;
+        padding: 0 5%;
+    }
+}
+@media screen and (max-width: 720px){
+    html{
+        font-size: 14px;
+    }
+    .container{
+        width: 400px;
+    }
+    .picture{
+        height: 200px;
+    }
+    .brief_intro{
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 480px){
+    .container{
+        width: 300px;
+    }
+    .picture{
+        height: 180px;
+    }
+    .brief_intro{
+        font-size: 13px;
+    }
+}
