@@ -1,0 +1,124 @@
+body{ 
+    width: 100%;
+    margin: 0;
+    background-image: url(../img/b.jpg);
+    background-size:120% 120%;
+    background-repeat: no-repeat;
+}
+.resume{
+    background: rgba(205, 220, 57, 0.69);
+    display: block;
+    position: relative;
+    top: 15%;
+    width: 80%;
+    margin: auto;
+    margin-top: 4%;
+}
+header{
+    margin: auto;
+    text-align: center;
+    font-size: 30px;
+    border-bottom-style: dashed;
+    border-bottom-color: #f1c490;
+
+}
+h1{
+    margin: auto;
+    background-image: url(../img/resume1.jpg);
+    background-size: 105% 540%;
+    background-repeat: no-repeat;
+    background-position-y: 14%;
+    background-position-x: 45%;
+    width: 100%;
+}
+/* 基本信息 */
+.mes{
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+}
+.left{
+    display: block;
+    width: 33%;
+}
+.right{
+    display: block;
+    width: 33%;
+}
+h2{
+    position: relative;
+    background: rgb(74, 74, 74);
+    width: 150px;
+    border-top-right-radius: 10px;
+    text-align: center;
+}
+.img{
+    width: 33%;
+}
+.img1{
+    background-image: url(../img/img.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 80%;
+}
+.text
+{
+    padding-left: 20px;
+}
+#tet{
+    padding-left: 20px;
+}
+section{
+    width: 100%;
+}
+/* iphone界面 */
+@media screen and (max-width: 480px) {
+    .mes{
+      flex-direction: column;
+      width: 80%;
+    }
+    .img{
+       height: 75px;
+       width: 100%;
+       margin-left: 35%;
+    }
+    .img1{
+        background-image: url(../img/img.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
+    }
+    .mes>div{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .right{
+        margin-top: -5%;
+    }
+    h2{
+        width: 100%;
+        border-top-right-radius: 0px;
+        font-size: 1.5em;;
+    }
+    p{
+        font-size: 1.1em;
+        color: #090556;
+    }
+    h1{
+        font-size: 1em;
+    }
+    section>p{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+/* ipad界面 */
+@media screen and (max-width: 480px) {
+    h2{
+        font-size: 1.5em;
+    }
+}
