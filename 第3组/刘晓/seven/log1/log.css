@@ -1,0 +1,45 @@
+.warp{
+  width: 560px;
+  margin:400px auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.k-line {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  background-color: #4b9cdb;
+}
+.k-line1-1 {
+  animation: k-loadingA 1.5s 0s infinite;}
+
+.k-line1-2 {
+  animation: k-loadingA 1.5s 0.5s infinite;}
+.k-line1-3 {
+   animation: k-loadingA 1.5s 1s infinite;}
+
+.wrapp {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 0 10px 10px 0;
+  padding: 20px 20px 20px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #d8d8d8;
+}
+@keyframes k-loadingA {
+0% {
+  height: 15px;
+}
+
+50% {
+  height: 35px;
+}
+
+100% {
+  height: 15px;
+}
+}
