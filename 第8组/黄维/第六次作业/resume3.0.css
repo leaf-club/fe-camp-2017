@@ -1,0 +1,189 @@
+html{
+    width:100%;
+}
+body{
+    width:100%;
+    background:url(img/bgg.jpg)fixed top center no-repeat;
+    background-size:cover;      
+}
+img{
+    max-width: 100%;
+}
+header .hi
+{
+    text-align: center;
+    background-color: #f6faf5;
+    border: 3px solid #000;
+    border-radius: 20px;
+    width: 50px;
+    height:40px;
+    font-size: 20px;
+    margin-left: 48%;
+    padding-top: 10px;
+}
+header #name{
+    text-align: center;
+    font-size: 18px;
+    color:#ee240e;
+    font-weight: bold;
+    padding-top: 10px;
+}
+header .personal{
+    margin-bottom: auto;
+}
+header ul .item
+{
+    list-style: none;
+    float: left;
+    padding-left: 1em;
+    color:#9e9e9a;
+    font-size: 15px;
+    height:25px;
+    line-height: 25px;
+    font-weight: bold; 
+    word-wrap: break-word;
+     
+}
+.module1{
+    margin-top: 60px;
+    
+}
+.module1 .title1{
+    clear: both;
+    text-align:center;
+    background-color: #0f0f0f;
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 150px;
+    height:20px;
+    padding:5px 0px 5px 0px;
+    color: rgb(22, 202, 202)
+}
+.module1 .intro{
+    word-wrap: break-word;
+    margin-left: 31%;
+    margin-top: 20px;
+    color:#9e9e9a;
+    font-weight: bold;
+}
+.module2 .title2{
+    text-align: center;
+    background-color: #0f0f0f;
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 150px;
+    height: 20px;
+    padding: 5px 0px 5px 0px;
+    color: rgb(22, 202, 202);
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.module2 .exper .year{
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    font-weight: bold;
+    color:#9e9e9a;   
+}
+.module3 .skill .title3{
+    text-align: center;
+    background-color: #0f0f0f;
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 150px;
+    height: 20px;
+    padding: 5px 0px 5px 0px;
+    color: rgb(22, 202, 202);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.module3 .skill .sk .item1{
+    list-style: none;
+    background-color: #f6faf5;
+    border: 1px solid #000;
+    border-radius: 100px;
+    height: 40px;
+    width: 55px;
+    text-align: center;
+    padding-top: 15px;
+}
+.module3 .interest{
+    clear: both;
+}
+.module3 .interest .title4{
+    text-align: center;
+    background-color: #0f0f0f;
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 150px;
+    height: 20px;
+    padding: 5px 0px 5px 0px;
+    color: rgb(22, 202, 202);
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+
+.module3 .interest .inter .item2{
+    list-style: none;
+    background-color: #f6faf5;
+    border: 1px solid #000;
+    border-radius: 100px;
+    height: 40px;
+    width: 55px;
+    text-align: center;
+    padding-top: 15px;
+}
+.module4 .title5{
+    text-align: center;
+    background-color: #0f0f0f;
+    border: 1px solid #000;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 150px;
+    height: 20px;
+    padding: 5px 0px 5px 0px;
+    color: rgb(22, 202, 202);
+    margin-top: 40px;
+    margin-bottom: 10px;
+}
+.module4 .exper1{
+    padding: 5px 0 10px 0;
+}
+.module4 .exper1 .work1{
+    text-align: center;
+    font-size:18px;    
+}
+.module4 .exper1 .text1{
+    text-align: center;
+    color:rgb(107, 105, 105)
+}
+.module4 .exper2{
+    padding: 5px 0 10px 0;
+}
+.module4 .exper2 .work2{
+    text-align: center;
+    font-size:18px;    
+}
+.module4 .exper2 .text2{
+    color:rgb(107, 105, 105);
+    word-wrap: break-word;
+    margin-left: 31%;
+}
+footer{
+    text-align: center;
+    color:rgb(107, 105, 105);
+    font-size:10px;
+}
