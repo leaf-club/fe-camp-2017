@@ -15,7 +15,7 @@
   height: 165px;
   align-items: center;
   justify-content: center;
-  background-color: #388aa2;
+  /*background-color: #388aa2;*/
   margin: 5px;
 }
 
@@ -54,16 +54,16 @@
 
 @keyframes loader2 {
   from,to{
-    background-color: #388aa2;
+    opacity: 0;
   }
   50%{
-    background-color: #93EC97;
+    opacity: 1;
   }
 }
 
 .loader2 > div {
   margin: 3px;
-  background-color: #388aa2;
+  background-color: #93EC97;
   width: 20px;
   height: 20px;
   border-radius: 10px;
@@ -126,7 +126,7 @@
   }
   to{
     transform: rotate(45deg);
-    background-color: #388aa2;
+    opacity: 0;
   }
 }
 
@@ -156,13 +156,13 @@
 
 @keyframes loader5{
   from,to{
-    background-color: #388aa2;
+    opacity: 0;
   }
   20%{
-    background-color: #93EC97;
+    opacity: 1;
   }
   50%{
-    background-color: #388aa200;
+    opacity: 0;
   }
 }
 .loader5{
@@ -182,7 +182,7 @@
 .loader5 .container1>div,.loader5 .container2>div{
   width: 20px;
   height: 20px;
-  background-color: #388aa2;
+  background-color: #93EC97;
   border-radius: 100%;
   position: absolute;
 }
@@ -222,7 +222,7 @@
   }
   20%{
     transform: scale(1);
-    background-color: #93EC97;
+    opacity: 1
   }
   50%{
     transform: scale(0);
@@ -245,7 +245,7 @@
 .loader6 .container1>div,.loader6 .container2>div{
   width: 20px;
   height: 20px;
-  background-color: #388aa2;
+  background-color: #93EC97;
   border-radius: 100%;
   position: absolute;
 }
@@ -281,17 +281,17 @@
 
 @keyframes loader7{
   from,to{
-    background-color: #388aa2;
+    opacity: 0;
   }
   50% {
-    background-color: #93EC97;
+    opacity: 1;
   }
 }
 .loader7{
   display: flex;
 }
 .loader7 >div{
-  background-color:#388aa2;
+  background-color:#93EC97;
   width: 15px;
   height: 10px;
   display: inline-block;
@@ -333,10 +333,10 @@
 
 @keyframes loader8{
   from{
-    background-color: #93EC97;
+    opacity: 0;
   }
   50%{
-    background-color: #388aa2;
+    opacity: 1;
   }
 }
 .loader8 .containers{
@@ -396,13 +396,13 @@
 
 @keyframes loader9{
   from,to{
-    background-color: #388aa2;
+    opacity: 0;
   }
   20%{
-    background-color: #93EC97;
+    opacity: 1;
   }
   50%{
-    background-color: #388aa200;
+    opacity: 0.3;
   }
 }
 .loader9{
@@ -425,7 +425,7 @@
 {
   width: 20px;
   height: 20px;
-  background-color: #388aa2;
+  background-color: #93EC97;
   border-radius: 100%;
   position: absolute;
 }
