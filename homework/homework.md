@@ -102,7 +102,7 @@
 
 JavaScript进阶学习：
 
-​    完成慕课网 [JavaScript进阶篇](https://www.imooc.com/learn/10) 教程学习，地址：https://www.imooc.com/learn/10，并完成每一章最后一节的 **编程练习** 并上交。
+​    完成慕课网 [JavaScript进阶篇](https://www.imooc.com/learn/10) 教程学习，地址：https://www.imooc.com/learn/10 ，并完成每一章最后一节的 **编程练习** 并上交。
 
 
 
