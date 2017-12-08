@@ -1,0 +1,31 @@
+.wrapp {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 0 10px 10px 0;
+    padding: 20px 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #d8d8d8;
+}
+
+.k-bar {
+    animation: k-loadingJ 2s cubic-bezier(.17,.37,.43,.67) infinite;
+}
+.k-bar {
+    float: left;
+    width: 15px;
+    height: 6px;
+    border-radius: 2px;
+    background-color: #4b9cdb;
+}
+@keyframes k-loadingJ{
+    0%  {
+        transform: translate(0,0);
+    }
+    100% {
+        transform: translate(80px,0);
+        background-color: #f5634a;
+        width: 25px;
+    }
+}
