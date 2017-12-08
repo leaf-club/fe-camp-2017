@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title> new document </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+    <script type="text/javascript"> 
+
+        window.onload = function () {
+            // 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色。
+            var tr = document.getElementsByTagName("tr");
+            var tr1 = document.getElementsByTagName("tr")[0];
+            for (var i = 0; i < tr.length; i++) {
+                tr[i].onmouseover = function () {
+                    this.style.backgroundColor = "#ccc";
+                }
+                tr[i].onmouseout = function () {
+                    this.style.backgroundColor = "#fff";
+                }
+            }
+            tr1.onmouseover = function () {
+                this.style.backgroundColor = "#fff";
+            }
+        }//没有实现添加行的变色效果
+        
+        // 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
+        var num = 3;
+        function ad() {
+            var tr = document.createElement("tr");
+            var td1 = document.createElement("td");
+            var td2 = document.createElement("td");
+            var td3 = document.createElement("td");
+            td1.innerHTML = "xh00" + num;
+            td2.innerHTML = "姓名" + num;
+            td3.innerHTML = "<a href='javascript:;' onclick='delet(this)'>删除</a>"
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            var tab = document.getElementById("table")
+            tab.appendChild(tr);
+            num++;
+        }
+        // 创建删除函数
+        function delet(node) {
+
+            var x = node.parentNode.parentNode.parentNode;
+
+            var y = node.parentNode.parentNode;
+
+            x.removeChild(y);
+        }
+    </script>
+</head>
+<body>
+    <table border="1" width="50%" id="table">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>xh001</td>
+            <td>王小明</td>
+            <td>
+                <a href="javascript:;" onclick="delet(this)">删除</a>
+            </td>
+            <!--在删除按钮上添加点击事件  -->
+        </tr>
+        <tr>
+            <td>xh002</td>
+            <td>刘小芳</td>
+            <td>
+                <a href="javascript:;" onclick="delet(this)">删除</a>
+            </td>
+            <!--在删除按钮上添加点击事件  -->
+        </tr>
+    </table>
+    <input type="button" value="添加一行" onclick="ad()" />
+    <!--在添加按钮上添加点击事件  -->
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 14px;
+}
+
+#box{
+    width: 280px;
+    margin: 60px auto;
+}
+
+ul{
+    list-style: none;
+}
+
+#title{
+    border-bottom: 2px solid rgb(172, 82, 18);
+    height: 34px;
+}
+
+#title li{
+    display: inline-block;
+    padding: 0 20px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid rgb(179, 179, 179);
+    border-bottom: none;
+    margin-left: 10px;
+}
+#title li.onsee{
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #8B4513;
+}
+#box>div{
+    border: 1px solid rgb(126, 177, 226);
+    border-top: none;
+    padding-left: 10px;
+}
+#box>div li{
+    height: 35px;
+    line-height: 35px;
+}
+.cant_see{
+    display: none;
+}
