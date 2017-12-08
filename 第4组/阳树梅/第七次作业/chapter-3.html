@@ -1,0 +1,31 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>数组</title>
+<!-- 
+       使用Javascript语言，把以下数组
+       var  arr = ['*','##',"***","&&","****","##*"];
+       arr[7] = "**";
+       在页面显示如下图所示的图案：
+         *
+         **
+         ***
+         **** 
+ -->
+
+<script type="text/javascript">
+ //创建数组
+    var myarray=['*','**','***','****'];
+    myarray[7]="**";
+ //显示数组长度
+    alert(myarray.length);
+ //将数组内容输出，完成达到的效果。
+    for(var i=0;i<4;i++){
+        document.write(myarray[i]+"<br>");
+    }    
+</script>
+</head>
+<body>
+</body>
+</html>
