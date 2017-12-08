@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="submit" value="准备好啦就点击我" onclick="pe()">
+        <input type="submit" value="另一种方式" onclick="p()">
+    <script>
+    document.write("系好安全带,准备起航--目标js");
+    function pe(){
+        var ss=confirm("准备好啦吗");
+        if(ss){
+            alert("准备好啦起航吧");
+        }
+    }
+    function p(){
+    var x=prompt("准备好啦吗","准备好啦");
+    if(x=="准备好啦"){
+        alert("起航吧")
+    }
+    }
+    </script>
+</body>
+</html>

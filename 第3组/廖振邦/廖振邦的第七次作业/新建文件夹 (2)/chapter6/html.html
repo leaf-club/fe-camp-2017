@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="0" id="0">
+    <input type="text" name="1" id="1">
+    <select id='select' onclick=cal()>
+		<option value='+' onclick=cal()>+</option>
+		<option value="-" onclick=cal()>-</option>
+		<option value="*" onclick=cal()>*</option>
+		<option value="/" onclick=cal()>/</option>
+   </select>
+   <input type="text" name="2" id="2">
+   <script>
+   function cal(){
+ var t1=parseInt(document.getElementById("0").value);
+ var t2=parseInt(document.getElementById("1").value);
+ var o1=document.getElementById("select").value;
+ var re;
+ switch(o1){
+     case"+":re=t1+t2;break;
+     case"-":re=t1-t2;break;
+     case"*":re=t1*t2;break;
+     case"/":re=t1/t2; break;
+ }
+ 
+ document.getElementById("2").value=re;
+   }
+
+   
+
+   </script>
+</body>
+</html>
