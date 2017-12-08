@@ -1,0 +1,309 @@
+html,body{
+    width: 100%;
+}
+.content{
+    display: inline-block;
+    max-width: 800px;
+    margin: auto;
+}
+.loading{
+    width: 250px;
+    height: 200px;
+    margin: 2px;
+    border: 1px #399f7d solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+}
+
+/* 第一个动画 */
+.loading-box-1:nth-child(1){
+    animation: first-show 0.9s ease infinite;
+}
+.loading-box-1:nth-child(2){
+    animation: first-show 0.9s 0.15s ease infinite;
+}
+.loading-box-1:nth-child(3){
+    animation: first-show 0.9s 0.3s ease infinite;
+}
+.loading-box-1:nth-child(4){
+    animation: first-show 0.9s 0.45s ease infinite;
+}
+.loading-box-1:nth-child(5){
+    animation: first-show 0.9s 0.6s ease infinite;
+}
+@keyframes first-show{
+    0%{
+        width: 10px;
+        height: 90px;
+        margin: 0 4px;
+        background-color: #a4d5df;
+        border-radius: 5px;
+    }
+    50%{
+        width: 10px;
+        height: 45px;
+        margin: 0 4px;
+        background-color: #7decad;
+        border-radius: 5px;
+    }
+    100%{
+        width: 10px;
+        height: 90px;
+        margin: 0 4px;
+        background-color: #a4d5df;
+        border-radius: 5px;
+    }
+}
+/* 第二个动画 */
+.loading-box-2{
+    width: 18px;
+    height: 18px;
+    margin: 8px;
+    background-color: #7decad;
+    border-radius: 50%;
+}
+.loading-box-2:nth-child(1){
+    animation: 0.65s second-show ease infinite;
+}
+.loading-box-2:nth-child(2){
+    animation: 0.65s 0.15s second-show ease infinite;
+}.loading-box-2:nth-child(3){
+    animation: 0.65s 0.3s second-show ease infinite;
+}
+.loading-box-2:nth-child(4){
+    animation: 0.65s 0.45s second-show ease infinite;
+}
+.loading-box-2:nth-child(5){
+    animation: 0.65s 0.6s second-show ease infinite;
+}
+@keyframes second-show{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+/* 第三个动画 */
+.loading-box-3:nth-child(1){
+    animation: third-show 1s ease infinite;
+}
+.loading-box-3:nth-child(2){
+    animation: third-show 1s 0.1s ease infinite;
+}
+.loading-box-3:nth-child(3){
+    animation: third-show 1s 0.2s ease infinite;
+}
+.loading-box-3:nth-child(4){
+    animation: third-show 1s 0.3s ease infinite;
+}
+.loading-box-3:nth-child(5){
+    animation: third-show 1s 0.4s ease infinite;
+}
+@keyframes third-show{
+    from{
+        width: 20px;
+        height: 20px;
+        margin: 6px;
+        background-color: #7decad;
+        border-radius: 50%;
+    }
+    to{
+        width: 4px;
+        height: 4px;
+        margin: 15px;
+        background-color: #c5eed6;
+        border-radius: 50%;
+    }
+}
+/* 第四个动画 */
+.loading-box-4:nth-child(1){
+    animation: forth-show 1s ease infinite;
+}
+.loading-box-4:nth-child(2){
+    animation: forth-show 1s 0.1s ease infinite;
+}
+.loading-box-4:nth-child(3){
+    animation:  forth-show 1s 0.2s ease infinite;
+}
+.loading-box-4:nth-child(4){
+    animation: forth-show 1s 0.3s ease infinite;
+}
+.loading-box-4:nth-child(5){
+    animation: forth-show 1s 0.4s ease infinite;
+}
+@keyframes forth-show{
+    0%{
+        width: 16px;
+        height: 16px;
+        margin: 8px;
+        background-color: #7decad;
+        opacity: 1;
+    }
+    50%{
+        width: 16px;
+        height: 16px;
+        margin: 8px;
+        background-color: #7decad;
+        transform-origin: 20px 20px;
+        transform: rotate(90deg);
+        opacity: 0.5;
+    }
+    100%{
+        width: 16px;
+        height: 16px;
+        margin: 8px;
+        background-color: #7decad;
+        transform-origin: 20px 20px;
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+}
+/* 第五个动画 */
+.loading-box-5{
+    width: 18px;
+    height: 18px;
+    background-color: #7decad;
+    border-radius: 50%;
+}
+.loading-box-5:nth-child(1){
+    transform: translate(18px,0);
+    animation: fifth-show 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-5:nth-child(2){
+    transform: translate(18px,-25px);
+    animation: fifth-show 1s 0.1s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+.loading-box-5:nth-child(3){
+    transform: translate(27px,-45px);
+    animation: fifth-show 1s 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+.loading-box-5:nth-child(4){
+    transform: translate(36px,-25px);
+    animation: fifth-show 1s 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-5:nth-child(5){
+    transform: translate(36px,0);
+    animation: fifth-show 1s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-5:nth-child(6){
+    transform: translate(0,25px);
+    animation: fifth-show 1s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-5:nth-child(7){
+    transform: translate(-48px,45px);
+    animation: fifth-show 1s 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-5:nth-child(8){
+    transform: translate(-92px,25px);
+    animation: fifth-show 1s 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+@keyframes fifth-show{
+    0%{
+        opacity: 1;
+    }
+    20%{
+        opacity: 0.6;
+    }
+    100%{
+        opacity: 0.25;
+    }
+}
+/* 第六个动画 */
+.loading-box-6:nth-child(1){
+    transform: translate(18px,0);
+    animation: sixth-show 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-6:nth-child(2){
+    transform: translate(18px,-25px);
+    animation: sixth-show 1s 0.1s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+.loading-box-6:nth-child(3){
+    transform: translate(27px,-45px);
+    animation: sixth-show 1s 0.2s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+}
+.loading-box-6:nth-child(4){
+    transform: translate(36px,-25px);
+    animation: sixth-show 1s 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-6:nth-child(5){
+    transform: translate(36px,0);
+    animation: sixth-show 1s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-6:nth-child(6){
+    transform: translate(0,25px);
+    animation: sixth-show 1s 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-6:nth-child(7){
+    transform: translate(-48px,45px);
+    animation: sixth-show 1s 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+.loading-box-6:nth-child(8){
+    transform: translate(-92px,25px);
+    animation: sixth-show 1s 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+@keyframes sixth-show{
+  from{
+         width:16px;
+         height:16px;
+         margin:1px;
+         background-color: #7decad;
+         border-radius: 50%;
+    }
+    to{
+          width:8px;
+          height:8px;
+          margin: 5px;
+          background-color: #c5eed6;
+          border-radius: 50%;
+    }
+}
+/* 第七个动画 */
+.loading-box-7-bottom{
+    width: 170px;
+    height: 10px;
+    background-color: #a4d5df;
+    border-radius: 5px;
+}
+.loading-box-7-top{
+    height: 10px;
+    background-color: #7decad;
+    border-radius: 5px;
+    position: absolute;
+    animation: seventh-show 3s linear infinite;
+}
+@keyframes seventh-show{
+    0%{
+        left: 51px;
+        width: 0;
+    }
+    50%{
+        left: 51px;
+        width: 170px;
+    }
+    100%{
+        left: 221px;
+        width: 0;
+    }
+
+}
+/* 第八个动画 */
+.loading-box-8{
+    height: 40px;
+    width: 10px;
+    background-color: #7decad;
+    margin:2px;
+    border-radius:5px 5px 0 0;
+}
+/* 第九个动画 */
+.loading-box-9{
+    width: 18px;
+    height: 18px;
+    background-color: #7decad;
+    border-radius: 50%;
+}
