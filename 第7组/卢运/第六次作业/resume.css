@@ -1,0 +1,146 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    width:100%;
+    margin: 0;
+}
+body {
+    width:100%;
+    min-width:320px;
+}
+
+.all-content{
+    width: 60%;
+    height: 772px;
+    margin: 0 auto;
+}
+
+.left-content{
+    width: 42%;
+    height: 772px;
+    background-color: rgb(243,195,61);
+    float: left;
+}
+
+.left-content .picture-out{
+    width: 50%;
+    height: 0;
+    padding-bottom:50%;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 auto;
+    margin-top: 7.1em;
+    margin-bottom: 1.2em;
+}
+
+
+.left-content img{
+    width: 70%;
+    margin: 15%;
+    max-width: 100%;
+}
+
+.left-content h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.left-content .web{
+    height: 36px;
+    background-color: rgb(56, 56, 56);
+    font-size: 1.1em;
+    font-style: italic;
+    color: rgb(243,195,61);
+    line-height: 36px;
+    text-align: center;
+}
+
+.left-content h3{
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.left-content .information{
+    height: 30px; 
+    margin-bottom: 10px;
+}
+
+.left-content .information .logo{
+    height: 30px; 
+    width: 23%;
+    background-color: rgb(56, 56, 56);
+    float: left;
+    position: relative;
+}
+
+.left-content .information .logo img{
+    width: 25%;
+    max-width: 100%;
+    position: absolute;
+    right: 10%;
+    bottom: 30%;
+    margin: 0;
+}
+
+.left-content .information p{
+    width: 70%;
+    margin-left: 6%;
+    font-size: 0.3em;
+    float: left;
+}
+
+.clear-float{
+    clear: both;
+}
+/* 左边样式结束 */
+/* 右边部分样式开始 */
+.right-content{
+    width: 55%;
+    height: 772px;
+    float: right;
+}
+
+.right-content h2{
+    font-size: 1.75em;
+    margin: 80px 0 15px 0;
+}
+
+.right-content .title{
+    height: 36px;
+    line-height: 36px;
+    text-indent: 3%;  
+    background-color: rgb(56, 56, 56);
+    margin-bottom:  20px;
+}
+
+.introduction-content p{
+    width: 90%;
+    margin-left: 1.5%;
+    font-size: 0.9em;
+    margin-bottom: 25px;
+}
+
+.right-content .honor li{
+    height: 40px;
+    margin: 0 0 20px 1.5%;
+    list-style: none;
+}
+
+.right-content .experience{
+    width: 90%;
+    margin-bottom: 25px;
+}
+
+.right-content .experience h4{
+    font-size: 0.9em;
+    text-indent: 3%;
+}
+
+.right-content .experience p{
+    margin-left: 1.5%;
+}
+/* 右边样式结束 */
