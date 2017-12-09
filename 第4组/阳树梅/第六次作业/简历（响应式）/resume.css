@@ -1,0 +1,142 @@
+html,
+body{
+    font-family: cursive;
+    font-size: 10px;
+}
+.title-li{
+    font-weight: bold;
+    font-size: 2rem;
+    list-style-image: url(eg_arrow.gif);
+}
+.resume ol li{
+    text-align: left;
+    line-height: 150%;
+    list-style-image: url(eg_arrow.gif);
+}
+hr{
+    clear: both;
+}
+/* 简历头部 */
+.head{
+    background: aliceblue;
+    border-radius: 14px;
+    text-align: center;
+}
+.head .first-line .N-1{  
+    font-size: 6rem;
+    font-weight: bolder; 
+    float: left;  
+}
+.head .first-line .N-2{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    float: left;
+}
+.head .second-line{
+    font-size: 6rem;
+    line-height: 130%;
+    font-weight: bolder;
+    color: darkorange;
+    clear: both;
+}
+/* 简历内容 */
+.resume {
+    background: aliceblue;
+    border-radius: 14px;
+    padding-bottom: 1px;
+}
+/* 个人信息 */
+.personal-information div{
+    font-size: 1.6rem;
+    line-height: 150%;
+}
+.left-float-li{
+    list-style: none;
+    float: left;
+}
+.right-float-li{
+    list-style: none;
+    float: left;
+}
+.img-float-li{
+    list-style: none;
+    float: right;
+}
+.education{
+    clear: both;
+}
+/* 自我评价 */
+.resume .self-coment p{
+    text-align: left;
+    text-indent: 2em;
+    line-height: 150%;
+    margin: 0 auto;
+}
+@media screen and (min-width:1380px) {
+    body{
+        max-width:70%;
+        margin:3px auto;
+    }
+    .N-1{
+        padding-left: 23%;
+    }
+    .N-2{
+        padding-top: 4%;
+    }
+    .left-float-li,.right-float-li,.img-float-li{
+        width:33%;
+    }
+     .title-li{
+        font-size: 2.4rem;
+    }
+    .personal-information div,.self-coment p,ol li{
+       font-size:1.6rem;
+    }
+}
+@media screen and (min-width:801px) and (max-width:1380px) {
+    body{
+        max-width:90%;
+        margin:5px auto;
+    }
+    .N-1{
+        padding-left: 25%;
+    }
+    .N-2{
+        padding-top: 2.5%;
+    }
+    .left-float-li,.right-float-li{
+        width:50%;
+    }
+    .img-float-li{
+        width:100%;
+        margin:1%;
+    }
+     .title-li{
+        font-size: 2.8rem;
+    }
+    .personal-information div,.self-coment p,ol li{
+       font-size:2.4rem;
+    }
+}
+@media screen and (max-width:800px){
+    body{
+        max-width: 95%;
+        margin: 5px auto; 
+    }
+    .N-1{
+        padding-left:20%
+    }
+    .N-2{
+        display:none;
+    }
+    .title-li{
+        font-size: 3.2rem;
+    }
+    .personal-information div,.self-coment p,ol li{
+       font-size:2.8rem;
+    }
+    .left-float-li,.right-float-li,.img-float-li{
+        width:90%;
+        margin:0 5%;
+    }
+}

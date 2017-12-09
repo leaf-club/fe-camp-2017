@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<table border="1" width="50%" id="tab">
+		<tr id="class">
+			<th>学号</th>
+			<th>姓名</th>
+			<th>操作</th>
+		</tr>
+
+		<tr>
+			<td>xh001</td>
+			<td>王小明</td>
+			<td>
+				<a href="javascript:;">删除</a>
+			</td>
+			<!--在删除按钮上添加点击事件  -->
+		</tr>
+
+		<tr>
+			<td>xh002</td>
+			<td>刘小芳</td>
+			<td>
+				<a href="javascript:;">删除</a>
+			</td>
+			<!--在删除按钮上添加点击事件  -->
+		</tr>
+
+	</table>
+	<input type="button" value="添加一行" onclick="c()"/>
+	<!--在添加按钮上添加点击事件  -->
+	<script>
+		window.onload = function (e) {
+			var line = document.getElementsByTagName("tr");
+
+			for (var i = 0; i < line.length; i++) {
+
+				line[i].onmouseover = function () {
+
+					this.style.background = "#f2f2f2";
+
+				}
+
+				line[i].onmouseout = function () {
+
+					this.style.background = "#fff";
+
+				}
+			}
+		}
+		var x =document.getElementsByTagName("a");
+		for(var i=0;i<x.length;i++){
+				x[i].onclick = function() {
+		
+					var a = this.parentNode.parentNode.parentNode;
+		
+					var b = this.parentNode.parentNode;
+		
+					a.removeChild(b);
+				}
+				}
+			function c(){
+			var a=document.createElement("tr");
+			var b=document.createElement("td");
+			var c=document.createElement("td");
+			var d=document.createElement("td");
+			var tab=document.getElementById("tab");
+			b.innerHTML="sad";
+			c.innerHTML="asf";
+			d.innerHTML="ad";
+			tab.append(a);
+			a.append(b);
+			a.append(c);
+			a.append(d);
+				}
+	</script>
+</body>
+
+</html>

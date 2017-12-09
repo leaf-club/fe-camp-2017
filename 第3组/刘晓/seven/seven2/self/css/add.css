@@ -1,0 +1,122 @@
+html,
+.body {
+    margin: 2;
+    width:auto;
+    height:auto;
+    background: url(bg.jpg);
+    border-style: dashed;
+    border-radius: 20px;
+    border-color: rgba(18, 21, 29, 0.863);
+    border-width:thick;
+    margin: 2em;
+    padding: 1em;
+    font-family:"微软雅黑";
+    font-weight:bold;
+    min-width: 40px;
+  } 
+  .bod{
+    border-radius: 24px;
+    border-color: rgb(255, 0, 0);
+    box-shadow: 24px;
+    max-width: 100%;
+  }
+.HolyGrail {
+  min-width: 40px;
+    display:auto;
+        background: url(bg.jpg);
+        font-family:"黑体";
+        font-size : 2em;
+  }
+
+  
+  .signal{
+    color: rgb(255, 0, 0);
+  }
+   
+  .left{
+    min-width: 20px;
+    max-width:100%;
+    max-height:20em;
+    display: flex;
+    overflow: auto;
+    margin: 1;
+    border-width: medium;
+    border-style: dashed;
+    border-color:rgb(68, 0, 255) ;
+    padding: 1em;
+  }
+  
+  .rigth{
+    min-width: 20px;
+    max-width:100%;
+    max-height:20em;
+    display: flex;
+    overflow: auto;
+    margin: 1;
+    border-width: medium;
+    border-style: dashed;
+    padding: 1em;
+  }
+  .last{
+    min-width: 40px;
+    max-width:100%;
+    max-height:20em;
+    display: flex;
+    overflow: auto;
+    margin: 1;
+    border-width: medium;
+    border-style: dashed;
+    padding: 1em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(233, 128, 7);
+    opacity: 0.5;
+    display: inline-block;
+    text-align: center;
+    text-decoration:blink;
+    font-family:"楷体";
+  }
+  html{
+    font-size: 16px;
+  }
+  h1{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1.5rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+  h4{
+    font-size: 0.5rem;
+  }
+    @media screen and (max-width:400px){
+    .left{
+      min-width: 40px;
+      max-width:50%;
+    }
+    .rigth{
+      min-width: 40px;
+      max-width:50%;
+    }
+    html{
+      font-size: 12px;
+    }
+     }
+
+
+
+     @media screen and (min-width:400px) and (max-width:500px) {
+      .left{
+        min-width: 40px;
+        max-width:50%;
+      }
+      .rigth{
+        min-width: 40px;
+        max-width:50%;
+      }
+      html{
+        font-size: 14px;
+      }
+       }
