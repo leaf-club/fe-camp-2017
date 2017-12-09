@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>浏览器对象</title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=gkb"/>   
+ </head>
+ <body>
+  <!--先编写好网页布局-->
+  <h3>操作成功</h3>
+  <span id="second">5</span>秒后回到主页<a href="javascript:goback()">返回</a>
+  <script type="text/javascript"> 
+  //获取显示秒数的元素，通过定时器来更改秒数。 
+  //通过window的location和history对象来控制网页的跳转。
+  var numStr=document.getElementById("second").innerHTML;
+  var num=parseInt(numStr),i;
+  function timeCount(){
+    num--;
+    if(num>0){
+    document.getElementById("second").innerHTML=num;
+    i=setTimeout(timeCount,1000);
+    }else{
+    window.location.href="http://baidu.com";
+    clearTimeout(i);
+    }
+  }
+  setTimeout(timeCount,1000);
+  function goback(){
+      window.history.back();
+  }
+ </script> 
+</body>
+</html>
