@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        
+          //通过javascript的日期对象来得到当前的日期，并输出。
+          var mydate=new Date();
+          var myweek=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"]
+          
+        
+          
+          
+          //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+          var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+          var score= new Array();
+          for(i=0;i<10;i++)
+          {
+              score[i]=parseInt(scoreStr.substr(6*i+3,2));
+          }
+          var addup=0;
+          for(j=0;j<10;j++)
+          {
+              addup+=score[j];
+          }
+          var averaddup=addup/score.length;
+        
+          //从数组中将成绩撮出来，然后求和取整，并输出。
+          document.write(mydate.getFullYear()+"年"+mydate.getMonth()+"月"+mydate.getDate()+"日"+" "+myweek[mydate.getDay()]+"--"+"班级总分为:"+averaddup);
+        
+        
+        </script>   
+</body>
+</html>
