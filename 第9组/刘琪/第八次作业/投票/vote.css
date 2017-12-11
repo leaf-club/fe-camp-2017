@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 560px;
+    height: 450px;
+    margin: 0 auto;
+    margin-top: 100px;
+    border: 2px solid rgb(44, 192, 233);
+}
+#container .item{
+    width: 65px;
+    height: 100%;
+    margin-left: 60px;
+    float: left;
+    position: relative;
+}
+#container .item .pic{
+    width: 65px;
+    height: 65px;
+    margin: 20px 0;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+#container .item .pic:hover{
+    box-shadow: 0 0 10px black;
+}
+#container .item .pic .picture{
+    width: 100%;
+    height: 100%;
+}
+.amount{
+    width: 60px;
+    height: 30px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    background: black;
+    position: absolute;
+    bottom: 300px;
+    left: 2.5px;
+    display: none;
+}
+.column{
+    width: 50px;
+    background: coral;
+    position: absolute;
+    bottom: 50px;
+    left: 7.5px;
+}
+#container .item .column1{
+    height: 220px;
+}
+#container .item .column2{
+    height: 161px;
+}
+#container .item .column3{
+    height: 130px;
+}
+#container .item .column4{
+    height: 211px;
+}
+/* #container .item .column:first-child{
+    height: 220px;
+}
+#container .item .column:nth-child(2){
+    height: 161px;
+}
+#container .item .column:nth-child(3){
+    height: 130px;
+}
+#container .item .column:last-child{
+    height: 211px;
+} */
+#container .item .column:hover{
+     box-shadow: 0 0 5px black; 
+}
+#container .item .name{
+    width: 50px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    left: 7.5px;
+    font: normal bold arial,sans-serif;
+}

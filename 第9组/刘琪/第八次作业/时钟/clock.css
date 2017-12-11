@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(57, 183, 221);
+    font: normal 500 20px/20px arial,sans-serif;
+}
+#container{
+    width: 220px;
+    height: 220px;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 200px;
+    background: black;
+}
+#container .content{
+    width: 195px;
+    height: 195px;
+    border-radius: 50%;
+    background: white;
+    position: relative;
+    top: 12.5px;
+    left: 12.5px;
+}
+/* 时间数字 */
+.num{
+    width: 20px;
+    position: absolute;
+    top: 10px;
+    left: 87.5px;
+    transform-origin: 10px 87.5px;
+    z-index: 0;
+}
+.num div{
+    text-align: center;
+}
+.num:nth-child(2){
+    transform: rotate(30deg);
+}
+.num:nth-child(2) div{
+    transform: rotate(-30deg);
+}
+.num:nth-child(3){
+    transform: rotate(60deg)
+}
+.num:nth-child(3) div{
+    transform: rotate(-60deg);
+}
+.num:nth-child(4){
+    transform: rotate(90deg);
+}
+.num:nth-child(4) div{
+    transform: rotate(-90deg);
+}
+.num:nth-child(5){
+    transform: rotate(120deg)
+}
+.num:nth-child(5) div{
+    transform: rotate(-120deg);
+}
+.num:nth-child(6){
+    transform: rotate(150deg);
+}
+.num:nth-child(6) div{
+    transform: rotate(-150deg);
+}
+.num:nth-child(7){
+    transform: rotate(180deg);
+}
+.num:nth-child(7) div{
+    transform: rotate(-180deg);
+}
+.num:nth-child(8){
+    transform: rotate(-150deg);
+}
+.num:nth-child(8) div{
+    transform: rotate(150deg);
+}
+.num:nth-child(9){
+    transform: rotate(-120deg);
+}
+.num:nth-child(9) div{
+    transform: rotate(120deg);
+}
+.num:nth-child(10){
+    transform: rotate(-90deg);
+}
+.num:nth-child(10) div{
+    transform: rotate(90deg);
+}
+.num:nth-child(11){
+    transform: rotate(-60deg);
+}
+.num:nth-child(11) div{
+    transform: rotate(60deg);
+}
+.num:nth-child(12){
+    transform: rotate(-30deg);
+}
+.num:nth-child(12) div{
+    transform: rotate(30deg);
+}
+/* 中心点 */
+#container .content .pivot{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -5px 0 0 -5px;
+    background: coral;
+    z-index: 100;
+}
+/* 时针 */
+#container .content #hourHand{
+    width: 50px;
+    height: 8px;
+    border-radius: 4px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -4px 0 0 5px;
+    /* transform: rotate(-90deg); */
+    transform-origin: -5px 50%;
+    z-index: 10;
+}
+#container .content #hourHand::before{
+    content: " ";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: black;
+    position: absolute;
+    margin: -4px 0 0 -13px;
+    z-index: 10;
+}
+/* 分针 */
+#container .content #minHand{
+    width: 70px;
+    height: 4px;
+    border-radius: 2px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 5px;
+    /* transform: rotate(-90deg); */
+    transform-origin: -5px 50%;
+    z-index: 1;
+}
+/* 秒针 */
+#container .content #secHand{
+    width: 85px;
+    height: 2px;
+    border-radius: 1px;
+    background: coral;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -1px 0 0 5px;
+    /* transform: rotate(-90deg); */
+    transform-origin: -5px 50%;
+    z-index: 100;
+}
+#container .content #secHand::before{
+    content: " ";
+    display: block;
+    width:20px;
+    height: 2px;
+    background: coral;
+    margin: 0 0 0 -20px;
+    z-index: 100;
+}
