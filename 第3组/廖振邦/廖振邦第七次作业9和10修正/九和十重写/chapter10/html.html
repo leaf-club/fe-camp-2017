@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    html,body{
+        margin:0;
+        padding:0;
+        font-size:100px;
+    }
+    ul{
+        margin:0;
+        padding:0;
+       
+    }
+    ul li{
+      display:flex;
+        list-style: none;
+        border:1px solid gray;
+       
+        display: inline-block;
+        font-size:0.16rem;
+        margin:0 0.1rem;
+        margin-bottom: 0;
+        
+    }
+    ul li a{
+        text-decoration: none;
+        color:black;
+        display: inline-block;
+        margin:0.5em 1.5em;
+       
+        
+    }
+    div{
+        border:1px blue solid;
+         border-top:2px solid rgb(39, 27, 27);
+       
+        width:30%;
+        height:500px;
+       margin-top: -0.13rem;
+       font-size:0.16rem;
+       z-index: 1;
+    }
+    .on{
+         border-top:2px solid rgb(39, 27, 27);
+         border-bottom: 2px solid white;
+         z-index: 2;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <ul id="top">
+        <li class="house"><a href="#">房产</a></li>
+        <li class="house"><a href="#">家居</a></li>
+        <li class="house"><a href="#">二手房</a></li>
+    </ul>
+    <div></div>
+    <script>
+    var bli=document.querySelectorAll("li");
+    var adiv=document.querySelector("div");
+    adiv.innerHTML="275万购昌平邻铁三居 总价20万买一";
+    
+    bli[0].onclick=function(){
+      adiv.innerHTML="275万购昌平邻铁三居 总价20万买一";
+      this.className="on";
+    bli[1].className="";
+    bli[2].className="";
+    
+    }
+    bli[1].onclick=function(){
+        adiv.innerHTML="40平出租屋大改造 美少女的混搭小窝40平出租屋大改造 美少女的混搭小窝";
+        this.className="on";
+        bli[0].className="";
+    bli[2].className="";
+    }
+    bli[2].onclick=function(){
+        adiv.innerHTML=" 通州豪华3居260万 二环稀缺2居250w甩西3环通透2居290万 130万2居限量";
+        this.className="on";
+        bli[1].className="";
+    bli[0].className="";
+    }
+    </script>
+</body>
+</html>
