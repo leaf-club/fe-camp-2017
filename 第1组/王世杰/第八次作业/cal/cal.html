@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+    <div id="cal">
+        <div class="head">
+            <span class="name">Calculator</span>
+        </div>
+        <div class="input">
+            <div class="screen">
+                <input type="text" id="dis">
+            </div>
+        </div>
+        <div class="keyboard">
+            <input type="button" value="C" class="buttons" id="C" onclick="clear1()">
+            <input type="button" value="%" class="buttons" id="%" onclick="inputs(this.id)">
+            <input type="button" value="<--" class="buttons" id="back" onclick="Back()">
+            <input type="button" value="+" class="buttons" id="add" onclick="inputs(this.id)">
+
+            <input type="button" value="7" class="buttons" id="7" onclick="inputs(this.id)">
+            <input type="button" value="8" class="buttons" id="8" onclick="inputs(this.id)">
+            <input type="button" value="9" class="buttons" id="9" onclick="inputs(this.id)">
+            <input type="button" value="-" class="buttons" id="sub" onclick="inputs(this.id)">
+
+            <input type="button" value="4" class="buttons" id="4" onclick="inputs(this.id)">
+            <input type="button" value="5" class="buttons" id="5" onclick="inputs(this.id)">
+            <input type="button" value="6" class="buttons" id="6" onclick="inputs(this.id)">
+            <input type="button" value="*" class="buttons" id="mul" onclick="inputs(this.id)">
+
+            <input type="button" value="1" class="buttons" id="1" onclick="inputs(this.id)">
+            <input type="button" value="2" class="buttons" id="2" onclick="inputs(this.id)">
+            <input type="button" value="3" class="buttons" id="3" onclick="inputs(this.id)">
+            <input type="button" value="/" class="buttons" id="divs" onclick="inputs(this.id)">
+
+            <input type="button" value="0" class="buttons1" id="0" onclick="inputs(this.id)">
+            <input type="button" value="." class="buttons" id="." onclick="inputs(this.id)">
+            <input type="button" value="=" class="buttons" id="equal" onclick="equal()">
+        </div>
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>
