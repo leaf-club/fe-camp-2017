@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算器</title>
+    <link rel="stylesheet" href="calculator.css">
+    <script type="text/javascript">
+    var num=0,result=0,_show=0;
+    var sign_in=0;
+    var sign=0;
+    function calculate(){
+        _show=Number(document.calculator1.showDisplay.value);
+        if(num!=0){
+            switch(sign){
+                case 1:
+                result = num+_show;
+                break;
+                case 2:
+                result = num-_show;
+                break;
+                case 3:
+                result = num*_show; 
+                break;
+                case 4:
+				result = num/_show;
+			    break;
+                case 5: 
+                result = num%_show;
+			    break;
+            }
+        }
+        else {
+		result = _show;
+	    }
+	   _show= String(result);
+	   document.calculator1.showDisplay.value = _show;
+	   num = result;
+    }
+    function show(num) {
+	var str = String(document.calculator1.showDisplay.value);
+	str = (str != "0") ? ((sign_in == 0) ? str : "") : "";
+	str = str + String(num);
+	document.calculator1.showDisplay.value = str;
+	sign_in = 0;
+}
+function dot() {
+	var str = String(document.calculator1.showDisplay.value);
+	str = (str != "0") ? ((sign_in == 0) ? str : "0") : "0";
+	for ( i = 0; i <= str.length; i++) {
+		if (str.substr(i, 1) == ".")
+			return false;
+	}
+	str = str + ".";
+	document.calculator1.showDisplay.value = str;
+	sign_in = 0;
+}
+
+function del() {
+	var str = String(document.calculator1.showDisplay.value);
+	str = (str != "0") ? str : "";
+	str = str.substr(0, str.length - 1);
+	str = (str != "") ? str : "0";
+	document.calculator1.showDisplay.value = str;
+}
+
+function clearscreen() {
+	num = 0;
+	result = 0;
+	_show= "0";
+	document.calculator1.showDisplay.value = "0";
+}
+
+function plus() {
+    calculate();
+	sign_in = 1;
+	sign = 1;
+}
+function minus() {
+    calculate();	
+	sign_in = 1;
+	sign = 2;
+}
+function times() {
+    calculate();	
+	sign_in = 1;
+	sign= 3;
+}
+function divide() {
+    calculate();	
+	sign_in = 1;
+	sign= 4;
+}
+function percent() {
+    calculate();	
+	sign_in = 1;
+	sign= 5;
+}
+function equal() {
+	calculate();
+	sign_in = 1;
+	num = 0;
+	result = 0;
+	_show= "0";
+}
+    </script>
+</head>
+<body>
+    <div id="calculator">
+        <div id="name">
+            <h1>简易计算器</h1>
+        </div>
+        <form name="calculator1" action="" method="get">
+            <div id="calculator_display">
+                <input type="text" name="showDisplay" class="display" value="0" onfocus="this.blur();">
+            </div>
+            <div id="button_list">
+                <ul>
+                    <li onClick="show(7)">7</li>
+                    <li onClick="show(8)">8</li>
+                    <li onClick="show(9)">9</li>
+                    <li onClick="del()">←</li>
+                    <li onClick="clearscreen()">C</li>
+                    <li onClick="show(4)">4</li>
+                    <li onClick="show(5)">5</li>
+                    <li onClick="show(6)">6</li>
+                    <li onClick="times()">×</li>
+                    <li onClick="divide()">÷</li>
+                    <li onClick="show(1)">1</li>
+                    <li onClick="show(2)">2</li>
+                    <li onClick="show(3)">3</li>
+                    <li onClick="plus()">+</li>
+                    <li onClick="minus()">-</li>
+                    <li onClick="show(0)" id="zero">0</li>
+                    <li onClick="dot()">.</li>
+                    <li onClick="percent()">%</li>
+                    <li onClick="equal()">=</li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
