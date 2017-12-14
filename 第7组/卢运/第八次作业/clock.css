@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#outbg{
+    width: 240px;
+    height: 240px;
+    border-radius: 16%;
+    margin: 50px auto;
+    background-color: rgb(10, 9, 9);
+}
+
+#clock {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: 20px;
+}
+
+#clock ul{
+    list-style:  none;
+}
+#clock #tick li {
+    width: 2px;
+    height: 6px;
+    background: #000;
+    position: absolute;
+    left: 99px;
+    top: 0;
+    transform-origin: center 100px;
+}
+
+#clock #num li{
+    width: 20px;
+    height: 100px;
+    position: absolute;
+    left: 90px;
+    transform-origin: center 100px;
+    padding-top: 10px;
+}
+
+#clock #num span {
+    display:block;
+    position:absolute;
+}
+
+#poi {
+    width: 10px;
+    height: 10px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 95px;
+    top: 95px;
+}
+
+#hour {
+    width: 6px;
+    height: 60px;
+    background: rgb(5, 5, 5);
+    border-radius: 50%;
+    position: absolute;
+    left: 97px;
+    top: 40px;
+    transform-origin: center 60px;
+}
+
+#min {
+    width: 4px;
+    height: 80px;
+    background: #000;
+    border-radius: 50%;
+    position: absolute;
+    left: 98px;
+    top: 20px;
+    transform-origin: center 80px;
+}
+
+#sec {
+    width: 2px;
+    height: 110px;
+    background: rgb(243, 137, 15);
+    border-radius: 50%;
+    position: absolute;
+    left: 99px;
+    top: 10px;
+    transform-origin: center 90px;
+}
