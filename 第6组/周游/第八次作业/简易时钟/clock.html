@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简易时钟</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <div id="clock">
+        <div class="num">12</div>
+        <div class="num">1</div>
+        <div class="num">2</div>
+        <div class="num">3</div>
+        <div class="num"><div>4</div></div>
+        <div class="num"><div>5</div></div>
+        <div class="num"><div>6</div></div>
+        <div class="num"><div>7</div></div>
+        <div class="num"><div>8</div></div>
+        <div class="num">9</div>
+        <div class="num">10</div>
+        <div class="num">11</div> 
+        <div id="hours" class="ppp"></div>
+        <div id="min" class="ppp"></div>
+        <div id="second" class="ppp"></div>
+        <div id="d"></div> 
+    </div>
+    <script>
+            function rotate(){
+                var date=new Date();
+                var hours=document.getElementById('hours'),
+                    min=document.getElementById('min'),
+                    second=document.getElementById('second'),
+                    h=date.getHours(),
+                    m=date.getMinutes(),
+                    s=date.getSeconds(); 
+                if(h>=12) h=h-12;
+                hours.style.transform="rotate("+(h*30+m*0.5-90)+"deg)";
+                min.style.transform="rotate("+(m*6+0.1*s-90)+"deg)";
+                second.style.transform="rotate("+(s*6-90)+"deg)";
+            }
+            setInterval(rotate,1000);
+            rotate();
+    </script>
+</body>
+</html>
