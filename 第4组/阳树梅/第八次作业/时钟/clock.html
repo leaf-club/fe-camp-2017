@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>myclock</title>
+    <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+    <div class="box">
+        <div class="clock">
+            <div class="num">
+                <div><span class="txt1">1</span></div>
+                <div><span class="txt2">2</span></div>
+                <div><span class="txt3">3</span></div> 
+                <div><span class="txt4">4</span></div>
+                <div><span class="txt5">5</span></div>
+                <div><span class="txt6">6</span></div>
+                <div><span class="txt7">7</span></div>
+                <div><span class="txt8">8</span></div>
+                <div><span class="txt9">9</span></div>
+                <div><span class="txt10">10</span></div>
+                <div><span class="txt11">11</span></div>
+                <div><span class="txt12">12</span></div>      
+            </div>
+            <div class="point">
+                <span id="hour"></span>
+                <span id="minute"></span>
+                <span id="second"></span>
+                <span class="circle"></span>
+            </div>
+        </div>
+    </div>
+    <script>
+        //clock函数
+        function clock(){
+            var mytime = new Date();
+            var Hour = document.getElementById("hour"),
+                Minute = document.getElementById("minute"),
+                Second = document.getElementById("second"); 
+            //指针转动
+            Second.style.webkitTransform = "rotate("+(mytime.getSeconds()*6)+ "deg)" ;
+            Minute.style.webkitTransform = "rotate("+((mytime.getMinutes()*6)+(mytime.getSeconds()/10))+ "deg)" ;
+            Hour.style.webkitTransform = "rotate("+((mytime.getHours()*30)+(mytime.getMinutes()/2))+ "deg)" ;
+        } 
+        clock();  
+        setInterval(clock,1000);
+    </script>
+</body>
+</html>
