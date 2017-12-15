@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="cal.css">
+	<!-- <script type="text/javascript" src="cal.js"></script> -->
+	<!-- <script type="text/javascript">
+		function colorchange(obj){
+	obj.style.backgroundColor="#000";
+}
+		window.onload = function(){
+
+    var trs = document.getElementsByTagName("div");
+    for(var i=0;i<trs.length;i++){
+        trs[i].onmouseover=function(){this.style.backgroundColor="#000";}
+        trs[i].onmouseout=function(){this.style.backgroundColor="#fff";}
+}}
+	</script> -->
+</head>
+<body>
+	<div class="cal">
+		<div id="screen">
+			<p id="result">0</p>
+		</div>
+		<div id="top">
+			<div name="btn" class="top-items" id="top-clear">C</div>
+			<div name="btn" class="top-items" id="top-oppo">+/-</div>
+			<div name="btn" class="top-items" id="top-percent">%</div>
+			<div name="btn" class="top-items" id="top-wash"><--</div>
+		</div>
+		<div id="bottom">
+			<div id="number">
+				<div name="btn" class="num" id="num-1">1</div>
+				<div name="btn" class="num" id="num-2">2</div>
+				<div name="btn" class="num" id="num-3">3</div>
+				<div name="btn" class="num" id="num-4">4</div>
+				<div name="btn" class="num" id="num-5">5</div>
+				<div name="btn" class="num" id="num-6">6</div>
+				<div name="btn" class="num" id="num-7">7</div>
+				<div name="btn" class="num" id="num-8">8</div>
+				<div name="btn" class="num" id="num-9">9</div>
+				<div name="btn" class="num" id="num-0">0</div>
+				<div name="btn" class="num" id="num-point">.</div>
+			</div>
+			<div id="operation">
+				<div name="btn" class="op" id="op-add">+</div>
+				<div name="btn" class="op" id="op-sub">-</div>
+				<div name="btn" class="op" id="op-mul">x</div>
+				<div name="btn" class="op" id="op-div">/</div>
+				<div name="btn" class="op" id="op-pow2">^2</div>
+				<div name="btn" class="op" id="op-sq2">sq</div>
+				<div name="btn" class="equal op" id="op-equ">=</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<script type="text/javascript" src="cal.js"></script>
+	
+</body>
+</html>
