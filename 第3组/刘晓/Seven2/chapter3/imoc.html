@@ -1,0 +1,54 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>数组</title>
+<script type="text/javascript">
+//创建数组
+    var arr = ['*','##',"***","&&","****","##*"];
+    arr[7] = "**";
+
+//第一种 
+var tmp = new Array(); //存储 排序后的图案;
+for(var i in arr){
+    for(var j in arr[i]){
+        if(arr[i][j] == '*'){
+            if(j==arr[i].length-1){
+                tmp.push(arr[i]);
+            }
+        }else break;
+    }
+}
+tmp.sort(); //排序
+for(var i in tmp){
+document.write(tmp[i]+"<br/>");
+}
+
+//第二种 
+    //数组长度
+    var l = arr.length;   
+    //删除数组中非*的项  
+    for( var i = 0; i < l; i++){
+        if(arr[i] != undefined) {
+            for(var j = 0; j < arr[i].length; j++){
+                if(arr[i][j] != '*'){
+                    arr.splice(i, 1);
+                    i--;l--;
+                    break;
+                }
+            }
+        }
+    }
+    //按照字符数排序
+    arr.sort(function(a, b){
+        return a.length - b.length;
+    })    
+    //将数组内容输出，完成达到的效果。
+    for(var i in arr){
+        document.write(arr[i] + '<br />')
+    }
+</script>
+</head>
+<body>
+</body>
+</html>

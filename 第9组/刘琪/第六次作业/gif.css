@@ -1,0 +1,538 @@
+body,html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color:coral;
+}
+.body{
+    position: relative;
+}
+.container{
+    /*电脑上500px*/
+    width: 600px;
+    height: 600px;
+    background-color: lightskyblue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    /*设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。*/
+    flex-wrap: wrap;
+    justify-content: space-around;/*主轴排列*/
+    align-content: space-around;/*交叉轴轴排列*/
+}
+@media screen and (max-width: 960px){
+    .container{
+        width: 450px;
+        height: 450px;
+    }
+}
+@media screen and (max-width: 720px){
+    .container{
+        width: 400px;
+        height: 400px;
+    }
+}
+@media screen and (max-width: 480px){
+    .container{
+        width: 300px;
+        height: 300px;
+    }
+}
+.gifs{
+    width: 30%;
+    height: 30%;
+    background-color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*第一幅gif图START*/
+.gif1{
+    width:5%;
+    height: 40%;
+    background-color: lightblue; 
+    margin: 0 2.5%;
+    border-radius: 50%/8%;
+}
+.gif1-1{
+    animation: gif1-1 1s ease-out infinite;
+}
+.gif1-2{
+    animation: gif1-1 1s ease-out 0.2s infinite;
+}
+.gif1-3{
+    animation: gif1-3 1s ease-out infinite;
+}
+.gif1-4{
+    animation: gif1-3 1s ease-out 0.2s infinite;
+}
+.gif1-5{
+    animation: gif1-5 1s ease-out infinite;
+}
+@keyframes gif1-1{
+    50%{
+        height: 20%;
+        background-color: lightgreen;
+    }
+}
+@keyframes gif1-3{
+    from{
+        height: 20%;
+        background-color: lightgreen;
+    }
+    50%{
+        height: 40%;
+        background-color: lightblue; 
+    }
+    to{
+        height: 20%;
+        background-color: lightgreen;
+    }
+}
+@keyframes gif1-5{
+    50%{
+        height: 20%;
+        background-color: lightgreen;
+    }
+}
+/*第一幅gif图END*/
+/*第二幅gif图START*/
+.gif2{
+    width: 12%;
+    height: 12%;
+    margin: 0 2.5%;
+    border-radius:50%; 
+}
+.gif2-1{
+    animation: gif2 1s ease-out infinite;
+}
+.gif2-2{
+    animation: gif2 1s ease-out 0.2s infinite;
+}
+.gif2-3{
+    animation: gif2 1s ease-out 0.4s infinite;
+}
+.gif2-4{
+    animation: gif2 1s ease-out 0.6s infinite;
+}
+.gif2-5{
+    animation: gif2 1s ease-out 0.8s infinite;
+}
+@keyframes gif2{
+    20%{
+        background: lightgreen;
+    }
+}
+/*第二幅gif图END*/
+/*第三幅gif图START*/
+.center{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.gif3{
+    margin: 0;
+    border-radius:50%; 
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.gif3-1{
+    left: 14%;
+    animation: gif3 1s linear infinite;
+}
+.gif3-2{
+    left: 32%;
+    animation: gif3 1s linear 0.2s infinite;
+}
+.gif3-3{
+    left: 50%;
+    animation: gif3 1s linear 0.4s infinite;
+}
+.gif3-4{
+    left: 68%;
+    animation: gif3 1s linear 0.6s infinite;
+}
+.gif3-5{
+    left:86%;
+    animation: gif3 1s linear 0.8s infinite;
+}
+@keyframes gif3{
+    from{
+        width: 12%;
+        height: 12%;
+        background: lightgreen;
+    }
+    80%{
+        width: 0;
+        height: 0;
+        background: none;
+    }
+    to{
+        width: 0;
+        height: 0;
+    }
+}
+/*第三幅gif图END*/
+/*第四幅gif图START*/
+.gif4{
+    width: 10%;
+    height: 10%;
+    background: lightgreen;
+    margin: 0 3%;
+    transform-origin: bottom right;
+}
+.gif4-1{
+    animation: gif4 0.9s linear infinite;
+}
+.gif4-2{
+    animation: gif4 0.9s linear 0.1s infinite;
+}
+.gif4-3{
+    animation: gif4 0.9s linear 0.2s infinite;
+}
+.gif4-4{
+    animation: gif4 0.9s linear 0.3s infinite;
+}
+.gif4-5{
+    animation: gif4 0.9s linear 0.4s infinite;
+}
+@keyframes gif4{
+    55.6%{
+        background: none;
+        transform: rotate(90deg);
+    }
+    to{
+        background: none;
+    }
+}
+/*第四幅gif图END*/
+/*第五幅gif图START*/
+.gif5{
+    width: 12%;
+    height: 12%;
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    background: lightgreen;
+    opacity: 0.4;
+    margin: 0;
+    border-radius:50%; 
+    transform-origin: 300% 50%;
+}
+.gif5-1{
+    transform: translateY(-50%);
+    animation: gif5 1s linear infinite;
+}
+.gif5-2{
+    transform: translateY(-50%) rotate(45deg);
+    animation: gif5 1s linear 0.1s infinite;
+}
+.gif5-3{
+    transform: translateY(-50%) rotate(90deg);
+    animation: gif5 1s linear 0.2s infinite;
+}
+.gif5-4{
+    transform: translateY(-50%) rotate(135deg);
+    animation: gif5 1s linear 0.3s infinite;
+}
+.gif5-5{
+    transform: translateY(-50%) rotate(180deg);
+    animation: gif5 1s linear 0.4s infinite;
+}
+.gif5-6{
+    transform: translateY(-50%) rotate(-135deg);
+    animation: gif5 1s linear 0.5s infinite;
+}
+.gif5-7{
+    transform: translateY(-50%) rotate(-90deg);
+    animation: gif5 1s linear 0.6s infinite;
+}
+.gif5-8{
+    transform: translateY(-50%) rotate(-45deg);
+    animation: gif5 1s linear 0.7s infinite;
+}
+@keyframes gif5{
+    from{
+        opacity: 1;
+    }
+    43%{
+        opacity: 0.4;
+    }
+    to{
+        opacity: 0.4;
+    }
+}
+/*第五幅gif图END*/
+/*第六幅gif图START*/
+.gif6{
+    width: 5%;
+    height: 5%;
+    border-radius:50%; 
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform-origin: 600% 50%;
+}
+.gif6-1{
+    transform: translateY(-50%);
+}
+.gif6-2{
+    transform: translateY(-50%) rotate(45deg);
+}
+.gif6-3{
+    transform: translateY(-50%) rotate(90deg);
+}
+.gif6-4{
+    transform: translateY(-50%) rotate(135deg);
+}
+.gif6-5{
+    transform: translateY(-50%) rotate(180deg);
+}
+.gif6-6{
+    transform: translateY(-50%) rotate(-135deg);
+}
+.gif6-7{
+    transform: translateY(-50%) rotate(-90deg);
+}
+.gif6-8{
+    transform: translateY(-50%) rotate(-45deg);
+}
+.inner{
+    width: 100%;
+    height: 100%;
+    border-radius:50%; 
+    background-color: lightgreen;
+    opacity: 0.4;
+}
+.inner1{
+    animation: gif6 1s linear infinite;
+}
+.inner2{
+    animation: gif6 1s linear 0.1s infinite;
+}
+.inner3{
+    animation: gif6 1s linear 0.2s infinite;
+}
+.inner4{
+    animation: gif6 1s linear 0.3s infinite;
+}
+.inner5{
+    animation: gif6 1s linear 0.4s infinite;
+}
+.inner6{
+    animation: gif6 1s linear 0.5s infinite;
+}
+.inner7{
+    animation: gif6 1s linear 0.6s infinite;
+}
+.inner8{
+    animation: gif6 1s linear 0.7s infinite;
+}
+/*用width和height值做动画时，缩放原点总在左上角；而用scale做变换，缩放圆点
+则在中心。*/
+/*时间没控制好，转完一周后有短暂停顿
+如何控制时间？*/
+@keyframes gif6{
+    /*18.2%{
+        transform: scale(2.5);
+        opacity: 1;
+    }
+    36.4%{
+        transform:scale(1);
+        opacity: 0.4;
+    }*/
+    21.5%{
+        transform: scale(2.5);
+        opacity: 1;
+    }
+    80%{/*凑的80%，感官上相似*/
+        transform:scale(1);
+        opacity: 0.4;
+    }
+}
+/*第六幅gif图END*/
+/*第七幅gif图START*/
+.gif7b{
+    width: 80%;
+    height: 6%;
+    background-color: lightblue;
+    border-radius: 5%/50%; 
+    overflow: hidden;
+    position: relative;
+}
+.gif7f{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%/50%; 
+    background-color:lightgreen;
+    animation: gif7 4s linear infinite;
+    position: absolute;
+}
+@keyframes gif7{
+    from{
+        left:-100%;
+    }
+    50%{
+        left: 0;
+    }
+    to{
+        left: 100%;
+    }
+}
+/*第七幅gif图END*/
+/*第八幅gif图START*/
+.gif8{
+    width: 20%;
+    height: 6%;
+    background: lightgreen;
+    opacity: 0.4;
+    border-radius: 25% 0 0 25%/50% 0 0 50%; 
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform-origin: 170% 50%;
+}
+.gif8-1{
+    transform: translateY(-50%);
+    animation: gif8 1s ease-out infinite;
+}
+.gif8-2{
+    transform: translateY(-50%) rotate(45deg);
+    animation: gif8 1s ease-out 0.1s infinite;
+}
+.gif8-3{
+    transform: translateY(-50%) rotate(90deg); 
+    animation: gif8 1s ease-out 0.2s infinite; 
+}
+.gif8-4{
+    transform: translateY(-50%) rotate(135deg); 
+    animation: gif8 1s ease-out 0.3s infinite;
+}
+.gif8-5{
+    transform: translateY(-50%) rotate(180deg);
+    animation: gif8 1s ease-out 0.4s infinite;
+}
+.gif8-6{
+    transform: translateY(-50%) rotate(-135deg);
+    animation: gif8 1s ease-out 0.5s infinite;
+}
+.gif8-7{
+    transform: translateY(-50%) rotate(-90deg);
+    animation: gif8 1s ease-out 0.6s infinite;
+}
+.gif8-8{
+    transform: translateY(-50%) rotate(-45deg);
+    animation: gif8 1s ease-out 0.7s infinite;
+}
+@keyframes gif8{
+    from{
+        opacity: 1;
+    }
+    43%{
+        opacity: 0.4;
+    }
+}
+/*第八幅gif图END*/
+/*第九幅gif图START*/
+.gif9{
+    width: 12%;
+    height: 12%;
+    background: lightgreen;
+    margin: 0;
+    border-radius:50%; 
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform-origin: 50% 300%;
+}
+.gif9-1{
+    animation: gif9-1 2s ease-in infinite;
+}
+.gif9-2{
+    animation: gif9-2 2s ease-in infinite;
+}
+.gif9-3{
+    animation: gif9-3 2s ease-in infinite;
+}
+.gif9-4{
+    animation: gif9-4 2s ease-in infinite;
+}
+@keyframes gif9-1{
+    from{
+        transform: translateX(-50%) rotate(0turn);
+    }
+    50%{
+        transform: translateX(-50%) rotate(0.5turn);
+        opacity: 1;
+    }
+    51%{
+        transform: translateX(-50%) rotate(0.51turn);
+        opacity: 0.1;
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-50%) rotate(1turn);
+    }
+}
+@keyframes gif9-2{
+    from{
+        transform: translateX(-50%) rotate(30deg) rotate(0turn);
+    }
+    41.67%{
+        transform: translateX(-50%) rotate(30deg) rotate(0.4167turn);
+        opacity: 1;
+    }
+    42.67%{
+        transform: translateX(-50%) rotate(30deg) rotate(0.4267turn);
+        opacity: 0.1;
+    }
+    91.67%{
+        transform: translateX(-50%) rotate(30deg) rotate(0.9167turn);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-50%) rotate(30deg) rotate(1turn);
+    }
+}
+@keyframes gif9-3{
+    from{
+        transform: translateX(-50%) rotate(60deg) rotate(0turn);
+    }
+    33.33%{
+        transform: translateX(-50%) rotate(60deg) rotate(0.3333turn);
+        opacity: 1;
+    }
+    34.33%{
+        transform: translateX(-50%) rotate(60deg) rotate(0.3433turn);
+        opacity: 0.1;
+    }
+    83.33%{
+        transform: translateX(-50%) rotate(60deg) rotate(0.8333turn);
+        opacity: 1;
+    }
+    to{
+        transform: translateX(-50%) rotate(60deg) rotate(1turn);
+        opacity: 1;
+    }
+}
+@keyframes gif9-4{
+    from{
+        transform: translateX(-50%) rotate(-30deg) rotate(0turn);
+    }
+    58.33%{
+        transform: translateX(-50%) rotate(-30deg) rotate(0.5833turn);
+        opacity: 1;
+    }
+    59.33%{
+        transform: translateX(-50%) rotate(-30deg) rotate(0.5turn);
+        opacity: 0.1;
+    }
+    to{
+        transform: translateX(-50%) rotate(-30deg) rotate(1turn);
+    }
+}
+/*第九幅gif图END*/

@@ -1,0 +1,68 @@
+html,
+.body {
+    margin: 2;
+    width:auto;
+    height:auto;
+    background: url(bg.jpg);
+    border-style: dashed;
+    border-radius: 20px;
+    border-color: rgba(18, 21, 29, 0.863);
+    border-width:thick;
+    margin: 2em;
+    padding: 1em;
+    font-family:"微软雅黑";
+    font-weight:bold;
+  }
+  
+.HolyGrail {
+
+    display:auto;
+        background: url(bg.jpg);
+        font-family:"黑体";
+        font-size : 2em;
+  }
+
+  
+  .signal{
+    color: rgb(255, 0, 0);
+  }
+   
+  .left{
+    max-width:100%;
+    max-height:20em;
+    display: flex;
+    overflow: auto;
+    margin: 1;
+    border-width: medium;
+    border-style: dashed;
+    border-color:rgb(68, 0, 255) ;
+    padding: 1em;
+  }
+  
+  .rigth{
+    max-width:100%;
+    max-height:10em;
+    display: flex;
+    overflow: auto;
+    margin: 1;
+    border-width: medium;
+    border-style: dashed;
+    padding: 1em;
+  }
+  .last{
+    max-width:100%;
+    max-height:20em;
+    display: flex;
+    overflow: auto;
+    margin: 1;
+    border-width: medium;
+    border-style: dashed;
+    padding: 1em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    display: inline-block;
+    text-align: center;
+    text-decoration:blink;
+    font-family:"楷体";
+  }

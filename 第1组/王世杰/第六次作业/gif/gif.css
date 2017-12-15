@@ -1,0 +1,482 @@
+html,
+body {
+    width: 100%;
+    height: 800px;
+}
+.box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box .gif-box {
+    width: 33%;
+    height: 33%;
+    border: solid 1px rgb(165, 248, 165);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 33%;
+}
+.box .gif-box .content1 {
+    height: 70px;
+    width: 8px;
+    border-radius: 10px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+@keyframes content1-show {
+    from {
+        background-color: rgb(97, 209, 255);
+        opacity: 0.6;
+        height: 70px;
+        width: 8px;
+    }
+    50% {
+        height: 35px;
+        width: 8px;
+        background-color: rgb(26, 239, 137);
+        opacity: 0.4;
+    }
+    to {
+        background-color: rgb(97, 209, 255);
+        opacity: 0.6;
+        height: 70px;
+        width: 8px;
+    }
+}
+.content1:nth-child(1) {
+    animation: content1-show 1s ease-in-out infinite;
+}
+.content1:nth-child(2) {
+    animation: content1-show 1s ease-in-out infinite;
+    animation-delay: 0.15s;
+}
+.content1:nth-child(3) {
+    animation: content1-show 1s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+.content1:nth-child(4) {
+    animation: content1-show 1s ease-in-out infinite;
+    animation-delay: 0.45s;
+}
+.content1:nth-child(5) {
+    animation: content1-show 1s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+.box .gif-box .content2 {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+}
+@keyframes content2-show {
+    from {
+        height: 18px;
+        width: 18px;
+        background-color: rgb(73, 231, 73);
+        opacity: 0.6;
+    }
+    to {
+        height: 18px;
+        width: 18px;
+        background-color: rgb(73, 231, 73);
+        opacity: 0;
+    }
+}
+.content2:nth-child(1) {
+    animation: content2-show 0.7s ease-in-out infinite;
+}
+.content2:nth-child(2) {
+    animation: content2-show 0.7s ease-in-out infinite;
+    animation-delay: 0.12s;
+}
+.content2:nth-child(3) {
+    animation: content2-show 0.7s ease-in-out infinite;
+    animation-delay: 0.24s;
+}
+.content2:nth-child(4) {
+    animation: content2-show 0.7s ease-in-out infinite;
+    animation-delay: 0.36s;
+}
+.content2:nth-child(5) {
+    animation: content2-show 0.7s ease-in-out infinite;
+    animation-delay: 0.48s;
+}
+.box .gif-box .gbox {
+    height: 18px;
+    width: 18px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .gif-box .gbox .content3 {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+@keyframes content3-show {
+    from {
+        height: 18px;
+        width: 18px;
+        background-color: rgb(73, 231, 73);
+        opacity: 0.6;
+    }
+    to {
+        height: 0px;
+        width: 0px;
+        background-color: rgb(73, 231, 73);
+        opacity: 0;
+    }
+}
+.gbox:nth-child(1) .content3 {
+    animation: content3-show 0.7s ease-in-out infinite;
+}
+.gbox:nth-child(2) .content3 {
+    animation: content3-show 0.7s ease-in-out infinite;
+    animation-delay: 0.12s;
+}
+.gbox:nth-child(3) .content3 {
+    animation: content3-show 0.7s ease-in-out infinite;
+    animation-delay: 0.24s;
+}
+.gbox:nth-child(4) .content3 {
+    animation: content3-show 0.7s ease-in-out infinite;
+    animation-delay: 0.36s;
+}
+.gbox:nth-child(5) .content3 {
+    animation: content3-show 0.7s ease-in-out infinite;
+    animation-delay: 0.48s;
+}
+.box .gif-box .content4 {
+    height: 18px;
+    width: 18px;
+    margin-right: 1.5%;
+    margin-left: 1.5%;
+}
+@keyframes content4-show {
+    from {
+        height: 18px;
+        width: 18px;
+        background-color: rgb(73, 231, 73);
+        opacity: 0.6;
+    }
+    to {
+        height: 18px;
+        width: 18px;
+        background-color: rgb(73, 231, 73);
+        opacity: 0;
+        transform-origin: 100% 100%;
+        transform: rotate(90deg);
+    }
+}
+.content4:nth-child(1) {
+    animation: content4-show 0.7s ease-in-out infinite;
+}
+.content4:nth-child(2) {
+    animation: content4-show 0.7s ease-in-out infinite;
+    animation-delay: 0.12s;
+}
+.content4:nth-child(3) {
+    animation: content4-show 0.7s ease-in-out infinite;
+    animation-delay: 0.24s;
+}
+.content4:nth-child(4) {
+    animation: content4-show 0.7s ease-in-out infinite;
+    animation-delay: 0.36s;
+}
+.content4:nth-child(5) {
+    animation: content4-show 0.7s ease-in-out infinite;
+    animation-delay: 0.48s;
+}
+.box .gif-box1 {
+    width: 33%;
+    height: 33%;
+    border: solid 1px rgb(165, 248, 165);
+    position: relative;
+}
+.box .gif-box1 .content5{
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+@keyframes content5-show {
+    from {
+        background-color: rgb(73, 231, 73);
+        opacity: 0.8;
+    }
+    to {
+        background-color: rgb(73, 231, 73);
+        opacity: 0.2;
+    }
+}
+.box .gif-box1 .gbox1 {
+    height: 18px;
+    width: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+.content5:nth-child(1) {
+    transform: translate(-9px,-63px);
+    animation: content5-show 0.8s ease-in-out infinite;
+}
+.content5:nth-child(2) {
+    transform: translate(29px,-47px);
+    animation: content5-show 0.8s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+.content5:nth-child(3) {
+    transform: translate(45px,-9px);
+    animation: content5-show 0.8s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+.content5:nth-child(4) {
+    transform: translate(29px,29px);
+    animation: content5-show 0.8s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+.content5:nth-child(5) {
+    transform: translate(-9px,45px);
+    animation: content5-show 0.8s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+.content5:nth-child(6) {
+    transform: translate(-47px,29px);
+    animation: content5-show 0.8s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+.content5:nth-child(7) {
+    transform: translate(-63px,-9px);
+    animation: content5-show 0.8s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+.content5:nth-child(8) {
+    transform: translate(-45px,-45px);
+    animation: content5-show 0.8s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+.box .gif-box1 .content6 {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+}
+.gbox1:nth-child(1){
+    transform: translate(-9px,-63px);
+}
+.gbox1:nth-child(2) {
+    transform: translate(29px,-47px);
+}
+.gbox1:nth-child(3) {
+    transform: translate(45px,-9px);
+}
+.gbox1:nth-child(4) {
+    transform: translate(29px,29px);
+}
+.gbox1:nth-child(5) {
+    transform: translate(-9px,45px);
+}
+.gbox1:nth-child(6) {
+    transform: translate(-47px,29px);
+}
+.gbox1:nth-child(7) {
+    transform: translate(-63px,-9px);
+}
+.gbox1:nth-child(8) {
+    transform: translate(-45px,-45px);
+}
+@keyframes content6-show {
+    from {
+        height: 18px;
+        width: 18px;
+        background-color: rgb(73, 231, 73);
+        opacity: 0.8;
+    }
+    to {
+        height: 0px;
+        width: 0px;
+        background-color: rgb(73, 231, 73);
+        opacity: 0.2;
+    }
+}
+.gbox1:nth-child(1) .content6 {
+    animation: content6-show 0.8s ease-in-out infinite;
+}
+.gbox1:nth-child(2) .content6 {
+    animation: content6-show 0.8s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+.gbox1:nth-child(3) .content6 {
+    animation: content6-show 0.8s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+.gbox1:nth-child(4) .content6 {
+    animation: content6-show 0.8s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+.gbox1:nth-child(5) .content6 {
+    animation: content6-show 0.8s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+.gbox1:nth-child(6) .content6 {
+    animation: content6-show 0.8s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+.gbox1:nth-child(7) .content6 {
+    animation: content6-show 0.8s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+.gbox1:nth-child(8) .content6 {
+    animation: content6-show 0.8s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+.box .gif-box2 {
+    width: 33%;
+    height: 33%;
+    border: solid 1px rgb(165, 248, 165);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box .gif-box2 .content7 {
+    width: 190px;
+    height: 10px;
+    background-color: rgb(97, 209, 255);
+    opacity: 0.6;
+    border-radius: 10px;
+}
+@keyframes content7-show {
+    from {
+        height: 10px;
+        width: 0px;
+        background-color: rgb(73, 231, 73);
+        border-radius: 10px;
+    }
+    50% {
+        height: 10px;
+        width: 190px;
+        background-color: rgb(73, 231, 73);
+        border-radius: 10px;
+    }
+    to {
+        float: right;
+        height: 10px;
+        width: 0px;
+        background-color: rgb(73, 231, 73);
+        border-radius: 10px;
+    }
+}
+.box .gif-box2 .content7 .rail {
+    animation: content7-show 3s linear infinite;
+}
+.box .gif-box1 .content8 {
+    height: 40px;
+    width: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+@keyframes content8-show {
+    from {
+        background-color: rgb(73, 231, 73);
+        opacity: 0.6;
+    }
+    to {
+        background-color: rgb(73, 231, 73);
+        opacity: 0.2;
+    }
+}
+.content8:nth-child(1) {
+    transform: translate(-5px,-74px);
+    animation: content8-show 0.8s ease-in-out infinite;
+}
+.content8:nth-child(2) {
+    transform: translate(33px,-58px) rotate(45deg);
+    animation: content8-show 0.8s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+.content8:nth-child(3) {
+    transform: translate(49px,-20px) rotate(90deg);
+    animation: content8-show 0.8s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+.content8:nth-child(4) {
+    transform: translate(33px,18px) rotate(135deg);
+    animation: content8-show 0.8s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+.content8:nth-child(5) {
+    transform: translate(-5px,34px) rotate(180deg);
+    animation: content8-show 0.8s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+.content8:nth-child(6) {
+    transform: translate(-43px,18px) rotate(225deg);
+    animation: content8-show 0.8s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+.content8:nth-child(7) {
+    transform: translate(-59px,-20px) rotate(270deg);
+    animation: content8-show 0.8s ease-in-out infinite;
+    animation-delay: 0.6s;
+}
+.content8:nth-child(8) {
+    transform: translate(-43px,-58px) rotate(315deg);;
+    animation: content8-show 0.8s ease-in-out infinite;
+    animation-delay: 0.7s;
+}
+/*.box .gif-box1 .content9 {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    background-color: rgb(73, 231, 73);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-9px,-63px);
+}
+@keyframes content9-show {
+    from {
+        background-color: rgb(73, 231, 73);
+        opacity: 0.6;
+    }
+    50% {
+        background-color: rgb(73, 231, 73);
+        opacity: 0.2;
+        transform: rotate(180deg);
+    }
+    to {
+        background-color: rgb(73, 231, 73);
+        opacity: 0.6;
+        transform: rotate(360deg);
+    }
+}
+.content9:nth-child(1) {
+    animation: content9-show 2s ease-in-out infinite;
+}
+.content9:nth-child(2) {
+    transform: translate(-9px,-63px);
+    animation: content9-show 2s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+.content9:nth-child(3) {
+    transform: translate(-9px,-63px);
+    animation: content9-show 2s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+.content9:nth-child(4) {
+    transform: translate(-9px,-63px);
+    animation: content9-show 2s ease-in-out infinite;
+    animation-delay: 0.6s;
+}*/

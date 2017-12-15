@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+   <script>
+    var s=["小明:87","小花:81","小天:76","小张:74","小小:94","小西:90"];
+    var w=["星期天","星期一","星期二","星期三","星期四","星期五","星期六"];
+   var sum=0;
+    var date=new Date();
+    for(var i=0;i<s.length;i++){
+  
+   var m= s[i].split(":");
+    sum+=parseInt(m[1]);
+   }
+
+    document.write(date.getFullYear()+"年"+date.getMonth()+"月"+date.getDate()+"日"+w[date.getDay()]+"班级总分:"+sum);
+
+    
+   </script>
+
+</body>
+</html>

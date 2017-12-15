@@ -1,0 +1,141 @@
+html,body {
+    margin: 0;
+    width: 100%;
+}
+.box1 {
+    width: 100%;
+    background-image: url(640.jpg);
+}
+.box1 .resumebox {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    width: 80%;
+    padding: 5% 7% 5% 7%;   
+}
+.box1 .resumebox .leftpart {
+    width: 50%;
+    background-color: rgb(182, 173, 165);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.box1 .resumebox .leftpart .photo {
+    margin: 0 auto;
+    width: 50%;
+    padding-top: 5%;
+}
+.box1 .resumebox .leftpart .photo img {
+    width: 100%;
+    height: 100%;
+}
+.box1 .resumebox .leftpart .job {
+    margin: 0 auto;
+    width: 40%;
+    text-align: center;
+    padding-bottom: 2%;
+    font-family: fantasy;
+    font-size: 2.0rem;
+    color: red;
+}
+.box1 .resumebox .leftpart .title1 {
+    padding: 0px 2% 0px 2%;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 2.3rem;
+    color: rgb(37, 36, 36);
+}
+.box1 .resumebox .leftpart .nav {
+    padding-bottom: 4%;
+}
+.box1 .resumebox .leftpart .nav .item {
+    font-family: cursive;
+    font-size: 1.5rem;
+}
+.box1 .resumebox .rightpart {
+    width: 50%;
+    background-color: rgb(219, 216, 198);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.box1 .resumebox .rightpart .title2 {
+    padding: 3% 2% 2% 2%;
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 2.3rem;
+    color: rgb(37, 36, 36);
+}
+.box1 .resumebox .rightpart .information {
+    font-family: cursive;
+    font-size: 1.5rem;
+    padding: 2% 8% 2% 8%;
+}
+.box1 .resumebox .rightpart .experience {
+    font-family: cursive;
+    font-size: 1.5rem;
+    padding: 1.5% 6%;
+}
+.box1 .resumebox .rightpart .language .lname {
+    font-family: cursive;
+    font-size: 1.3rem;
+    padding: 1% 4%;
+}
+.box1 .resumebox .rightpart .language .rail {
+    border: 0.2em solid black;
+    margin-left: 5%;
+    margin-right: 10%;
+    margin-bottom: 3%;
+}
+.box1 .resumebox .rightpart .language .rail .col1 {
+    background: red;
+    height: 15px;
+    width: 90%;
+}
+.box1 .resumebox .rightpart .language .rail .col2 {
+    background: red;
+    height: 15px;
+    width: 70%;
+}
+.box1 .resumebox .rightpart .evaluate {
+    font-family: cursive;
+    font-size: 1.1rem;
+    padding: 2% 4%
+}
+@media screen and (max-width: 500px) {
+    .resumebox {
+        flex-direction: column;
+    }
+    .box1 .resumebox .leftpart {
+        width: 100%;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 0px;
+    }
+    .box1 .resumebox .rightpart {
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-right-radius: 0px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 16px;
+    }
+}  
+@media screen and (max-width: 900px) {
+    html {
+        font-size: 13px;
+    }
+}  
+@media screen and (max-width: 600px) {
+    html {
+        font-size: 10px;
+    }
+}
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 7px;
+    }
+}  
