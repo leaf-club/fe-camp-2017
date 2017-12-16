@@ -1,0 +1,619 @@
+html,body{
+padding:0;
+margin:0;
+font-size:100px;
+
+}
+header{
+    display:flex;
+    font-size:0.16rem;
+    width:100%;
+    justify-content: space-between;
+    height:0.6rem;
+ border-bottom:0.1px solid rgb(216, 214, 214);
+}
+header ul{
+    list-style:none;
+    display:flex;
+    padding:0.1rem;
+    align-items: center;
+    margin-left:0;
+}
+header ul li{
+    padding:0.1rem;
+}
+header ul li a{
+    text-decoration: none;
+    color:black;
+    
+}
+.logo{
+    align-items: center;
+}
+header form{
+    display:flex;
+    
+    align-items: center;
+}
+.green{
+    background-color:green;
+    color:white;
+}
+.green1{
+    display:inline-block;
+   padding:1em 0.2em;
+    background-color:green;
+    color:white;
+}
+.border{
+    border:black 1px solid; 
+}
+header ul li:hover a{
+    color:rgb(163, 238, 163);
+}
+.first{
+    font-size:0.12rem;
+    width:100%;
+    height:0.3rem;
+    display:flex;
+    border-bottom:0.1px solid rgb(230, 226, 226);
+    position:relative;
+}
+.right{
+    font-size:0.08rem;
+}
+.right li a{
+    display:inline-block;
+    padding:1em;
+}
+.first ul {
+display:flex;
+
+list-style: none;
+position: absolute;
+top:-90%;
+}
+.first ul{
+    margin-left:3.3rem;
+   
+}
+.first ul li{
+    padding:0.2rem;
+}
+.first ul li a{
+text-decoration: none; 
+color:black;
+}
+.first .wgreen{
+    color:yellowgreen;
+
+}
+.first ul li:hover a{
+    color:rgb(106, 236, 106);
+}
+.second{
+    font-size:0.2rem;
+    width:100%;
+    height:0.5rem;
+    display:flex;
+}
+.second{
+justify-content: center;
+align-items: center;
+margin-left:-1rem;
+}
+.second a{
+    padding:0.2em;
+    font-weight:bold;
+}
+.third{
+    font-size:0.13rem;
+    width:100%;
+    height:0.3rem;
+    display:flex;
+    position:relative;
+}
+.third ul{
+    margin-left:3.5rem;
+    display:flex;
+    position: absolute;
+    top:-100%
+}
+.third ul li{
+    align-items: center;
+    justify-content: center;
+    padding:2em;
+list-style: none;
+
+}
+.third ul li a{
+    text-decoration: none;
+    color:black;
+    font-size:0.13rem;
+}
+.third .green2{
+    color:rgb(68, 211, 68);
+}
+.forth{
+    width:100%;
+    display:flex;
+    margin-left:0.5rem;
+    margin-top:1rem;
+}
+.forth div{
+    padding:0.2rem;
+}
+.forth div div a{
+    font-size:0.13rem;
+    color:black;
+    text-decoration: none;
+    
+}
+.forth div div{
+    font-size:0.1rem;
+    color:rgb(151, 140, 140);
+margin-top:0rem;
+}
+.forth .green{
+    background: white;
+}
+.forth .green:hover a{
+    color:rgb(115, 196, 115);
+}
+.fifth{
+    width: 100%;
+    height:0.3rem;
+    display:flex;
+}
+.fifth .cir1{
+    background:rgb(83, 80, 80);
+    border-radius: 50%;
+    width:0.1rem;
+    height:0.1rem;
+    margin-left:6.5rem;
+}
+.fifth .cir2{
+    background:rgb(121, 116, 116);
+    border-radius: 50%;
+    width:0.1rem;
+    height:0.1rem;
+}
+.fifth .cir1{
+    margin-right:0.2rem;
+}
+.sixth{
+    display:flex;
+    width:100%;
+    justify-content: center;
+margin-left:-1rem;
+
+}
+.sixth a{
+    font-size:0.2rem;
+    padding: 0.5em;
+    font-weight: bold;  
+} 
+.seventh{
+    width:100%;
+    display:flex;
+
+}
+.seventh div{
+  border:1px solid black;
+  font-size:0.13rem;
+  width:1rem;
+  height:0.3rem;
+  margin-left:1rem;
+  display:flex;
+  
+  justify-content: center;
+  align-items: center;
+}
+.seventh a{
+    color:black;
+    text-decoration: none;
+ 
+
+}
+.seventh ul{
+    display:flex;
+    list-style: none;
+    margin-top:0;
+    margin-left:2rem;
+
+}
+.seventh ul li a{
+    font-size:0.13rem;
+    display: inline-block;
+    padding:1em 3em;
+    vertical-align:top ;
+}
+.seventh ul .green{
+    color:rgb(124, 214, 124);
+    background-color: white;
+} 
+
+.seventh div a:before{
+    content:url("./image/34.png");
+    vertical-align:middle;
+    display:inline-block;
+}
+.seventh ul li:hover a{
+    color:yellowgreen;
+} 
+.eighth{
+font-size:0.13rem;
+margin-top:-10%;
+}
+.eighth a{
+    color:black;
+}
+.eighth .firstr{
+    display:flex;
+    width:100%;
+    margin-left:1rem;
+    position: relative;
+    
+}
+
+.eighth .firstr div {
+    display:flex;
+    align-items: center;
+}
+.eighth .firstr div  a{
+    text-decoration: none;
+}
+
+.eighth .firstr div{
+  width:30%;
+}
+.eighth .firstr  .bottom1{
+    position: absolute;
+    top:55%;
+    left:6%;
+}
+.eighth .firstr .bottom2{
+    position: absolute;
+    top:55%;
+    left:36%;
+}
+
+.eighth a{
+    color:gray;
+}
+.eighth .firstr .bottom3{
+    position: absolute;
+    top:55%;
+    left:65.7%;
+}
+
+.eighth .secondr{
+    width:100%;
+}
+.eighth .firstr div div:hover a{
+    color:rgb(68, 223, 68);
+}
+
+ 
+ .eighth .secondr{
+        display:flex;
+        width:100%;
+        margin-left:1rem;
+        position: relative;
+        
+    }
+    
+    .eighth .secondr div {
+        display:flex;
+        align-items: center;
+    }
+    .eighth .secondr div  a{
+        text-decoration: none;
+    }
+    
+    .eighth .secondr div{
+      width:30%;
+    }
+    .eighth .secondr  .bottom1{
+        position: absolute;
+        top:55%;
+        left:6%;
+    }
+    .eighth .secondr .bottom2{
+        position: absolute;
+        top:55%;
+        left:36%;
+    }
+    
+   
+    .eighth .secondr .bottom3{
+        position: absolute;
+        top:55%;
+        left:65.7%;
+    }
+    
+    
+    .eighth .secondr div div:hover a{
+        color:rgb(68, 223, 68);
+    }
+   
+        .eighth .thirdr{
+            display:flex;
+            width:100%;
+            margin-left:1rem;
+            position: relative;
+            
+        }
+        
+        .eighth .thirdr div {
+            display:flex;
+            align-items: center;
+        }
+        .eighth .thirdr div  a{
+            text-decoration: none;
+        }
+        
+        .eighth .thirdr div{
+          width:30%;
+        }
+        .eighth .thirdr  .bottom1{
+            position: absolute;
+            top:55%;
+            left:6%;
+        }
+        .eighth .thirdr .bottom2{
+            position: absolute;
+            top:55%;
+            left:36%;
+        }
+        
+        
+        .eighth .thirdr .bottom3{
+            position: absolute;
+            top:55%;
+            left:65.7%;
+        }
+        
+        .eighth .thirdr{
+            width:100%;
+        }
+        .eighth .thirdr div div:hover a{
+            color:rgb(68, 223, 68);
+        }
+        .ninth{
+            width:100%;
+            height:0.3rem;
+          
+           
+        }
+        .ninth>div{
+            display:flex;
+            margin-left:6rem;
+        }
+        .ninth>div div{
+            background:rgb(150, 137, 137);
+            border-radius: 50%;
+            width:0.1rem;
+            height:0.1rem;
+            margin-left:0.3rem;
+        }
+        .ninth .cir1{
+            background-color: rgb(44, 39, 39);
+        }
+        .tenth{
+            font-size:0.2rem;
+            font-weight:bold;
+            margin-left:6rem;
+        }
+        .tenth a{
+            
+              display:inline-block;
+              padding-right:0.26rem;
+        }
+        .eleverth{
+            display:flex;
+            width:100%;
+            justify-content: flex-start;
+        }
+        .eleverth div{
+            margin-left: 1rem;
+            margin-top:0.5rem;
+        }
+        .twelvth{
+            width:100%;
+            height:0.3rem;
+        }
+        .twelvth>div{
+            display:flex;
+            margin-left:6rem;
+        }
+        .twelvth>div div{
+            background:rgb(150, 137, 137);
+            border-radius: 50%;
+            width:0.1rem;
+            height:0.1rem;
+            margin-left:0.3rem;
+        }
+        .twelvth .cir1{
+            background-color: rgb(77, 72, 72);
+        }
+        .seventh .ul2{
+            margin-left:4rem;
+        }
+        .seventh .more{
+            display: inline-block;
+            margin-left:2rem;
+            margin-top:0.15rem;
+            font-size:0.13rem;
+        }
+
+        .more:after{
+            content:url("./image/39.png");
+            display: inline-block;
+         vertical-align: middle;
+        }
+        .thirdth{
+            width:100%;
+            font-size:0.15rem;
+            margin-top:-1rem;
+            margin-left:0.5rem;
+        }
+        .thirdth .firstr {
+            display: flex;
+           
+        }
+        .thirdth .firstr div,.thirdth .secondr div{
+            margin-left:0.2rem;
+        }
+        .thirdth .secondr{
+            display: flex;
+        }
+        .thirdth a{
+            text-decoration: none;
+            color:rgb(70, 60, 60);
+        }
+        .thirdth .wgreen a{
+            color:gray;
+            font-size:0.13rem;
+            background:white;
+        }
+        .thirdth .green{
+            background:white;
+        }
+        .thirdth .green:hover a{
+            color:rgb(111, 179, 111);
+        }
+        .thirdth .wgreen:hover a{
+            color:yellowgreen;
+        } 
+     
+     .forteenth{
+         display:flex;
+         width:100%;
+         font-size:0.16rem;
+         margin-left:1.2rem;
+        margin-top:0.5rem;
+     }
+     .forteenth .big{
+         font-size:0.2rem;
+     }
+     .forteenth div {
+         color:white;
+         margin-right:0.6rem;
+     }
+     .forteenth div ol{
+         margin:0.65rem;
+         padding:0;
+     }
+     .forteenth div>p:first-child{
+         margin-left:0.7rem;
+     }
+     .forteenth div>p{
+        margin-left:0.5rem;
+     }
+     .forteenth div ol li p{
+         font-size:0.1rem;
+     }
+     .forteenth .first1{
+         width:2rem;
+         background-color: rgb(241, 56, 56);
+     }
+     .forteenth .second2{
+         width:2rem;
+         background-color:rgb(49, 49, 228);
+     }
+     .forteenth .third3{
+        width:2rem;
+        background-color:rgb(7, 88, 7);
+    }
+    .forteenth .forth4{
+        
+            width:2rem;
+            background-color:rgb(145, 233, 145);
+        
+    }
+    .forteenth .fifth5{
+        width:2rem;
+        background-color:rgb(255, 164, 6);
+    }
+    .fifteenth{
+        font-size: 0.2rem;
+        font-weight: bold;
+        margin-left:6.5rem;
+        margin-top:0.5rem;
+    }
+    .sixteenth{
+       
+        width:100%;
+        font-size:0.13rem;
+        margin-left:1rem;
+        margin-top:-2rem;
+    }
+    .sixteenth .first-r{
+        display:flex;
+    }
+    .sixteenth .second-r{
+        display:flex;
+    }
+    .sixteenth a{
+        text-decoration: none;
+        color:black
+    }
+    .sixteenth div div{
+        margin-right:0.4rem;
+    }
+    .sixteenth .v a{
+        font-size:0.13rem;
+        color:rgb(138, 120, 120);
+    }
+   .sixteenth .v:hover a{
+      color:rgb(59, 238, 59);
+   }
+   .sixteenth .g:hover a{
+    color:rgb(59, 238, 59);
+   }
+   .seventeenth {
+       font-size:0.13rem;
+       color:gray;
+       background-color: rgb(31, 29, 29);
+       height:4rem;
+       display:flex;
+       
+   }
+   .seventeenth .photo{
+       display:flex;
+       margin-bottom: 0.5rem;
+   }
+   .seventeenth>div{
+     margin-left:1.5rem;
+   
+   }
+   .seventeenth .photo div{
+       margin-right:0.5rem;
+   }
+   .seventeenth>div>p{
+       display: inline-block;
+       margin:0.5rem 0;
+   }
+   .seventeenth .second-l .photo{
+    display:flex;   
+    margin-right:0.5rem;
+   }
+  .s{
+      margin:0.5rem 0;
+  }
+  .seventeenth a{
+      text-decoration: none;
+      color:gray;
+  }
+  .seventeenth .third-l div{
+     margin:0.5rem 0;
+  }
+  .seventeenth .third-l .small{
+      margin:-0.7rem -0.3rem;
+      padding:0.1rem;
+  }
+   .seventeenth .third-l div span:hover a{
+       color:rgb(16, 110, 16);
+   } 
+  

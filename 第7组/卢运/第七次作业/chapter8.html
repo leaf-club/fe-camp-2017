@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>浏览器对象</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=gkb" />
+</head>
+
+<body onload="setTimeout(timing, 1000)">
+  <!--先编写好网页布局-->
+  <h2>操作成功</h2>
+  <P style="font-size:18px;">
+    <span id="tt">5</span>
+    <span>秒后回到主页</span>
+    <input type="button" value="返回" onclick="GoBack();" />
+  </P>
+
+  <script type="text/javascript">  
+
+    //获取显示秒数的元素，通过定时器来更改秒数。
+    function timing() {
+      document.getElementById("tt").innerHTML--;
+      setTimeout("timing()", 1000);
+      if (document.getElementById("tt").innerHTML==1)
+        window.location.href = "https://www.imooc.com/";
+    }
+    //通过window的location和history对象来控制网页的跳转。
+
+    function GoBack() {
+      window.history.back();
+    }
+  </script>
+</body>
+
+</html>
