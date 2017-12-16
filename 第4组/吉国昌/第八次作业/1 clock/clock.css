@@ -1,0 +1,188 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+#warpper {
+  padding-top: 150px;
+}
+#box {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(132, 132, 132, .2);
+  margin: auto;
+  position: relative;
+  border: solid 15px grey;
+}
+#box .num {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -12.5px;
+  margin-top: -140px;
+  width: 25px;
+  height: 280px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 23px;
+}
+#box .num div {
+  margin-top: 5px;
+}
+#box .num:nth-child(1) {
+  transform: rotate(30deg);
+}
+#box .num:nth-child(1) div {
+  transform: rotate(-30deg);
+}
+#box .num:nth-child(2) {
+  transform: rotate(60deg);
+}
+#box .num:nth-child(2) div {
+  transform: rotate(-60deg);
+}
+#box .num:nth-child(3) {
+  transform: rotate(90deg);
+}
+#box .num:nth-child(3) div {
+  transform: rotate(-90deg);
+}
+#box .num:nth-child(4) {
+  transform: rotate(120deg);
+}
+#box .num:nth-child(4) div {
+  transform: rotate(-120deg);
+}
+#box .num:nth-child(5) {
+  transform: rotate(150deg);
+}
+#box .num:nth-child(5) div {
+  transform: rotate(-150deg);
+}
+#box .num:nth-child(6) {
+  transform: rotate(180deg);
+}
+#box .num:nth-child(6) div {
+  transform: rotate(-180deg);
+}
+#box .num:nth-child(7) {
+  transform: rotate(210deg);
+}
+#box .num:nth-child(7) div {
+  transform: rotate(-210deg);
+}
+#box .num:nth-child(8) {
+  transform: rotate(240deg);
+}
+#box .num:nth-child(8) div {
+  transform: rotate(-240deg);
+}
+#box .num:nth-child(9) {
+  transform: rotate(270deg);
+}
+#box .num:nth-child(9) div {
+  transform: rotate(-270deg);
+}
+#box .num:nth-child(10) {
+  transform: rotate(300deg);
+}
+#box .num:nth-child(10) div {
+  transform: rotate(-300deg);
+}
+#box .num:nth-child(11) {
+  transform: rotate(330deg);
+}
+#box .num:nth-child(11) div {
+  transform: rotate(-330deg);
+}
+#box #hourHand {
+  width: 6px;
+  height: 140px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -3px;
+  margin-top: -70px;
+}
+#box #hourHand div {
+  width: 100%;
+  height: 70px;
+  margin-top: 20px;
+  background: #000;
+}
+#box #minuteHand {
+  width: 5px;
+  height: 160px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2.5px;
+  margin-top: -80px;
+}
+#box #minuteHand div {
+  width: 100%;
+  height: 120px;
+  margin-top: -15px;
+  background: #000;
+}
+#box #secondHand {
+  width: 2px;
+  height: 160px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -1px;
+  margin-top: -80px;
+}
+#box #secondHand div {
+  width: 100%;
+  height: 135px;
+  margin-top: -30px;
+  background: red;
+}
+#box #node {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -7.5px;
+  margin-left: -7.5px;
+  border-radius: 50%;
+  background: red;
+}
+#box .dot {
+  width: 2px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -1px;
+  margin-top: -150px;
+}
+#box .dot div {
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  margin-top: 5px;
+  background: #000;
+}
+#box .dot2 {
+  width: 5px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -2.5px;
+  margin-top: -150px;
+}
+#box .dot2 div {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  margin-top: 2.5px;
+  background: #000;
+}
