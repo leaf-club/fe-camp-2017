@@ -1,0 +1,248 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{  
+    color: #333;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.clear{
+    clear: both;
+}
+body{
+    color: #333;
+    font-size: 14px;
+    font-family: "微软雅黑", sans-serif;
+    background: url(image/bg_detail.jpg) 0 142px repeat-x;
+}
+.top-up, .top-down, .maincontent{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (max-width: 1240px)
+{
+.maincontent, .topper {
+    margin:0 50px;
+    min-width: 900px;
+}
+}
+.top-up ul li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.top-up ul li a{
+    display: block;
+    height: 90px;
+    line-height: 90px;
+    padding:0 20px;
+    font-size: 18px;
+    text-align: center;
+    margin-left: -5px;
+}
+.top-up ul li:nth-child(1){
+    margin-right: 28px;
+}
+.top-up ul li:nth-child(2) a{
+    background-color: #31c27c;
+    color: #fff;
+}
+.top-up{
+    position: relative;
+}
+.search{
+    position: absolute;
+    top:0;
+    right: 284px;
+}
+.search-form{
+    display: block;
+    position: relative;
+    border: 1px solid #c9c9c9;
+    padding: 0 33px 0 11px;
+    margin-top: 26px;
+    background-color: #fff;
+    border-radius: 3px;    
+}
+.search-area{
+    height: 36px; 
+    line-height: 36px;
+    width: 174px;
+    border: 0 none;
+    background: 0 0;
+    outline: none;
+    font-size: 14px;
+}
+.search-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 0 none;
+    width: 38px;
+    height: 35px;
+    overflow: visible;
+    background: 0 0;
+    cursor: pointer;
+}
+.search-btn:hover .search-icon{
+    background-position: 0 -60px;
+}
+.search-icon{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background-position: 0 -40px;
+    background-image: url(image/icon_sprite.png);
+}
+.option{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.option .log_in{
+    display: inline-block;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    font-size: 16px;
+}
+.op1, .op2{
+    display: inline-block;
+    text-align: center;
+    margin-left: 10px;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 9px;
+    font-size: 13px;
+    border-radius: 2px;
+    position: relative;
+    top: -4px;
+}
+.op1{
+    background-color: #31c27c;
+    border: 1px solid #31c27c;
+}
+.op2{
+    border: 1px solid #c9c9c9;
+}
+.op1 a{
+    color: #fff;
+}
+.top-down ul{
+    border-top: 1px solid #f2f2f2;
+    padding-left: 230px;
+    margin-right: -50px;
+    line-height: 51px;
+    font-size: 15px;
+    height: 51px;
+}
+.top-down ul li{
+    float: left;
+    margin-right: 47px;
+}
+.top-down ul li a{
+    display: block;
+}
+/* a行级元素margin和padding只有right和left有效，
+设置浮动可以使TOP和bottom生效 */
+/* 此外，lineheight的大小与行级元素的高度并不相等，但在
+设置的float的情况下，两者相等 */
+.category{
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    line-height: 26px;
+    padding-left: 65px;
+}
+.category_name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+}
+.category_item{
+    float: left;
+    padding: 0 8px;
+    margin: 0 24px 15px 0;
+}
+.category_box{
+    margin-top: 52px;
+}
+.category_chosen{
+    background-color: #31c27c;
+    color: #fff;
+}
+.detail_head{
+    overflow: hidden;
+}
+/* overflow:hidden可以用來清楚浮動 */
+.chosen_one{
+    float: left;
+    line-height: 60px;
+    font-size: 24px;
+    font-weight: 400;
+}
+.hot_most, .new_most{
+    float: right;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 16px;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.new_most{
+    background-color: #31c27c;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    border:1px solid #31c27c;
+}
+.new_most a{
+    color: #fff;
+}
+.hot_most{
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border: 1px solid #c9c9c9;
+}
+.album_list{
+    margin-right: -20px;
+    overflow: hidden;
+}
+.album{
+    width: 20%;
+    float: left;
+    padding-bottom: 44px;
+    font-size: 14px;
+}
+.list_content{
+    margin-right: 20px;
+}
+.photo_stuff{
+    width: 100%;
+    padding-top: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.photo_stuff img{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+.album_name{
+    font-weight: 400;
+    line-height: 22px;
+    font-size: 14px;
+}
+.singer a, .date{
+    display: block;
+    color: #999;
+    height: 22px;
+}
