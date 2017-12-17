@@ -18,13 +18,13 @@ body{
     font-family: "微软雅黑", sans-serif;
     background: url(image/bg_detail.jpg) 0 142px repeat-x;
 }
-.top-up, .top-down, .maincontent{
+.top-up, .top-down, .maincontent, .footer_inner{
     max-width: 1200px;
     margin: 0 auto;
 }
 @media (max-width: 1240px)
 {
-.maincontent, .topper {
+.maincontent, .topper ,.footer_inner{
     margin:0 50px;
     min-width: 900px;
 }
@@ -245,4 +245,161 @@ body{
     display: block;
     color: #999;
     height: 22px;
+}
+.page_list{
+    margin-bottom: 60px;
+    text-align: center;
+}
+.page_list strong{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+}
+.page1{
+    color: #fff;
+    background-color: #31c27c;
+}
+.dot{
+    color: #a2a2a2;
+}
+.page_list a{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 50px;
+    margin: 0 5px;
+    padding: 0 21px;
+    color: #a2a2a2;
+}
+.footer{
+    background-color: #333;
+    color: #999;
+}
+.footer_pattern{
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 45px;
+}
+.open_plat{
+    margin: 230px 0 0 10px;
+}
+.open_plat h4{
+    font-size: 15px;
+    font-weight: 400;
+    padding: 80px 0 46px;
+}
+.open_plat ul{
+    overflow: hidden;
+}
+.open_plat ul li{
+    float: left;
+    margin: 0 5px 12px 0;
+    min-width: 100px;
+}
+.footer a{
+    color: #999;
+}
+.download{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+.specialty{
+    position: absolute;
+    top: 0px;
+    left: 476px;
+}
+@media (max-width: 1240px){
+    .specialty{
+        left: 41.5%
+    }
+}
+.download h4, .specialty h4, .co_link h4{
+    font-size: 15px;
+    font-weight: 400;
+    padding: 80px 0 46px;
+}
+.download ul, .specialty ul{
+    overflow: hidden;
+    margin-left: -29px;
+    text-align: center;
+}
+.specialty ul::after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+}
+.download li, .specialty li{
+    float: left;
+}
+.download li i, .specialty li i{
+    display: block;
+    background-image: url(image/footer.png);
+    height: 48px;
+    margin: 0 29px 12px;
+}
+.ksong{
+    width: 41px;
+    background-position: -370px 0;
+}
+.ssound{
+    width: 37px;
+    background-position: -463px 0;
+}
+.qplay{
+    width: 40px;
+    background-position: -563px 0;
+}
+.pc{
+    width: 37px;
+    background-position: -2px 0;
+}
+.mac{
+    width: 46px;
+    background-position: -92px 0;
+}
+.android{
+    width: 37px;
+    background-position: -190px 0;
+}
+.iphone{
+    width: 34px;
+    background-position: -279px 0;
+}
+/* 绝对定位和overflow：hidden可以创建bfc
+bfc可以理解为创建独立的带边框的盒子，内部因子不会影响外部元素 */
+.item_other{
+    float: left;
+    display: block;
+    margin: 10px 27px 0 -5px;;
+}
+.co_link{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.co_link ul{
+    overflow: hidden;
+    width: 300px;
+}
+@media (max-width: 1240px)
+{
+    .co_link ul{
+        width: 200px;
+    }
+}
+.link_item{
+    float: left;
+    margin-bottom: 12px;
+    min-width: 100px;
+}
+.footer_details{
+    text-align: center;
+    line-height: 28px;
+    padding: 24px 0;
+    font-size: 12px;
 }
