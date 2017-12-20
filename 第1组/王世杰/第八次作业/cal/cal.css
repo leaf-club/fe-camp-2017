@@ -1,0 +1,109 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+#cal {
+    height: 60%;
+    width: 25%;
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 1.5px solid rgb(156, 156, 156);
+    box-shadow: 0 0 10px gray;
+    padding: 2%;
+    border-radius: 10px;
+}
+.head {
+    height: 20px;
+}
+.head .name {
+    float: right;
+    margin-right: 4%;
+    line-height: 20px;
+    font-size: 16px;
+    font-style: italic;
+}
+.input {
+    width: 100%;
+    height: 15%;
+    margin-top: 3%;
+}
+.input .screen {
+    width: 100%;
+    height: 75%;
+}
+#dis {
+    display: block;
+    margin: 0 auto;
+    width: 92%;
+    height: 100%;
+    border-radius: 5px;
+    text-align: right;
+    font-size: 16px;
+}
+.keyboard {
+    height: 75%;
+    width: 100%;
+    margin-top: 2%;
+}
+.keyboard .buttons {
+    float: left;
+    width: 20%;
+    height: 16%;
+    margin-left: 4%;
+    margin-top: 3%;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: cursive;
+    font-size: 20px;
+}
+.keyboard .buttons:hover {
+    opacity: 0.8;
+}
+.keyboard .buttons:active {
+    background-color: rgb(109, 108, 108);
+}
+.keyboard .buttons1 {
+    float: left;
+    width: 44%;
+    height: 16.4%;
+    margin-left: 4%;
+    margin-top: 3%;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: cursive;
+    font-size: 20px;
+}
+.keyboard .buttons1:hover {
+    opacity: 0.8;
+}
+.keyboard .buttons1:active {
+    background-color: rgb(109, 108, 108);
+}
+#C {
+    color: rgb(253, 36, 36);
+}
+#equal {
+    color: rgb(253, 36, 36);
+}
+#add {
+    color: rgb(9, 13, 230);
+}
+#sub {
+    color: rgb(9, 13, 230);
+}
+#mul {
+    color: rgb(9, 13, 230);
+}
+#divs {
+    color: rgb(9, 13, 230);
+}
+input {
+    outline: none;
+}
