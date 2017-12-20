@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table{
+    height:531px;
+    width: 558px;
+    box-sizing: content-box;
+    margin: 100px auto 0;
+    background-color: black;
+    padding: 40px;
+    border-spacing: 10px; 
+}
+td{
+    color: rgb(236, 227, 227);
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 3px;
+    text-align: center;
+    vertical-align: middle;
+    font-size:25px;
+    cursor: pointer;
+}
+.btn:hover, .caculate:hover, #caculate:hover{
+    background-color: rgb(20, 134, 187);
+}
+tr:nth-child(1) td{
+    background-color: black;
+    height:60px;
+    width: 478px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    margin-bottom: 20px;
+}
+tr:nth-child(2) td{
+    text-align: right;
+    font-size: 11px;
+    font-weight: bold;
+    height: 11px;
+    background-color: black;
+}
+tr:nth-child(3) td:nth-child(1){
+    background-color: rgb(20, 134, 187);
+}
+tr:nth-child(3) td:nth-child(2){
+    background-color: black;
+}
+#result{
+    text-align: left;
+    vertical-align: bottom;
+}
