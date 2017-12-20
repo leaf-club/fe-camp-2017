@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简易时钟</title>
+    <link rel="stylesheet" type="text/css" href="clock.css">
+</head>
+<body>
+    <!-- HTML部分 -->
+    <div id="outbg">
+        <div id="clock">
+            <ul id="tick"></ul>
+            <ul id="num">
+                <li><span>12</span></li>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+                <li><span>3</span></li>
+                <li><span>4</span></li>
+                <li><span>5</span></li>
+                <li><span>6</span></li>
+                <li><span>7</span></li>
+                <li><span>8</span></li>
+                <li><span>9</span></li>
+                <li><span>10</span></li>
+                <li><span>11</span></li>
+            </ul>
+            <div id="hour"></div>
+            <div id="min"></div>
+            <div id="sec"></div>
+            <div id="poi"></div>
+        </div>
+    </div>
+    <!-- JS部分 -->
+    <script type="text/javascript">
+        window.onload = function (){
+            var oTick = document.getElementById('tick');
+            var oNum =document.getElementById('num');
+            var cNum = oNum.childNodes;
+            var oSec = document.getElementById('sec');
+            var oMin = document.getElementById('min');
+            var oHour = document.getElementById('hour');
+            for (var i = 0; i < 60; i++) {
+                var oLi = document.createElement('li');
+                oLi.style.transform = "rotate("+i*6+"deg)";
+                if(i%5==0){
+                    oLi.style.height= "10px";
+                }
+                oTick.appendChild(oLi);
+            }//实现刻度线分布
+   
+            for(var i=0;i<cNum.length;i++) {
+                if (cNum[i].nodeType == 1){
+                cNum[i].style.transform = "rotate("+(i-1)*15+"deg)";
+                cNum[i].firstChild.style.transform = "rotate("+(i-1)*-15+"deg)";
+                }
+            }//实现数字分布
+
+            function clock(){
+                var date = new Date();
+                var sec = date.getSeconds();
+                var min = date.getMinutes() + (sec / 60);
+                var hour = date.getHours() + (min / 60);
+                oSec.style.transform = 'rotate(' + sec * 6 + 'deg)';
+                oMin.style.transform = 'rotate(' + min * 6 + 'deg)';
+                oHour.style.transform = 'rotate(' + hour * 30 + 'deg)';
+            }//实现指针随时间旋转
+            clock();
+            setInterval(clock, 1000);
+        }
+    </script>
+</body>
+
+</html>
