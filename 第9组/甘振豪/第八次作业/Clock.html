@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Clock</title>
+    <style type="text/css">
+    html{
+        max-width: 1000px;
+    }
+        body {
+            margin: auto;
+        }
+        h1,h2,h3{
+            user-select: none; 
+        }
+        #tab {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -200px 0 0 -500px;
+            width: 1000px;
+            height: 400px;
+            background: -webkit-linear-gradient(top, #007fff, #84bff9);
+        }
+        #Tradion {
+            width: 200px;
+            height: 200px;
+            /* border: 2px solid #fff; */
+            border-radius: 200px;
+            float: left;
+            margin: 100px 100px;
+        }
+        #Content {
+            float: left;
+            width: 600px;
+            height: 400px;
+        }
+        #hours {
+            width: 60px;
+            height: 6px;
+            margin: 94px 100px;
+            background: #fff;
+            transform-origin: left;
+        }
+        #minutes {
+            width: 76px;
+            height: 4px;
+            background: #fff;
+            margin: -100px 100px;
+            transform-origin: left bottom;
+            transform: rotate(0deg);
+        }
+        #seconds {
+            width: 90px;
+            height: 2px;
+            background: red;
+            margin: 100px 100px;
+            transform-origin: left bottom;
+            transform: rotate(0deg);
+        }
+        #origin {
+            width: 12px;
+            height: 12px;
+            border-radius: 12px;
+            background: #fff;
+            margin: -106px 94px;
+        }
+        /*测试旋转角*/
+        .tran {
+            transform: rotate(0deg);
+        }
+        #aTime,
+        #aDate,
+        #week {
+            color: #fff;
+            text-align: center;
+            margin-top: 76.25px;
+            margin-bottom: 76.25px;
+        }
+        /* 刻度 */
+        .clock_scale {
+            width: 100px;
+            height: 2px;
+            transform-origin: 0% 50%;
+            z-index: 7;
+            position: absolute;
+            top: 50%;
+            left: 20%;
+        }
+        .scale_show {
+            width: 6px;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.5);
+            float: left;
+        }
+        .scale_hidden {
+            width: 94px;
+            height: 2px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div id="tab">
+        <div id="Tradion">
+            <div id="hours" class="tran"></div>
+            <div id="minutes" class="tran"></div>
+            <div id="seconds" class="tran"></div>
+            <div id="origin"></div>  
+        </div>
+        <div id="Content">
+            <h1 id="aTime"></h1>
+            <h3 id="aDate"></h3>
+            <h2 id="week"></h2>
+        </div>
+    </div>
+    <script type="text/javascript">
+        window.onload = function () {
+            function addzero(num) {
+                if (num >= 10) {
+                    return "" + num;
+                } else {
+                    return "0" + num;
+                }
+            }
+            function times() {
+                var date = new Date(),
+                    aTime = document.getElementById('aTime'),
+                    str = addzero(date.getHours()) + ":" + addzero(date.getMinutes()) + ":" + addzero(date.getSeconds());
+                aTime.innerHTML = str;
+            }
+            setInterval(times, 1000);
+            times();
+            function Ttranform() {
+                var date = new Date(),
+                    hours = document.getElementById('hours'),
+                    minutes = document.getElementById('minutes'),
+                    seconds = document.getElementById('seconds'),
+                    num = date.getHours(),
+                    num2 = date.getMinutes(),
+                    num3 = date.getSeconds();
+                if(num>=12){
+                    hours.style.transform = "rotate(" + ((num-12) * 30 + num2/2 + num3/600 - 90) + "deg)";
+                }
+                else{
+                    hours.style.transform = "rotate(" + (num * 30 + num2/2 + num3/600 - 90) + "deg)";
+                }
+                minutes.style.transform = "rotate(" + (num2 * 6 + num3/10 - 90) + "deg)";
+                seconds.style.transform = "rotate(" + (num3 * 6 - 90) + "deg)";
+            }
+            setInterval(Ttranform, 1000);
+            Ttranform();
+        }
+    </script>
+    <script type="text/javascript">
+        function Adate() {
+            var date = new Date(),
+                aDate = document.getElementById("aDate"),
+                week = document.getElementById('week'),
+                weekList = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"],
+                str = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+            aDate.innerHTML = str;
+            var westr = weekList[date.getDay()];
+            week.innerHTML = westr;
+        }
+        Adate();
+    </script>
+    <script>
+        for (var i = 0; i < 60; i++) {
+        Tradion.innerHTML += "<div class='clock_scale'> " +
+            "<div class='scale_hidden'></div>" +
+            "<div class='scale_show'></div>" +
+            "</div>";
+        }
+        var scale = document.getElementsByClassName("clock_scale"),
+            show = document.getElementsByClassName("scale_show");
+            hidden = document.getElementsByClassName("scale_hidden");
+        for (var i = 0; i < scale.length; i++) {
+            scale[i].style.transform = "rotate(" + (i * 6 - 90) + "deg)";
+            if(i%5==0){
+                show[i].style.width = "10px";
+                show[i].style.backgroundColor = "#fff";
+                hidden[i].style.width = "90px";
+            }
+        }
+    </script>
+</body>
+</html>
