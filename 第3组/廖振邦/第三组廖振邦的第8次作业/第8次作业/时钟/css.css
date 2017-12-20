@@ -1,0 +1,131 @@
+*{
+    padding:0;
+    margin:0;
+}
+.back{
+
+    margin: auto;
+  
+    background: rgb(123, 123, 230);
+    width:250px;
+    height: 250px;
+    display: flex;        
+    justify-content: center
+    
+  
+}
+.ground{
+    width:200px;
+    height:200px;
+    background: black;
+    border-radius: 20px;  
+    margin: auto;  
+    display: flex;        
+    justify-content: center
+
+}
+.time{
+    width:150px;
+    height:150px;
+    background: white;
+    border-radius: 50%;
+   margin: auto;
+   position: relative;
+   
+}
+.num{
+    font-size: 15px;
+    color: black;
+  
+}
+p{
+   position: absolute;
+   top:0;
+   left:67.5px;
+   
+}
+p:nth-child(1){
+    
+}
+p:nth-child(2){
+    transform: rotate(30deg);
+    transform-origin: 0 67.5px;
+}
+p:nth-child(3){
+    transform: rotate(60deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(4){
+    transform: rotate(90deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(5){
+    transform: rotate(120deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(6){
+    transform: rotate(150deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(7){
+    transform: rotate(180deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(8){
+    transform: rotate(210deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(9){
+    transform: rotate(240deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(10){
+    transform: rotate(270deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(11){
+    transform: rotate(300deg);
+    transform-origin: 7.5px 75px;
+}
+p:nth-child(12){
+    transform: rotate(330deg);
+    transform-origin: 7.5px 75px;
+}
+.cir{
+    width:10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left:47%;
+    top:47%;
+    background: black;
+}
+.long{
+    width:3px;
+    height:70px;
+    background: orangered;
+    position: absolute;
+    left:50%;
+    top:50%;
+}
+.short{
+    width:4px;
+    height:50px;
+    background: black;
+    position: absolute;
+    left:50%;
+    top:50%;
+    
+}
+.sshort{
+    width:5px;
+    height:30px;
+    background: blue;
+    position: absolute;
+    left:50%;
+    top:50%;
+}
+.back .ground .auto{
+    
+    transform-origin: 0 0;
+}

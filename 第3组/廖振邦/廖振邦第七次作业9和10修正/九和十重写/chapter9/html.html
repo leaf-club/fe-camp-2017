@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" width="50%" id="table">
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>操作</th>
+        </tr>
+
+        <tr>
+            <td>xh001</td>
+            <td>王小明</td>
+            <td>
+                <a href="javascript:;">删除</a>
+            </td>
+            <!--在删除按钮上添加点击事件  -->
+        </tr>
+
+        <tr>
+            <td>xh002</td>
+            <td>刘小芳</td>
+            <td>
+                <a href="javascript:;">删除</a>
+            </td>
+            <!--在删除按钮上添加点击事件  -->
+        </tr>
+
+    </table>
+    <input type="button" value="添加一行" />
+    <script>
+        var btr = document.querySelectorAll("tr");
+        var ba = document.querySelectorAll("a");
+        var ain=document.querySelector("input");
+        var ata=document.querySelector("table");
+        for (var i = 0; i < btr.length; i++) {
+            btr[i].style.backgroundColor = "#fff";
+            btr[i].onmouseover = function () {
+                this.style.backgroundColor = "#f2f2f2";
+            }
+            btr[i].onmouseout = function () {
+                this.style.backgroundColor = "#fff";
+            }
+        }
+        for (var i = 0; i < ba.length; i++) {
+            ba[i].onclick = function(){
+                this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+            }
+        }
+        
+        
+        ain.onclick=function(){
+var atr=document.createElement("tr");
+ata.appendChild(atr);
+var btd=new Array(3);
+for(var i=0;i<btd.length;i++){
+    btd[i]=document.createElement("td");
+
+}
+btd[0].innerHTML="0020";
+btd[1].innerHTML="孙悟空";
+
+    atr.appendChild(btd[0]);
+    atr.appendChild(btd[1]);
+    atr.appendChild(btd[2]);
+    var aa=document.createElement("a");
+        btd[2].appendChild(aa);
+        aa.href="javascript:;";
+        aa.innerHTML="删除";
+        aa.onclick=function(){
+            this.parentNode.parentNode.parentNode.removeChild(this.parentNode.parentNode);
+        }
+        }
+      
+    </script>
+</body>
+
+</html>

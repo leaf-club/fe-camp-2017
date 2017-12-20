@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="vertor">
+        <div class="people">
+            <img src="img/1.png">
+            <div class="col"></div>
+            <p>LeeSin</p>
+        </div>
+        <div class="people">
+            <img src="img/2.png">
+            <div class="col"></div>
+            <p>Ahri
+                <p>
+        </div>
+        <div class="people">
+            <img src="img/3.png">
+            <div class="col"></div>
+            <p>SoNa</p>
+        </div>
+        <div class="people">
+            <img src="img/4.png">
+            <div class="col"></div>
+            <p>Jaran</p>
+        </div>
+    </div>
+    <script>
+        var bimg=document.querySelectorAll(".vertor .people img");
+        var bdiv=document.querySelectorAll(".vertor .people .col");
+        var bdiv2=document.querySelectorAll(".vertor .people");
+
+        var num=100,num2=100,num3=100,num4=100;
+       var adiv=document.createElement("div");
+       var adiv2=document.createElement("div");
+       var adiv3=document.createElement("div");
+       var adiv4=document.createElement("div");
+        bimg[0].onclick=function(){
+           
+          num++;
+          var s=num+"px";
+          bdiv[0].style.height=s;
+        }
+        bdiv[0].onmouseover=function(){
+            bdiv2[0].insertBefore(adiv,bdiv2[0].children[1]);
+            adiv.className="new";
+            
+            adiv.innerHTML=num;
+        }
+        bdiv[0].onmouseout=function(){
+            adiv.className="no";
+        }
+        bdiv[1].onmouseover=function(){
+            bdiv2[1].insertBefore(adiv2,bdiv2[1].children[1]);
+            adiv2.className="new";
+            
+            adiv2.innerHTML=num2;
+        }
+        bdiv[1].onmouseout=function(){
+            adiv2.className="no";
+        }
+        bdiv[2].onmouseout=function(){
+            adiv3.className="no";
+        }
+        bdiv[3].onmouseout=function(){
+            adiv4.className="no";
+        }
+        bdiv[2].onmouseover=function(){
+            bdiv2[2].insertBefore(adiv3,bdiv2[2].children[1]);
+            adiv3.className="new";
+            
+            adiv3.innerHTML=num3;
+        }
+        bdiv[3].onmouseover=function(){
+            bdiv2[3].insertBefore(adiv4,bdiv2[3].children[1]);
+            adiv4.className="new";
+            
+            adiv4.innerHTML=num4;
+        }
+        bimg[1].onclick=function(){
+            
+          num2++;
+          var s=num2+"px";
+          bdiv[1].style.height=s;
+        }
+    
+        bimg[2].onclick=function(){
+           
+          num3++;
+          var s=num3+"px";
+          bdiv[2].style.height=s;
+        }
+        bimg[3].onclick=function(){
+           
+          num4++;
+          var s=num4+"px";
+          bdiv[3].style.height=s;
+        }
+    
+            
+        
+    </script>
+</body>
+
+</html>
