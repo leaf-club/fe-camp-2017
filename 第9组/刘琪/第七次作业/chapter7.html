@@ -3,13 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>系好安全带,准备启航</title>
-
 <script type="text/javascript">
   //通过javascript的日期对象来得到当前的日期，并输出。
   var weekday=['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
   var mydate=new Date();
-  document.write(mydate.getFullYear()+'年'+mydate.getMonth()+'月'+mydate.getDay()
-        +'日 星期'+weekday[mydate.getDay()]+'--班级总分为:');
+  document.write(mydate.getFullYear()+'年'+(mydate.getMonth()+1)+'月'+(mydate.getDay()+1)
+        +'日 '+weekday[mydate.getDay()+1]+'--班级总分为:');
   //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
   var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
   var nameScore=scoreStr.split(';');//nameScore为数组，元素内容为字符串“姓名：分数”；
