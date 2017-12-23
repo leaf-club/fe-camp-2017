@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+html, body{
+    width: 100%;
+}
+/*基本样式 */
+.box{
+    width: 50%;
+    border: 4px solid rgb(190, 142, 142);
+    border-radius: 5%;
+    margin: auto;
+    margin-top: 2%;
+}
+/* 标题 */
+.header{
+    width: 100%;
+    text-align: center;
+}
+/* 投票按钮 */
+.vote{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+.btn{
+    width: 20%;
+    border: 1px solid gray;
+}
+button:hover{
+    cursor: pointer;
+}
+button{
+    width: 100%;
+    height: 5em;
+}
+#btn1{
+    background-image: url(./img/1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#btn2{
+    background-image: url(./img/2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#btn3{
+    background-image: url(./img/3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#btn4{
+    background-image: url(./img/4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* 投票情况 */
+.item{
+    width: 100%;
+}
+.item>ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5%;
+    text-align: center;
+}
+.item>ul>li{
+    width: 20%;
+    border: 1px solid rgb(202, 170, 66);
+    height: 350px;
+    border-radius: 5%;
+}
+.show{
+    width: 60px;
+    background: rgb(236, 42, 36);
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 35px;
+    margin-left: 37px;
+}
+.num{
+    margin-top: -20px;
+    display: none;
+}
+.show:hover .num{
+    display: block;
+}
