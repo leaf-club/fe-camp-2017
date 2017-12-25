@@ -170,5 +170,23 @@ JavaScript进阶学习：
 
 截止上交时间：2017年12月28日17:00。
 
+# 第九次作业
+
+**jQuery练习**
+
+在以下两个题目中选择一个进行完成
+
+题目一：
+
+1. jQuery轮播图制作，需要有3张以上图片并有动画效果
+2. 使用 [jQuery Validate](https://jqueryvalidation.org/)  进行表单（表单需要自行设计）验证，至少包括长度、必填、邮箱三种验证。
+
+题目二：
+
+使用jQuery制作一个todo-list，可参照 [云备忘录](https://maxwelldu.github.io/vue-todolist/#/) 样式和功能
+
+
+截止上交时间：2018年1月2日17:00。
+
 
 
