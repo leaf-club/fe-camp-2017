@@ -1,0 +1,423 @@
+@import "https://fonts.googleapis.com/css?family=Titillium+Web:400,700";
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+.iphone {
+    box-shadow: inset 0 0 3px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #999, 0 0 30px 0px rgba(0, 0, 0, 0.7);
+    border: 5px solid #9e886f;
+    background: #fbfbfb;
+    padding: 15px;
+    border-radius: 50px;
+    height: 877px;
+    width: 423px;
+    position: relative;
+    margin: 30px auto;
+    transform: scale(0.8);
+}
+.iphone-top {
+    padding: 5px 110px 40px;
+    position: relative;
+}
+.iphone-top .speaker {
+    display: block;
+    width: 70px;
+    height: 6px;
+    margin: 0 auto;
+    border-radius: 6px;
+    background: #292728;
+}
+.iphone-top .camera {
+    display: block;
+    margin: 0 auto;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin-bottom: 13px;
+    background: #333;
+}
+.iphone-top .sensor {
+    display: block;
+    width: 6px;
+    height: 6px;
+    float: left;
+    background: #333;
+    margin-top: 2px;
+    border-radius: 50%;
+}
+.top-bar,
+.bottom-bar {
+    display: block;
+    width: 423px;
+    height: 15px;
+    border-left: 5px solid #f3e7d5;
+    border-right: 5px solid #f3e7d5;
+    position: absolute;
+    left: -5px;
+}
+.top-bar {
+    top: 65px;
+}
+.bottom-bar {
+    bottom: 65px;
+}
+.iphone-screen {
+    /* border: 1px solid #fff; */
+    height: 677px;
+    width: 375px;
+    /* border: 2px solid rgba(0, 0, 0, 0.9); */
+}
+.buttons .on-off,
+.buttons .up,
+.buttons .down,
+.buttons .sleep {
+    display: block;
+    background: #9e886f;
+    position: absolute;
+    border-radius: 2px 0px 0px 2px;
+}
+.buttons .on-off {
+    height: 40px;
+    width: 3px;
+    top: 100px;
+    left: -8px;
+}
+.buttons .up,
+.buttons .down,
+.buttons .sleep {
+    height: 60px;
+    width: 5px;
+    left: -10px;
+}
+.buttons .up {
+    top: 170px;
+}
+.buttons .down {
+    top: 250px;
+}
+.buttons .sleep {
+    left: auto;
+    right: -10px;
+    top: 170px;
+    border-radius: 0px 2px 2px 0px;
+}
+.iphone-bottom {
+    padding: 10px 0 0;
+}
+.iphone-bottom span {
+    display: block;
+    margin: 0 auto;
+    width: 68px;
+    height: 68px;
+    background: #ab957b;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #a38b6d 0%, #d8c9b6 50%, #ece9e6 69%, #ab957b 100%);
+    position: relative;
+}
+.iphone-bottom span:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+}
+body {
+    position: relative;
+    background-color: #33444e;
+    font-family: 'Titillium Web', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+    height: 100%;
+    width: 100%;
+}
+#restartbtn {
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+}
+.table {
+    display: table;
+    height: 87%;
+    width: 100%;
+    position: relative;
+}
+.cell {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.iphone-header {
+    margin-top: 0px;
+    background-color: #000;
+}
+.iphone-header h3 {
+    text-align: center;
+    margin: 0;
+}
+.iphone-footer button {
+    background-color: rgba(255, 255, 255, 0);
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    opacity: 1;
+    outline: 0;
+}
+.iphone-footer button:active {
+    color: #aaa;
+    color: #eee;
+    outline: 0;
+}
+.iphone-footer h3 {
+    height: 40px;
+    margin: 0px;
+    line-height: 40px;
+}
+.iphone-footer #emergency {
+    float: left;
+    margin-left: 20px;
+}
+.iphone-footer #delete {
+    float: right;
+    margin-right: 20px;
+}
+.welcome{
+    width: 100%;
+    height: 100%;
+}
+.welcome h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -127.07px;
+    color: green;
+}
+/*------
+# Pincode
+----*/
+#pincode {
+    position: fixed;
+    overflow: hidden;
+    height: 676px;
+    width: 375px;
+    z-index: 9999;
+    background-color: #c4c4c4;
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-top: -344px;
+    /* Negative half of height. */
+    margin-left: -192px;
+    /* Negative half of width. */
+}
+#numbers {
+    max-width: 300px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    -webkit-transition: all 1s ease-out;
+    -moz-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    opacity: 1;
+}
+#numbers.hide {
+    opacity: 0.3;
+}
+#numbers button {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+    background-color: #bcbcbc;
+    border: 0;
+    color: #fff;
+    font-size: 25px;
+    line-height: 50px;
+    border-radius: 100%;
+    opacity: 1;
+    outline: 0;
+    border: 1px solid #fff;
+}
+#numbers button:active {
+    background-color: #858585;
+    border: 1px solid #fff;
+    outline: 0;
+}
+#fields {
+    max-width: 200px;
+    padding: 0 20px;
+    margin: 50px auto;
+    position: relative;
+    display: block;
+}
+#fields .numberfield {
+    text-align: center;
+}
+#fields .numberfield span {
+    height: 10px;
+    width: 10px;
+    border: 2px solid #fff;
+    background-color: transparent;
+    border-radius: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+#fields .numberfield.active span {
+    background-color: #fff;
+}
+#fields .numberfield.right span {
+    background-color: #33444e;
+    border-color: #33444e;
+    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
+}
+/*------
+# Toast Grid
+----*/
+.grid {
+    list-style: none;
+    margin-left: -20px;
+}
+.grid__col--1-of-3,
+.grid__col--2-of-6,
+.grid__col--4-of-12 {
+    width: 33.33333%;
+}
+.grid__col--1-of-6,
+.grid__col--2-of-8,
+.grid__col--3-of-12 {
+    width: 15.66%;
+}
+.grid__col {
+    box-sizing: border-box;
+    display: inline-block;
+    margin-right: -.25em;
+    min-height: 1px;
+    padding-left: 20px;
+    vertical-align: top;
+}
+.grid__col--centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grid__col--d-first {
+    float: left;
+}
+.grid__col--d-last {
+    float: right;
+}
+.grid--no-gutter {
+    margin-left: 0;
+    width: 100%;
+}
+.grid--no-gutter .grid__col {
+    padding-left: 0;
+}
+.grid--no-gutter .grid__col--span-all {
+    margin-left: 0;
+    width: 100%;
+}
+.grid__col--ab {
+    vertical-align: bottom;
+}
+.grid__col--am {
+    vertical-align: middle;
+}
+.miss {
+    -webkit-animation: miss .8s ease-out 1;
+    animation: miss .8s ease-out 1;
+}
+@-webkit-keyframes miss {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    10% {
+        -webkit-transform: translate(-25px, 0);
+        transform: translate(-25px, 0);
+    }
+    20% {
+        -webkit-transform: translate(25px, 0);
+        transform: translate(25px, 0);
+    }
+    30% {
+        -webkit-transform: translate(-20px, 0);
+        transform: translate(-20px, 0);
+    }
+    40% {
+        -webkit-transform: translate(20px, 0);
+        transform: translate(20px, 0);
+    }
+    50% {
+        -webkit-transform: translate(-10px, 0);
+        transform: translate(-10px, 0);
+    }
+    60% {
+        -webkit-transform: translate(10px, 0);
+        transform: translate(10px, 0);
+    }
+    70% {
+        -webkit-transform: translate(-5px, 0);
+        transform: translate(-5px, 0);
+    }
+    80% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
+@keyframes miss {
+    0% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    10% {
+        -webkit-transform: translate(-25px, 0);
+        transform: translate(-25px, 0);
+    }
+    20% {
+        -webkit-transform: translate(25px, 0);
+        transform: translate(25px, 0);
+    }
+    30% {
+        -webkit-transform: translate(-20px, 0);
+        transform: translate(-20px, 0);
+    }
+    40% {
+        -webkit-transform: translate(20px, 0);
+        transform: translate(20px, 0);
+    }
+    50% {
+        -webkit-transform: translate(-10px, 0);
+        transform: translate(-10px, 0);
+    }
+    60% {
+        -webkit-transform: translate(10px, 0);
+        transform: translate(10px, 0);
+    }
+    70% {
+        -webkit-transform: translate(-5px, 0);
+        transform: translate(-5px, 0);
+    }
+    80% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0);
+    }
+    100% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+}
