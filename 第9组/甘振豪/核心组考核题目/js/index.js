@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
         var enterCode = "";
         enterCode.toString();
         $("#numbers button").click(function() {
-            var clickedNumber = $(this).text().toString();
+            var clickedNumber = $(this).text().toString().substring(0, 1);
             enterCode = enterCode + clickedNumber;
             //console.log(enterCode); //test
             var lengthCode = parseInt(enterCode.length);

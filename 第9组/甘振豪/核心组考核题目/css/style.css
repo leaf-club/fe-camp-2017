@@ -199,6 +199,13 @@ body {
     margin-left: -127.07px;
     color: green;
 }
+
+#numbers button h5{
+    margin: 0;
+    margin-top: -15px;
+    height: 20px;
+    font-size: 8px;
+}
 /*------
 # Pincode
 ----*/
@@ -233,14 +240,14 @@ body {
     opacity: 0.3;
 }
 #numbers button {
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
     background-color: #bcbcbc;
     border: 0;
     color: #fff;
     font-size: 25px;
-    line-height: 50px;
+    line-height: 40px;
     border-radius: 100%;
     opacity: 1;
     outline: 0;
