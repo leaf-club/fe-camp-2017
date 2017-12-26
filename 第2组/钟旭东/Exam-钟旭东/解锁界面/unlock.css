@@ -1,0 +1,177 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.back_pic{
+    background-image: url(image/back_image.jpg);
+    position: absolute;
+    background-size: cover;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-filter:blur(15px);
+    -moz-filter:blur(15px);
+    -o-filter:blur(15px);
+    -ms-filter:blur(15px);
+    filter:blur(15px);
+    z-index: -1;
+}
+@keyframes clearer{
+    0%{
+        -webkit-filter:blur(15px);
+        -moz-filter:blur(15px);
+        -o-filter:blur(15px);
+        -ms-filter:blur(15px);
+        filter:blur(15px);
+    }
+    25%{
+        -webkit-filter:blur(12px);
+        -moz-filter:blur(12px);
+        -o-filter:blur(12px);
+        -ms-filter:blur(12px);
+        filter:blur(12px);
+    }
+    50%{
+        -webkit-filter:blur(8px);
+        -moz-filter:blur(8px);
+        -o-filter:blur(8px);
+        -ms-filter:blur(8px);
+        filter:blur(8px);
+    }
+    100%{
+        -webkit-filter:blur(0px);
+        -moz-filter:blur(0px);
+        -o-filter:blur(0px);
+        -ms-filter:blur(0px);
+        filter:blur(0px);
+    }
+}
+.wrapper{
+    width: 300px;
+    height: 580px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: rgba(0,0,0,.6);
+    color: rgb(172, 169, 177);
+    font-family: "Quicksand", sans-serif;
+    position: relative;
+}
+.dot_box{
+    padding: 188px 0 50px;
+    position: relative;
+}
+.dot_inner{
+    width: 108px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#input_wrong{
+    position: absolute;
+    left: 22px;
+    top: 200px;
+    display: none;
+}
+.dot{
+    height: 6px;
+    width: 6px;
+    float: left;
+    border-radius: 4px;
+    background-color: gray;
+    border: 1px solid grey;
+    margin: 0 5px;
+}
+@keyframes whiter{
+    0%{
+        background-color: gray
+    }
+    100%{
+        background-color: rgb(245, 235, 226)
+    }
+}
+@keyframes grayer{
+    0%{
+        background-color: rgb(243, 231, 231)
+    }
+    100%{
+        background-color: gray
+    }
+}
+.number_box{
+    height: 260px;
+    width: 100%;
+    overflow: hidden;
+}
+.num{
+    height: 44px;
+    width: 44px;
+    margin: 10px 27px;
+    border-radius: 23px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    float: left;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background-color: rgba(60, 60, 60, 0);
+}
+@keyframes darker{
+    0%{
+        background-color: rgba(60, 60, 60, 0);
+    }
+    50%{
+        background-color: rgba(60, 60, 60, 0.5);
+    }
+    100%{
+        background-color: rgba(60, 60, 60, 1);
+    }
+}
+@keyframes lighter{
+    0%{
+        background-color: rgba(60, 60, 60, 1);
+    }
+    50%{
+        background-color: rgba(60, 60, 60, 0.5);
+    }
+    100%{
+        background-color: rgba(60, 60, 60, 0);
+    }
+}
+.number_box .last_num{
+    margin: 10px 127px;
+}
+.number{
+    line-height: 35px;
+    font-size: 30px;
+}
+.attach{
+    font-size: 8px;
+    position: absolute;
+    top: 27px;
+    left: 10px;
+}
+.num .at4{
+    left: 12px;
+}
+.num .at7, .num .at9{
+    left: 7px;
+}
+.num .at0{
+    left: 18px
+}
+.extra{
+    width: 300px;
+    overflow: hidden;
+    padding: 10px 0 43px;
+}
+.emergency{
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    float: left;
+    cursor: pointer;
+}
+.delect{
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 3px;
+    float: right;
+    cursor: pointer;
+}
