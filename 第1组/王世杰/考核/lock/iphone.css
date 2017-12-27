@@ -1,0 +1,316 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(187, 187, 179);
+}
+.box {
+    margin: 0;
+    width: 100%;
+    height: 700px;
+}
+#iphone {
+    width: 380px;
+    margin: 0 auto;
+    margin-top: 5%;
+    border: 2px solid ;
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 8px red;
+}
+.part1 {
+    width: 100%;
+    height: 12%;
+    margin-bottom: 6%;
+}
+.part1 .cam {
+    width: 6px;
+    height: 6px;
+    background-color: rgb(97, 97, 97);
+    box-shadow: 0 0 4px black inset;
+    margin: 0 auto;
+    margin-top: 4%;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+.part1_2 .round {
+    width: 4px;
+    height: 4px;
+    background-color: gray;
+    border-radius: 50%;
+    float: left;
+    margin-top: 1px;
+    margin-left: 38%;
+    opacity: 0.6;
+}
+.part1_2 .rectangle {
+    width: 40px;
+    height: 5px;
+    background-color: black;
+    margin: 0 auto;
+    margin-top: 3%;
+    border-radius: 5px;
+}
+.part2 {
+    width: 92%;
+    margin: 0 auto;
+    background-color: rgb(187, 187, 179);
+}
+.part2 .black_head {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    color: #fff;
+    font-size: 10px;
+    background-color: black;
+}
+.part2 .black_head .info  {
+    width: 35px;
+    height: 100%;
+    float: left;
+    margin-left: 1%;
+}
+.part2 .black_head .info ul {
+    padding: 0;
+    margin: 0;
+}
+.part2 .black_head .info ul li {
+    list-style: none;
+    float: left;
+    width: 5px;
+    height: 5px;
+    margin: 5px;
+    margin-left: 2px;
+    margin-right: 0px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.part2 .black_head .bell {
+    float: left;
+    height: 100%;
+    line-height: 15px;
+    margin-left: 1%;
+}
+.part2 .black_head .time {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    line-height: 15px;
+}
+.part2 .black_head .battery {
+    float: right;
+    margin-top: 2px;
+    margin-right: 1.5%;
+    border: 1px solid silver;
+}
+.part2 .battery .white {
+    width: 18px;
+    height: 7px;
+    background-color: #fff;
+    border: 1px solid black;
+}
+.part2 .black_head .bluetooth {
+    float: right;
+    height: 100%;
+    line-height: 15px;
+    margin-right: 1%;
+}
+.part2 .black_head .percent {
+    float: right;
+    height: 100%;
+    line-height: 15px;
+    margin-right: 1%;
+}
+.show {
+    background-image: url(./img/timg.jpg);
+    z-index: 100;
+    padding-top: 20%;
+}
+.illustrate {
+    width: 100%;
+    position: relative;
+    color: #fff;
+}
+.illustrate .word {
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 19px;
+}
+.illustrate .password {
+    width: 132px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -2%;
+}
+.illustrate .password ul {
+    padding: 0;
+}
+.illustrate .password ul li {
+    float: left;
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.keyboard {
+    width: 330px;
+    height: 300px;
+    margin: 0 auto;
+    padding-top: 20%;
+    color: white;
+}
+.keyboard .key {
+    float: left;
+    width: 20%;
+    height: 22%;
+    margin-left: 8%;
+    margin-bottom: 3%;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+.keyboard .key:hover {
+    background-color: rgb(110, 110, 110);
+}
+.keyboard .key:nth-child(3n+1) {
+    margin-left: 12%;
+}
+.keyboard .key:nth-child(10) {
+    float: left;
+    position: relative;
+    width: 20%;
+    height: 22%;
+    margin-left: 40%;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.key .number {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 12%;
+}
+.key:nth-child(10) .number {
+    position: absolute;
+    margin: 0;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 24px;
+}
+.key .letter {
+    text-align: center;
+    font-size: 10px;
+}
+.foot {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+    padding-top: 5%;
+    padding-bottom: 7%;
+}
+.foot .p1 {
+    float: left;
+    margin-left: 5%;
+    cursor: pointer;
+}
+.foot .p1:hover {
+    color: black;
+}
+.foot .p2 {
+    float: right;
+    margin-right: 5%;
+    cursor: pointer;
+}
+.foot .p2:hover {
+    color: black;
+}
+.part3 {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    background: linear-gradient(135deg, rgb(32, 28, 28), white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.part3 .linear {
+    width: 36px;
+    height: 36px;
+    margin-left: 2px;
+    transform: translateY(2px);
+    border-radius: 50%;
+    background-color: #fff;
+}
+.part3 .linear:hover {
+    background-color: rgb(230, 228, 228);
+}
+#passcode .active {
+    background-color: gray;
+}
+@media screen and (max-width: 1000px) {
+    #iphone {
+        width: 330px;
+    }
+    .keyboard {
+        width: 275px;
+        height: 250px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .box {
+        height: 600px;
+    }
+    #iphone {
+        width: 280px;
+    }
+    .illustrate .word {
+        font-size: 16px;
+    }
+    .keyboard {
+        width: 231px;
+        height: 210px;
+    }
+    .keyboard .number {
+        font-size: 20px;
+    }
+    .keyboard .key .letter {
+        font-size: 5px;
+        margin-top: -2px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .box {
+        height: 500px;
+    }
+    #iphone {
+        width: 240px;
+    }
+    .illustrate .word {
+        font-size: 14px;
+    }
+    .keyboard {
+        width: 198px;
+        height: 180px;
+    }
+    .keyboard .number {
+        font-size: 16px;
+    }
+    .key .letter {
+        font-size: 1px;
+        margin-top: -3px;
+    }
+    .foot {
+        font-size: 14px;
+    }
+}
