@@ -94,7 +94,7 @@ window.onload = function () {
   document.querySelector('#control button').addEventListener('click', function () {
     if (document.querySelector('#control button').innerHTML == '设置') {
       var newpwd = document.querySelector('#control input').value;
-      if (Boolean(Number(newpwd))) {
+      if (Boolean(Number(newpwd)) && newpwd.indexOf('.') == -1) {
         if (newpwd.length != 6) {
           document.querySelector('#control input').disabled = true;
           document.querySelector('#control input').style.color = 'red';
@@ -116,7 +116,7 @@ window.onload = function () {
       else {
         document.querySelector('#control input').disabled = true;
         document.querySelector('#control input').style.color = 'red';
-        document.querySelector('#control input').value = '请输入数字密码';
+        document.querySelector('#control input').value = '请输入六位数字密码';
         setTimeout(function () {
           document.querySelector('#control input').disabled = false;
           document.querySelector('#control input').style.color = 'black';
