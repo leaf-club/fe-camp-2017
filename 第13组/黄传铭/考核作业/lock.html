@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="lock.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <!-- 提示 -->
+            <div class="tip">
+                <p id="tips">Touch ID or Enter passcode</p>
+            </div>
+            <div class="show" id="show1">
+                <!-- 圆圈 -->
+                <div class="show1">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+        <!-- 键盘 -->
+        <div class="keyboard" id = "action">
+            <div class="number">
+                <div id="num1" onmouseout=col(this)>1</div>
+            </div>
+            <div class="number">
+                <div id="num2" onmouseout=col(this)>2</div>
+            </div>
+            <div class="number">
+                <div id="num3" onmouseout=col(this)>3</div>
+            </div>
+            <div class="number">
+                <div id="num4" onmouseout=col(this)>4</div>
+            </div>
+            <div class="number">
+                <div id="num5" onmouseout=col(this)>5</div>
+            </div>
+            <div class="number">
+                <div id="num6" onmouseout=col(this)>6</div>
+            </div>
+            <div class="number">
+                <div id="num7" onmouseout=col(this)>7</div>
+            </div>
+            <div class="number">
+                <div id="num8" onmouseout=col(this)>8</div>
+            </div>
+            <div class="number">
+                <div id="num9" onmouseout=col(this)>9</div>
+            </div>
+            <div class="number" id="zero">
+                <div id="num0" onmouseout=col(this)>0</div>
+            </div>
+        </div>
+        <!-- 删除键及emergency -->
+        <div class="footer" id="footer1">
+            <div class="foot">
+                <p>Emergency</p>
+            </div>
+            <div class="foot">
+                <p id="del"  onmouseout=col(this) onmouseover=bac(this)>Delete</p>
+            </div>
+        </div>
+    </div>
+    <script src="lock.js"></script>
+</body>
+</html>
