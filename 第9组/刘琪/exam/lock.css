@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    background: rgb(155, 180, 204);
+}
+.screen{
+    width: 400px;
+    height: 600px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+.tip{
+    margin: 0 auto;
+    margin-top: 70px;
+    text-align: center;
+}
+.circles{
+    width: 150px;
+    height: 20px;
+    margin: 20px auto;
+    margin-bottom: 50px;
+    border-collapse: separate;
+}
+.circle{
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 0 2.5px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+.numbers{
+    width: 300px;
+    margin: 0 auto;
+    color: white;
+    overflow: hidden;
+}
+.number{
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin: 10px 15px;
+    border-radius: 50%;
+    float: left;
+    background: transparent;
+    border: 1px solid red;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.number:last-child{
+    margin: 10px 115px;
+}
+/* @keyframes click{
+    50%{background: #eee}
+} */
+.foot{
+    width: 300px;
+    margin: 20px auto;
+    background: black;
+    font-size: 16px;
+}
+#emergency{
+    float: left;
+    margin: 0 10px;
+    cursor: pointer;
+}
+#cancel{
+    float:right;
+    margin: 0 10px;
+    cursor: pointer;
+}
