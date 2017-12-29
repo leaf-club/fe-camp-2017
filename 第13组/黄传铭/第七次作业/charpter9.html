@@ -9,11 +9,12 @@
 <body>  
   <script type="text/javascript"> 
       window.onload = function(){
+          //window.onload页面加载完成后才执行
         // 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色。
          var tr=document.getElementsByTagName("tr");
          for(var i=0;i<tr.length;i++){
              tr[i].onmouseover=function(){
-                 this.style.backgroundColor="red";
+                 this.style.backgroundColor="#f2f2f2";
              }
              tr[i].onmouseout=function(){
                  this.style.backgroundColor=" #fff";
@@ -37,7 +38,7 @@
         var tr=document.getElementsByTagName("tr");
         for(var i=0;i<tr.length;i++){
             tr[i].onmouseover=function(){
-                this.style.backgroundColor="red";
+                this.style.backgroundColor="#f2f2f2";//tr[i].addEventListener('mouseover', function(){})
             }
             tr[i].onmouseout=function(){
                 this.style.backgroundColor="#fff";
