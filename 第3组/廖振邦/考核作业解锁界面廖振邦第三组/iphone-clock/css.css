@@ -1,0 +1,261 @@
+/*统一设置*/
+
+body,html{
+    margin: 0;
+    padding:0;
+    font-size:100px;
+    height:100%;
+    -moz-user-select:   none;
+}
+/*开始*/
+.back{
+    background-color: rgb(196,196,196);
+    height:100%;
+   
+    margin:auto;
+    padding-top:5%;    
+}
+.phone{
+    width:50%;
+    height:90%;
+    background-color: white;
+    margin:auto;
+box-shadow:5px 5px 5px rgb(238, 238, 106) ; 
+border-radius: 10%;
+padding-top:3%;
+}
+.cir{
+    height:1.25%;
+    width:2.25%;
+    border-radius: 50%;
+   background-color: rgb(211, 195, 195);
+   margin:auto;
+}
+.second{
+    margin:auto;
+    margin-top:5%;
+    padding-left: 35%;
+    width:100%;
+    height:2%;
+   
+}
+.cir2{
+    height:50%;
+    width:1.8%;
+    border-radius: 50%;
+    background-color: rgb(247, 228, 228);
+}
+.reten{
+    width:20%;
+    height:50%;
+   margin-left:6%;
+   margin-top:-1.8%;
+    background-color: rgb(85, 69, 69);
+    border-radius:10px;
+
+}
+.screen{
+    width:90%;
+    height:75%;
+    background-color: rgb(196,196,196);
+    margin:auto;
+    margin-top:10%;
+   position: relative;
+}
+/*导航栏*/
+.nav{
+    width:100%;
+    height:3%;
+    background-color:black;
+    display:flex;
+}
+.cirs{
+    width:10%;
+    height:100%;
+    display: flex;
+}
+.cirss{
+    width:25%;
+    height:40%;
+    border-radius: 50%;
+    margin-left:5%;
+    margin-top:10%;
+    border:1px solid white;
+    background-color: white;
+}
+.cirss:nth-child(4),.cirss:nth-child(5){
+    background-color:black;
+}
+.word{
+    color:white;
+    margin-left:2%;
+    margin-top:0.2%;
+    font-size:0.1rem;
+    width:10%;
+    height:100%;
+}
+.time{
+    font-size:0.1rem;
+    color:white;
+    margin-top:0.2%;
+    width:10%;
+    height:10%;
+   margin-left:22%;
+}
+.ele{
+    font-size:0.1rem;
+    color:white;
+    margin-top:0.2%;
+    width:10%;
+    height:10%;
+   margin-left:25%;
+}
+.imge{
+    width:8%;
+    height:60%;
+    margin-top:0.4%;
+    background-color:white;
+    border:1px solid black;
+}
+.small{
+   background-color:white;
+    margin-left:0;
+    width:1%;
+    margin-top:1.5%;
+    height:20%;
+}
+.words{
+    margin-top:8%;
+    height:5%;
+    font-size:0.2rem;   
+    color:white;
+    text-align: center;
+}
+/*主要的界面*/
+.mainview{
+padding-bottom:0;
+    height:85%;
+}
+.five{
+    height:10%;
+    display:flex;
+    justify-content: center;
+}
+.cirsss{
+    height:22%;
+    width:3%;
+    border-radius: 50%;
+    background-color:  rgb(196,196,196);
+    border: 1px white solid;
+    margin-left:5%;
+}
+/*数字区域*/
+.nums{
+    height:60%;
+    display:flex;
+    flex-wrap:wrap;
+    padding-left:5%;
+    cursor: pointer;;
+}
+.num{
+    height:20%;
+    width:20%;
+    border-radius: 50%;
+    border:1px solid white;
+    background-color:rgb(196,196,196);
+    font-size:0.23rem;
+padding-top:5%;
+    color:white;
+    margin-left:8%;
+    text-align: center;
+    margin-bottom:5%;
+}
+.num:nth-child(10){
+    margin-left:36%;
+}
+
+.num p:nth-child(1){
+
+
+    margin:0;
+}
+.num p:nth-child(2){
+font-size:0.13rem;
+margin:0;
+}
+/*底部文字*/
+.foot{
+    cursor: pointer;
+    color:white;
+    font-size:0.2rem;
+  bottom:2%;
+    height:5%;
+    width:100%;
+    display:flex;
+    position: absolute;
+}
+.foot .eng:nth-child(2){
+position: absolute;
+    right:2%;
+}
+.foot .eng:nth-child(1){
+    position: absolute;
+        left:2%;
+ }
+/*实现圆环渐变色*/
+ .liner{
+     position: relative;
+    
+     margin:auto;
+     margin-top:5%;
+     width:50px;
+     height:50px;
+ }
+ 
+
+.liner:before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 25px;
+    padding-bottom: 0;
+    box-sizing: border-box;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    background: -webkit-linear-gradient(0deg, #999 70%, yellow 90%);
+}
+
+.liner:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 25px;
+    padding-top: 0;
+    box-sizing: border-box;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background: -webkit-linear-gradient(0deg,yellow 5%, #999 90%);
+}
+
+.liner>i {
+    display: block;
+position: absolute;
+    width: 40px;
+    height: 40px;
+    background: white;
+   top:5px;
+   left:5px;
+    border-radius: 20px;
+}
+/*js新增div的属性*/
+.new{
+    font-size:0.13rem;
+    text-align: center;
+    color:white;
+    background-color: rgb(196,196,196);
+    margin-bottom: 3%;
+}
+/*动画*/
+.ani{
+    animation:down 0.2s ease-in; 
+}
