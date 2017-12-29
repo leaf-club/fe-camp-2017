@@ -1,0 +1,180 @@
+/* Basic reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	
+	/* Better text styling */
+	font: bold 14px Arial, sans-serif;
+}
+
+/* Finally adding some IE9 fallbacks for gradients to finish things up */
+
+/* A nice BG gradient */
+html {
+	height: 100%;
+	background: white;
+	background: radial-gradient(circle, #fff 20%, #ccc);
+	background-size: cover;
+}
+
+/* Using box shadows to create 3D effects */
+#calculator {
+	width: 232px;
+	height: 580px;
+	
+	margin: 100px auto;
+	padding: 20px 20px 9px;
+	
+	background: #9dd2ea;
+	background: linear-gradient(#9dd2ea, #8bceec);
+	border-radius: 10px ;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Top portion */
+/* Inset shadow on the screen to create chinaz */
+.top .screen {
+	height: 65px;
+	width: 192px;
+	
+	padding: 0 10px;
+	
+
+	border-radius: 3px;
+
+	
+	/* Typography */
+	font-size: 62px;
+	line-height: 40px;
+	color: rgb(19, 128, 218);
+
+
+
+	text-align: center;
+	letter-spacing: 1px;
+	vertical-align:middle;
+	top:50%;
+	line-height: 66px;
+	
+}
+.top span{
+	top: 0;
+	height: 20px;
+	width: 20px;
+	position: relative;
+	background: white;
+	border-radius: 100px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 22px 5px 11px 5PX;
+	font-size: 50px;
+	color: #888;
+	line-height: 70px;
+	transition: all 0.3s ease;
+
+}
+
+/* Clear floats */
+.keys, .top {overflow: hidden;}
+
+/* Applying same to the keys */
+.HAH ,.keys span {
+	float: left;
+	top: 0;
+	height: 66px;
+	width: 54px;
+	position: relative;
+	cursor: pointer;
+	background: white;
+	border-radius: 100px;
+	box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+	margin: 22px 5px 11px 5PX;
+	font-size: 50px;
+	color: #888;
+	line-height: 70px;
+	text-align: center;
+	
+	/* prevent selection of text inside keys */
+	user-select: none;
+	
+	/* Smoothing out hover and active states using css3 transitions */
+	transition: all 0.3s ease;
+}
+
+.HAHA{
+	float: left;
+	position: relative;
+    left: 12px;
+	bottom: 19px;
+	user-select: none;
+	vertical-align:middle;
+}
+.wei{
+	top: 0px;	
+	float: left;
+	width: 100%;
+	position: relative;
+	vertical-align:middle;
+   }
+   .zero{
+	text-align:center; display:block;
+	left: 62px;
+	
+   }
+   .show{
+	text-align: center;
+   }
+/* Remove right margins from operator keys */
+/* style different type of keys (operators/evaluate/clear) differently */
+
+
+
+span.clear,span.clear2 {
+
+	background: #ff9fa8;
+	box-shadow: 0px 4px #ff7c87;
+	color: white;
+		float: right;
+		height: 21px;
+		width: 66px;
+		position: relative;
+		cursor: pointer;
+		background:rgba(255, 0, 0, 0.171);
+		border-radius: 0px;
+		box-shadow: 0px 4px rgba(3, 33, 90, 0.2);
+		font-size: 10px;
+		color: rgb(11, 75, 160);
+		line-height: 24px;
+		top: 45px;
+}
+span.clear2{
+	float: left;
+}
+
+/* Some hover effects */
+.keys span:hover {
+
+	color: rgb(22, 204, 228);
+}
+
+
+
+span.clear:hover,span.clear2:hover {
+	background: #f68991;
+	box-shadow: 0px 4px #d3545d;
+	color: white;
+}
+
+/* Simulating "pressed" effect on active state of the keys by removing the box-shadow and moving the keys down a bit */
+
+
+.keys span:active {
+	background: #9c89f6;
+	box-shadow: 0px 4px #6b54d3;
+	top: 4px;
+}
+
+span.clear:active,span.clear2:active {
+	top: 35px;
+	box-shadow: 0px 0px #d3545d;
+}
