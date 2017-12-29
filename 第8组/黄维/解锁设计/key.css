@@ -1,0 +1,193 @@
+@import  "https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Risque";
+*{
+    box-sizing: border-box;
+}
+#key{
+    position: relative;
+    width: 380px;
+    height: 600px;
+    margin-left: 38%;
+    font-family: 'Risque', cursive; 
+    
+}
+#bg{
+    background: url(bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;    
+    filter:blur(8px);
+    -webkit-filter:blur(8px);
+    -moz-filter:blur(8px);
+    -ms-filter:blur(8px);
+    -o-filter:blur(8px);
+    width: inherit;
+    height: inherit;
+  
+}
+#ntime{
+    font-size: 70px;    
+    position: absolute;
+    left: 120px;
+    top: 50px;
+    display: none;
+}
+#tip{
+    position: absolute;
+    left: 148px;
+    top: 90px;
+    font-size: 18px;
+    display: none;
+}
+#circle_box{
+    position: absolute;
+    left:140px;
+    top: 120px;
+}
+.circle{
+   height:8px;
+   width: 8px;
+   border-radius: 4px;
+   border: 1px solid #a6b1a6;
+   background-color: rgba(18, 224, 197, 0);
+   float: left;
+   margin-left:10px;
+   
+}
+#button_box{
+   position: absolute;
+   left: 85px;
+   top: 200px; 
+   text-align: center;
+   width: 250px;
+}
+.num{
+    height:50px;
+    width: 50px;
+    border-radius: 25px;
+    border: 2px solid rgba(173, 180, 175,0.3);
+    
+    background-color: rgba(174, 240, 194, 0);
+    cursor: pointer;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding-top: 15px;
+}
+.num:active,
+#call:active,
+#del:active{
+    background-color: rgba(174, 240, 194, 1);
+}
+.num0{
+    margin-left: 90px;
+}
+#call{
+    clear: both;
+    width: 105px;
+    margin-top: 10px;
+    margin-left: -10px;
+    float: left;
+    cursor: pointer;
+    height:50px;
+    padding: 10px;
+    border-radius: 5px;
+}
+#del{
+    float: left;
+    margin-top: 15px;
+    margin-left:50px;
+    cursor: pointer;
+    height:30px;
+    width: 80px;
+    padding:5px;
+    border-radius: 5px;
+}
+#unlock{
+    position: absolute;
+    left:150px;
+    bottom: 10px;
+    width: 100px;
+    height: 50px;
+    display: none;
+}
+#lock_h{
+    width:15px;
+    height:20px;
+    border-top-right-radius: 7.5px;
+    border-top-left-radius: 7.5px;
+    border: 3px double rgba(173, 180, 175,0.7);
+    border-bottom: 0px;
+    margin-left: 45px;
+}
+#lock_b{
+    width:30px;
+    height:30px;
+    border: 2px solid rgba(173, 180, 175,0.7);
+    margin-left: 38px;
+}
+#lock_c{
+    width:16px;
+    height:16px;
+    border-radius: 8px;
+    border: 3px solid rgba(209, 205, 207, 0.7);
+    margin: -23px 0 0 45px;
+}
+@keyframes lock{
+    0%{
+        filter:blur(8px);
+        -webkit-filter:blur(8px);
+        -moz-filter:blur(8px);
+        -ms-filter:blur(8px);
+        -o-filter:blur(8px);
+    }
+    100%{
+        filter:blur(0px);
+        -webkit-filter:blur(0px);
+        -moz-filter:blur(0px);
+        -ms-filter:blur(0px);
+        -o-filter:blur(0px);
+    }
+}
+@keyframes unlock{
+    0%{
+        filter:blur(0px);
+        -webkit-filter:blur(0px);
+        -moz-filter:blur(0px);
+        -ms-filter:blur(0px);
+        -o-filter:blur(0px);
+    }
+    100%{
+        filter:blur(8px);
+        -webkit-filter:blur(8px);
+        -moz-filter:blur(8px);
+        -ms-filter:blur(8px);
+        -o-filter:blur(8px);
+    }
+}
+@keyframes move{
+    0% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(-20px, 0);
+    }
+    40% {
+        transform: translate(20px, 0);
+    }  
+    60% {
+        transform: translate(-10px, 0);
+    }
+    80% {
+        transform: translate(10px, 0);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+@keyframes stand{
+    0%{
+        transform: translate(0, 0);
+    }
+    100%{
+        transform: translate(0, 0);
+    }
+}
