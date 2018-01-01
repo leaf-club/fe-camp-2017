@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400);
+body {
+  font: normal normal 13px/16px "Open Sans", sans-serif;
+  background: #dfdfdf;
+}
+
+.container {
+  padding: 20px;
+  width: 550px;
+  margin: 0 auto;
+  margin-top: 40px;
+  background: white;
+  border-radius: 5px;
+}
+
+.container h2 {
+  text-align: center;
+  font-size: 100px;
+  color: rgba(175, 47, 47, 0.15);
+  font-weight: 100;
+  user-select: none;
+}
+
+.container p {
+  text-align: center;
+  font-size: 20px;
+  user-select: none;
+}
+
+.container form {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  margin-left: -175px;
+}
+
+.container form input {
+  padding: 4px 15px 4px 5px;
+  width: 250px;
+}
+
+#button {
+  position: absolute;
+  left: 50%;
+  margin-left: 105px;
+  background-color: #fc999b;
+  color: #ffffff;
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px 15px;
+  user-select: none;
+}
+
+#button:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
+ol {
+  padding-left: 20px;
+}
+
+ol li {
+  padding: 5px;
+  color: #000;
+  height: 50px;
+  line-height: 50px;
+}
+
+ol li:nth-child(even) {
+  background: #87f0a7;
+}
+ol li:nth-child(odd) {
+  background: #9881fc;
+}
+ol li:nth-child(1) {
+  margin-top: 50px;
+}
+.strike {
+  text-decoration: line-through;
+}
+
+li:hover {
+  cursor: pointer;
+}
