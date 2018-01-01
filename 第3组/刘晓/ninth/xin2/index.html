@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script type="text/javascript" src="js/jquery1.js"></script>
+    <script type="text/javascript" src="js/validate.js"></script>
+    <script>
+            $(function(){
+            $("#formID").validate({
+                    debug:true,
+                    rules:{
+                    username:{
+                        required:true,
+                        minlength:2,
+                        maxlength:10
+                    },
+                    //密码验证
+                    userpassword:{
+                        required:true,
+                        minlength:2,
+                        maxlength:10,
+                        number:true,
+                        digits:true
+                    },
+                    cofiguserpassword: {equalTo:"#userpassword" },
+                    email:{
+                        required:true,
+                        email: true
+
+                    }
+                },
+                //提示信息
+                messages:{
+                        username:{
+                        required:"必须填写用户名",
+                        minlength:"用户名不能小于2位",
+                        maxlength:"用户名不能大于10位",
+                    },
+                    userpassword:{
+                        required:"必须填写密码",
+                        minlength:"用户名不能小于2位",
+                        maxlength:"用户名不能大于10位",
+                        email:"非法的email格式",
+                    },
+                    email:{
+                        required: '请输入电子邮件',
+                        email: '请检查电子邮件的格式'
+
+                    },
+                    userpassword: "required",
+                     cofiguserpassword:{
+                            equalTo:"两次密码输入不一致"
+                    }
+                }
+            });
+        });
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <form id="formID"action="login.spring" method="post">
+        name:<input type="text" name="username" ><br><br>
+        password:<input type="text"  name="userpassword" id="userpassword" ><br><br>
+        surepassword:<input type="text"  name="cofiguserpassword" ><br><br>
+        email:<input type="text"  name="email" ><br><br>
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+</html>
