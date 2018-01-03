@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="banner.css">
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+</head>
+<body>
+    <div id="banner">
+        <div class="pic">
+            <ul>
+                <li><a href=""><img src="img/p1.jpg" alt=""></li></a>
+                <li><a href=""><img src="img/p2.jpg" alt=""></li></a>
+                <li><a href=""><img src="img/p3.jpg" alt=""></li></a>
+                <li><a href=""><img src="img/p4.jpg" alt=""></li></a>
+                <li><a href=""><img src="img/p5.jpg" alt=""></li></a>
+            </ul>
+        </div>
+        <div class="intro">
+            <ul>
+                <a href=""><li>神秘莲花之令</li></a>
+                <a href=""><li>阿卡丽的黑金商店</li></a>
+                <a href=""><li>海克斯科技圣诞礼物</li></a>
+                <a href=""><li>无限火力雪球大战</li></a>
+                <a href=""><li>音乐节纪录片上篇</li></a>
+            </ul>
+        </div>
+    </div>
+    <script>
+        var $pic=$('.pic ul li'),
+            $intro=$('.intro ul a li'),
+            index=0,
+            L=$pic.length;
+        //初始化
+        $pic.hide().eq(index).show();
+        $intro[index].className='on';
+        //自动转换
+        time1=setInterval(autochange,2000);
+        $('#banner').hover(
+            function(){
+                clearInterval(time1)
+                },
+            function(){
+                time1=setInterval(autochange,2000);
+                });
+        function autochange(){
+            let x=index;
+            $intro[x].className='';
+            x++;
+            if(x==L){
+                x=0;
+                $pic.hide().eq(x).show();
+                $intro[x].className='on'
+                index=0;
+            }
+            else{
+                $pic.eq(x).stop().fadeIn();
+                $intro[x].className='on';
+                index++;
+            }
+        }
+        //mouseover事件
+        for(let i=0;i<L;i++){
+            $intro[i].no=i;
+            $intro.mouseenter(function(){
+                let x=index;
+                $intro[x].className='';
+                //console.log(this.no);
+                this.className='on';
+                $pic.hide().eq(this.no).show().fadeIn();
+                index=this.no;
+            })
+        }
+    </script>
+</body>
+</html>
