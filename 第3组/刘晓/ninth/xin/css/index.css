@@ -1,0 +1,73 @@
+.container {
+  margin: 20px auto;
+  width: auto;
+  height:absolute;
+  overflow: hidden;
+  position: relative;
+}
+.inner {
+  position: relative;
+  width: 9999px;
+  left: 0;
+  top: 0;
+}
+.innerwraper {
+  float: left;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:after {
+  display: block;
+  clear: both;
+  visibility: hidden;
+  content: "";
+  height: 0;
+}
+a {
+  text-decoration: none;
+}
+.left-arrow {
+  position: absolute;
+  left: 0;
+  top: 40%;
+  width: 5%;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 20px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.3;
+}
+.right-arrow {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 5%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 20px;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.3;
+}
+.pagination{
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  opacity: 0.3;
+}
+.pagination span{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-color: yellow;
+  line-height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.pagination .active{
+  background-color: red;
+  color: #FFFFFF;
+}
