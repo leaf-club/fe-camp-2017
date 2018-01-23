@@ -1,0 +1,33 @@
+*{
+    padding:0;
+    margin: 0;
+   
+}
+body{
+    background-color: rgb(245,245,245);
+}
+.remember{
+    width:300px;
+    height:600px;
+    margin:auto 0;
+    text-align: center;
+}
+.remember .title{
+     font-size:60px;
+     color:rgba(255,0,0,0.3);
+     height:50px;
+     line-height: 50px;
+     margin:auto 0;
+     text-align: center;
+}
+#cin{
+    font-size:30px;
+    margin:30px 0;
+}
+.false-css{
+    color:blue;
+}
+
+.true-css{
+color:red;
+}
