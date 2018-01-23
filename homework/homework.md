@@ -253,7 +253,7 @@ JavaScript进阶学习：
 
 寒假 （2018年2月1日至2018年3月1日）期间，每周至少在[github 项目](https://github.com/leaf-club/fe-camp-2017) 中发一次pr，并进行pr内容的说明，提交内容可以是读书笔记或心得，或是完成项目的某一部分代码等。
 
-**PS：**如家里没有网络，无法提交pr的同学可联系 imyann@qq.com 说明情况。
+**PS：** 如家里没有网络，无法提交pr的同学可联系 imyann@qq.com 说明情况。
 
 
 
