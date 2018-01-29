@@ -11,18 +11,17 @@
   <a href="javascript:back();">返回</a>  
 
   <script type="text/javascript">
-    var num =document.getElementById("second").innerHTML;
-    function count(){
+    var num = document.getElementById('second').innerHTML;
+    function count()
+    {
       num--;
-      document.getElementById("second").innerHTML=num;
-      if(num==0){
+      document.getElementById('second').innerHTML = num;
+      if(num == 0)
+      {
         location.assign("http://www.imooc.com");
       }
     }
-  setInterval("count()",1000);
-   function back(){
-        window.history.back();
-      }
+    setInterval('count()',1000);
   </script>
 </body>
 </html>

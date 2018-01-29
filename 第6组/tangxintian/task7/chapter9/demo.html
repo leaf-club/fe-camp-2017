@@ -2,61 +2,47 @@
 <html>
  <head>
   <title> new document </title>  
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>   
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>   
   <script type="text/javascript"> 
   
-      window.onload = function(){
-          var tr=document.getElementsByTagName("tr");
-          for(var i= 0;i<tr.length;i++)
-          {
+      window.onload = function() {
+          var tr = document.getElementsByTagName("tr");
+          for (var i = 0; i < tr.length; i++) {
               bgcChange(tr[i]);
           }
-     // 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色。
-      }         
-   function bgcChange(obj)
-     {
-        obj.onmouseover=function(){
-            obj.style.backgroundColor="#f2f2f2";
-        }
-        obj.onmouseout=function(){
-            obj.style.backgroundColor="#fff";
-        }
-   }
-   
-   // 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
-     var num=2;
-     function add(){
-        num++;
-        var tr=document.createElement("tr");
-        var xh=document.createElement("td");
-        var xm=document.createElement("td");
-        xh.innerHTML="xh00"+num;
-        xm.innerHTML="第"+num+"学生";
-        var del=document.createElement("td");
-        del.innerHTML="<a href='javascript:;' onclick='del(this)' >删除</a>";
-        var tab=document.getElementById("table");
-        tab.appendChild(tr);
-        tr.appendChild(xh);
-        tr.appendChild(xm);
-        tr.appendChild(del);
-        var tr = document.getElementsByTagName("tr");
-          for(var i= 0;i<tr.length;i++)
-          {
-              bgcChange(tr[i]);
+      }
+      // 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色。
+      function bgcChange(obj) {
+          obj.onmouseover =function () {
+              obj.style.backgroundColor = "#f2f2f2";
           }
+          obj.onmouseout = function () {
+              obj.style.backgroundColor = "#fff";
+          }
+      }
+      var num = 2;
+      // 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
+     function add() {
+         num++;
+         var tr = document.createElement("tr");
+         var xh = document.createElement("td");
+         var xm = document.createElement("td");
+         xh.innerHTML = "xh00" + num;
+         xm.innerHTML = "第" + num + "位学生";
+         var del = document.createElement("td");
+         del.innerHTML = "<a href='javascript:;' onclick='remove(this)' >删除</a>";
+         var tab = document.getElementById("table");
+         tab.appendChild(tr);
+         tr.appendChild(xh);
+         tr.appendChild(xm);
+         tr.appendChild(del);
      }
-      
-     
      // 创建删除函数
-     function del(obj)
-     {
-         var tr=obj.parentNode.parentNode;
-         tr.parentNode.removeChild(tr);
+     function remove(obj){
+      var tr = obj.parentNode.parentNode;
+      tr.parentNode.removeChild(tr);
      }
      
-   
-   
-
 
   </script> 
  </head> 
@@ -70,14 +56,14 @@
 
      <tr>
     <td>xh001</td>
-    <td>王小明</td>
-    <td><a href="javascript:;" onclick="del(this);">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+    <td>第1位学生</td>
+    <td><a href="javascript:" onclick = "remove(this);" >删除</a></td>   <!--在删除按钮上添加点击事件  -->
      </tr>
 
      <tr>
     <td>xh002</td>
-    <td>刘小芳</td>
-    <td><a href="javascript:;" onclick="del(this);">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+    <td>第2位学生</td>
+    <td><a href="javascript:" onclick = "remove(this);" >删除</a></td>   <!--在删除按钮上添加点击事件  -->
      </tr>  
 
      </table>
