@@ -1,0 +1,178 @@
+body{
+  margin:0;
+  padding:0;
+  background: #eee;
+  font:normal normal 16px/200% Arial Sans-serif;
+}
+.container{
+  width: 900px;
+  height: 500px;
+  background: #ccc;
+  margin:50px auto;
+}
+.songList{
+  width: calc(30% - 1px);
+  height: 100%;
+  background: white;
+  border-right: 1px solid #aaa;
+  float: left;
+}
+.songList span.title{
+  display:block;
+  text-align: center;
+  background: green;
+  color: white;
+  padding: 5px;
+}
+.songList ul{
+  list-style: none;
+  height: calc(500px - 52px);
+  margin:0;
+  padding: 0;
+  font-size: 14px;
+  overflow: auto;
+}
+.songList ul li{
+  background: white;
+  padding-left: 1em;
+}
+.songList ul li:hover{
+  background: #eee;
+  cursor: pointer;
+}
+.songList ul li span{
+  width:50px;
+  color: green;
+  float: right;
+  font-size: 12px;
+}
+.songInf{
+  width: 70%;
+  float: left;
+  height: 100%;
+  background: white;
+  position: relative;
+}
+.songInf span{
+  display: block;
+  text-align: center;
+  background: green;
+  color: white;
+  padding:5px;
+}
+.songInf .songPic{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-size: 200px 200px;
+  margin:50px auto;
+  box-shadow: 0 0 5px 10px #aaa;
+}
+.songInf .picDefault{
+  width: 200px;
+  height: 200px;
+  background-image: url('icons/disc.png');
+  background-size: 270px 270px;
+  background-position: 45% 45%;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  margin:50px auto;
+  box-shadow: 0 0 5px 10px #aaa;
+}
+@keyframes discRotation{
+  from{transform: rotate(0);}
+  to{transform: rotate(360deg);}
+}
+.songInf .control{
+  width:100%;
+  height: 60px;
+  position: absolute;
+  bottom:0;
+  border-top: 1px solid #aaa;
+}
+.songInf ul {
+  list-style: none;
+  width: 35%;
+  height: 100%;
+  margin: 0;
+  padding:0;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.songInf ul li{
+  width: 35px;
+  height: 35px;
+  background: white;
+  border-radius: 50%;
+  margin: 5px;
+}
+.songInf ul li:hover{
+  cursor: pointer;
+}
+.songInf ul li:first-child{
+  background: green url('icons/prev.png') center no-repeat;
+  background-size: 25px 25px;
+}
+.songInf ul .playing{
+  width: 40px;
+  height: 40px;
+  background: green url('icons/playing.png') no-repeat center;
+  background-size: 30px 30px;
+}
+.songInf ul .paused{
+  width: 40px;
+  height: 40px;
+  background: green url('icons/paused.png') no-repeat;
+  background-position: 80% 50%;
+  background-size: 30px 30px;
+}
+.songInf ul li:last-child{
+  background: green url('icons/next.png') center no-repeat; 
+  background-size: 25px 25px;
+}
+.songInf .progress{
+  width: 65%;
+  height: 100%;
+  background-color:white;
+  font-size:12px;
+  text-align: center;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.songInf .progress .currentTime{
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+}
+.songInf .progress .bar{
+  width:280px;
+  height: 4px;
+  background:#eee;
+  position: relative;
+}
+#playedBar{
+  height: 100%;
+  width: 0;
+  background: green;
+}
+#changeButton{
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background-color: green;
+  position: absolute;
+  top:-3px;
+  left:-5px;
+}
+#changeButton:hover{
+  cursor: pointer;
+}
+.songInf .progress .endTime{
+  width: 50px;
+  height: 20px;
+  line-height: 20px;
+}
