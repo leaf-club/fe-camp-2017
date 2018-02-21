@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="music_player.css">
+</head>
+<body>
+<div class="player">
+    <div class="player_bd">
+        <!-- 默认 -->
+        <div class="player_style_normal js_full_box" >
+            <div class="sb_scrollable sb_main sb_viewport">
+
+                <!-- 主要内容_S -->
+                <div class="sb_overview">
+
+                    <!-- 编辑模式 mod_songlist--edit -->
+                    <div class="songlist">
+                        <i class="player_songlist__line"></i>
+                        <ul class="songlist__header">
+                            <li class="songlist__header_name" style="width:60%;">歌曲</li>
+                            <li class="songlist__header_author">歌手</li>
+                            <li class="songlist__header_time">时长</li>
+                        </ul>
+                        <i class="player_songlist__line"></i>
+                        <ul class="songlist__list" id="song_box">
+                            <!--<li>
+                                <div class="songlist__item">
+                                    <div class="songlist__number">1</div>
+                                    <div class="songlist__songname">冷暴力</div>
+                                    <div class="songlist__artist">星弟/任然</div>
+                                    <div class="songlist__time">03:40</div>
+                                    <i class="player_songlist__line"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="songlist__item">
+                                    <div class="songlist__number">2</div>
+                                    <div class="songlist__songname">
+                                        <span class="songlist__songname_txt">我好想你</span>
+                                    </div>
+                                    <div class="songlist__artist"><span>苏打绿</span></div>
+                                    <div class="songlist__time">05:24</div>
+                                    <i class="player_songlist__line"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="songlist__item">
+                                    <div class="songlist__number">3</div>
+                                    <div class="songlist__songname">
+                                        <span class="songlist__songname_txt">丑八怪</span>
+                                    </div>
+                                    <div class="songlist__artist"><span>薛之谦</span></div>
+                                    <div class="songlist__time">04:08</div>
+                                    <i class="player_songlist__line"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="songlist__item">
+                                    <div class="songlist__number">4</div>
+                                    <div class="songlist__songname">
+                                        <span class="songlist__songname_txt">忧伤与快乐</span>
+                                    </div>
+                                    <div class="songlist__artist"><span>— —</span></div>
+                                    <div class="songlist__time">03:50</div>
+                                    <i class="player_songlist__line"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="songlist__item">
+                                    <div class="songlist__number">5</div>
+                                    <div class="songlist__songname">
+                                        <span class="songlist__songname_txt">最佳损友</span>
+                                    </div>
+                                    <div class="songlist__artist"><span>陈奕迅</span></div>
+                                    <div class="songlist__time">03:59</div>
+                                    <i class="player_songlist__line"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="songlist__item">
+                                    <div class="songlist__number">6</div>
+                                    <div class="songlist__songname">
+                                        <span class="songlist__songname_txt">一个人的时光</span>
+                                    </div>
+                                    <div class="songlist__artist"><span>石进</span></div>
+                                    <div class="songlist__time">03:40</div>
+                                    <i class="player_songlist__line"></i>
+                                </div>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+                <!-- 主要内容_E -->
+            </div>
+
+            <div class="song_info" id="song_info">
+                <div class="song_info__info">
+                    <a href="#" class="song_info__cover js_album">
+                        <img src="pic/player_cover.png" id="song_pic" width="186px" height="186px"/>
+                    </a>
+                    <div class="song_info__name" id="song_name">歌曲名：——</div>
+                    <div class="song_info__singer" id="singer_name">歌手名：——</div>
+                </div>
+                <div class="song_info__lyric">
+                    <div class="song_info__lyric_box js_lyric_box">
+                        <!-- 控制song_info__lyric_inner来做滚动 -->
+                        <div class="song_info__lyric_inner qrc_ctn" id="qrc_ctn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="player__ft" id="opbanner">
+        <a href="#" class="btn_big_prev" id="btnprev" title="alt+←"></a>
+        <a href="#" class="btn_big_play" id="btnplay" title="[空格]"></a>
+        <a href="#" class="btn_big_next" id="btn3" title="alt+→"></a>
+        <div class="player_music">
+            <div class="player_music__info" id="sim_song_info">
+                 暂无曲目
+            </div>
+            <div class="player_music__time" id="time_show"><span id="progress_time">---:--</span>/<span id="song_time">--:--</span></div>
+            <div class="player_progress" id="progress">
+                <div class="player_progress__inner" id="spanplayer_bgbar" style="width: 400px">
+                    <div class="player_progress__load" id="downloadbar"></div>
+                    <div class="player_progress__play" id="spanplaybar"><i class="player_progress__dot" id="spanprogress_op"></i></div>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn_big_style_order" id="play_mod"></a>
+        <div class="player_progress player_voice" id="voice">
+            <a href="#" class="btn_big_voice" id="spanmute"> </a>
+            <!--<a href="#" class="btn_big_voice btn_big_voice-no" id="spanmute"> </a>-->
+            <div class="player_progress__inner" id="spanvolume" title="调节音量 [增大alt+↑][减小alt+↓]">
+                <div class="player_progress__play" style="width:50%;" id="spanvolumebar"><i class="player_progress__dot" id="spanvolumeop"></i></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg_player_mask"></div>
+
+<audio src="music/horse.ogg" id="play1"></audio>
+<audio src="music/苏打绿%20-%20我好想你.mp3" id="play2"></audio>
+<audio src="music/薛之谦%20-%20丑八怪.mp3" id="play3"></audio>
+<audio src="music/钢琴曲%20-%20忧伤与快乐.mp3" id="play4"></audio>
+<audio src="music/陈奕迅%20-%20最佳损友.mp3" id="play5"></audio>
+<audio src="music/石进%20-%20一个人的时光.mp3" id="play6"></audio>
+<script src="music_player.js"></script>
+</body>
+</html>
