@@ -1,0 +1,20 @@
+h1{
+    color:blue;
+}
+p1{
+    width: 6em;
+    font-size: 20px;  
+}
+.w4-2 {
+    letter-spacing: 2em;
+}
+.w4-4 {
+    letter-spacing: 0.5em;
+}
+.w4-2, .w4-4 {
+    width: 4em;
+}
+label {
+    padding-top: inherit;
+    line-height: 60px;
+}
