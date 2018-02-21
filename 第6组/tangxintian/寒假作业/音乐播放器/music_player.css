@@ -251,15 +251,15 @@ body{
 .player_progress{
     padding-top: 6px;
     height: 8px;
-    cursor: pointer;
 }
 .player_progress__inner{
     position: relative;
     height: 2px;
     background: rgba(255,255,255,0.1);
+    cursor: pointer;
 }
 .player_progress__load{
-    height: 2px;
+    height: 3px;
     background: rgba(255,255,255,0.2);
     width: 101%;
 }
@@ -267,7 +267,7 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    height: 2px;
+    height: 3px;
     background: rgba(255,255,255,0.7);
 }
 .player_progress__dot{
@@ -295,6 +295,9 @@ body{
     background-position: 0 -144px;
     top: 4px;
     left: -15px;
+}
+#spanvolumeop{
+    right: -80px;
 }
 .btn_big_style_order{
     width: 23px;

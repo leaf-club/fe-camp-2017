@@ -59,8 +59,18 @@ window.onload = function init() {
                 break;
         }
     }
+    window.addEventListener("keypress",function (e) {
+        if (e.keyCode === 32 || e.keyCode === 13){
+            start();
+        }else if (e.altKey && e.keyCode == 37){
+            reduce();
+        }else if (e.altKey && e.keyCode == 39){
+            add();
+        }
+    })
 };
 player.addEventListener("click",start,false);
+
 function start() {
     reload();
     if (flag){
@@ -134,8 +144,6 @@ function add() {
 }
 function change(e) {
     var musicName = e.target;
-    console.log(musicName);
-
 }
 function clean() {
     clearInterval(timer1);
@@ -175,5 +183,32 @@ function reload() {
     song_info_info.children[1].innerHTML = "歌曲名："+songlist[index].songname;
     song_info_info.children[2].innerHTML = "歌手名："+songlist[index].author;
 }
-
-
+var volume= document.getElementById("spanvolume");
+volume.addEventListener("click",function (e) {
+    var x = e.offsetX;
+    var volume_bar= document.getElementById("spanvolumebar"),
+        volume_dot = document.getElementById("spanvolumeop");
+    volume_bar.style.width = x+"px";
+    volume_dot.style.right = -x+4 +"px";
+    play[index].volume = parseFloat(x/80)*1;
+});
+var voice =document.getElementById("spanmute");
+voice.addEventListener("click",function (e) {
+    if (!play[index].muted){
+        voice.style.backgroundPosition =" 0 -182px";
+        play[index].muted = true;
+    }else {
+        voice.style.backgroundPosition = " 0 -144px";
+        play[index].muted = false;
+    }
+})
+var song_progress = document.getElementById("spanplayer_bgbar");
+song_progress.addEventListener("click",function (e) {
+    var bar = e.target,
+        x =e.offsetX,
+        length = play[index].duration;
+    progress_play.style.width= x+"px";
+    progress_dot.style.right= -x+5+"px";
+    play[index].currentTime=parseInt(x*length/400)+"";
+    play[index].play();
+})
