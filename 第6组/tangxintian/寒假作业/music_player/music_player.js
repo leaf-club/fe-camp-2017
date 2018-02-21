@@ -163,7 +163,7 @@ var songlist =[
         {songname:"丑八怪",author:"薛之谦",time:"04:08"},
         {songname:"阴天快乐",author:"陈奕迅",time:"04:20"},
         {songname:"最佳损友",author:"陈奕迅",time:"03:59"},
-        {songname:"一个人的时光",author:"石进",time:"03:40"}
+        {songname:"一个人的时光",author:"石进",time:"02:52"}
     ],
     songlist__item = document.getElementsByClassName("songlist__item");
 var song_info = document.getElementById("sim_song_info"),
