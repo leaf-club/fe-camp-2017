@@ -17,7 +17,7 @@ var flag = 0,
     index = 0;
 window.onload = function init() {
     var song_box =document.getElementById("song_box");
-    for (i = 0; i < play.length; i++){
+    for (var i = 0; i < play.length; i++){
         var li = document.createElement("li"),
             item = document.createElement("div"),
             number = document.createElement("div"),
@@ -87,9 +87,9 @@ function jindutiao() {
         var cur = parseInt(play[index].currentTime),
             minute = parseInt(cur / 60);
         if (cur % 60 < 10){
-            progress_time.innerHTML = ""+minute+":0"+cur%60+"";
+            progress_time.innerHTML = "0"+minute+":0"+cur%60+"";
         }else {
-            progress_time.innerHTML = ""+minute+":"+cur%60+"";
+            progress_time.innerHTML = "0"+minute+":"+cur%60+"";
         }
         if (play[index].ended){
             switch (play_mod.getAttribute("class")){
