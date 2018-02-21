@@ -161,7 +161,7 @@ var songlist =[
         {songname:"冷暴力",author:"星弟/任然",time:"03:40"},
         {songname:"我好想你",author:"苏打绿",time:"05:24"},
         {songname:"丑八怪",author:"薛之谦",time:"04:08"},
-        {songname:"忧伤与快乐",author:"July",time:"03:50"},
+        {songname:"阴天快乐",author:"陈奕迅",time:"04:20"},
         {songname:"最佳损友",author:"陈奕迅",time:"03:59"},
         {songname:"一个人的时光",author:"石进",time:"03:40"}
     ],
