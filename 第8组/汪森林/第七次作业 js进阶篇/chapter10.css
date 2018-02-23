@@ -1,0 +1,40 @@
+body div{
+	border: 1px solid black;
+	border-top: 2px solid red;
+	padding-bottom: 40px;
+	width: 300px;
+}
+body div p{
+	margin: 0;
+	margin-top: 5px;
+}
+body ul{
+	height:20px;
+	width:300px;
+	border-bottom: 2px solid red;
+	margin-bottom: 0;
+	padding-left: 0;
+	list-style: none;
+}
+body ul li{
+	display: inline-block;
+	line-height: 17px;
+	border: 1px solid black;
+}
+body a{
+	display: block;
+	margin-right: 10px;
+	margin-left: 10px;
+	color:black;
+	text-decoration: none;
+}
+.hide{
+	display: none;
+}
+.show{
+	border-top:1px solid white;
+}
+.show1{
+	border-top: 3px solid red;
+	border-bottom:2px solid white;
+}
