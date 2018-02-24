@@ -5,6 +5,7 @@ var list=document.getElementById('list'),                 //歌单列表ul
     next=document.getElementById('next'),                 //下一首按钮
     songPic=document.getElementById('songPic'),           //专辑封面显示div
     songPicStyle=window.getComputedStyle(songPic,null).getPropertyValue("animation"),
+    progressDiv=document.getElementsByClassName('progress')[0];
     currentTime=document.getElementById('currentTime');   //播放即时时间显示div
     totalTime=document.getElementById('totalTime');       //总时间显示div
     bar=document.getElementById('bar');                   //进度条灰色框
@@ -33,7 +34,7 @@ function initialList(){
     //单击歌曲，播放
     item.addEventListener('click',chooseSong);//dbclick没用，所以用了单击！
     //设置定时器
-    var t=setInterval(progressTime,1000);
+    t=setInterval(progressTime,1000);
   }
 }
 //点击歌曲播放
@@ -85,28 +86,16 @@ function progress(){
     changeButton.style.left=cbLeft;
   }
 }
-//总时间
-audio.addEventListener('canplay',function(){    //play没有用！
-  total=parseInt(audio.duration);
-  tMin=parseInt(total/60);
-  tSec=total%60;
-  if(tSec<10){
-    totalTime.innerHTML='0'+tMin+':0'+tSec;
-  }else{
-    totalTime.innerHTML='0'+tMin+':'+tSec;
-  }
-})
-//上一首
-prev.addEventListener('click',prevSong)
-//播放-暂停
-play_pause.addEventListener('click',statusChange)
-//下一首
-next.addEventListener('click',nextSong);
 //上一首歌
 function prevSong(){
   if(n==0) n=songList.length;
   n=n-1;
   coverChange();
+  var items=list.children;
+  for(var i=0;i<items.length;i++){
+    items[i].style.backgroundColor='white';
+  }
+  items[n].style.backgroundColor='#ccc';
 }
 //播放-暂停
 function statusChange(){
@@ -125,23 +114,27 @@ function nextSong(){
   if(n==songList.length-1) n=-1;
   n=n+1;
   coverChange();
+  var items=list.children;
+  for(var i=0;i<items.length;i++){
+    items[i].style.backgroundColor='white';
+  }
+  items[n].style.backgroundColor='#ccc';
 }
-//拖动进度条,用户体验仍有不足，鼠标脱离了拖拽按钮后会有问题。
-changeButton.addEventListener('mousedown',function(e0){
-  var e0=window.event || e0;
+//mouseDown
+function mouseDown(){
+  var e0=window.event;
   x0=e0.clientX;
   flag=true;
   clearInterval(t);//清除定时器，让进度条完全由鼠标控制。
-})
-changeButton.addEventListener('mousemove',function(e1){
+}
+//拖动
+function mouseMove(){
   if(flag){//保证mousemove在mousedown后发生。
-    var e1=window.event || e1;
+    var e1=window.event;
     x1=e1.clientX;
     deltaX=x1-x0;//得到水平方向坐标差
-    console.log(deltaX+'deltaX');
     pbarLength=pbLength+deltaX;//这里不能pbLength+=deltaX,再多定义一个变量，避免变量被刷新。
     var pbWidth=pbarLength+'px';
-    console.log(pbWidth+'pbWidth');
     playedBar.style.width=pbWidth;
     //拖拽按钮位置变更
     cbPos=pbarLength-5;
@@ -149,13 +142,42 @@ changeButton.addEventListener('mousemove',function(e1){
     changeButton.style.left=cbLeft;
   }
   return false;
+}
+//mouseUp
+function mouseUp(){
+  if(flag){
+    flag=false;
+    audio.currentTime=pbarLength/barLength*audio.duration;
+    pbLength=pbarLength;
+    x0=0;x1=0;deltaX=0;
+    t=setInterval(progressTime,1000);
+  }
+}
+//总时间
+audio.addEventListener('canplay',function(){    //play没有用！
+  total=parseInt(audio.duration);
+  tMin=parseInt(total/60);
+  tSec=total%60;
+  if(tSec<10){
+    totalTime.innerHTML='0'+tMin+':0'+tSec;
+  }else{
+    totalTime.innerHTML='0'+tMin+':'+tSec;
+  }
 })
-changeButton.addEventListener('mouseup',function(){
-  flag=false;
-  audio.currentTime=pbarLength/barLength*audio.duration;
-  pbLength=pbarLength;
-  x0=0;x1=0;deltaX=0;
-  t=setInterval(progressTime,1000);
-})
+//上一首
+prev.addEventListener('click',prevSong)
+//播放-暂停
+play_pause.addEventListener('click',statusChange)
+//下一首
+next.addEventListener('click',nextSong);
+//拖动进度条,用户体验仍有不足，鼠标脱离了拖拽按钮后会有问题。
+//按住拖拽按钮
+changeButton.addEventListener('mousedown',mouseDown);
+//拖动拖拽按钮
+progressDiv.addEventListener('mousemove',mouseMove);
+changeButton.addEventListener('mousemove',mouseMove);
+//松开拖拽按钮
+progressDiv.addEventListener('mouseup',mouseUp);
+changeButton.addEventListener('mouseup',mouseUp);
 //调用函数
 initialList();
