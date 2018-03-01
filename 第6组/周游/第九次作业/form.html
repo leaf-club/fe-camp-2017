@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>login</title>
+    <link rel="stylesheet" href="form.css">
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+</head>
+<body>
+    <div id="all">
+    <h1>登 陆 界 面</h1>
+    <form action="#">
+        <div class="inp_box">
+            用户名：
+            <input id="username" name="username" type="text" placeholder="请输入用户名">
+            <small>必填</small>
+        </div>
+        <div class="inp_box">
+            邮&nbsp;&nbsp;&nbsp;箱：
+            <input id="email" type="email" name="email" placeholder="请输入邮箱">
+            <small>请输入正确的邮箱</small>
+        </div>
+        <div class="inp_box">
+            密&nbsp;&nbsp;&nbsp;码：
+            <input id="password" name="password" type="password" placeholder="请输入密码">
+            <small>密码不能少于六位</small>
+        </div>   
+        <button type="submit">登陆</button>
+    </form>
+    </div>
+    <script>
+        $('#username').blur(function(){
+            if($('#username').val()==''){
+                $('#username+small').css('display','inline-block');
+            }
+            else $('#username+small').css('display','none');
+        })
+        $('#email').blur(function(){
+            if(!$("#email").val().match(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/)){
+                $('#email+small').css('display','inline-block');
+            }
+            else $('#email+small').css('display','none');
+        })
+        $('#password').blur(function(){
+            if($('#password').val().length<6){
+                $('#password+small').css('display','inline-block');
+            }
+            else $('#password+small').css('display','none');
+        })
+    </script>
+</body>
+</html>

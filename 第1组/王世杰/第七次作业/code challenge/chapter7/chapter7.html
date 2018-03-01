@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        var time = new Date();
+        var weekday = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+        document.write(
+            time.getFullYear() + '年' + 
+            time.getMonth() + '月' + 
+            time.getDate() + '日' + 
+            weekday[time.getDay()] );
+        var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+        var scoreArr = scoreStr.split(';');
+        var score = new Array();
+        var sum = 0;
+        for(var i = 0; i < scoreArr.length; i++) {
+            sum += parseInt(scoreArr[i].substr(scoreArr[i].indexOf(':')+1));
+        }
+        document.write('班级的平均分：' + Math.round(sum/scoreArr.length));
+      </script>
+</head>
+<body>   
+</body>
+</html>

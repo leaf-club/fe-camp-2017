@@ -1,0 +1,488 @@
+html,body{
+    padding:0;
+    margin:0;
+    font-size:100px; 
+}
+.first{
+    width:30%;
+    height:200px;
+    background-color: white;
+    border: 1px solid black;
+  position: relative;
+}
+
+.change{
+    position: absolute;
+    width:10px;
+    height:80px;
+    background-color: rgb(83, 83, 214);
+    border-radius: 20px;
+    top:10%;
+    animation:down 1s ease infinite ;
+
+}
+.f{
+    
+left:20%;
+animation:down 1s ease infinite 0;
+}
+.s{
+  
+left:30%;
+animation:down 1s ease infinite 0.2s;
+
+}.t{
+left:40%;
+
+animation:down 1s ease infinite 0.4s;
+}
+.fi{
+    left:50%;
+  
+    animation:down 1s ease infinite 0.6s;
+}
+.fif{
+   
+    left:60%;
+    animation:down 1s ease infinite 0.8s;
+}
+.second{
+    width:30%;
+    height:200px;
+    background-color: white;
+    border: 1px solid black;
+  position: relative;
+}
+.c{
+    position: absolute;
+    height:20px;
+    width:20px;
+    background-color: rgb(125, 125, 219);
+    border-radius: 50%;
+   top:40%;
+   
+}
+.cf{
+    left:20%;
+    animation:d 1s ease infinite 0s;
+}
+.cs{
+    left:30%;
+    animation:d 1s ease infinite 0.2s;
+}
+.ct{
+    left:40%;
+    animation:d 1s ease infinite 0.4s;
+}
+.cfi{
+    left:50%;
+    animation:d 1s ease infinite 0.6s;
+}
+.cfif{
+    left:60%;
+    animation:d 1s ease infinite 0.8s;
+}
+.third{
+    width:30%;
+    height:200px;
+    background-color: white;
+    border: 1px solid black;
+  position: relative;
+}
+.q{
+    position: absolute;
+    height:20px;
+    width:20px;
+    background-color: rgb(125, 125, 219);
+    border-radius: 50%;
+   top:40%;
+}
+.y{
+    left:20%;
+    animation:o 1s ease infinite 0s ;
+}
+.w{
+    left:30%;
+    animation:o 1s ease infinite 0.15s;
+}
+.e{
+    left:40%;
+    animation:o 1s ease infinite 0.3s;
+}
+.r{
+    left:50%;
+    animation:o  1s ease infinite 0.45s;
+}
+.u{
+    left:60%;
+    animation:o 1s ease infinite 0.6s;
+}
+.forth{
+    width:30%;
+    height:200px;
+    background-color: white;
+    border: 1px solid black;
+  position: relative;
+}
+.ch{
+    position: absolute;
+    height:20px;
+    width:20px;
+    background-color: rgb(125, 125, 219);
+    
+   top:40%;
+}
+.fir{
+    left:20%;
+    animation:w 1s ease infinite 0s ;
+}
+.sec{
+    left:30%;
+    animation:w 1s ease infinite 0.2s ;
+}
+.thi{
+    left:40%;
+    animation:w 1s ease infinite 0.4s ;
+}
+.for{
+    left:50%;
+    animation:w 1s ease infinite 0.6s ;
+}
+.fift{
+    left:60%;
+    animation:w 1s ease infinite 0.8s ;
+}
+.fifth{
+    width:30%;
+    height:200px;
+    background-color: white;
+    border: 1px solid black;
+  position: relative;
+}
+.cha{
+    position: absolute;
+    height:20px;
+    width:20px;
+    background-color: rgb(125, 125, 219);
+    border-radius: 50%;
+}
+.firs{
+top:20%;
+left:50%;
+transform-origin: 17px 61px;
+animation:n 1s ease infinite 0s ;
+}
+.seco{
+    top:20%;
+    left:50%;
+  transform: rotate(45deg);
+  transform-origin: 17px 61px;
+    animation:n 1s ease infinite 0.1s ;
+}
+.thir{
+    top:20%;
+    left:50%;
+    transform: rotate(90deg);
+    transform-origin: 17px 61px;
+    animation:n 1s ease infinite 0.2s ;
+}
+.fort{
+    top:20%;
+    left:50%;
+    transform: rotate(135deg);
+    transform-origin: 17px 61px;
+    animation:n 1s ease infinite 0.3s ;
+}
+.fifthf{
+    top:20%;
+    left:50%;
+    transform: rotate(180deg);
+    transform-origin: 17px 61px;
+    animation:n 1s ease infinite 0.4s ;
+}
+.si{
+    top:20%;
+    left:50%;
+    transform: rotate(225deg);
+    transform-origin: 17px 61px;
+    animation:n 1s ease infinite 0.5s ;
+}
+.se{
+    top:20%;
+    left:50%;
+    transform: rotate(270deg);
+    transform-origin: 17px 61px;
+    animation:n 1s ease infinite 0.6s ;
+}
+.ei{
+    top:20%;
+    left:50%;
+    transform: rotate(315deg);
+    transform-origin: 17px 61px;
+    animation:n 1s ease infinite 0.7s ;
+}
+.sixth{
+    width:30%;
+    height:200px;
+    background-color: white;
+    border: 1px solid black;
+  position: relative;
+}
+.chan{
+        position: absolute;
+        height:20px;
+        width:20px;
+        background-color: rgb(125, 125, 219);
+        border-radius: 50%;
+    
+}
+.firstf{
+    top:20%;
+    left:50%;
+   
+    animation:do 1s ease infinite 0s ;
+}
+.secon{
+    top:20%;
+    left:50%;
+    transform: rotate(45deg);
+    transform-origin: 17px 61px;
+    
+    animation:do 1s ease infinite 0.1s ;
+}
+.thirdt{
+    top:20%;
+    left:50%;
+    transform: rotate(90deg);
+    transform-origin: 17px 61px;
+  
+    animation:do 1s ease infinite 0.3s ;
+}
+.forthf{
+    top:20%;
+    left:50%;
+    transform: rotate(135deg);
+    transform-origin: 17px 61px;
+  
+    animation:do 1s ease infinite 0.4s ;
+}
+.fifthfi{
+    top:20%;
+    left:50%;
+    transform: rotate(180deg);
+    transform-origin: 17px 61px;
+    
+    animation:do 1s ease infinite 0.5s ;
+}
+.six{
+    top:20%;
+    left:50%;
+    transform: rotate(225deg);
+    transform-origin: 17px 61px;
+   
+    animation:do 1s ease infinite 0.6s ;
+}
+.sev{
+    top:20%;
+    left:50%;
+    transform: rotate(270deg);
+    transform-origin: 17px 61px;
+    
+    animation:do 1s ease infinite 0.7s ;
+}
+.eig{
+    top:20%;
+    left:50%;
+    transform: rotate(315deg);
+    transform-origin: 17px 61px;
+    
+    animation:do 1s ease infinite 0.8s ;
+}
+.seventh{
+    width:30%;
+    height:200px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+}
+.i{
+height:10px;
+width:200px;
+border-radius: 10px 10px;
+background-color: rgb(133, 133, 228);
+position: absolute;
+top:20%;
+left:30%;
+overflow: hidden;
+
+}
+.in{
+    
+        height:10px;
+       width:200px;
+        border-radius: 10px 10px;
+        background-color:rgb(143, 214, 143);
+        position: absolute;
+        animation:ow 2s ease infinite;
+}
+.eighth{
+    width:30%;
+    height:300px;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+}
+.firstfi{
+    height:50px;
+    width:10px;
+    border-radius: 10px 10px;
+    background-color: rgb(139, 233, 139);
+    position: absolute;
+    top:20%;
+    left:50%;
+    animation:  on 1s ease infinite 0.1s;
+}
+.seconds{
+    height:50px;
+    width:10px;
+    border-radius: 10px 10px;
+    background-color: rgb(139, 233, 139);
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform:rotate(45deg);
+    transform-origin:  7px 82px;
+    animation:  on 1s ease infinite 0.2s;
+}
+.thirdth{
+    height:50px;
+    width:10px;
+    border-radius: 10px 10px;
+    background-color: rgb(139, 233, 139);
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform:rotate(90deg);
+    transform-origin:  7px 82px;
+    animation:  on 1s ease infinite 0.3s;
+}
+.forthfo{
+    height:50px;
+    width:10px;
+    border-radius: 10px 10px;
+    background-color: rgb(139, 233, 139);
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform:rotate(135deg);
+    transform-origin:  7px 82px;
+    animation:  on 1s ease infinite 0.4s;
+}
+.fifthfif{
+    height:50px;
+    width:10px;
+    border-radius: 10px 10px;
+    background-color: rgb(139, 233, 139);
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform:rotate(180deg);
+    transform-origin:  7px 82px;
+    animation:  on 1s ease infinite 0.5s;
+}
+.sixt{
+    height:50px;
+    width:10px;
+    border-radius: 10px 10px;
+    background-color: rgb(139, 233, 139);
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform:rotate(225deg);
+    transform-origin:  7px 82px;
+    animation:  on 1s ease infinite 0.6s;
+}
+.seve{
+    height:50px;
+    width:10px;
+    border-radius: 10px 10px;
+    background-color: rgb(139, 233, 139);
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform:rotate(270deg);
+    transform-origin:  7px 82px;
+    animation:  on 1s ease infinite 0.7s;
+}
+.eigh{
+    height:50px;
+    width:10px;
+    border-radius: 10px 10px;
+    background-color: rgb(139, 233, 139);
+    position: absolute;
+    top:20%;
+    left:50%;
+    transform:rotate(315deg);
+    transform-origin:  7px 82px;
+    animation:  on 1s ease infinite 0.8s;
+}
+.ninth{
+    width:30%;
+    height:300px;
+    background-color: white;
+    border: 1px solid black;
+ 
+}
+.right{
+    width:50%;
+    height:300px;
+    margin-left:50%;
+    
+   
+}
+
+.wo{
+   
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background-color: rgb(109, 211, 109);
+    top:20%;
+  left:23%;
+ 
+  animation: don 2s ease infinite 0.6s;
+}
+.shi{
+    
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background-color: rgb(109, 211, 109);
+    margin-top:-10%;
+  left:23%;
+  transform: rotate(20deg);
+  transform-origin: 0 80px;
+  animation: don 2s ease infinite 0.4s;
+}
+.zhuan{
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background-color: rgb(109, 211, 109);
+    margin-top:-10%;
+  left:23%;
+  transform: rotate(40deg);
+  transform-origin: 0 80px;
+  animation: don 2s ease infinite 0.2s;
+}
+.qiu{
+    height:20px;
+    width:20px;
+    border-radius: 50%;
+    background-color: rgb(109, 211, 109);
+    margin-top:-10%;
+  left:23%;
+  transform: rotate(60deg);
+  transform-origin: 0 80px;
+  animation: don 2s ease infinite 0s;
+}

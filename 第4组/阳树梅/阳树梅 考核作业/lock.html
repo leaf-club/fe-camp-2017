@@ -1,0 +1,228 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>mylock</title>
+        <link rel="stylesheet" href="lock.css">
+        <style>
+            @media screen and (min-width:1025px) {
+                #box{
+                    width: 400px;
+                    background: url(background.jpg);
+                }
+            } 
+            @media screen and (max-width:1025px) and (min-width:750px) {
+                #box{
+                    width: 100%;
+                    background: url(background3.jpg);
+                }
+                .nav-info span:nth-child(2){
+                    font-size: 4.8rem;
+                    top: 13%;
+                    left: 40%;
+                    color: #dfdfdf;
+                }
+                .nav-info span:nth-child(3){
+                    left: 90%;
+                }
+                .nav-info span:nth-child(4){
+                    left: 95%;
+                }
+                .prompt{
+                    zoom: 1.25;
+                    padding-top: 30%;
+                    padding-bottom: 10%;
+                }
+                .lock-ul{
+                    width: 450px;   
+                    padding-left: 5%;
+                }
+                .lock-ul li{
+                    zoom: 1.25;
+                    margin: 0 30px 30px 0;
+                }
+            } 
+            @media screen and (max-width:750px) and (min-width:480px){
+                #box{
+                    width: 100%;
+                    background: url(background3.jpg);
+                }
+                .prompt{
+                    zoom: 1.1;
+                }
+                .nav-info span:nth-child(2){
+                    left: 45%;
+                }
+                .nav-info span:nth-child(3){
+                    left: 86%;
+                }
+                .nav-info span:nth-child(4){
+                    left: 93%;
+                }
+                .lock-ul{
+                    width: 440px;
+                    padding-left: 0;
+                }
+                .lock-ul li{
+                    zoom: 1.1;
+                    margin: 0 30px 30px 0;
+                }
+            }
+            @media screen and (max-width:480px) and (min-width:345px) {
+                #box{
+                    width: 100%;
+                    background: url(background.jpg);
+                }
+                .nav-info span:nth-child(2){
+                    left: 45%;
+                }
+                .nav-info span:nth-child(3){
+                    left: 81%;
+                }
+                .nav-info span:nth-child(4){
+                    left: 91%;
+                }
+                .lock-ul{
+                    width: 340px;
+                    padding-left: 6%;
+                }
+            } 
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <!-- 导航栏 -->
+            <div class="nav">
+                <ul class="nav-ul">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li class="sp-dot"></li>
+                    <li class="sp-dot"></li>
+                    <li class="nav-info">
+                        <span>BELL</span>
+                        <span>4:20 PM</span>
+                        <span>100%</span>
+                        <span><i></i></span> 
+                    </li>
+                                  
+                </ul>
+                
+            </div>
+            <!-- 解锁区 -->
+            <div class="content">
+                <!-- 提示区 -->
+                <div class="prompt">
+                    <div id="prompt-info">Touch ID or Enter passcode</div>
+                    <div>
+                        <ul class="prompt-ul">
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 输入区 -->
+                <div>
+                    <ul class="lock-ul">
+                        <li><span>1</span> <span>&nbsp</span></li>
+                        <li><span>2</span> <span>ABC</span></li>
+                        <li><span>3</span> <span>DEF</span></li>
+                        <li><span>4</span> <span>GHI</span></li>
+                        <li><span>5</span> <span>JKL</span></li>
+                        <li><span>6</span> <span>MNO</span></li>
+                        <li><span>7</span> <span>PQRS</span></li>
+                        <li><span>8</span> <span>TUV</span></li>
+                        <li><span>9</span> <span>WXYZ</span></li>
+                        <li><span>0</span> <span>&nbsp</span></li>
+                    </ul>
+                </div>
+                <!-- footer -->
+               <div class="footer">
+                    <span>Emergency</span>
+                    <span id="can_del">Cancel</span>
+                </div>
+            </div>
+        </div>
+        <script>
+            var notice = document.querySelectorAll(".prompt-ul li"),
+                lock = document.querySelectorAll(".lock-ul li"),
+                Can_Del = document.getElementById("can_del"),
+                prompt_info = document.getElementById("prompt-info");
+            var mybox = document.getElementById("box");
+            var index = 0;
+            var password = new Array;
+            //密码
+            localStorage.setItem("mypassword","123456");
+    
+            // 禁止双击选择事件
+            mybox.onselectstart = function(){
+                return false; 
+            }
+    
+        //功能实现
+        for(var i=0;i<lock.length;i++){
+            lock[i].gg = i;
+            // 点击按键变色 PC端+移动端
+            if (window.innerWidth > 1024) {
+                lock[i].onmousedown = function () {
+                    lock[this.gg].style.backgroundColor = "rgba(0,0,0,0.3)"
+                }
+                lock[i].onmouseup = function () {
+                    lock[this.gg].style.backgroundColor = "rgba(0,0,0,0.1)";
+                }
+            } else {
+                lock[i].ontouchstart = function () {
+                    lock[this.gg].style.backgroundColor = "rgba(0,0,0,0.3)";
+                }
+                lock[i].ontouchend = function () {
+                    lock[this.gg].style.backgroundColor = "rgba(0,0,0,0.1)";
+                }
+            }
+            //点击按键解锁
+            lock[i].addEventListener("click",function(){
+                Can_Del.innerHTML = "Delete";
+                if(index<6){
+                    notice[index].style.backgroundColor = "#eeeeee";
+                    password[index] = this.gg+1;
+                    change(password);
+                    index++;
+                }
+                if(index==6){
+                    if(localStorage.input_password==localStorage.mypassword){
+                    alert("解锁成功");
+                    } else{
+                        prompt_info.innerHTML = "Your password is wrong!";
+                        prompt_info.style.color = "red";
+                    }
+                }
+            });
+        }
+        //按下Delete删除输入
+        Can_Del.addEventListener("click",function(){
+            if(index>0){
+                index--;
+                password[index] = null;
+                change(password);
+                notice[index].style.backgroundColor = "rgba(0,0,0,0.1)";
+                prompt_info.innerHTML = "Touch ID or Enter passcode";
+                prompt_info.style.color = "#ffffff";
+            }          
+            if(index==0){
+                Can_Del.innerHTML = "Cancel";
+            }
+        })
+            /**定义change()函数
+              * 把数组转换为字符串
+              * 把字符串存到localStorge里 */
+            function change(obj){
+                var temp = obj.join("");
+                localStorage.setItem("input_password",temp);
+            }
+        </script>
+    </body>
+    </html>

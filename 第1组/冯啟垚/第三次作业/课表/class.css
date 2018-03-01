@@ -1,0 +1,49 @@
+html
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+table{  
+    height: 80%;
+    width:53%;
+    margin: 10px auto;
+    /* background: url(logo.png); */
+    background: rgba(152, 152, 163, 0.075)
+}
+
+table caption{
+    /* set the title */
+    height: 10%;
+    width: 100%;
+    line-height: 80px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 30px;
+    /* ######################### */
+
+    /* place the logo */
+    background: url(logo.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    /* ################## */
+    
+}
+
+
+table thead th{
+    font-family: sans-serif;    
+    font-size: 20px;
+    height: 50px;
+}
+table thead th.time{
+    width: 30%;
+}
+
+
+table tbody{
+    text-align: center;
+
+}

@@ -1,0 +1,93 @@
+html
+body{
+    margin: 0;
+    padding: 0;
+}
+#clock{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 200px;
+    margin: 20px auto;
+    position: relative;
+}
+.ppp{
+    left: 50%;
+    top:50%;
+    position: absolute;
+    transform: rotate(0deg);
+    transform-origin: left 50%;
+}
+#hours{
+    width: 50px;
+    height: 6px;
+    background: blue;
+    border-radius: 3px;
+}
+#min{
+    width: 76px;
+    height: 4px;
+    background: black;
+    border-radius: 2px;
+}
+#second{
+    width: 90px;
+    height: 2px;
+    background: red;
+    border-radius: 1px;
+}
+.num{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    text-align: center;
+    transform-origin: 50% 50%;
+}
+.num div{
+    width: 20px;
+    height: 20px;
+    margin: 0 auto;
+    transform: rotate(180deg);
+}
+.num:nth-child(2){
+    transform: rotate(30deg);
+}
+.num:nth-child(3){
+    transform: rotate(60deg);
+}
+.num:nth-child(4){
+    transform: rotate(90deg);
+}
+.num:nth-child(5){
+    transform: rotate(120deg);
+}
+.num:nth-child(6){
+    transform: rotate(150deg);
+}
+.num:nth-child(7){
+    transform: rotate(180deg);
+}
+.num:nth-child(8){
+    transform: rotate(210deg);
+}
+.num:nth-child(9){
+    transform: rotate(240deg);
+}
+.num:nth-child(10){
+    transform: rotate(270deg);
+}
+.num:nth-child(11){
+    transform: rotate(300deg);
+}
+.num:nth-child(12){
+    transform: rotate(330deg);
+}
+#d{
+    width: 8px;
+    height: 8px;
+    left: 48%;
+    top: 49%;
+    position: absolute;
+    border-radius: 50%;
+    background: black;
+}

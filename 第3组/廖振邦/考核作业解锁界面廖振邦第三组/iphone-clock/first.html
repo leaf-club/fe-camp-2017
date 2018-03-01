@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*响应式*/
+
+        @media screen and (max-width:1300px) and (min-width:400px) {
+            .screen {
+                width: 35%;
+            }
+        }
+
+        @media screen and (min-width:1300px) {
+            .screen {
+                width: 25%;
+            }
+        }
+
+        @media screen and (max-width:400px) {
+            .screen {
+                width: 50%;
+            }
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html body {
+            padding: 0;
+            margin: 0;
+            height: 600px;
+            padding-top: 2%;
+        }
+
+
+        body {
+            background-color: rgb(198, 198, 198);
+        }
+
+        .screen {
+            border-radius: 40px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            height: 100%;
+
+            margin: auto;
+            padding-top: 5%;
+            position: relative;
+            background: url("2.jpg")no-repeat;
+            background-size: 100% 100%;
+
+            box-shadow: 5px 5px 5px white;
+
+        }
+
+        .word {
+            margin-top: 5%;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /*颜色渐变*/
+        /*资料来源网上*/
+        p {
+
+            left: 25%;
+            position: absolute;
+            bottom: 5%;
+            width: 50%;
+            margin: 0 auto;
+            line-height: 20px;
+            font-size: 20px;
+            text-align: center;
+
+            -webkit-background-clip: text;
+            /*按文字裁剪*/
+            -webkit-text-fill-color: transparent;
+            /*文字的颜色使用背景色*/
+            background-color: #19385c;
+            /*设置一个背景色*/
+            background-image: -webkit-linear-gradient(-45deg, rgba(0, 0, 0, 0.6) 30%, #aff0ff 50%, rgba(0, 0, 0, 0.6) 70%);
+            /*设置渐变的背景，按对角线渐变*/
+            background-blend-mode: hard-light;
+            /*设置背景为混合模式下的强光模式*/
+            background-size: 200%;
+
+            -webkit-animation: shine 4s infinite;
+            /*给背景添加动画改变位置*/
+        }
+
+        @keyframes shine {
+            from {
+                background-position: 100%;
+            }
+            to {
+                background-position: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="screen">22:10
+        <div class="word">开心每一天</div>
+        <p>&gt;&nbsp;Click To Unlock</p>
+    </div>
+
+    <script>
+        var pp = document.querySelector("p");
+        
+        pp.onclick = function () {
+            window.location.href = "main.html";
+        }
+    </script>
+</body>
+
+</html>

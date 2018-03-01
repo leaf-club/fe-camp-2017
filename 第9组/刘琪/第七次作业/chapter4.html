@@ -1,0 +1,38 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>流程控制语句</title>
+<script type="text/javascript">
+ //第一步把之前的数据写成一个数组的形式,定义变量为 infos
+ var infos=new Array();
+ infos[0]=['小A','女',21,'大一'];
+ infos[1]=['小B','男',23,'大三'];
+ infos[2]=['小C','男',24,'大四'];
+ infos[3]=['小D','女',21,'大一'];
+ infos[4]=['小E','女',22,'大四'];
+ infos[5]=['小F','男',21,'大一'];
+ infos[6]=['小G','女',22,'大二'];
+ infos[7]=['小H','女',20,'大三'];
+ infos[8]=['小I','女',20,'大一'];
+ infos[9]=['小J','男',20,'大三'];
+ //第一次筛选，找出都是大一的信息
+ var first=new Array();
+ var n=0;
+ for(var i=0;i<infos.length;i++){
+    if(infos[i][3]=='大一'){
+        first[n]=infos[i];
+        n++;
+    }
+ }
+ //第二次筛选，找出都是女生的信息
+ for(var i=0;i<first.length;i++){
+     if(first[i][1]=='女'){
+         document.write(first[i]+"<br>");
+     }
+ }
+</script>
+</head>
+<body>
+</body>
+</html>

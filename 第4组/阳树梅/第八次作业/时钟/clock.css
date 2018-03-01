@@ -1,0 +1,143 @@
+html,body{
+    background-color: #ececec;
+}
+.box{
+    width: 400px;
+    height: 400px;
+    background-color: #caefeb;
+    border: 1px #0000005c solid;
+    border-radius: 30px;
+}
+.clock{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    border: 1px #0000008a solid;;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    box-shadow: 0 0 0 15px #c1c7cc;
+}
+.num{
+    background-color: #ffffff54;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+span{
+    display: inline-block;
+}
+/* 时钟的数字部分 */
+.num div{
+    position: absolute;
+    left: 148px;
+    top: 18px;
+    transform-origin: 0 135px;
+}
+.num div:nth-child(1){
+    transform: rotate(30deg);
+}
+.num div:nth-child(2){
+    transform: rotate(60deg);
+}
+.num div:nth-child(3){
+    transform: rotate(90deg);
+}
+.num div:nth-child(4){
+    transform: rotate(120deg);
+}
+.num div:nth-child(5){
+    transform: rotate(150deg);
+}
+.num div:nth-child(6){
+    transform: rotate(180deg);
+}
+.num div:nth-child(7){
+    transform: rotate(210deg);
+}
+.num div:nth-child(8){
+    transform: rotate(240deg);
+}
+.num div:nth-child(9){
+    transform: rotate(270deg);
+}
+.num div:nth-child(10){
+    transform: rotate(300deg);
+}
+.num div:nth-child(11){
+    transform: rotate(330deg);
+}
+/* 数字旋转 */
+.txt1{
+    transform: rotate(-30deg);
+}
+.txt2{
+    transform: rotate(-60deg);
+}
+.txt3{
+    transform: rotate(-90deg);
+}
+.txt4{
+    transform: rotate(-120deg);
+}
+.txt5{
+    transform: rotate(-150deg);
+}
+.txt6{
+    transform: rotate(-180deg);
+}
+.txt7{
+    transform: rotate(-210deg);
+}
+.txt8{
+    transform: rotate(-240deg);
+}
+.txt9{
+    transform: rotate(-270deg);
+}
+.txt10{
+    transform: rotate(-300deg);
+}
+.txt11{
+    transform: rotate(-330deg);
+}
+/*时钟的指针部分 */
+#hour{
+    background-color: #000000;
+    height: 70px;
+    width: 8px;
+    position: absolute;
+    left: 149px;
+    top: 89px;
+    border-radius: 100% 100% 4px 4px;
+    transform-origin: 4px 67px;
+}
+#minute{
+    background-color: #000000;
+    height: 90px;
+    width: 6px;
+    position: absolute;
+    left: 150px;
+    top: 69px;
+    border-radius: 100% 100% 3px 3px;
+    transform-origin: 3px 88px;
+}
+#second{
+    background-color: red;
+    height: 120px;
+    width: 4px;
+    position: absolute;
+    left: 151px;
+    top: 40px;
+    border-radius: 100% 100% 2px 2px;
+    transform-origin: 2px 115px; 
+}
+.circle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #dedbdb;
+    position: absolute;
+    left: 146px;
+    top: 150px;
+}

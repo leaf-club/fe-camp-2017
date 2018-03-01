@@ -1,0 +1,563 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    min-width: 1000px;
+    overflow-y: scroll;
+    color: #333;
+    line-height: 1.5;
+    font-family:poppin,Tahoma,Arial,\5FAE\8F6F\96C5\9ED1,sans-serif;
+}
+@media(max-width: 1240px){
+    margin: 0 50px;
+    min-width: 900px;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+img{
+    border: 0 none;
+    max-width: 100%;
+}
+input{
+    margin: 0;
+    padding: 0;
+}
+button{cursor: pointer;}
+a:link {text-decoration:none;color: black;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:none;color: green;}
+a:active {text-decoration:none;}
+/*头部*/
+.li_first>a{
+    color: green;
+}
+.header{
+    background-color: #fff;
+    position: relative;
+    z-index: 4;
+}
+.inner{
+    padding-top: 90px;
+    margin: 0 50px;
+}
+.qqmusic_picture{
+    position: absolute;
+    left: 50px;;
+    top: 4px;
+}
+.qqmusic_logo{
+    width: 170px;
+    height: 46px;
+}
+.header_top_nav1{
+    position: absolute;
+    left:248px;
+    top: 0;
+}
+.header_top_nav1 li{
+    float:left;
+    margin-right: -5px;
+}
+.header_top_nav1 li a{
+   display: block;
+   padding: 0 20px;
+   line-height: 90px;
+   height: 90px;
+   text-align: center;
+   font-size: 18px; 
+}
+.header_top_nav1 .li_first a{
+    background-color: #31c27c;
+    color: #fff;
+}
+.header_top_nav2{
+    height: 51px;
+    line-height: 51px;
+    border-top: 1px solid #f2f2f2;
+    padding-left: 230px;
+    margin-right: -50px;
+}
+.header_top_nav2 li{
+    float: left;
+    font-size: 15px;
+    color: #c1c1c1;
+    margin-right: 47px;
+}
+.header_top_search{
+    position: absolute;
+    top:0;
+    right: 400px;;
+}
+@media(max-width:1220px){
+    .header_top_search{right: 189px;}
+}
+.header_top_input{
+    border: 1px solid #c9c9c9;
+    padding: 0 33px 0 11px;
+    line-height: 36px;
+    height: 36px;
+    margin-top: 26px;
+    position: relative;
+    border-radius: 3px;
+    background-color: #fff;
+    -webkit-transition: width .6s ease-out;
+    transition: width .6s ease-out;
+}
+@media(max-width:1135px){
+    .header_top_search:hover.header_top_input{padding-left: 11px;}
+    .header_top_search.header_top_input{padding-left: 3px;overflow: hidden;}
+    .header_top_search:hover.search_input{
+        width: 174px;
+        visibility: visible;
+    }
+    .header_top_search:hover.icon_search{
+        right: 15px;
+        -webkit-transition: right .15s ease-out;
+        transition: right .15s ease-out;
+    }
+    .header_top_search.icon_search{
+        right: 10px;
+        -webkit-transition: right .15s ease-out;
+        transition: right .15s ease-out;
+    }
+}
+.search_input{
+    width: 174px;
+    height: 36px;
+    border: 0 none;
+    font-size: 14px;
+    background: 0 0;
+}
+.search_button{
+    position: absolute;
+    top: 0;
+    right:0;
+    border: 0 none;
+    width: 35px;
+    height: 35px;
+    overflow: visible;
+    background-image: url('img/search_button.png');
+    background-size: 38px;
+}
+.icon_search{
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+}
+.header_top_login{
+    position: absolute;
+    height: 90px;
+    line-height: 90px;
+    top: 0;
+    right:100px;
+}
+.login1{
+    position: relative;
+    font-size: 16px;
+    float: left;
+    width: 38px;
+    margin-right: 10px;
+    text-align: center;
+}
+.login2{
+    position: relative;
+    font-size: 13px;
+    float: left;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    margin:20px 10px 0 0;
+    text-align: center;
+    background-color: #31c27c;
+    border: 1px solid #31c27c;  
+}
+#login2_1{color: #fff;}
+.login3{
+    position: relative;
+    font-size: 13px;
+    border: 1px solid #c9c9c9;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    margin-top: 20px;
+}
+/*热门歌单*/
+.hot_music_menu{
+    position: relative;
+    background-color: #f3f3f3;
+}
+.body_inner{
+    padding-top: 0px;
+    margin: 0 50px;
+}
+.index_hd{
+    position: relative;
+    padding-top:4.16667%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+.header_top_nav3{
+    height: 50px;
+    padding: 0 auto;
+    text-align: center;
+}
+.header_top_nav3 li{
+    display: inline-block;
+    font-size: 15px;
+    color: #c1c1c1;
+    margin-right: 47px;
+}
+.content_list{
+    margin-left: 8%;
+    text-align: left;
+}
+.content_li{
+    display: inline-block;
+    width: 16%;
+    margin-right: 2%;
+    vertical-align: middle;
+}
+.content_intro{
+    font-size: 13px;
+    color: rgb(87, 86, 86);
+}
+.open_sum{
+    font-size: 13px;
+    color: rgb(156, 156, 156)
+}
+/*新歌首发*/
+.new_songs{
+    background-color: #f3f3f3;
+}
+.playall_bt{
+    position: relative;
+    top: 24px;
+    margin-left: 5%;
+    padding: 8px 23px 8px 6px;
+    border: 1px solid #8a8686;
+    color: black;
+}
+.playall_bt img{
+    position: relative;
+    top: 4px;
+}
+.ns_menu{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.ns_menu a{
+    color: black;
+    margin-right: 55px;
+}
+.ns_menu a:hover{
+    color: green;
+}
+.ns_content{
+    width: 100%;
+    text-align: center;
+    margin-left: 2%;
+}
+.ns_content.b{
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 2%;
+}
+.ns_img{
+    display: inline-block;
+    position: relative;
+    float: left;
+    width: 20%;
+}
+.ns_intro{
+    display: inline-block;
+    position: relative;
+    margin-left: 1%;
+    width: 60%;
+}
+.time{
+    display: inline-block;
+    position: relative;
+    float: right;
+    width: 18%;
+    color: rgb(156, 156, 156);
+    text-align: right;
+}
+.ns_intro_i{
+    margin: 2px 0 0 0;
+    padding: 0;
+    font-size: 13px;
+    color: rgb(66, 66, 66);
+} 
+.author{
+    display: block;
+    margin: 0 0 2px 0;
+    font-size: 13px;
+    color: rgb(156, 156, 156);
+}
+/*精彩推荐*/
+.ex_recom{background-color: #f3f3f3;text-align: center;}
+.ex_recom_picture{
+    display: inline-block;
+    width: 47%;
+    margin-left: 2%;
+}
+/*新碟首发*/
+.newcd{
+    background-color: #f3f3f3;
+}
+.newcd_more{
+    float: right;
+    color: black;
+}
+.newcd_content{
+    width: 100%;
+    text-align: center;
+    margin-left: 0%;
+}
+.newcd_content.b{
+    display: inline-block;
+    width: 15%;
+    vertical-align: middle;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 2%;
+}
+.cd_intro_i{
+    margin: 2px 0 0 0;
+    padding: 0;
+    font-size: 13px;
+    color: rgb(66, 66, 66);
+} 
+.cd_author{
+    display: block;
+    margin: 0 0 2px 0;
+    font-size: 13px;
+    color: rgb(156, 156, 156);
+}
+/*排行榜*/
+.ranking_list{
+    background-color: #f3f3f3;
+}
+.rank_content{
+    width: 100%;
+    text-align: center;
+    margin-left: 0%;
+    margin-top: 48px;
+}
+.rank_contentb1{
+    display: inline-block;
+    width: 16%;
+    background-color: #cc7189;
+    color: white;
+    margin-right: 2%;
+}
+.rank_tittle{
+    font-size: 1.5em;
+    color: white;
+}
+#rank_line{
+}
+.ralist{
+    padding-left: 12%;
+}
+.ralist li{
+    margin: 20px 0;
+}
+.ralist li a{
+    display: block;
+    color: white;
+    text-align: left;
+    font-size: 13px;
+}
+.rank_contentb2{
+    display: inline-block;
+    width: 16%;
+    background-color: #6b97b1;
+    color: white;
+    margin-right: 2%;
+}
+.rank_contentb3{
+    display: inline-block;
+    width: 16%;
+    background-color: #6bc1b9;
+    color: white;
+    margin-right: 2%;
+}
+.rank_contentb4{
+    display: inline-block;
+    width: 16%;
+    background-color: #518e95;
+    color: white;
+    margin-right: 2%;
+}
+.rank_contentb5{
+    display: inline-block;
+    width: 16%;
+    background-color: #e89e70;
+    color: white;
+}
+/*MV*/
+.mv{
+    background-color: #f3f3f3;
+}
+.mv_content{
+    width: 100%;
+    text-align: center;
+}
+.mv_contentb{
+    display: inline-block;
+    width: 17%;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-right: 2%;
+}
+/*底部*/
+.footer{
+    background-color: #333;
+    clear: both;
+}
+.footer_info{
+    float: left;
+    min-width: 31%;
+    border-bottom: 1px solid #353535;
+    position: relative;
+    padding-bottom: 45px;
+}
+.footer_product{
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left:3%;
+    width: 304px;
+}
+.footer_link{
+    float: right;
+    width:300px;
+    padding-bottom: 57px;
+    position: relative;
+    top: 0;
+}
+.footer_tit{
+    color: #7f7f7f;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 80px 0 46px;
+}
+.download{
+    position: absolute;
+    top: 0;
+    left: 10px;
+}
+.download_list{
+    margin-left: -25px;
+}
+.download_list li{
+    float: left;
+    text-align: center;
+    position: relative;
+}
+.download_list1{
+    background-image: url('img/do.png');
+    background-position: 0 0;
+    width: 70px; height:90px;
+}
+.download_list2{
+    background-image: url('img/do.png');
+    background-position: -83px 0;
+    width: 70px; height:90px;
+}
+.download_list3{
+    background-image: url('img/do.png');
+    background-position: -176px 0;
+    width: 70px; height:90px;
+}
+.download_list4{
+    background-image: url('img/do.png');
+    background-position: 79px 0;
+    width: 70px; height:90px;
+}
+.download_list li a{
+    display: block;
+    width: 70px; height:90px;
+}
+.product_list li{
+    display: inline-block;
+    margin: 0;
+}
+.product_list1{
+    background-image: url('img/li.png');
+    background-position: 0 0;
+    width: 70px; height:90px;
+}
+.product_list2{
+    background-image: url('img/li.png');
+    background-position: -80px 0;
+    width: 99px; height:90px;
+    width: 40%;
+}
+.product_list3{
+    background-image: url('img/li.png');
+    background-position: 79px 0;
+    width: 70px; height:90px;
+}
+.product_list li a{
+    display: block;
+    width: 70px; height:90px;
+    color: #7f7f7f;
+    font-size: 14px;
+}
+.product_list4{
+    padding-left: 11px;
+}
+.link_list_item{
+    float: left;
+    min-width: 100px;
+    margin-bottom: 12px;
+}
+.link_list_item a{
+    color: #7f7f7f;
+}
+.link_list_item a:hover{
+    color:green;
+}
+.footer_pf{
+    position: relative;
+    top: -100px;
+}
+.pf_list_item{
+    float: left;
+    min-width: 100px;
+    margin: 0 35px 12px 0;
+}
+.pf_list_item a{
+    color: #7f7f7f;
+}
+.pf_list_item a:hover{
+    color: green;
+}
+.footer_copyright{
+    text-align: center;
+    line-height: 28px;
+    padding:24px 0;
+    font-size: 13px;
+    color:#7f7f7f;
+    position: relative;
+    top: 0px;
+    
+}
+.footer_copyright p a{
+    color: #7f7f7f;
+}
+.footer_copyright p a:hover{
+    color: green;
+}

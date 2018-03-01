@@ -1,0 +1,40 @@
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+#banner{
+    width: 780px;
+    height: 380px;
+    position: relative;
+    margin: 100px auto;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+.pic ul li{
+    position: absolute;
+}
+.intro{
+    position: absolute;
+    top:330px;
+}
+.intro ul li{
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    width: 156px;
+    text-align: center;
+    background-color: #303030;
+    font-size: 0.9em;
+    color: #c8c8c8;
+}
+.intro ul li.on{
+    color: #e9c06c;
+    background: #666666;
+}

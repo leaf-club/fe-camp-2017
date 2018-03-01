@@ -1,0 +1,681 @@
+@keyframes shrink {
+  from {
+    height: 100px;
+    background: lightblue;
+  }
+  50% {
+    height: 50px;
+    background: lightgreen;
+  }
+  to {
+    height: 100px;
+    background: lightblue;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-shrink1 {
+  from {
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+    top:38px;
+    border-radius: 12px;
+  }
+  to {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    top:50px;
+    border-radius: 0px;
+  }
+}
+@keyframes fade-shrink2 {
+  from {
+    opacity: 1;
+    width: 25px;
+    height: 25px;
+    top: 37.5px;
+    border-radius: 12.5px;
+  }
+  to {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    top: 50px;
+    border-radius: 0px;
+  }
+}
+@keyframes fade-shrink3 {
+  from {
+    opacity: 1;
+    width: 26px;
+    height: 26px;
+    top: 37px;
+    border-radius: 13px;
+  }
+  to {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    top: 50px;
+    border-radius: 0px;
+  }
+}
+@keyframes fade-shrink4 {
+  from {
+    opacity: 1;
+    width: 27px;
+    height: 27px;
+    top: 36.5px;
+    border-radius: 13.5px;
+  }
+  to {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    top: 50px;
+    border-radius: 0px;
+  }
+}
+@keyframes fade-shrink5 {
+  from {
+    opacity: 1;
+    width: 28px;
+    height: 28px;
+    top: 36px;
+    border-radius: 14px;
+  }
+  to {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    top: 50px;
+    border-radius: 0px;
+  }
+}
+@keyframes row-fade {
+  from {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+}
+@keyframes rotate-fade {
+  from {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5625;
+  }
+  to {
+    opacity: 0.125
+  }
+}
+@keyframes rotate-fade-shrink {
+  from {
+    opacity: 1;
+    width: 20px;
+    height: 20px;
+    top: 0px;
+  }
+  50% {
+    opacity: 0.5625;
+    width: 12.5px;
+    height: 12.5px;
+    top: 3.75px;
+  }
+  to {
+    opacity: 0.125;
+    width: 5px;
+    height: 5px;
+    top: 7.5px;
+  }
+}
+@keyframes travel {
+  from {
+    width: 0px;
+    margin-left: 0px;
+  }
+  25% {
+    width: 80px;
+    margin-left: 0px;
+  }
+  50% {
+    width: 160px;
+    margin-left: 0px;
+  }
+  75% {
+    width: 80px;
+    margin-left: 80px;
+  }
+  to {
+    width: 0px;
+    margin-left: 160px;
+  }
+}
+@keyframes rotate-fade-2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
+}
+@keyframes complex {
+  from {
+    opacity: 0.15;
+    transform: rotate(0deg);
+  }
+  25% {
+    opacity: 0.3;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0.7;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0.15;
+    transform: rotate(360deg);
+  }
+}
+@keyframes winx {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+html {
+  font-size: 0px;
+}
+.gif {
+  width: 30%;
+  min-width: 300px;
+  height: 300px;
+  position: relative;
+  margin: 10px 1%;
+  float: left;
+  border: 5px solid lightgray;
+  font-size: 0px;
+  vertical-align: top;
+}
+.inner {
+  width: 160px;
+  margin: auto;
+  height: 100px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  font-size: 0px;
+  position: relative;
+}
+img {
+  width: 25%;
+  height: auto;
+  position: absolute;
+  border-right: solid lightgray 2px;
+  border-bottom: solid lightgray 2px;
+}
+span {
+  display: block;
+  width: 75%;
+  height: 25%;
+  position: absolute;
+  left: 25%;
+  font-size: 20px;
+  text-align: center;
+  line-height: 75px;
+  color: red;
+}
+#gif1 .inner .item1 {
+  width: 10px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: lightblue; 
+  display: inline-block;
+  margin: 0px 5%;
+  vertical-align: middle;
+}
+#gif1 .inner #item11 {
+  animation: shrink 0.9s ease infinite;
+  animation-delay: 0s;
+}
+#gif1 .inner #item12 {
+  animation: shrink 0.9s ease infinite;
+  animation-delay: 0.18s;
+}
+#gif1 .inner #item13 {
+  animation: shrink 0.9s ease infinite;
+  animation-delay: 0.36s;
+}
+#gif1 .inner #item14 {
+  animation: shrink 0.9s ease infinite;
+  animation-delay: 0.54s;
+}
+#gif1 .inner #item15 {
+  animation: shrink 0.9s ease infinite;
+  animation-delay: 0.72s;
+}
+#gif2 .inner .item2 {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: lightgreen; 
+  display: inline-block;
+  margin: 40px 5%;
+  vertical-align: middle;
+}
+#gif2 .inner #item21 {
+  animation: fade 0.75s ease infinite;
+  animation-delay: 0s;
+}
+#gif2 .inner #item22 {
+  animation: fade 0.75s ease infinite;
+  animation-delay: 0.15s;
+}
+#gif2 .inner #item23 {
+  animation: fade 0.75s ease infinite;
+  animation-delay: 0.3s;
+}
+#gif2 .inner #item24 {
+  animation: fade 0.75s ease infinite;
+  animation-delay: 0.45s;
+}
+#gif2 .inner #item25 {
+  animation: fade 0.75s ease infinite;
+  animation-delay: 0.6s;
+}
+#gif3 .inner-block {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+#gif3 .inner .item3 {
+  position: relative;
+  background-color: lightgreen; 
+  margin: auto;
+  vertical-align: middle;
+}
+#gif3 .inner #item31 {
+  width: 24px;
+  height: 24px;
+  border-radius: 12px;
+  top: 38px;
+  animation: fade-shrink1 0.8s linear infinite;
+  animation-delay: 0s;
+}
+#gif3 .inner #item32 {
+  width: 25px;
+  height: 25px;
+  border-radius: 12.5px;
+  top: 37.5px;
+  animation: fade-shrink2 0.8s linear infinite;
+  animation-delay: 0.15s;
+}
+#gif3 .inner #item33 {
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  top: 37px;
+  animation: fade-shrink3 0.8s linear infinite;
+  animation-delay: 0.3s;
+}
+#gif3 .inner #item34 {
+  width: 27px;
+  height: 27px;
+  border-radius: 13.5px;
+  top: 36.5px;
+  animation: fade-shrink4 0.8s linear infinite;
+  animation-delay: 0.45s;
+}
+#gif3 .inner #item35 {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  top: 36px;
+  animation: fade-shrink5 0.8s linear infinite;
+  animation-delay: 0.6s;
+}
+#gif4 .inner-block {
+  width: 20%;
+  height: 100%;
+  display: inline-block;
+}
+#gif4 .inner .item4 {
+  width: 16px;
+  height: 16px;
+  margin: 42px auto;
+  background: lightgreen;
+  animation: row-fade 1s ease infinite;
+  transform-origin: bottom right;
+}
+#gif4 .inner #item41 {
+  animation-delay: 0s;
+}
+#gif4 .inner #item42 {
+  animation-delay: 0.15s;
+}
+#gif4 .inner #item43 {
+  animation-delay: 0.3s;
+}
+#gif4 .inner #item44 {
+  animation-delay: 0.45s;
+}
+#gif4 .inner #item45 {
+  animation-delay: 0.6s;
+}
+#gif5 .inner .inner-block {
+  width: 100px;
+  height: 16px;
+  margin: 42px auto;
+  position: absolute;
+  left: 30px;
+}
+#gif5 .inner .item5 {
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  margin-left: 5px;
+  background: lightgreen;
+  animation: rotate-fade 1s ease infinite;
+}
+#gif5 .inner .inner-block:nth-child(2) {
+  transform: rotate(45deg);
+}
+#gif5 .inner .inner-block:nth-child(3) {
+  transform: rotate(90deg);
+}
+#gif5 .inner .inner-block:nth-child(4) {
+  transform: rotate(135deg);
+}
+#gif5 .inner .inner-block:nth-child(5) {
+  transform: rotate(180deg);
+}
+#gif5 .inner .inner-block:nth-child(6) {
+  transform: rotate(225deg);
+}
+#gif5 .inner .inner-block:nth-child(7) {
+  transform: rotate(270deg);
+}
+#gif5 .inner .inner-block:nth-child(8) {
+  transform: rotate(315deg);
+}
+#gif5 .inner #item51 {
+  animation-delay: 0s;
+}
+#gif5 .inner #item52 {
+  animation-delay: 0.125s;
+}
+#gif5 .inner #item53 {
+  animation-delay: 0.25s;
+}
+#gif5 .inner #item54 {
+  animation-delay: 0.375s;
+}
+#gif5 .inner #item55 {
+  animation-delay: 0.5s;
+}
+#gif5 .inner #item56 {
+  animation-delay: 0.625s;
+}
+#gif5 .inner #item57 {
+  animation-delay: 0.75s;
+}
+#gif5 .inner #item58 {
+  animation-delay: 0.875s;
+}
+/*    */
+#gif6 .inner .inner-block {
+  width: 20px;
+  height: 100px;
+  position: absolute;
+  left: 70px;
+}
+#gif6 .inner .item6 {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  margin: auto;
+  position: absolute;
+  background: lightgreen;
+  animation: rotate-fade-shrink 0.8s ease infinite;
+}
+#gif6 .inner .inner-block:nth-child(2) {
+  transform: rotate(45deg);
+}
+#gif6 .inner .inner-block:nth-child(3) {
+  transform: rotate(90deg);
+}
+#gif6 .inner .inner-block:nth-child(4) {
+  transform: rotate(135deg);
+}
+#gif6 .inner .inner-block:nth-child(5) {
+  transform: rotate(180deg);
+}
+#gif6 .inner .inner-block:nth-child(6) {
+  transform: rotate(225deg);
+}
+#gif6 .inner .inner-block:nth-child(7) {
+  transform: rotate(270deg);
+}
+#gif6 .inner .inner-block:nth-child(8) {
+  transform: rotate(315deg);
+}
+#gif6 .inner #item61 {
+  animation-delay: 0s;
+}
+#gif6 .inner #item62 {
+  animation-delay: 0.1s;
+}
+#gif6 .inner #item63 {
+  animation-delay: 0.2s;
+}
+#gif6 .inner #item64 {
+  animation-delay: 0.3s;
+}
+#gif6 .inner #item65 {
+  animation-delay: 0.4s;
+}
+#gif6 .inner #item66 {
+  animation-delay: 0.5s;
+}
+#gif6 .inner #item67 {
+  animation-delay: 0.6s;
+}
+#gif6 .inner #item68 {
+  animation-delay: 0.7s;
+}
+#gif7 .inner #out-layer {
+  width: 160px;
+  height: 10px;
+  margin: 45px 0px;
+  border-radius: 5px;
+  background: lightblue;
+  float: left;
+  /**
+  bug:
+      连续两个div嵌套时，如果当两个容器嵌套时,如果
+      外层容器和内层容器之间没有别的元素,chrome和
+      firefox会把内层元素的margin-top作用于父元素。
+  解决方法：
+      1、使用浮动来解决，即将子层代码改为：
+      <div style="margin-top:200px;float:left";>子层</div>
+      2、使用padding-top来解决，即：
+      <div style="padding-top:200px;">
+        <div>子层</div>
+      </div> 
+  */
+}
+#gif7 .inner #in-layer {
+  width: 0px;
+  height: 10px;
+  border-radius: 5px;
+  background: lightgreen;
+  animation: travel 3s linear infinite;
+}
+#gif8 .inner .inner-block {
+  width: 100px;
+  height: 10px;
+  margin-top: 45px;
+  position: absolute;
+  left: 30px;
+}
+#gif8 .inner .item8 {
+  width: 30px;
+  height: 10px;
+  border-radius: 5px 0px 0px 5px;
+  position: absolute;
+  background: lightgreen;
+  animation: rotate-fade-2 0.8s ease infinite;
+}
+#gif8 .inner .inner-block:nth-child(2) {
+  transform: rotate(45deg);
+}
+#gif8 .inner .inner-block:nth-child(3) {
+  transform: rotate(90deg);
+}
+#gif8 .inner .inner-block:nth-child(4) {
+  transform: rotate(135deg);
+}
+#gif8 .inner .inner-block:nth-child(5) {
+  transform: rotate(180deg);
+}
+#gif8 .inner .inner-block:nth-child(6) {
+  transform: rotate(225deg);
+}
+#gif8 .inner .inner-block:nth-child(7) {
+  transform: rotate(270deg);
+}
+#gif8 .inner .inner-block:nth-child(8) {
+  transform: rotate(315deg);
+}
+#gif8 .inner #item81 {
+  animation-delay: 0s;
+}
+#gif8 .inner #item82 {
+  animation-delay: 0.1s;
+}
+#gif8 .inner #item83 {
+  animation-delay: 0.2s;
+}
+#gif8 .inner #item84 {
+  animation-delay: 0.3s;
+}
+#gif8 .inner #item85 {
+  animation-delay: 0.4s;
+}
+#gif8 .inner #item86 {
+  animation-delay: 0.5s;
+}
+#gif8 .inner #item87 {
+  animation-delay: 0.6s;
+}
+#gif8 .inner #item88 {
+  animation-delay: 0.7s;
+}
+#gif9 .inner .inner-block {
+  width: 10px;
+  height: 100px;
+  position: absolute;
+  left: 75px;
+  animation: complex 1.75s cubic-bezier(0.7, 0.3, 0.3, 0.7) infinite; 
+}
+#gif9 .inner .item9 {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  position: absolute;
+  top: 5px;
+  background: lightgreen;
+}
+#gif9 .inner .inner-block:nth-child(2) {
+  animation-delay: 0.15s;
+}
+#gif9 .inner .inner-block:nth-child(3) {
+  animation-delay: 0.3s;
+}
+#gif9 .inner .inner-block:nth-child(4) {
+  animation-delay: 0.45s;
+}
+.gifx {
+  clear: both;
+  width: 50%;
+  height: 400px;
+  float: left;
+  margin: 30px 25%;
+}
+.innerx {
+  font-size: 16px;
+  height: 100%;
+  background: rgb(0, 0, 0);
+}
+#watcher {
+  position: relative;
+  top: 50px;
+  width: 180px;
+  height: 110px;
+  margin: auto;
+  perspective: 20em;
+}
+#icon {
+  width: 180px;
+  height: 110px;
+  transform: rotateY(-45deg);
+}
+#icon>div {
+  width: 80px;
+  height: 45px;
+  margin: 5px;
+  float: left;
+  background: rgb(0, 204, 255);
+}
+#load {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  margin-top: 160px;
+  position: relative;
+}
+#load .inner-blockx {
+  width: 4px;
+  height: 50px;
+  position: absolute;
+  left: 32px;
+  animation: winx 2s cubic-bezier(0.7, 0.3, 0.3, 0.7) infinite; 
+}
+#load .inner-blockx .itemx {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: white;
+}
+#load .inner-blockx:nth-child(2) {
+  animation-delay: 0.2s;
+}
+#load .inner-blockx:nth-child(3) {
+  animation-delay: 0.4s;
+}
+#load .inner-blockx:nth-child(4) {
+  animation-delay: 0.6s;
+}
+#load .inner-blockx:nth-child(5) {
+  animation-delay: 0.8s;
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算器</title>
+    <style type="text/css">
+    * {
+	    margin: 0px;
+	    padding: 0px;
+    }
+
+    td {
+	    background-color: #303133;
+	    width: 100px;
+	    height: 80px;
+	    color: white;
+	    text-align: center;
+	    font-size: 20px;
+    }
+
+    .td_b {
+    	background-color: rgb(59, 10, 173);
+    }
+    </style>
+
+    <script type="text/javascript">
+
+	function Content(td){
+		//找到显示字符串等式的td标签
+		var content = document.getElementById("content");
+		//找到显示结果的td标签
+		var result = document.getElementById("result");
+		//获取字符串的等式
+		var text = td.innerText;
+
+		//如果是删除键
+		if("del" == text){
+			if(content.innerText.length > 0){
+				//删除最后一个字符
+				content.innerText = content.innerText.substring(0,content.innerText.length-1);
+			}
+		//如果是全部删除
+		}else if("c" == text){
+			content.innerText = "";
+		//如果是按了等于号
+		}else if("=" == text){
+			var resultText = parse(content.innerText);
+			result.innerText = content.innerText + "=" + resultText;
+			content.innerText = "";
+		}else{
+			content.innerText = content.innerText + text;
+		}
+		
+	}
+
+	function parse(content){
+
+		//寻找最后一个左括号
+		var index = content.lastIndexOf("(");
+
+		//如果等式中有左括号
+		if(index > -1){
+			//寻找右括号,从左括号的位置开始寻找
+			var endIndex = content.indexOf(")",index);
+
+			//如果等式中有右括号
+			if(endIndex > -1){
+				//调用自己算出括号中的结果
+				var result = parse(content.substring(index + 1,endIndex));
+				return parse(content.substring(0,index) + ("" + result) + content.substring(endIndex + 1)) 
+			}
+		}
+
+		index = content.indexOf("+");
+		
+		if(index > -1){
+			return parse(content.substring(0,index)) + parse(content.substring(index + 1));
+		}
+
+		index = content.lastIndexOf("-");
+
+		if(index > -1){
+			return parse(content.substring(0,index)) - parse(content.substring(index + 1));
+		}
+
+		index = content.lastIndexOf("*");
+
+		if(index > -1){
+			return parse(content.substring(0,index)) * parse(content.substring(index + 1));
+		}
+
+		index = content.lastIndexOf("/");
+
+		if(index > -1){
+			return parse(content.substring(0,index)) / parse(content.substring(index + 1));
+		}
+		
+		if("" == content){ 
+			return 0;
+		}else{
+			return content - 1 + 1;
+		}
+	}
+	
+</script>
+
+</head>
+<body>
+	<table align="center">
+		<tr>
+			<td class="td_b" colspan="5" id="content"></td>
+		</tr>
+		<tr>
+			<td class="td_b" colspan="5" id="result"></td>
+		</tr>
+		<tr>
+			<td onclick="Content(this)">1</td>
+			<td onclick="Content(this)">2</td>
+			<td onclick="Content(this)">3</td>
+			<td onclick="Content(this)">*</td>
+			<td onclick="Content(this)">/</td>
+		</tr>
+		<tr>
+			<td onclick="Content(this)">4</td>
+			<td onclick="Content(this)">5</td>
+			<td onclick="Content(this)">6</td>
+			<td onclick="Content(this)">+</td>
+			<td onclick="Content(this)">-</td>
+		</tr>
+		<tr>
+			<td onclick="Content(this)">7</td>
+			<td onclick="Content(this)">8</td>
+			<td onclick="Content(this)">9</td>
+			<td onclick="Content(this)">(</td>
+			<td onclick="Content(this)">)</td>
+		</tr>
+		<tr>
+			<td onclick="Content(this)">c</td>
+			<td onclick="Content(this)">0</td>
+			<td onclick="Content(this)">.</td>
+			<td onclick="Content(this)">del</td>
+			<td onclick="Content(this)">=</td>
+		</tr>
+	</table>
+</body>
+</html>

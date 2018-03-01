@@ -1,0 +1,343 @@
+/* 第一个动画 */
+*{
+    padding: 0;
+    margin: 0;
+}
+.allmotion1, .allmotion2{
+    margin: 100px 100px;
+    display: flex;
+    justify-content:space-around;
+    flex-wrap: wrap;
+}
+.motion1 .stick{
+    height: 100px;
+    width: 10px;
+    margin-left: 10px;
+    border-radius: 5px;
+    float: left;
+    animation: shrink 1s linear infinite;
+}
+.motion1 .stick1{
+    animation-delay: 0s;
+}
+.motion1 .stick2{
+    animation-delay: 0.2s;
+}
+.motion1 .stick3{
+    animation-delay: 0.4s;
+}
+.motion1 .stick4{
+    animation-delay: 0.6s;
+}
+.motion1 .stick5{
+    animation-delay: 0.8s;
+}
+@keyframes shrink{
+    0%{
+        background-color: lightblue;
+    }
+    50%{
+        background-color: lightgreen;
+        transform: scaleY(0.5);
+    }
+    100%{
+        background-color: lightblue;
+    }
+}
+.allmotion .clear{
+    clear: both;
+}
+/* 第二、三个动画 */
+.round{
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    margin:40px 10px 0 0;
+    float: left;
+}
+.motion2 .round{
+    animation: fade 0.9s ease infinite backwards;
+}
+.motion3 .round{
+    animation: fade-scale 0.9s ease infinite backwards;
+}
+.motion2 .round1, .motion3 .round1{
+    animation-delay: 0s;
+}
+.motion2 .round2, .motion3 .round2{
+    animation-delay: 0.18s;
+}
+.motion2 .round3, .motion3 .round3{
+    animation-delay: 0.36s;
+}
+.motion2 .round4, .motion3 .round4{
+    animation-delay: 0.54s;
+}
+.motion2 .round5, .motion3 .round5{
+    animation-delay: 0.72s;
+}
+@keyframes fade{
+    0%{
+        background-color: lightgreen;
+        opacity: 1; 
+    }
+    50%{
+        opacity: 0.5
+    }
+    100%{
+        opacity: 1;
+        }
+}
+@keyframes fade-scale{
+    0%{
+        background-color: lightgreen;
+        opacity: 1; 
+    }
+    50%{
+        opacity: 0.5
+    }
+    100%{
+        opacity: 1;
+        transform: scale(0);
+        }
+}
+/* 第四个动画 */
+.square{
+    height: 20px;
+    width: 20px;
+    margin:40px 20px 0 0;
+    float: left;
+    animation: rotate-fade 0.9s linear infinite backwards;
+}
+.square1{
+    animation-delay: 0s;
+}
+.square2{
+    animation-delay: 0.18s;
+}
+.square3{
+    animation-delay: 0.36s;
+}
+.square4{
+    animation-delay: 0.54s;
+}
+.square5{
+    animation-delay: 0.72s;
+}
+@keyframes rotate-fade{
+    0%{
+        background-color: lightgreen;
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: rotate(90deg);
+        transform-origin: right bottom;
+    }
+}
+/* 第五、六个动画 */
+.motion5, .motion6{
+    position: relative;
+}
+/* 为absolute布局父级盒定义大小 */
+.motion5,.motion6{
+    height: 150px;
+    width: 150px;
+}
+.m5round, .m6round{
+    position: absolute;
+    top:40px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    transform-origin: 60px;
+}
+.allmotion2 .m6round{
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    transform-origin: 70px;
+}
+.m5round{
+    animation: round-fade 1s linear infinite backwards;
+}
+.m6round{
+    animation: round-fade-scale 1s linear infinite backwards;
+}
+.m5round1, .m6round1{
+    animation-delay: 0s;
+}
+.m5round2, .m6round2{
+    transform: rotate(45deg);
+    animation-delay: 0.125s;
+}
+.m5round3, .m6round3{
+    transform: rotate(90deg);
+    animation-delay: 0.25s;
+}
+.m5round4, .m6round4{
+    transform: rotate(135deg);
+    animation-delay: 0.375s;
+}
+.m5round5, .m6round5{
+    transform: rotate(180deg);
+    animation-delay: 0.5s;
+}
+.m5round6, .m6round6{
+    transform: rotate(225deg);
+    animation-delay: 0.625s;
+}
+.m5round7, .m6round7{
+    transform: rotate(270deg);
+    animation-delay: 0.75s;
+}
+.m5round8, .m6round8{
+    transform: rotate(315deg);
+    animation-delay: 0.825s;
+}
+@keyframes round-fade{
+    0%{
+    background-color: lightgreen;
+    }
+    100%{
+    opacity: 0.2;
+    }
+}
+@keyframes round-fade-scale {
+    0%{
+        background-color: lightgreen;
+        top: 0px;
+    }
+    50%{
+        height: 18px;
+        width: 18x;
+        top: 6px;
+    }
+    100%{
+        height: 6px;
+        width: 6px;
+        top: 12px;
+        opacity: 0.5
+    }
+}
+/* 第七个动画 */
+.motion7{
+    background-color: lightblue;
+    border-radius: 5px;
+    height: 10px;
+    width: 160px;
+}
+.m7rect{
+    height: 10px;
+    width: 160px;
+    border-radius: 5px;
+    background-color: lightgreen;
+    animation: rect-scale 2s linear infinite;
+}
+@keyframes rect-scale{
+    0%{
+        width: 0px; 
+        margin-left: 0px;
+    }
+    50%{
+        width: 160px;
+        margin-left: 0px;
+    }
+    100%{
+        margin-left: 160px;
+        width: 0px;
+    }
+}
+/* 第八个动画 */
+.motion8{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.m8rect{
+    position: absolute;
+    height: 12px;
+    width: 35px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background-color: lightgreen;
+    transform-origin: 60px;
+    animation: round-fade 1s ease infinite backwards;
+}
+.m8rect1{
+    animation-delay: 0s;
+}
+.m8rect2{
+    transform: rotate(45deg);
+    animation-delay: 0.125s;
+}
+.m8rect3{
+    transform: rotate(90deg);
+    animation-delay: 0.25s;
+}
+.m8rect4{
+    transform: rotate(135deg);
+    animation-delay: 0.375s;
+}
+.m8rect5{
+    transform: rotate(180deg);
+    animation-delay: 0.5s;
+}
+.m8rect6{
+    transform: rotate(225deg);
+    animation-delay: 0.625s;
+}
+.m8rect7{
+    transform: rotate(270deg);
+    animation-delay: 0.75s;
+}
+.m8rect8{
+    transform: rotate(315deg);
+    animation-delay: 0.825s;
+}
+/* 第九个动画 */
+.motion9{
+    position: relative;
+    height:150px;
+    width: 150px;
+}
+.m9round{
+    position: absolute;
+    top:-50px;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: lightgreen;
+    animation: round-fade-speed 2s cubic-bezier(0.7,0.3,0.3,0.7) infinite; 
+    transform-origin: center 60px;
+}
+.m9round1{
+    animation-delay: 0s;
+}
+.m9round2{
+    animation-delay: 0.2s;
+}
+.m9round3{
+    animation-delay: 0.4s;
+}
+.m9round4{
+    animation-delay: 0.6s;
+}
+@keyframes round-fade-speed{
+    0%{
+
+    }
+    45%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+        opacity: 0.3;
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}

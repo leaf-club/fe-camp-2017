@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my todo-list</title>
+    <link rel="stylesheet" href="css/todo.css">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="todo">
+        <h2>云备忘录</h2>
+        <input id="thing" type="text" placeholder="接下来要做什么？">
+        <ul id="list"></ul>
+        <div class="btn-box">
+            <button class="btn" id="all-js">全部</button>
+            <button class="btn" id="todo-js">未完成</button>
+            <button class="btn" id="done-js">已完成</button>
+        </div>
+    </div>
+    <script>
+          var i = 0; //用于控制btn-box的top值
+        //添加新事件
+        $("#thing").keyup(function(e){
+            if(e.keyCode==13){
+                add();
+            }
+        })
+        //删除事件
+        $(document).on("click",".del",function(){
+            $(this).parent().remove();
+            i-=60;
+            $(".btn-box").css("top",i-60);
+        });
+        //切换事件状态
+        $(document).on("click",".change",function(){
+            $(this).parent().toggleClass('done-li');
+        })
+        //查看事件
+        $( ".btn" ).each(function() {
+            $(this).on("click", function(){
+               console.log(this)
+               console.log($(this).attr('id'))
+               if($(this).attr('id')=='todo-js'){
+                   $(".todo-li").css("display","block");
+                   $(".done-li").css("display","none");
+               } else if($(this).attr('id')=='done-js'){
+                   $(".todo-li").css("display","none");
+                   $(".done-li").css("display","block");
+               }else{
+                   $(".todo-li").css("display","block");
+                   $(".done-li").css("display","block");
+               }
+            });
+        });
+        // 定义添加新事件函数 add()
+        function add(){
+            if($("#thing")[0].value!=''){
+                $myul = $("#list");
+                var li = $("<li class='todo-li'></li>");
+                var button1 = $("<button class='change'>切换</button>");
+                var button2 = $("<button class='del'>删除</button>");
+                var span = $("<span></span>").html($("#thing")[0].value);
+                $myul.append(li);
+                li.append(button1);
+                li.append(span);
+                li.append(button2);
+                $("#thing")[0].value = "";
+                $(".btn-box").css("top",i);
+                i+=60;
+                $(".btn-box").css("display","block");
+            }    
+        }
+    </script>
+</body>
+</html>

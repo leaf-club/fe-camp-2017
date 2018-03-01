@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /*Basic reset*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font: 14px Arial, sans-serif;
+        }
+        html {
+            height: 100%;
+        }
+        #calculator {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -200px -165px;
+            width: 330px;
+            height: 400px;
+            border: 1px solid lightgray;
+            padding: 15px;
+
+            background: -webkit-linear-gradient(top, #007fff, #84bff9);
+        }
+        /*LOGO*/
+        .LOGO {
+            height: 20px;
+            text-align: center;
+        }
+        .LOGO .name {
+            line-height: 30px;
+        }
+        /*screen*/
+        #result {
+            margin-top: 15px;
+        }
+        .screen {
+            width: 300px;
+            height: 40px;
+            text-align: right;
+            padding-right: 10px;
+            font-size: 20px;
+        }
+        #keys {
+            border: 1px solid lightgray;
+            height: 223px;
+            margin-top: 25px;
+            padding: 8px;
+        }
+        #keys .last {
+            margin-right: 0px;
+        }
+        #keys .buttons {
+            float: left;
+            width: 42px;
+            height: 36px;
+            text-align: center;
+            margin: 0 17px 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculator">
+        <div class="LOGO">
+            <span class="name">简易计算器</span>
+        </div>
+        <div id="result">
+            <!--screen输入栏-->
+            <div class="screen">
+                <input type="text" id="screenName" name="screenName" class="screen" autofocus>
+            </div>
+        </div>
+        <div id="keys">
+            <!--第一排-->
+            <input type="button" id="7" onclick="jsq(this.id)" value="7" class="buttons">
+            <input type="button" id="8" onclick="jsq(this.id)" value="8" class="buttons">
+            <input type="button" id="9" onclick="jsq(this.id)" value="9" class="buttons">
+            <input type="button" id="CE" onclick="tuiGe()" value="CE" class="buttons">
+            <input type="button" id="C" onclick="clearNum()" value="C" class="buttons" style="margin-right:0px">
+            <!--第二排-->
+            <input type="button" id="4" onclick="jsq(this.id)" value="4" class="buttons">
+            <input type="button" id="5" onclick="jsq(this.id)" value="5" class="buttons">
+            <input type="button" id="6" onclick="jsq(this.id)" value="6" class="buttons">
+            <input type="button" id="X" onclick="jsq(this.id)" value="*" class="buttons">
+            <input type="button" id="/" onclick="jsq(this.id)" value="/" class="buttons" style="margin-right:0px">
+            <!--第三排-->
+            <input type="button" id="1" onclick="jsq(this.id)" value="1" class="buttons">
+            <input type="button" id="2" onclick="jsq(this.id)" value="2" class="buttons">
+            <input type="button" id="3" onclick="jsq(this.id)" value="3" class="buttons">
+            <input type="button" id="+" onclick="jsq(this.id)" value="+" class="buttons">
+            <input type="button" id="-" onclick="jsq(this.id)" value="-" class="buttons" style="margin-right:0px">
+            <!--第四排-->
+            <input type="button" id="0" onclick="jsq(this.id)" value="0" class="buttons">
+            <input type="button" id="00" onclick="jsq(this.id)" value="00" class="buttons">
+            <input type="button" id="." onclick="jsq(this.id)" value="." class="buttons">
+            <input type="button" id="%" onclick="jsq(this.id)" value="%" class="buttons">
+            <input type="button" id="eva" onclick="eva()" value="=" class="buttons" style="margin-right:0px">
+        </div>
+    </div>
+    <script>
+        var num = 0; 
+        document.getElementById("screenName").value = 0;
+        function jsq(num) {
+            //获取当前输入
+            if (num == "%") {
+                document.getElementById('screenName').value = (document.getElementById('screenName').value)/100;
+            } 
+            else {
+                document.getElementById('screenName').value += document.getElementById(num).value;
+            }
+        }
+        function eva() {
+            //计算输入结果
+            document.getElementById("screenName").value = eval(document.getElementById("screenName").value);
+        }
+        
+        function clearNum() {
+            //清零
+            document.getElementById("screenName").value = 0;
+            document.getElementById("screenName").focus();
+        }
+        function tuiGe() {
+            //退格
+            var arr = document.getElementById("screenName");
+            arr.value = arr.value.substring(0, arr.value.length - 1);
+        }
+    </script>
+</body>
+</html>
