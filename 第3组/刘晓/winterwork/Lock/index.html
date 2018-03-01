@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lock</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script type="text/javascript"></script>
+  <link href="cc.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="select">
+    <div class="message">请输入手势密码</div>
+    <div class="radio">
+      <label><click  type="radio" name="pass">设置手势密码</label>
+    </div>
+  </div>
+  <div id="lock">
+    <div class="info"></div>
+  </div>
+
+  <script type="text/javascript" src="lock.js"></script>
+  <script type="text/javascript">
+    var el = document.getElementById('lock'),
+      info = el.getElementsByClassName('info')[0],
+      select = document.getElementById('select'),
+      message = select.getElementsByClassName('message')[0],
+      radio = select.getElementsByClassName('radio')[0],
+      setPass = radio.children[0].children[0],
+      checkPass = radio.children[0].children[0];
+    new Lock({
+      el: el,
+      info: info,
+      message: message,
+      setPass: setPass,
+      checkPass: checkPass,
+      n: 3
+    }).init();
+  </script>
+
+</body>
+</html>

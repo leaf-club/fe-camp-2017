@@ -1,0 +1,63 @@
+*{
+     padding:2;margin:2; 
+}
+click{
+    background-color: rgb(98, 164, 226);
+}
+
+click:hover{
+    background-color: rgb(42, 191, 218);
+}
+html, body{
+     width: 100%; 
+     height: 100%;
+}
+
+body{
+     background-color: #4747f1; 
+     text-align: center;
+}
+
+#lock {
+     width: 100%; 
+     height: auto;
+     max-width: 500px; 
+     min-width: 300px; 
+     margin: 0 auto; 
+     position: relative;
+}
+
+#lock .info{
+     position: absolute; 
+     left: 0; 
+     right: 0; 
+     top: 0; 
+     bottom: 0; 
+     margin: auto; 
+     width: 300px; 
+     height: 50px; 
+     background-color: rgba(35, 213, 226, 0.6); 
+     color: #ff15fb; 
+     line-height: 50px; 
+     font-size: 22px; 
+     border-radius: 100px; 
+     display: none;
+    }
+
+#lock canvas{ 
+    margin: 10 auto; 
+}
+#select{ 
+    font-size: 20px; 
+    font-weight: bold; 
+}
+
+#select .message{ 
+    color: rgb(224, 121, 52); 
+    padding: 0 10px;
+}
+
+#select .radio label{ 
+    display: block; 
+    margin: 10px 0 
+}
