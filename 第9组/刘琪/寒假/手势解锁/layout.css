@@ -1,0 +1,38 @@
+body{
+  text-align: center;
+}
+#button{
+  margin: 0 auto;
+  width: 300px;
+}
+#button div{
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin: 5px 10px;
+  padding: 4px 8px;
+  border: 1px solid lightskyblue;
+  cursor: pointer;
+}
+#tip{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+.container{
+  width: 100%;
+  height: 300px;
+  margin: 20px 0;
+  text-align: center;
+  background: lightblue;
+  position: relative;
+}
+.container canvas{
+  background: transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;/*绝对定位水平居中*/
+  margin-top:-150px;
+}
