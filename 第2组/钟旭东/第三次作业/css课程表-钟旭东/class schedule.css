@@ -1,0 +1,31 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.maincontainer{
+    background-image: url(images/grunge_wall.png);
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    height: 1000px;
+}
+.maincontainer caption{
+    font-family: sans-serif,monospace;
+    font-size: 2em;
+    color: #444;
+    font-weight: bold;
+    margin: 30px 20px;
+}
+.maincontainer tbody{
+    font-family: sans-serif,monospace;
+    font-size: 1em;
+    color:  #444;
+    font-weight: normal;
+}
+.table-style{
+    border: 1px solid red;
+    width: 50%; height: auto;
+}
+.table-style tr{
+    height: 30px;text-align: center;
+}

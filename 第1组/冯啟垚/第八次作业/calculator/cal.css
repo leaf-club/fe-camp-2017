@@ -1,0 +1,114 @@
+html
+body{
+	max-width: 20%;
+	display: block;
+	margin: 0 auto;
+	font-size: 16px;
+	/*background-color: #CCC;*/
+}
+
+.cal{
+	background: #00000036;
+	margin: 1rem auto;
+	padding: 1rem 0;
+}
+
+.cal>#screen{
+	/*border: 1px solid #000;*/
+	height: 3rem;
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 0 2%;
+    background: #fff;
+}
+
+.cal>#screen>#result{
+	height: 3rem;
+    display: block;
+}
+
+/*#################################*/
+.cal>#top{
+	width: 80%;
+	height: 2rem;
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.cal>#top>.top-items{
+	/*height: 2rem;*/
+	width: 20%;
+    border-radius: 40%;
+	background: #fff;
+	margin: 0 auto;
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal>#top>#top-wash{
+	width: 35%;
+}
+
+/*############################################*/
+.cal>#bottom{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	padding-bottom: 1rem;
+}
+
+.cal>#bottom>#number{
+	display: flex;
+    width: 64%;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cal>#bottom>#number>.num{
+	/*height: 2rem;*/
+	width: 31%;
+    border-radius: 40%;
+	background: #fff;
+	margin: 0 auto;
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal>#bottom>#number>#num-0{
+	width: 63%;
+}
+
+/*#########################################*/
+.cal>#bottom>#operation{
+	display: flex;
+    width: 36%;
+    height: 10rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.op{
+	/*height: 2rem;*/
+	width: 45%;
+    border-radius: 40%;
+	background: #fff;
+	margin: 0 auto;
+
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cal>#bottom>#operation>#op-equ{
+	width: 90%;
+}

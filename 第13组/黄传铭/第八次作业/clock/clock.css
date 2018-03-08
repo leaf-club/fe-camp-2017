@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: rgb(199, 197, 197);
+    border: 4px solid rgb(32, 206, 218);
+    margin: auto;
+    margin-top: 20px;
+}
+.num{
+    text-align: right;
+    position: absolute;
+    left: 49%;    
+    font-size: 20px;
+    top: 0.7%;
+    width: 20px;
+    width: 20px;
+    width: 25px;
+    height: 300px;
+    text-align: center;
+    margin-top: 20px;
+}
+/* 数字转动 */
+.num:nth-child(1){
+    transform: rotate(30deg);
+}
+.num:nth-child(2){
+    transform: rotate(60deg);
+}
+.num:nth-child(3){
+    transform: rotate(90deg);
+}
+.num:nth-child(4){
+    transform: rotate(120deg);
+}
+.num:nth-child(5){
+    transform: rotate(150deg);
+}
+.num:nth-child(6){
+    transform: rotate(180deg);
+}
+.num:nth-child(7){
+    transform: rotate(210deg);
+}
+.num:nth-child(8){
+    transform: rotate(240deg);
+}
+.num:nth-child(9){
+    transform: rotate(270deg);
+}
+.num:nth-child(10){
+    transform: rotate(300deg);
+}
+.num:nth-child(11){
+    transform: rotate(330deg);
+}
+/* 数字正立 */
+.num:nth-child(1)>div{
+    transform: rotate(-30deg);
+}
+.num:nth-child(2)>div{
+    transform: rotate(-60deg);
+}
+.num:nth-child(3)>div{
+    transform: rotate(-90deg);
+}
+.num:nth-child(4)>div{
+    transform: rotate(-120deg);
+}
+.num:nth-child(5)>div{
+    transform: rotate(-150deg);
+}
+.num:nth-child(6)>div{
+    transform: rotate(-180deg);
+}
+.num:nth-child(7)>div{
+    transform: rotate(-210deg);
+}
+.num:nth-child(8)>div{
+    transform: rotate(-240deg);
+}
+.num:nth-child(9)>div{
+    transform: rotate(-270deg);
+}
+.num:nth-child(10)>div{
+    transform: rotate(-300deg);
+}
+.num:nth-child(11)>div{
+    transform: rotate(-330deg);
+}
+/* 指针 */
+#hour{
+    text-align: right;
+    position: absolute;
+    left: 49%;    
+    font-size: 20px;
+    top: 0.7%;
+    width: 25px;
+    height: 300px;
+    margin-top: 20px;
+}
+#hour>div{
+    background: #000000;
+    height: 115px;
+    margin-top: 59px;
+    width: 5px;
+    margin-left: 12px;
+}
+#min{
+    text-align: right;
+    position: absolute;
+    left: 49%;    
+    font-size: 20px;
+    top: 0.7%;
+    width: 25px;
+    height: 300px;
+    margin-top: 20px;
+}
+#min>div{
+    background: #000000;
+    height: 150px;
+    margin-top: 40px;
+    width: 3px;
+    margin-left: 13px;
+}
+#second{
+    text-align: right;
+    position: absolute;
+    left: 49%;    
+    font-size: 20px;
+    top: 0.7%;
+    width: 25px;
+    height: 300px;
+    margin-top: 20px;
+}
+#second>div{
+    background: #e41a1a;
+    height: 200px;
+    margin-top: 6px;
+    width: 1px;
+    margin-left: 14px;
+}

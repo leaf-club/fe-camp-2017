@@ -1,0 +1,43 @@
+html{
+    font-family:楷体,sans-serif;
+
+}
+#left{
+    margin:0;
+    width:30%;
+    float:left;
+    border:1px gray solid;
+    background:rgb(228, 228, 75);
+    height:500px;
+}
+#left #name{
+    font-size:1.5em;
+    font-weight:bold;
+}
+#left #work{
+   background:black;
+    color:rgb(241, 241, 144);
+    font-size:1.2em;
+}
+#left a{
+    font-size:0.8em;
+}
+#right{
+    margin:0;
+    width:60%;
+    float:left;
+    border:1px gray solid;
+    height:500px;
+}
+#right pre{
+    font-weight:bold;
+    font-size:1.5em;
+}
+#right p{
+    font-size:0.8em;
+}
+#right .introduce{
+    background:black;
+    color:white;
+    font-size:1.25em;
+}

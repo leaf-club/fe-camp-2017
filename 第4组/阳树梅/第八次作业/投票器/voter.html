@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>voter</title>
+    <link rel="stylesheet" href="voter.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">
+            <div class="img-box"><img src="images/1.jpg" alt=""></div>
+            <div class="screen"></div>
+            <div class="points"></div>
+            <div class="name">LeeSin</div>
+        </div>
+        <div class="box">
+            <div class="img-box"><img src="images/2.jpg" alt=""></div>
+            <div class="screen"></div>
+            <div class="points"></div>
+            <div class="name">Ahri</div>
+        </div>
+        <div class="box">
+            <div class="img-box"><img src="images/3.jpg" alt=""></div>
+            <div class="screen"></div>
+            <div class="points"></div>
+            <div class="name">Sona</div>
+        </div>
+        <div class="box">
+            <div class="img-box"><img src="images/4.jpg" alt=""></div>
+            <div class="screen"></div>
+            <div class="points"></div>
+            <div class="name">JarvanIV</div>
+        </div>
+    </div>
+    <script>
+        var mypoints = document.querySelectorAll(".points"),
+            myhead = document.querySelectorAll(".img-box img"),
+            myscreen = document.querySelectorAll(".screen");
+        var num = [1,1,1,1];
+        
+        for(var i = 0; i<myhead.length;i++){
+            myhead[i].gg = i;
+            mypoints[i].gg = i;
+            //点击头像头投票
+            myhead[i].onclick = function(){
+                num[this.gg]++;
+                mypoints[this.gg].style.height = num[this.gg];
+            }
+            //鼠标悬停显示票数
+            mypoints[i].onmouseover = function(){
+                myscreen[this.gg].style.display = "block";
+                myscreen[this.gg].innerHTML = num[this.gg]-1;
+                myscreen[this.gg].style.bottom = num[this.gg]+325;
+            }
+            //鼠标哦移开不显示
+            mypoints[i].onmouseout = function(){
+                myscreen[this.gg].style.display = "none";
+                }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript"> 
+        window.onload = function(){
+          var tr = document.getElementsByTagName('tr');
+            for(var i = 0; i < tr.length; i++) {
+                tr[i].onmouseover = function() {
+                    this.style.backgroundColor = '#f2f2f2';
+                }
+                tr[i].onmouseout = function() {
+                    this.style.backgroundColor = '#fff';
+                }
+            }
+         }
+          // 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
+        function add_() {
+            var table1 = document.getElementById('table').lastChild;
+            var tr = document.createElement('tr');
+            var td = document.createElement('td');
+            td.innerHTML="<input type = 'text' />";
+            tr.appendChild(td);
+            td = document.createElement('td');
+            td.innerHTML="<input type = 'text' />";
+            tr.appendChild(td);
+            td = document.createElement('td');
+            td.innerHTML='<a href="#" onclick = "delete_(this);" >删除</a>';
+            tr.appendChild(td);
+            table.appendChild(tr);
+        } 
+         // 创建删除函数
+        function delete_(x) {
+            var z = x.parentNode.parentNode;
+            z.parentNode.removeChild(z);
+        }
+      </script> 
+</head>
+<body>
+    <table border="1" width="50%" id="table">
+        <tr>
+         <th>学号</th>
+         <th>姓名</th>
+         <th>操作</th>
+        </tr>  
+ 
+        <tr>
+         <td>xh001</td>
+         <td>王小明</td>
+         <td><a href="javascript:;" onclick='delete_(this);' >删除</a></td>   <!--在删除按钮上添加点击事件  -->
+        </tr>
+ 
+        <tr>
+         <td>xh002</td>
+         <td>刘小芳</td>
+         <td><a href="javascript:;" onclick='delete_(this);' >删除</a></td>   <!--在删除按钮上添加点击事件  -->
+        </tr>  
+ 
+        </table>
+        <input type="button" value="添加一行" onclick='add_()' />   <!--在添加按钮上添加点击事件  -->
+</body>
+</html>

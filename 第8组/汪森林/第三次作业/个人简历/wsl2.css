@@ -1,0 +1,121 @@
+.back{
+	background-image: url("zuoy.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+.center{
+	width: 1000px;
+	height: 1200px;
+	position: absolute;
+	left: 50%;
+	top: 80%;
+	margin-left:-500px;
+	margin-top:-600px;
+	border: 1px solid black;
+	border-radius: 10px;
+	background-image: url("zuot.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: opacity(70%);
+
+}
+.hea{
+	border-width: 0px 0px 10px 0px;
+	border-color: #CDAA7D;
+	border-style: double;
+	height: 188px;
+}
+
+.left-top{
+	font-size: 60px;
+	width: 200px;
+	background-color: #CDAA7D;
+	color: white;
+	text-align: center;
+	float: left;
+}
+.right-top{
+	float: right;
+	padding-right: 600px;
+}
+.header{
+	font-size: 25px;
+	font-family: sans-serif;
+	font-weight: normal;
+	list-style: none;
+	text-align: left;
+	margin-right: 20px;
+	position: absolute;
+	margin-right: 100px
+	margin-top:100px;
+
+}
+.cc{
+	border-width: 0px 0px 10px 0px;
+	border-color: #CDAA7D;
+	border-style: double;
+	height: 130px;
+}
+.aa{
+	font-size: 30px;
+	font-family: sans-serif;
+	color: black;
+	font-weight: bold;
+	text-align: left;
+
+}
+.bb{
+	font-size: 15px;
+	font-family: serif;
+	color: black;
+	font-weight: thin;
+}
+.dd{
+	border-width: 0px 0px 10px 0px;
+	border-color: #CDAA7D;
+	border-style: double;
+	height: 250px;
+}
+.qq{
+	font-size: 30px;
+	font-family: sans-serif;
+	color: black;
+	font-weight: bold;
+	text-align: left;
+}
+.ee{
+	font-size: 20px;
+	font-family: sans-serif;
+	color: black;
+	font-weight: bold;
+	text-align: left;
+	list-style: none;
+
+}
+.ff{
+	font-size: 15px;
+	font-family: serif;
+	color: black;
+	font-weight: thin;
+	padding: 0px 50px;
+}
+.wsl{
+	border-width: 0px 0px 10px 0px;
+	border-color: #CDAA7D;
+	border-style: double;
+	height: 200px;
+}
+.wsl1{
+	font-size: 30px;
+	font-family: sans-serif;
+	color: black;
+	font-weight: bold;
+	text-align: left;
+}
+.pp{
+	font-size: 20px;
+	font-family: serif;
+	color: black;
+	font-weight: thin;
+}

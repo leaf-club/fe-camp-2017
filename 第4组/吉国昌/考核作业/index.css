@@ -1,0 +1,287 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* 背景模糊效果 */
+#bg {
+  position: absolute;
+  width: 300px;
+  height: 533.6px;
+  margin: 0;
+  top: 60px;
+  left: 50%;
+  margin-left: -150px;
+  z-index: 2;
+  overflow: hidden;
+}
+#bg img {
+  width: 100%;
+  height: 100%;
+  filter: blur(12px);
+}
+#bg.clear img {
+  width: 100%;
+  height: 100%;
+  filter: blur(0px);
+  transition: all 0.25s linear;
+}
+#container {
+  width: 300px;
+  height: 533.6px;
+  margin: 60px auto 0;
+  box-sizing: border-box;
+  border: solid 2px black;
+  z-index: 999;
+  position: relative;
+}
+#control {
+  width: 300px;
+  height: 50px;
+  margin: 10px auto 0;
+  background: lightgreen;
+  display: flex;
+  align-items: center;
+}
+#head {
+  height: 20px;
+  /*background: black;*/
+  margin-top: 5px;
+  color: white;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  line-height: 20px;
+}
+#hint {
+  text-align: center;
+  color: white;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 45px;
+  font-family: "黑体";
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+#dots {
+  width: 170px;
+  height: 14px;
+  margin: 10px auto 0;
+  /*background: red;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid white;
+  /*background: lightgrey;*/
+}
+#dots .active {
+  background: white;
+  transition: all 0.075s linear;
+}
+#keys {
+  margin: 40px auto 0;
+  /*background: lightblue;*/
+  width: 220px;
+  height: 310px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+#keys .key {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+#keys .key:active {
+  background: rgba(255, 255, 255, 0.6);
+}
+#keys .key div.num {
+  width: 100%;
+  height: 26px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  text-align: center;
+  font-size: 26px;
+  color: white;
+  line-height: 26px;
+}
+#keys .key.s div.num {
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+#keys .key div.char {
+  position: relative;
+  top: -2px;
+  height: 10px;
+  text-align: center;
+  color: white;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+}
+#bottom {
+  width: 100%;
+  height: 30px;
+  margin-top: 20px;
+  line-height: 30px;
+  color: white;
+  /*background: blue;*/
+  font-size: 14px;
+  font-family: "黑体";
+  letter-spacing: 0.5px;
+}
+#bottom .left {
+  margin-left: 40px;
+  float: left;
+  cursor: pointer;
+}
+#bottom .right {
+  margin-right: 40px;
+  float: right;
+  cursor: pointer;  
+}
+#return {
+  width: 200px;
+  height: 50px;
+  background: rgb(25, 211, 109);
+  color: white;
+  text-align: center;
+  font-family: "黑体";
+  line-height: 50px;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 10px;
+  display: none;
+  cursor: pointer;
+}
+#return:active {
+  background: rgb(86, 243, 157);
+}
+#control input {
+  width: 190px;
+  height: 30px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 16px;
+}
+#control button {
+  width: 50px;
+  height: 30px;
+  border: none;
+  margin-left: 15px;
+  background: rgb(255, 0, 106);
+  color: white;
+  font-family: "宋体";
+  font-size: 16px;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+#control button:active {
+  background: red;
+}
+#out {
+  width: 330px;
+  height: 670px;
+  margin: 20px auto 0;
+  background: white ;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 3px solid lightgrey;
+  position: relative;
+}
+#top {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  position: absolute;
+  top: 13px;
+  background: black;
+  left: 50%;
+  margin-left: -4px;
+}
+#bar {
+  width: 70px;
+  height: 5px;
+  margin: auto;
+  background: black;
+  border-radius: 3px;
+  position: absolute;
+  top: 35px;
+  left: 50%;
+  margin-left: -35px;
+}
+#touch {
+  position: absolute;
+  left: 50%;
+  bottom:8px;
+  width: 50px;
+  height: 50px;
+  margin-left: -25px;
+  border-radius: 50%;
+  border:  goldenrod 3px inset;
+  background: white;
+}
+#cam {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+  top: 32px;
+  margin-left: 100px;
+}
+.band {
+  width: 325px;
+  height: 15px;
+  border-left: white solid 2.5px;
+  border-right: white solid 2.5px;
+  position: absolute;
+  left: -3px;
+  
+}
+.band.a {
+  top: 30px;
+}
+.band.b {
+  bottom: 35px;
+}
+.btn {
+  width: 4px;
+  height: 50px;
+  position: absolute;
+  background: lightgray;
+}
+#up {
+  top: 110px;
+  left: -7px;
+}
+#down {
+  top: 170px;
+  left: -7px;
+}
+#mute {
+  height: 30px;
+  top: 60px;
+  left: -7px;
+}
+#power {
+  top: 100px;
+  right: -7px;
+}

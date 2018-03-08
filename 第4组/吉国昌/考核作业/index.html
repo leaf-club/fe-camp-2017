@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="index.css">
+  <title>解锁界面</title>
+</head>
+
+<body>
+  <!-- 外部 -->
+  <div id="out">
+    <!-- 背景图片模糊 -->
+    <div id="bg">
+      <img src="theme.jpg" alt="bg">
+    </div>
+    <!-- 界面 -->
+    <div id="container">
+      <!-- 头部日期 -->
+      <div id="head">123</div>
+      <!-- 提示文字 -->
+      <div id="hint">
+        <p>触控ID或输入密码</p>
+      </div>
+      <!-- 输入指示 -->
+      <div id="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <!-- 键盘 -->
+      <div id="keys">
+        <div class="key">
+          <div class="num" value="1">1</div>
+        </div>
+        <div class="key s">
+          <div class="num" value="2">2</div>
+          <div class="char" value="2">ABC</div>
+        </div>
+        <div class="key s">
+          <div class="num" value="3">3</div>
+          <div class="char" value="3">DEF</div>
+        </div>
+        <div class="key s">
+          <div class="num" value="4">4</div>
+          <div class="char" value="4">GHI</div>
+        </div>
+        <div class="key s">
+          <div class="num" value="5">5</div>
+          <div class="char" value="5">JKL</div>
+        </div>
+        <div class="key s">
+          <div class="num" value="6">6</div>
+          <div class="char" value="6">MNO</div>
+        </div>
+        <div class="key s">
+          <div class="num" value="7">7</div>
+          <div class="char" value="7">PQRS</div>
+        </div>
+        <div class="key s">
+          <div class="num" value="8">8</div>
+          <div class="char" value="8">TUV</div>
+        </div>
+        <div class="key s">
+          <div class="num" value="9">9</div>
+          <div class="char" value="9">WXYZ</div>
+        </div>
+        <div class="key">
+          <div class="num" value="0">0</div>
+        </div>
+      </div>
+      <!-- 底部按钮 -->
+      <div id="bottom">
+        <span class="left">紧急情况</span>
+        <span class="right">取消</span>
+      </div>
+      <div id="return">复位</div>
+    </div>
+
+
+    <div id="top"></div>
+    <div id="bar"></div>
+    <div id="cam"></div>
+    <div class="band a"></div>
+    <div class="band b"></div>
+    <div class="btn" id="up"></div>
+    <div class="btn" id="down"></div>
+    <div class="btn" id="power"></div>
+    <div class="btn" id="mute"></div>
+    <div id="touch"></div>
+  </div>
+
+  <!-- 控制台 -->
+  <div id="control">
+    <input type="text" placeholder="设置6位密码 默认123456">
+    <button type="123" value="设置">设置</button>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>

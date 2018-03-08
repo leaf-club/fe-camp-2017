@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+/*若不加上述属性，简历上边缘与页面上边缘有距离*/
+#container {
+    margin: 0 auto;
+    width: 900px;
+}
+#basic {
+    width: 300px;
+    height: 1000px;
+    float: left;
+    background-color: rgb(134, 229, 255)
+}
+#basic h3 {
+    background-color: rgb(245, 53, 53);
+}
+#picture {
+    width:200px;
+    height: 320px;
+    margin-top: 80px;
+    margin-left: 50px;
+}
+#picture h2 {
+    text-align: center;
+}
+#picture img {
+    width: 200px;
+    height: 240px;
+}
+#brief_intro {
+    width: 300px;
+    height: 450px;
+}
+#detailed {
+    width: 600px;
+    height: 1000px;
+    float: left;
+    background-color: rgb(248, 247, 233)
+}
+#detailed h3 {
+    line-height: 40px;
+    background-color: rgb(89, 223, 96);
+    border-bottom: 2px dotted red;
+    margin: 0;
+}

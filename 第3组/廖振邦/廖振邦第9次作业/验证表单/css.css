@@ -1,0 +1,14 @@
+*{
+    padding:0;
+    margin:0;
+}
+.load{
+    margin-left:300px;
+    font-size:16px;
+    margin-top:200px;
+}
+.new{
+    font-size:8px;
+    color:red;
+}
+

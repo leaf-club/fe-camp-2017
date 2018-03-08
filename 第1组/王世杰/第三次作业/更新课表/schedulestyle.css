@@ -1,0 +1,26 @@
+html,
+body {
+    margin: 0;
+    width: 100%;
+}
+.box {
+    height: 800px;
+    background-image: url(666.jpg);
+}
+.box .schedulest {
+    position: relative;
+    margin: 0 auto;
+    width: 800px;
+}
+.box .schedulest .schedule {
+    border: 2px solid gray;
+}
+.box .schedulest .schedule .week {
+    font-family: cursive;
+    font-size: 22px;
+}
+.box .schedulest .schedule .subject {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    text-align: center;
+}

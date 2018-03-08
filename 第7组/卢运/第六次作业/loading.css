@@ -1,0 +1,500 @@
+.loading1{
+    width: 80px;
+    margin: 0 auto;
+    padding: 40px 55px;
+    border: 1px solid rgb(3, 194, 51);
+    display: flex;
+    justify-content: space-around;
+}
+
+.loading1 .one{
+    height: 80px;
+    width: 10px;
+    border-radius: 6px;
+}
+
+.one:nth-child(1) {
+    animation: run1 1s ease-in-out infinite; 
+}
+.one:nth-child(2) {
+    animation: run1 1s 0.2s ease-in-out infinite;
+}
+.one:nth-child(3){
+    animation: run1 1s 0.4s ease-in-out infinite;
+}
+.one:nth-child(4) {
+    animation: run1 1s 0.6s ease-in-out infinite;
+}
+.one:nth-child(5) {
+    animation: run1 1s 0.8s ease-in-out infinite;
+}
+
+@keyframes run1 {
+    from {
+        height: 80px;
+        margin: 0 0;
+        background-color: rgb(75, 209, 224);
+    }
+    50% {
+        height: 40px;
+        margin: 20px 0;
+        background-color: rgb(23, 231, 23);
+    }
+    to {
+        height: 80px;
+        margin: 0 0;
+        background-color: rgb(75, 209, 224);
+    }
+}
+/* 第二个loading */
+.loading2,.loading3,.loading4{
+    width: 130px; 
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 70px 30px;
+    border: 1px solid rgb(3, 194, 51);
+    display: flex;
+    justify-content: space-around;
+}
+
+.two,.three{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+}
+
+@keyframes run2{
+    from{
+        opacity: 1;
+        background-color: rgb(63, 238, 57);
+    }
+    to{
+        opacity: 0;
+        background-color: rgb(63, 238, 57);
+    }
+}
+
+.two:nth-child(1) {
+    animation: run2 1s ease-in-out infinite; 
+}
+.two:nth-child(2) {
+    animation: run2 1s 0.2s ease-in-out infinite;
+}
+.two:nth-child(3){
+    animation: run2 1s 0.4s ease-in-out infinite;
+}
+.two:nth-child(4) {
+    animation: run2 1s 0.6s ease-in-out infinite;
+}
+.two:nth-child(5) {
+    animation: run2 1s 0.8s ease-in-out infinite;
+}
+/* 第三个loading */
+@keyframes run3{
+    from{
+        opacity: 1;
+        background-color: rgb(63, 238, 57);
+    }
+    to{
+        transform: scale(0);
+        opacity: 0;
+        background-color: rgb(63, 238, 57);
+    }
+}
+
+.three:nth-child(1) {
+    animation: run3 1s ease-in-out infinite; 
+}
+.three:nth-child(2) {
+    animation: run3 1s 0.2s ease-in-out infinite;
+}
+.three:nth-child(3){
+    animation: run3 1s 0.4s ease-in-out infinite;
+}
+.three:nth-child(4) {
+    animation: run3 1s 0.6s ease-in-out infinite;
+}
+.three:nth-child(5) {
+    animation: run3 1s 0.8s ease-in-out infinite;
+}
+/* <!-- 第四个loading --> */
+.loading4 .four{
+    width: 14px;
+    height: 14px;
+}
+
+@keyframes run4{
+    from{
+        opacity: 1;
+        background-color: rgb(63, 238, 57);
+    }
+    to{
+        transform: rotate(90deg);
+        transform-origin: bottom right;
+        opacity: 0;
+        background-color: rgb(63, 238, 57);
+    }
+}
+.four:nth-child(1) {
+    animation: run4 1s ease-in-out infinite; 
+}
+.four:nth-child(2) {
+    animation: run4 1s 0.2s ease-in-out infinite;
+}
+.four:nth-child(3){
+    animation: run4 1s 0.4s ease-in-out infinite;
+}
+.four:nth-child(4) {
+    animation: run4 1s 0.6s ease-in-out infinite;
+}
+.four:nth-child(5) {
+    animation: run4 1s 0.8s ease-in-out infinite;
+}
+/* 第五个loading  */
+.loading5,.loading6{
+    width: 120px; 
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 35px 35px;
+    border: 1px solid rgb(3, 194, 51);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.skt{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.loading5 .skt .circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+}
+
+@keyframes run5{
+    from{
+        opacity: 1;
+        background-color: rgb(63, 238, 57);
+    }
+    to{
+        
+        opacity: 0;
+        background-color: rgb(63, 238, 57);
+    }
+}
+
+.loading5 .skt .circle1{
+    animation: run5 0.8s ease-in-out infinite; 
+}
+.loading5 .skt .circle2{
+    animation: run5 0.8s 0.1s ease-in-out infinite; 
+}
+.loading5 .skt .circle3{
+    animation: run5 0.8s 0.2s ease-in-out infinite; 
+}
+.loading5 .skt .circle4{
+    animation: run5 0.8s 0.3s ease-in-out infinite; 
+}
+.loading5 .skt .circle5{
+    animation: run5 0.8s 0.4s ease-in-out infinite; 
+}
+.loading5 .skt .circle6{
+    animation: run5 0.8s 0.5s ease-in-out infinite; 
+}
+.loading5 .skt .circle7{
+    animation: run5 0.8s 0.6s ease-in-out infinite; 
+}
+.loading5 .skt .circle8{
+    animation: run5 0.8s 0.7s ease-in-out infinite; 
+}
+/* 第六个loading  */
+.loading6 .skt .circle{
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+}
+@keyframes run6{
+    from{
+        opacity: 1;
+        background-color: rgb(63, 238, 57);
+    }
+    to{
+        opacity: 0;
+        background-color: rgb(63, 238, 57);
+        transform: scale(0);
+    }
+}
+.loading6 .skt .circle1{
+    animation: run6 0.8s ease-in-out infinite; 
+}
+.loading6 .skt .circle2{
+    animation: run6 0.8s 0.1s ease-in-out infinite; 
+}
+.loading6 .skt .circle3{
+    animation: run6 0.8s 0.2s ease-in-out infinite; 
+}
+.loading6 .skt .circle4{
+    animation: run6 0.8s 0.3s ease-in-out infinite; 
+}
+.loading6 .skt .circle5{
+    animation: run6 0.8s 0.4s ease-in-out infinite; 
+}
+.loading6 .skt .circle6{
+    animation: run6 0.8s 0.5s ease-in-out infinite; 
+}
+.loading6 .skt .circle7{
+    animation: run6 0.8s 0.6s ease-in-out infinite; 
+}
+.loading6 .skt .circle8{
+    animation: run6 0.8s 0.7s ease-in-out infinite; 
+}
+/* 第七个loading */
+.loading7{
+    width: 190px; 
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 70px 0;
+    border: 1px solid rgb(3, 194, 51);
+    overflow: hidden;
+}
+
+.loading7 .box{
+    height: 14px;
+    border-radius: 5px;
+    position: relative;
+    animation: run7 1s linear infinite; 
+}
+
+.loading7 .box1{
+    width: 190px;
+    height: 14px;
+    background-color: rgb(144,238,144);
+}
+.loading7 .box2{
+    width: 190px;
+    height: 14px;
+    position: absolute;
+    left: -190px;
+    top: 0;
+    background-color: rgb(173,216,230);
+}
+
+@keyframes run7{
+    to{
+        transform: translateX(190px);
+    }
+}
+/* 第八个loading */
+.loading8{
+    width: 10px;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px 90px;
+    border: 1px solid rgb(3, 194, 51);
+}
+
+.loading8 .eight{
+    width:10px;
+    height: 40px;
+}
+
+.loading8 .white{
+    height: 20px;
+    background-color:white;
+}
+
+.loading8>div{
+    position: absolute;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+@keyframes run8{
+    from{
+        opacity: 1;
+        background-color: rgb(147, 238, 147);
+    }
+    to{
+        opacity: 0.3;
+        background-color: rgb(147, 238, 147);
+    }
+}
+
+.eight1{
+    animation: run8 0.8s ease-in-out infinite; 
+}
+.eight2{
+    transform: rotate(45deg);
+    transform-origin: bottom center;
+    animation: run8 0.8s 0.1s ease-in-out infinite; 
+}
+.eight3{
+    transform: rotate(90deg);
+    transform-origin: bottom center;
+    animation: run8 0.8s 0.2s ease-in-out infinite; 
+}
+.eight4{
+    transform: rotate(135deg);
+    transform-origin: bottom center;
+    animation: run8 0.8s 0.3s ease-in-out infinite; 
+}
+.eight5{
+    transform: rotate(180deg);
+    transform-origin: bottom center;
+    animation: run8 0.8s 0.4s ease-in-out infinite; 
+}
+.eight6{
+    transform: rotate(225deg);
+    transform-origin: bottom center;
+    animation: run8 0.8s 0.5s ease-in-out infinite; 
+}
+.eight7{
+    transform: rotate(270deg);
+    transform-origin: bottom center;
+    animation: run8 0.8s 0.6s ease-in-out infinite; 
+}
+.eight8{
+    transform: rotate(315deg);
+    transform-origin: bottom center;
+    animation: run8 0.8s 0.7s ease-in-out infinite; 
+}
+/* 第九个loading */
+.loading9{
+    width: 20px;
+    height: 120px;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 20px 85px;
+    border: 1px solid rgb(3, 194, 51);
+}
+
+.loading9 .nine{
+    width:20px;
+    height: 20px;
+    background-color: rgb(144,238,144);
+    border-radius: 10px;
+}
+
+.loading9 .white{
+    height: 40px;
+}
+
+.loading9>div{
+    background-color: white;
+    position: absolute;
+}
+
+.nine1{
+    animation: run91 1.6s cubic-bezier(0.05, 0.01, 0.88, 0.96) infinite; 
+}
+.nine2{
+    animation: run92 1.6s cubic-bezier(0.05, 0.01, 0.88, 0.96) infinite; 
+}
+.nine3{
+    animation: run93 1.6s cubic-bezier(0.05, 0.01, 0.88, 0.96) infinite;
+}
+.nine4{
+    animation: run94 1.6s cubic-bezier(0.05, 0.01, 0.88, 0.96) infinite; 
+}
+
+@keyframes run91{
+    from{
+        opacity: 1;
+    }
+    25%{
+        opacity: 1;
+        transform: rotate(90deg);
+        transform-origin: bottom center;
+    }
+    50%{
+        opacity: 0;
+        transform: rotate(180deg);
+        transform-origin: bottom center;;
+    }
+    to{
+        opacity: 1;
+        transform: rotate(360deg);
+        transform-origin: bottom center;
+    }
+}
+@keyframes run92{
+    from{
+        opacity: 1;
+        transform: rotate(30deg);
+        transform-origin: bottom center;
+    }
+    16.7%{
+        opacity: 1;
+        transform: rotate(90deg);
+        transform-origin: bottom center;
+    }
+    41.7%{
+        opacity: 0;
+        transform: rotate(180deg);
+        transform-origin: bottom center;;
+    }
+    91.7%{
+        opacity: 1;
+        transform: rotate(360deg);
+        transform-origin: bottom center;
+    }
+    to{
+        opacity: 1;
+        transform: rotate(390deg);
+        transform-origin: bottom center;
+    }
+}
+@keyframes run93{
+    from{
+        opacity: 1;
+        transform: rotate(60deg);
+        transform-origin: bottom center;
+    }
+    8.3%{
+        opacity: 1;
+        transform: rotate(90deg);
+        transform-origin: bottom center;
+    }
+    33.3%{
+        opacity: 0;
+        transform: rotate(180deg);
+        transform-origin: bottom center;;
+    }
+    83.3%{
+        opacity: 1;
+        transform: rotate(360deg);
+        transform-origin: bottom center;
+    }
+    to{
+        opacity: 1;
+        transform: rotate(420deg);
+        transform-origin: bottom center;
+    }
+}
+@keyframes run94{
+    from{
+        opacity: 1;
+        transform: rotate(90deg);
+        transform-origin: bottom center;
+    }
+    25%{
+        opacity: 0;
+        transform: rotate(180deg);
+        transform-origin: bottom center;;
+    }
+    75%{
+        opacity: 1;
+        transform: rotate(360deg);
+        transform-origin: bottom center;
+    }
+    to{
+        opacity: 1;
+        transform: rotate(450deg);
+        transform-origin: bottom center;
+    }
+}

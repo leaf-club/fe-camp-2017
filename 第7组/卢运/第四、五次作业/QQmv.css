@@ -1,0 +1,592 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+
+header{
+    background-color: rgb(255, 255, 255);
+    margin-top: -16px;
+    min-width: 1300px;
+    overflow: hidden;
+}
+
+a:hover{
+    color: rgb(105, 228, 105);
+}
+
+header .nav-top{
+    height: 90px;
+    margin-left: 100px;
+    line-height: 90px;
+    border-bottom: 1px solid rgb(238, 230, 230);
+}
+
+header .nav-top .logo a{
+    width: 176px;
+    height: 46px;
+    background-image: url("logo.png");
+    background-repeat: no-repeat;
+    float: left;
+    margin: 22px 20px 0 0;
+}
+
+header .nav-top li{ 
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+
+header .nav-top li a{
+    height: 90px;
+    display: inline-block;
+    font-size: 18px;
+    padding: 0 20px; 
+}
+
+header .nav-top li #focu-a{
+    background-color: rgb(49, 194, 124);
+    color: white;
+}
+/* header部分结束 */
+.nav-top #search{
+    float: left;
+    margin-left: 45px;
+    position: relative;
+    margin-right: 15px;
+}
+.nav-top .search{
+    width: 200px;
+    height: 30px;
+}
+
+.nav-top #search .search-logo{
+    position: absolute;
+    top: 50%;
+    right: 11px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background-image: url("icon_sprite.png");
+    background-position: 0 -40px;
+}
+
+.nav-top #search a.search-logo:hover{
+    background-image: url("icon_sprite.png");
+    background-position: 0 -60px;
+}
+
+.nav-top .login{
+    font-size: 16px; 
+}
+
+.nav-top .lvzhuan{
+    display: inline-block;
+    width: 91px;
+    height: 36px;
+    line-height: 36px;
+    background-color: rgb(49, 194, 124);
+    font-size: 13px;
+    color: rgb(255, 255, 255);
+    margin: 24px 0 0 10px;
+    border: 1px solid #1bd67c;
+    padding: 0 10px;
+}
+header .nav-top .lvzhuan:hover{
+    background-color: rgb(27, 172, 27);
+}
+
+.nav-top .pay{
+    display: inline-block;
+    width: 65px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 13px;
+    margin: 24px 0 0 10px;
+    border: 1px solid #c2bfbf;
+    padding: 0 10px;
+}
+header .pay:hover{
+    background-color: rgb(226, 240, 226);
+    color: black;
+}
+
+header .nav-bottom li{
+    list-style: none;
+    float: left;
+    margin-right: 46px;
+}
+
+header .nav-bottom{
+    padding-left: 100px;
+    height: 50px;    
+    line-height: 50px;
+    position: relative;
+    top: -16px;
+}
+
+header .nav-bottom li a{
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    font-size: 15px;
+}
+
+header .nav-bottom ul{
+    position: relative;
+    left: 186px;
+}
+
+header .nav-bottom li  #mv{
+    color:rgb(49, 194, 124);
+}
+/* header部分结束 */
+
+.main{
+    min-width: 1300px;
+    overflow: hidden;
+}
+.main .main-top{
+    background-color: rgb(243,243,243);
+    height: 210px; 
+    margin-top: -16px;
+    padding-top: 60px;
+}
+.main .main-topcontent{
+    width: 1200px;
+    height: 210px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    font-size: 14px;
+}
+
+.main .main-topcontent .area{
+    flex-basis: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .main-topcontent  span a{
+    height: 26px;
+    padding: 0 8px;
+    line-height: 26px;
+    text-align: center;
+    display: inline-block;
+}
+
+.main .main-topcontent .title{
+    height: 26px;
+    padding: 0 8px;
+    line-height: 26px;
+    text-align: center;
+    display: inline-block;
+}
+
+.main .main-topcontent span .all{
+    background-color: rgb(49, 194, 124);
+    color: white;
+}
+
+.main .main-topcontent .type{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .main-topcontent .type1{
+    padding-left: 72px; 
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .main-topcontent .type2{
+    padding-left: 72px; 
+    flex-basis: 21%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main .main-topcontent .years{
+    flex-basis: 74%;
+    display: flex;
+    justify-content: space-between;
+}
+/* main-top部分结束 */
+.main .main-bottom{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main .main-bottom .allmv h2{
+    font-size:24px;
+    font-weight: 400;
+    margin: 15px 0;
+    float: left;
+}
+
+.main .main-bottom .allmv .new-hot{
+    margin-top: 10px;
+    padding: 0 16px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid rgb(145, 140, 140);
+    float: right;
+}
+
+.main .main-bottom .allmv .hot{
+    background-color: rgb(49, 194, 124);
+    border-left-width: 0;
+}
+
+.clear-f{
+    clear: both;
+}
+
+.main-bottom .mv-show{
+    height: 1450px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.main-bottom .mv-show .one-row{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+.main-bottom .mv-show .item{
+    position: relative;
+}
+.main-bottom .mv-show .item-img{
+    display: inline-block;
+    width: 285px;
+    height: 161px;
+    margin-bottom: 15px;
+}
+
+/* 图片集 */
+.main-bottom .mv-show .img00{
+    background-image: url("00.jpg")
+}
+.main-bottom .mv-show .img01{
+    background-image: url("01.jpg")
+}
+.main-bottom .mv-show .img02{
+    background-image: url("02.jpg")
+}
+.main-bottom .mv-show .img03{
+    background-image: url("03.jpg")
+}
+.main-bottom .mv-show .img10{
+    background-image: url("10.jpg")
+}
+.main-bottom .mv-show .img11{
+    background-image: url("11.jpg")
+}
+.main-bottom .mv-show .img12{
+    background-image: url("12.jpg")
+}
+.main-bottom .mv-show .img13{
+    background-image: url("13.jpg")
+}
+.main-bottom .mv-show .img20{
+    background-image: url("20.jpg")
+}
+.main-bottom .mv-show .img21{
+    background-image: url("21.jpg")
+}
+.main-bottom .mv-show .img22{
+    background-image: url("22.jpg")
+}
+.main-bottom .mv-show .img23{
+    background-image: url("23.jpg")
+}
+.main-bottom .mv-show .img30{
+    background-image: url("30.jpg")
+}
+.main-bottom .mv-show .img31{
+    background-image: url("31.jpg")
+}
+.main-bottom .mv-show .img32{
+    background-image: url("32.jpg")
+}
+.main-bottom .mv-show .img33{
+    background-image: url("33.jpg")
+}
+.main-bottom .mv-show .img40{
+    background-image: url("40.jpg")
+}
+.main-bottom .mv-show .img41{
+    background-image: url("41.jpg")
+}
+.main-bottom .mv-show .img42{
+    background-image: url("42.jpg")
+}
+.main-bottom .mv-show .img43{
+    background-image: url("43.jpg")
+}
+/* 图片集 */
+
+.main-bottom .mv-show .one-row .item .play{
+    background-image: url("cover_play.png");
+    position: absolute;
+    left: 107px;
+    top: 45px;
+    width: 70px;
+    height: 70px;
+    display: none;
+}
+
+.main-bottom .mv-show .item a.item-img:hover>.play{
+   display: block;
+}
+
+.main-bottom .mv-show .item a.item-img:hover{
+    transform: scale(1.08);
+    transition: all 1s ease;
+    -webkit-transform: scale(1.08);
+    -webkit-transition: all 1s ease 0s;
+}/*hover-图片放大1.08倍*/
+
+.main-bottom .mv-show .item-description p{
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.main-bottom .mv-show .item-description .singer{
+    color: #999;
+}
+
+.main-bottom .mv-show .item-description .singer a:hover{
+    color: rgb(105, 228, 105);
+}
+
+.main-bottom .mv-show .item-description .logo1{
+    display: inline-block;
+    width: 19px;
+    height: 12px;
+    background-image: url("icon_sprite.png");
+    background-position: -180px -20px;
+    margin-right: 6px;
+}
+
+.main-bottom .page{ 
+    height: 50px;
+    width: 550px;
+    margin: 50px 325px;
+}
+
+.main-bottom .page li{
+   list-style: none;
+   float: left;
+   margin: 0 8px;
+   height: 50px;
+   line-height: 50px;
+}
+
+.main-bottom .page li a{
+    display: inline-block;
+    color: rgb(162, 162, 162);
+    height: 50px;
+    padding: 0 20px;
+}
+
+.main-bottom .page li a.page1{
+    background-color: rgb(49, 194, 124); 
+    color: white;
+}
+
+.main-bottom .page li a:hover{
+    background-color: rgb(49, 194, 124);
+    color: white !important;
+}
+/* main-bottom部分结束 */
+/* footer部分开始 */
+.footer{
+    background-color: rgb(51,51,51);
+    min-width: 1300px;
+    overflow: hidden;
+    font-size: 14px;
+    padding-top: 75px;
+    color: #999;
+}
+
+.footer a{
+    color: #999;
+}
+
+.footer a:hover{
+    color: rgb(105, 228, 105);
+}
+
+.foot-content{
+    width: 1180px;
+    margin: 0 auto;
+}
+
+.footer .foot-content .download{
+    width: 360px;
+    height: 150px;
+    float: left;
+}
+
+.footer .foot-content h4{
+    font-size: 15px;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+
+.footer .foot-content .download .method{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pc-logo,.mac-logo,.android-logo,.iphone-logo{
+    background-image: url("footer@2x.png");
+    display: inline-block;
+    height: 48px;
+}
+
+.footer .foot-content .download .method .pc .pc-logo{
+    width: 37px;
+    background-position: -2px 0;
+}
+
+.footer .foot-content .download .method .pc a.pc-logo:hover{
+    background-position: -2px -49px;
+}
+
+.footer .foot-content .download .method .mac .mac-logo{
+    width: 46px;
+    background-position: -92px 0;
+}
+.footer .foot-content .download .method .mac a.mac-logo:hover{
+    background-position: -92px -49px;
+}
+
+.footer .foot-content .download .method .android a.android-logo{
+    margin-left: 15px;
+    width: 45px;
+    background-position: -190px 0;
+}
+.footer .foot-content .download .method .android a.android-logo:hover{
+    background-position: -190px -49px;
+}
+
+.footer .foot-content .download .method .iphone a.iphone-logo{
+    margin-left: 11px;
+    width: 34px;
+    background-position: -279px 0;
+}
+.footer .foot-content .download .method .iphone a.iphone-logo:hover{
+    background-position: -279px -49px;
+}
+
+.footer .foot-content .allproducts{
+    width: 250px;
+    height: 210px;
+    float: left;
+    margin-left: 120px;
+}
+
+.footer .foot-content .allproducts .products{
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kge-logo,.sound-logo,.qplay-logo{
+    background-image: url("footer@2x.png");
+    display: inline-block;
+    height: 48px;
+}
+
+.footer .foot-content .products  .kge .kge-logo{
+    width: 41px;
+    background-position: -370px -0px;
+}
+.footer .foot-content .products  .kge a.kge-logo:hover{
+    background-position: -370px -49px;
+}
+
+.footer .foot-content .products  .sound .sound-logo{
+    width: 41px;
+    background-position: -463px 0;
+    margin-left: 22px;
+}
+.footer .foot-content .products  .sound a.sound-logo:hover{
+    background-position: -463px -49px;
+}
+
+.footer .foot-content .products  .qplay .qplay-logo{
+    width: 41px;
+    background-position: -563px 0;
+}
+.footer .foot-content .products  .qplay a.qplay-logo:hover{
+    background-position: -563px -49px;
+}
+
+.footer .foot-content .allproducts .pro45{
+    display: inline-block;
+    margin-right: 35px;
+}
+
+.footer .foot-content .cooperation{
+    width: 300px;
+    height: 200px;
+    float: right;
+    margin-right: 20px;
+}
+
+.footer .foot-content .cooperation .cooperation-list{
+    height: 130px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.footer .foot-content .cooperation .cooperation-list .onelist{
+    display: flex;
+    flex-direction: column;
+    height: 125px;
+    justify-content: space-between;
+}
+
+.footer .foot-content .platform{
+    margin-top: 50px;
+    width: 400px;
+    height: 170px;
+}
+
+.footer .foot-content .platform .platform-list{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+.footer .foot-content .copyright{
+    margin-bottom: 25px;
+    flex-basis: 100%;
+    font-size: 12px;
+}
+
+.footer .foot-content .copyright .oneline{
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+}
+
+.footer .foot-content .copyright .oneline a{
+    padding: 0 4px;
+}

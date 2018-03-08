@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chapter7</title>
+</head>
+<body>
+    <script type="text/javascript">
+
+  //通过javascript的日期对象来得到当前的日期，并输出。
+  var now = new Date();
+  var weekday = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
+  document.write(now.getFullYear()+"年"+(now.getMonth()+1)+"月"+now.getDate()+"日"+" "+weekday[now.getDay()]);
+  
+  
+  //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+  var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+ 
+    var scoreStr1=scoreStr.split(";");
+    var sum=0;
+    var i;
+  //从数组中将成绩撮出来，然后求和取整，并输出。
+  for(i=0; i<scoreStr1.length; i++){
+      sum+=parseInt(scoreStr1[i].substr(3));
+  }
+    document.write("--班级总分为"+Math.round(sum));
+    document.write("<br/>"+"班级平均分为"+Math.round(sum/scoreStr1.length));
+</script>
+</body>
+</html>

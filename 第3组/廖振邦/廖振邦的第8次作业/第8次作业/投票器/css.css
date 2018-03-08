@@ -1,0 +1,53 @@
+*{
+    padding:0;
+    margin:0;
+}
+.vertor{
+    margin:50px auto;
+    border:1px solid green;
+    width:600px;
+    height:600px;
+    display:flex;
+}
+.vertor div{
+  margin: 25px;
+}
+.vertor .people img{
+    cursor: pointer;
+}
+.vertor div{
+    width:100px;
+    height:575px;
+    background: rgb(247, 241, 241);
+    position: relative;
+}
+.vertor div p{
+    position: absolute;
+    bottom: 0;
+    width:100px;
+    font-size:15px;
+    font-weight: bold;
+    text-align:center
+}
+.vertor div .col{
+    position: absolute;
+    bottom: 30px;
+    background: orangered;
+    width:80px;
+    height:100px;
+    margin:0 10px;
+    cursor: pointer;
+
+}
+.vertor .people .new{
+    height:20px;
+    width:100%;
+    margin:0;
+    margin-bottom:0;
+background: black;
+color:white;
+text-align: center;
+}
+.vertor .people .no{
+    display: none;
+}

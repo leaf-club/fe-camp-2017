@@ -1,0 +1,39 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>函数</title>
+
+<script type="text/javascript">
+
+//定义函数
+function sum1(x,y){
+    if(x>y){
+    return x;
+    }
+    else if(x<y){
+        return y;
+    }else{
+        return ("它们相等没有较大值");
+    }
+    }
+
+
+
+//函数体，判断两个整数比较的三种情况
+x1=sum1(4,6);
+x2=sum1(6,3);
+x3=sum1(6,6);
+ 
+//调用函数，实现下面两组数中，返回较大值。
+  document.write(" 4和6的较大值是:"+x1+"<br/>");
+  document.write(" 6和3的较大值是:"+x2+"<br/>"); 
+  document.write(" 6和6的较大值是:"+x3 ); 
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

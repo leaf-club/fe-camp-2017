@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chapter4</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //第一步把之前的数据写成一个数组的形式,定义变量为 infos
+        var infos=[["小A","女",21,"大一"],["小B","男",23,"大三"],["小C","男",24,"大四"],["小D","女",21,"大一"],
+                   ["小E","女",22,"大四"],["小F","男",21,"大一"],["小G","女",22,"大二"],["小H","女",20,"大三"],
+                   ["小I","女",20,"大一"],["小J","男",20,"大三"]];
+        //第一次筛选，找出都是大一的信息
+        var infos1=new Array();
+        var temp=0;
+        for(var i=0; i<10; i++){
+           if(infos[i][3]=="大一"){
+               infos1[temp]=infos[i];
+               temp++;
+           }
+           console.log(i);
+        }
+        //第二次筛选，找出都是女生的信息
+        for(var i=0; i<infos1.length; i++){
+            if(infos1[i][1]=="女"){
+                document.write(infos1[i][0]+" "+infos1[i][1]+" "+infos1[i][2]+" "+infos1[i][3]+"<br/>");  
+            }
+        }     
+       </script> 
+</body>
+</html>
