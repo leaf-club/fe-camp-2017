@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var m = prompt("请输入您的兴趣爱好"); 
+        function repeat(list){
+            var x,y
+            x = list.split(',');
+            for(var i = 0 ; i < x.length ; i++){
+                for(var j = i+1 ; j<x.length ;j++){
+                    if(x[i]==x[j]){
+                        x.splice(j,1);
+                    }
+                }
+            }
+            alert(x.toString());
+        }
+        repeat(m);
+    </script>
+</body>
+</html>
