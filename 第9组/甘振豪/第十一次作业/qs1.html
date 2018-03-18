@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ShopCard</title>
+    <style>
+    #in,#out{
+        width: 200px;
+        height: 30px;
+    }
+    #in,#out{
+        font-size: 18px;
+    }
+    #out{
+        font-size: 15px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="psw">
+        <label for="">Input:</label>&nbsp;&nbsp;&nbsp;
+        <input type="text" autofocus value='3efu8-rt67f-e42op-8rpol' id='in'>
+        <br>
+        <label for="">Output:</label>
+        <input type="text" value='' id='out'>
+        <br>
+        <button onclick=activative()>激活</button>
+    </div>
+    <script>
+        function activative() {
+            var In = document.querySelector('#psw #in');
+            var Out = document.querySelector('#psw #out');
+            var inPassWord = In.value;
+            var str1 = inPassWord.replace(/-/g, "");
+            var strExp = /^[A-Za-z0-9]+$/;
+            if (strExp.test(str1) && str1.length == 20) {
+                Out.value = str1.toUpperCase();
+            } else {
+                //In.value = "";
+                Out.value = "";
+                alert('异常：无效的激活码格式！请重新输入。');
+                In.focus();
+            }
+        }
+    </script>
+</body>
+
+</html>
