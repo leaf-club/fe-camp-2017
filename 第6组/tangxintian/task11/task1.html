@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" name="" id="input">
+  <input type="submit" name="" id="submit" onclick="check()">
+</body>
+<script type="text/javascript">
+function check(){
+    var My_input = document.getElementById('input').value,
+    temp = My_input.split("-"),
+    psw = "";
+  for (var i in temp){
+       psw += temp[i];
+  }
+  psw = psw.toUpperCase(psw);
+  if (psw.length === 20){
+      alert("您的购物卡号为："+psw)
+  }else {
+      alert("异常：无效的密码格式")
+  }
+}
+</script>
+</html>

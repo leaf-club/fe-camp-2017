@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="cal.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="cal">
+        <div id="top">
+            <input type="text" name="" id="show" value="">
+        </div>
+        <div id="but">
+            <input type="button" class="blue" value="c">
+            <input type="button" id="nosee" value="">
+            <input type="button" value=".">
+            <input type="button" value="+">
+            <input type="button" value="7">
+            <input type="button" value="8">
+            <input type="button" value="9">
+            <input type="button" value="-">
+            <input type="button" value="4">
+            <input type="button" value="5">
+            <input type="button" value="6">
+            <input type="button" value="*">
+            <input type="button" value="1">
+            <input type="button" value="2">
+            <input type="button" value="3">
+            <input type="button" value="/">
+            <input type="button" id="big" value="0">
+            <input type="button" class="blue" value="=">
+
+        </div>
+    </div>
+    <script>
+        var atex = document.querySelectorAll("#show");
+        var bbut = document.querySelectorAll("#but input");
+        var result = "";
+        var finalR;
+        console.log(atex);
+        for (let i = 2; i < bbut.length - 1; i++) {
+            bbut[i].onclick = function(){
+                result += this.value;
+                console.log(this.value);
+                console.log(result);
+            atex[0].value = result;
+            console.log(atex.value);
+            }
+        }
+        bbut[17].onclick = function () {
+          finalR=eval(result);
+          atex[0].value = finalR;
+        }
+        bbut[0].onclick=function(){
+            atex[0].value=0;
+            result="";
+            finalR=0;
+        }
+    </script>
+</body>
+</html>

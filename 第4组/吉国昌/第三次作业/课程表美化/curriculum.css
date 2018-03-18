@@ -1,0 +1,93 @@
+body {
+  background: url('theme.jpg') no-repeat;
+}
+#warpper {
+  width: 900px;
+  margin: auto;
+  margin-top: 120px;
+}
+h2 {
+  text-align: center;
+  color: white;
+  font-size: 25px;
+  font-style: italic;
+  font-weight: 500;
+}
+nav{
+  /*此处是为了消去inline-block的间距*/
+  font-size: 0px;
+  position: relative;
+  top: 0.5px;
+}
+a {
+  color: rgb(75, 75, 75);
+  font-size: 20px;
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  text-align-last: center;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 20px 20px 0px 0px;
+  transition: background 0.3s ease-in-out;
+}
+a:hover {
+  background: rgba(255, 255, 255, 0.55);
+}
+a.active {
+  background: rgba(255, 255, 255, 0.625);
+}
+.cur {
+  width: 900px;
+  padding: 20px 30px 30px 30px;
+  border: none;
+  background: rgba(255, 255, 255, 0.625);
+  position: absolute;
+  border-radius: 0px 0px 20px 20px; 
+  visibility: hidden;
+  font-family: "宋体";
+}
+.cur.active {
+  visibility: visible;
+}
+table tr {
+  display: block;
+  margin: 5px;
+}
+table tr th {
+  width: 180px;
+  border-radius: 8px 0px 0px 8px;
+}
+table tr td {
+  width: 615px;
+  border-radius: 0px 8px 8px 0px;
+  padding-left: 20px;
+}
+table tr th, td {
+  display: inline-block;
+  height: 50px; 
+  line-height: 50px; 
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+table tr .one {
+  background: #7d7676;
+  box-shadow: 0px 0px 3px #7d7676;
+}
+table tr .two {
+  background: rgb(82, 133, 115);
+  box-shadow: 0px 0px 3px rgb(82, 133, 115);
+}
+table tr .three {
+  background: rgb(111, 143, 72);
+  box-shadow: 0px 0px 3px rgb(111, 143, 72);
+}
+table tr .four {
+  background: rgb(220, 170, 59);
+  box-shadow: 0px 0px 3px rgb(214, 170, 59);
+}
+table tr .five {
+  background: #e66868;
+  box-shadow: 0px 0px 3px #e66868;
+}

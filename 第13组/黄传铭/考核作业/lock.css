@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* 所有文字白色 */
+p, div{
+    color: #ffffff;
+    text-align: center;
+}
+/* 背景样式 */
+.box{
+    background: #bcbcbc;
+    width: 282px;
+    height: 487px;
+    margin: auto;
+    margin-top: 3%;
+}
+.header{
+    position: relative;
+    width: 100%;
+    top: 38px;
+}
+/* 提示文字 */
+.tip{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+/* 圆圈 */
+.show{
+    width: 100%;
+    margin: auto;
+    
+}
+.show1{
+    display: flex;
+    margin-left: 58px;
+    margin-top: 10px;
+}
+.circle{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    margin-left: 13px;
+}
+/* 键盘 */
+.keyboard{
+    position: relative;
+    top: 48px;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.number{
+    width: 33%;
+}
+.number>div{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    line-height: 60px;
+    margin: auto;
+    margin-top: 16px;
+}
+#zero{
+    margin-left: 50%;
+    margin-left: 93.5px;
+}
+/* 底部 */
+.footer{
+    position: relative;
+    top: 85px;
+    display: flex;
+    justify-content: space-around;
+}
+/* 动态反应 */
+.number>div:hover{
+    background: #868686;
+    cursor: pointer;
+}
+.foot:hover>p{
+    cursor: pointer;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="back">
+        <div class="ground">
+            <div class="time">
+               <p class="num">12</p>
+               <p class="num">1</p>
+               <p class="num">2</p>
+               <p class="num">3</p>
+               <p class="num">4</p>
+               <p class="num">5</p>
+               <p class="num">9</p>
+               <p class="num">7</p>
+               <p class="num">8</p>
+               <p class="num">9</p>
+               <p class="num">10</p>
+               <p class="num">11</p>
+               <div class="short"></div>
+               <div class="long"></div>
+               <div class="sshort"></div>
+               <div class="cir"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var ashort=document.querySelector(".back .ground .short");
+    var along=document.querySelector(".back .ground .long");
+    var asshort=document.querySelector(".back .ground .sshort");
+    var time1;
+    var time2;
+    var time3;
+    var i=1;
+    var auto=function(){
+        time1=setInterval(function(){
+         var s="rotate"+"("+i*6+"deg"+")";
+        along.style.transform=s;
+            
+            along.className=" long auto";
+              i++;
+        },100)
+    }
+    auto();
+    var auto2=function(){
+         time2=setInterval(function(){
+             var s="rotate"+"("+i*6+"deg"+")";
+             ashort.style.transform=s;
+             ashort.className="short auto";
+             i++;
+         },60000);
+    }
+    auto2();
+    var auto3=function(){
+         time3=setInterval(function(){
+             var s="rotate"+"("+i*30+"deg"+")";
+             asshort.style.transform=s;
+             asshort.className="sshort auto";
+             i++;
+         },3600000);
+    }
+    auto3();
+    </script>
+</body>
+</html>

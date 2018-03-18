@@ -1,0 +1,90 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.banner{
+    margin-top:100px;
+    margin-left: 100px;
+    position: relative;
+    width:790px;
+    height:340px;
+}
+ul{
+    list-style: none;
+}
+li{
+    cursor:pointer;
+}
+.right-button,.left-button{
+    cursor:pointer;
+}
+.banner .pic{
+    position: absolute;
+    left:0;
+    top:0;
+    display: none;
+}
+
+.left-button{
+    background:black;
+    color:white;
+   
+    width:40px;
+    height:80px;
+    
+    top:50%;
+    margin-top: -40px;
+    position: absolute;
+    left:0;
+}
+.right-button{
+    background:black;
+    color:white;
+   
+    width:40px;
+    height:80px;
+    
+    top:50%;
+    margin-top: -40px;
+    right:0%;
+    position: absolute;
+}
+.button div{
+ text-align: center;
+line-height:80px;
+display: none;
+}
+.banner:hover .button div{
+    display: block;
+}
+
+.tab{
+    background: rgba(255,255,255,0.7);
+    position: absolute;
+    width:250px;
+    height:20px;
+    left:50%;
+    bottom:0;
+    margin-left:-125px;
+    border-radius: 10px;
+   
+}
+.tab ul li{
+    background:rgb(196,196,196);
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    float: left;
+    margin:0 5px;
+}
+.tab ul{
+    padding: 0 5px;
+}
+
+.tab ul li.on{
+    background: red;
+}
+.banner{
+    cursor:pointer;
+}

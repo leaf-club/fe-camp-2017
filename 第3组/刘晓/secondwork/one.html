@@ -1,0 +1,198 @@
+<httpwww.cnblogs.comcwp-bgp7732486.html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>javascript入门知识点总结(一) - 天宇之游 - 博客园</title>
+    </head>
+    <body>
+        <a name="top"></a>
+        
+        <!--done-->
+            <a  href="http://www.cnblogs.com/cwp-bg/"><img src="/Skins/custom/images/logo.gif" alt="返回主页"></a>			
+                
+        <!--done-->
+        <h1><a  href="http://www.cnblogs.com/cwp-bg/">天宇之游</a></h1>
+        <h2></h2>
+        
+        
+        
+                
+            </div><!--end: blogTitle 博客的标题和副标题 -->
+            <div >
+                
+        <ul >           <!--end: 标题栏上的几个按钮,分别牵引到不同网站 -->              
+        <li><a  href="http://www.cnblogs.com/">博客园</a></li>
+        <li><a  href="http://www.cnblogs.com/cwp-bg/">首页</a></li>
+        <li><a  rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+        <li><a  rel="nofollow" href="https://msg.cnblogs.com/send/%E5%A4%A9%E5%AE%87%E4%B9%8B%E6%B8%B8">联系</a></li>
+        <li><a  href="http://www.cnblogs.com/cwp-bg/rss">订阅</a>
+        <li><a rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+        </ul>
+
+        <span >随笔 - 20&nbsp; </span>
+        <span >文章 - 0&nbsp; </span>
+        <span >评论 - 11</span>
+        </div>
+                    
+                </div><!--end: blogStats -->
+            </div><!--end: navigator 博客导航栏 -->
+        </div><!--end: header 头部 -->
+        
+        <div >
+            <div >
+            <div >
+                
+        <div>
+        <!--done-->
+        <div >
+            <div>
+                <h1>
+                    <a  href="http://www.cnblogs.com/cwp-bg/p/7732486.html">javascript入门知识点总结(一)</a>
+                </h1>
+                <div ></div>
+                <div >
+                    <div ><p><strong>学了几天javascript，现总结一下原生javascript的基本知识点。</strong></p>
+        <hr>
+        <h2 >一、javascript基本知识</h2>
+        <h3 >变量</h3>
+        <ul>
+        <li><strong>定义：</strong></li>
+        </ul>
+        <pre><code ><span >var</span> a = <span >123</span>;
+        <span >var</span> b = <span >'abc'</span>;
+        <span >//连写</span>
+        <span >var</span> a = <span >123</span>,b=<span >456</span>;</code></pre>
+        <p><strong>注意：js为弱类型的解释型脚本语言，使用var关键字定义一个变量，数据类型自动判断。</strong></p>
+        <p><strong>注意：每句代码后可以不写分号，换行即可，习惯上最好加上，增强可读性。</strong></p>
+        <ul>
+        <li><p><strong>变量类型：</strong></p>
+        <ul>
+        <li>number：数字类型</li>
+        <li>string：字符串类型</li>
+        <li>boolean：布尔类型</li>
+        <li>undefined：未定义类型</li>
+        <li>null：空类型</li>
+        <li>object：复合类型，一般用来接收标签。</li>
+        </ul></li>
+        <li><p><strong>命名规则：</strong></p>
+        <ul>
+        <li>区分大小写；</li>
+        <li>第一个字符必须是字母、下划线（_）或者美元符号（$），不能输数字；</li>
+        <li>其他字符可以是字母、下划线、美元符或数字；</li>
+        <li><strong>不能使用js的关键字或保留字。</strong></li>
+        <li><strong>多个单词变量的命名使用小驼峰或单词加下划线。</strong></li>
+        <li><strong>对于object对象一般使用匈牙利命名风格。</strong></li>
+        </ul></li>
+        </ul>
+        <pre><code ><span>//小驼峰命名法</span>
+        <span class="hljs-keyword">var</span> getMyClass = <span >"abc"</span>;
+        <span class="hljs-comment">//字母加下划线</span>
+        <span class="hljs-keyword">var</span> get_my_name = <span >"abc"</span>;
+        <span class="hljs-comment">//匈牙利命名风格</span>
+        <span class="hljs-keyword">object</span>: oDiv = document.getElementById(<span>'div1'</span>);
+        <span class="hljs-keyword">string</span>: sMyName = <span >"abc"</span>  <span >//根据数据类型的第一个字母为开头的小驼峰命名法。</span></code></pre>
+        <h3 >获取属性</h3>
+        <pre><code ><span ><span >&lt;<span >script</span>&gt;</span><span >
+            <div  style="margin: 0px">        <ul style="list-style: none; opacity: 0.5; background: #9DD8F0; margin: 0px">        
+                    <li style="list-style: none; margin: 0px"><span style="font-size: 25px; line-height: 50px">作者：天宇之游</span></li>     
+                           <li style="list-style: none; margin: 0px"><span style="font-size: 25px; line-height: 50px">出处：<a href="http://www.cnblogs.com/cwp-bg/" style="text-decoration: none">http://www.cnblogs.com/cwp-bg/</a></span></li>      
+                                 <li style="list-style: none; margin: 0px"><span style="font-size: 25px; line-height: 50px">本文版权归作者和博客园共有，欢迎转载、交流，但未经作者同意必须保留此段声明，且在文章明显位置给出原文链接。 </span></li>        </ul>    </div>
+        </div><div id="MySignature"></div>
+        <div ></div>
+        <div>
+        <div>分类: <a href="http://www.cnblogs.com/cwp-bg/category/1096381.html" target="_blank">javascript</a></div>
+        <div>标签: <a href="http://www.cnblogs.com/cwp-bg/tag/javascript/">javascript</a></div>
+        <div ><div id="green_channel">
+                <a href="javascript:void(0);" onclick="DiggIt(7732486,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+                    <a id="green_channel_follow" onclick="follow('585e0a6f-e112-e711-845c-ac853d9f53ac');" href="javascript:void(0);">关注我</a>
+            <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+            <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="//common.cnblogs.com/images/icon_weibo_24.png" alt=""></a>
+            <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="//common.cnblogs.com/images/wechat.png" alt=""></a>
+        </div>
+        <div >
+            <div >
+                    <a href="http://home.cnblogs.com/u/cwp-bg/" target="_blank"><img src="//pic.cnblogs.com/face/1135090/20170903000714.png" alt=""></a>
+                <div >
+                    <a href="http://home.cnblogs.com/u/cwp-bg/">天宇之游</a><br>
+                    <a href="http://home.cnblogs.com/u/cwp-bg/followees">关注 - 0</a><br>
+                    <a href="http://home.cnblogs.com/u/cwp-bg/followers">粉丝 - 7</a>
+                </div>
+            </div>
+            <div ></div>
+            <div ></div>
+            <div >
+                        <a href="javascript:void(0);" onclick="follow('585e0a6f-e112-e711-845c-ac853d9f53ac');return false;">+加关注</a>
+            </div>
+        </div>
+        <div >
+            <div  onclick="votePost(7732486,'Digg')">
+                <span >0</span>
+            </div>
+            <div  onclick="votePost(7732486,'Bury')">
+                <span >0</span>
+            </div>
+            <div ></div>
+            <div  >
+            </div>
+        </div>
+        </div>
+        <div></div>
+        <div ><a href="http://www.cnblogs.com/cwp-bg/p/7712635.html" >« </a> 上一篇：<a href="http://www.cnblogs.com/cwp-bg/p/7712635.html" title="发布于2017-10-22 23:30">Django项目搭建和配置总结</a><br></div>
+        </div>
+        
+        
+                </div>
+                <div >posted @ <span >2017-10-25 21:41</span> <a href="http://www.cnblogs.com/cwp-bg/">天宇之游</a> 阅读(<span >16</span>) 评论(<span id="post_comment_count">0</span>) 
+                     <a href="https://i.cnblogs.com/EditPosts.aspx?postid=7732486" rel="nofollow">编辑</a> <a href="#" onclick="AddToWz(7732486);return false;">收藏</a></div>
+            </div>
+            <script src="//common.cnblogs.com/highlight/9.1.0/highlight.min.js?id=20160127"></script><script>markdown_highlight();</script><script type="text/javascript">var allowComments=true,cb_blogId=349326,cb_entryId=7732486,cb_blogApp=currentBlogApp,cb_blogUserGuid='585e0a6f-e112-e711-845c-ac853d9f53ac',cb_entryCreatedDate='2017/10/25 21:41:00';loadViewCount(cb_entryId);</script>
+            
+        </div><!--end: topics 文章、评论容器-->
+        </div><a name="!comments"></a><div ></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+        <div >
+        <a name="commentform"></a>
+        <div id="divCommentShow"></div>
+        <div id="comment_nav"><span ></span><a href="javascript:void(0);" onclick="return RefreshCommentList();"  runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+        <div id="comment_form_container"><div >注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login('commentform');">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com">访问</a>网站首页。</div></div>
+        <div class="ad_text_commentbox" ></div>
+        <div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://dnspod.cloud.tencent.com/act/newuser?fromSource=gwzcw.539241.539241.539241" target="_blank">【域名】腾讯云 新注册用户域名抢购1元起</a><br><a href="http://www.gcpowertools.com.cn/products/activereports_overview.htm?utm_source=cnblogs&amp;utm_medium=blogpage&amp;utm_term=bottom&amp;utm_content=AR&amp;utm_campaign=community" target="_blank">【推荐】报表开发有捷径：快速设计轻松集成，数据可视化和交互</a><br></div>
+        <div ></div>
+        <div id="cnblogs_c1" class="c_ad_block"><a href="http://activity.huaweicloud.com/mobiletest/index.html?utm_source=cnblogs&amp;utm_medium=MediaB&amp;utm_campaign=%E5%8D%8E%E4%B8%BA%E4%BA%91-10%E6%9C%88%E5%B9%BF%E5%91%8A%E6%8A%95%E6%94%BE&amp;utm_content=%E5%8D%9A%E5%AE%A2%E5%9B%AD%E5%86%85%E9%A1%B5C1%E7%9F%A9%E5%BD%A2&amp;utm_term=%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E4%BA%91-mobiletest" target="_blank"><img width="300" height="250" src="https://images2017.cnblogs.com/news/24442/201710/24442-20171024183729457-421799845.jpg" alt="华为云C2_1024"></a></div>
+        <div id="under_post_news"><div ><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/580962/" target="_blank">直降500元！黑莓KEYone国行历史新低：3499元</a><br> ·  <a href="http://news.cnblogs.com/n/580955/" target="_blank">特斯拉在纽约交付第一辆带有车牌的Model 3</a><br> ·  <a href="http://news.cnblogs.com/n/580958/" target="_blank">现金贷是一盘怎样的生意？业内人士：不“高利”，不赚钱</a><br> ·  <a href="http://news.cnblogs.com/n/580961/" target="_blank">为什么微信的撤回消息只能是2分钟？</a><br> ·  <a href="http://news.cnblogs.com/n/580960/" target="_blank">Ubuntu创始人解释为什么决定放弃Unity</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+        <div id="cnblogs_c2" class="c_ad_block"><a href="http://click.aliyun.com/m/22446/" target="_blank"><img width="468" height="60" src="https://images2017.cnblogs.com/news/24442/201710/24442-20171001085719794-417760373.jpg" alt="阿里云1001"></a></div>
+        <div id="under_post_kb"><div class="itnews c_ad_block"><b>最新知识库文章</b>:<br><div > ·  <a href="http://kb.cnblogs.com/page/579480/" target="_blank">实用VPC虚拟私有云设计原则</a><br> ·  <a href="http://kb.cnblogs.com/page/576251/" target="_blank">如何阅读计算机科学类的书</a><br> ·  <a href="http://kb.cnblogs.com/page/578103/" target="_blank">Google 及其云智慧</a><br> ·  <a href="http://kb.cnblogs.com/page/575829/" target="_blank">做到这一点，你也可以成为优秀的程序员</a><br> ·  <a href="http://kb.cnblogs.com/page/566880/" target="_blank">写给立志做码农的大学生</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+        <div id="HistoryToday" class="c_ad_block"></div>
+        <script type="text/javascript">
+            fixPostBody();
+            setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+            deliverAdT2();
+            deliverAdC1();
+            deliverAdC2();    
+            loadNewsAndKb();
+            loadBlogSignature();
+            LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+            GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+            loadOptUnderPost();
+            GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+        </script>
+        </div>
+        
+        
+            </div><!--end: forFlow -->
+            </div><!--end: mainContent 主体内容容器-->
+        
+
+                    </div><!--end: sideBarMain -->
+                </div><!--end: sideBar 侧边栏容器 -->
+                <div ></div>
+                </div><!--end: main -->
+                <div ></div>
+                <div>
+                    
+            <!--done-->
+            Copyright ©2017 天宇之游
+                </div><!--end: footer -->
+            </div><!--end: home 自定义的最大容器 -->
+            
+            
+            </body></html>

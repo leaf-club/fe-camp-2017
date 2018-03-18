@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chapter8</title>
+</head>
+<body>
+    <p>操作成功</p>
+    <span id="s">5</span>
+   <span>秒后回到主页</span>
+   <a href="javascript:back();">返回</a>
+    <script type="text/javascript">  
+   var num = document.getElementById("s").innerHTML;
+     //获取显示秒数的元素，通过定时器来更改秒数。
+      function count(){
+          num--;
+          document.getElementById("s").innerHTML=num;
+          if(num==0){
+              location.assign("http://www.imooc.com/code/1633");
+          }
+      }
+      setInterval("count()", 1000);
+     //通过window的location和history对象来控制网页的跳转。
+     function back(){
+         window.history.back();
+     }
+   </script> 
+</body>
+</html>

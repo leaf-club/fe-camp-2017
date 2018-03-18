@@ -1,0 +1,45 @@
+html,
+body {
+    text-align: center;
+}
+header {
+    font-size: 30px;
+    background: rgb(84, 138, 153);
+    color: blue;
+    font-family: "华文行楷";  
+    line-height: 80px;
+}
+table {
+    border: none;
+    margin: auto;
+}
+table .parts {
+    display: inline-block;
+    height: 300px;
+    width: 800px;
+    text-align: -webkit-center;
+    border: cornsilk;
+    background-color: #91ced0;
+    padding-top: 20px;
+    text-decoration: none;
+    outline: none;
+}
+table .parts .part1 {
+    height: 60px;
+    width: 30px;
+    color: white;
+    font: 30px "华文行楷"; 
+    background-color: rgba(0, 0, 255, 0.5);   
+}
+table .parts .part2 .small {
+    font: 30px "华文行楷";
+    color: white;
+    height: 45px;
+    background-color: rgba(0, 0, 255, 0.5);
+}
+table .parts .part2 .other {
+    font: 40px "华文行楷";
+    color: rgb(209, 6, 250);
+    background-color: rgba(58, 75, 114, 0.342);
+    vertical-align: middle;
+}

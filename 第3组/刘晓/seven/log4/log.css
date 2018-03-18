@@ -1,0 +1,26 @@
+.k-square-holder {
+    margin-top: 15px;
+}
+
+.k-square {
+    animation: k-loadingG 1.5s cubic-bezier(.17,.37,.43,.67) infinite;
+}
+
+.k-square {
+    width: 12px;
+    height: 12px;
+    border-radius: 4px;
+    background-color: #4b9cdb;
+}
+div {
+    display: block;
+}
+@keyframes k-loadingG{
+0% {
+    transform: translate(0,0) rotate(0deg);
+}
+100% {
+    transform: translate(70px,0) rotate(360deg);
+}
+
+}

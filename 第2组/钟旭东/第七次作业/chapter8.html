@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>计时器</title>
+</head>
+<body>
+  <!--先编写好网页布局-->
+  <h1>操作成功</h1>
+  <span id="sec">5</span>秒后返回前一个页面<a href="" onclick="GoBack()">返回</a>
+  
+ 
+  <script type="text/javascript">  
+ 
+   //获取显示秒数的元素，通过定时器来更改秒数。
+  var num=4;
+  function startCount(){
+      document.getElementById("sec").innerHTML=num;
+      num=num-1;
+      setTimeout(startCount,1000);
+  }
+      setTimeout(startCount,1000);
+  function GoBack(){
+      window.history.back();
+  }
+  function Change(){
+      window.open("http://www.imooc.com","_self")
+  }
+      setTimeout(Change,5000);
+   //通过window的location和history对象来控制网页的跳转。
+   </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {background:#f9f9f9;}
+#clock {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    list-style: none;	
+    margin: 20px auto;
+    background: url('clock.png') no-repeat center;
+}
+#seconds, #minutes, #hours {
+    position: absolute;
+    width: 30px;
+    height: 580px;
+    left: 270px;
+}
+#hours {
+    background: url('hands.png') no-repeat left;
+    z-index: 1000;
+}
+#minutes {
+    background: url('hands.png') no-repeat center;
+    width:25px;
+    z-index: 2000;
+}
+#seconds {
+    background: url('hands.png') no-repeat right;
+    z-index: 3000;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task 3</title>
+  <style type="text/css">
+    #tip{height:150px;height:20px;line-height: 20px;font-size: 14px;color: red;}
+  </style>
+</head>
+<body>
+    <form action="">
+        输入数值:
+        <input type="text" name="input">
+        <div id="tip"></div>
+        <input type="button" name="submit" value="submit">
+      </form>
+  <script>
+    var submit=document.getElementsByName("submit")[0];
+    var tip=document.getElementById("tip");
+    var isPalindrome = function(x) {
+      var ans=0;//结果
+      var n=0;//记录比较的次数
+      x=parseInt(x);//化为数值
+      var num=[];
+      if(x<0||!Number.isInteger(x)){
+        return x+"不是回文数";
+      }else if(x<10){//个位数
+        return x+"是回文数";
+      }else{//判断多位数的整数
+        var temp=x;
+        while(x){//收集数值
+          num.push(x%10);
+          x=Math.floor(x/10);
+        }
+        for(var i=0;i<Math.floor(num.length/2);i++){//reverse
+          if(num[i]==num[num.length-1-i]){
+            n++;
+          }
+        }
+        if(n==Math.floor(num.length/2)){
+          return temp+"是回文数";
+        }else{
+          return temp+"不是回文数";
+        }
+      }
+    };
+    function show(){
+      var input=document.getElementsByName("input")[0].value;
+      tip.innerHTML=isPalindrome(input);
+    }
+    submit.addEventListener("click",show);
+  </script>
+</body>
+</html>

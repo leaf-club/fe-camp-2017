@@ -1,0 +1,46 @@
+第三章 DOM
+通过setAttribute对文档做出修改后，在通过浏览器的view source选项查看文档的源代码时看到的仍将是改变之前的属性值，也就是说，set Attribute做出的修改不会反映在文档本身的源代码里。这种“表里不一“的现象源自DOM的工作模式：先加载文档的静态内容，再动态刷新，动态刷新不影响文档的静态内容。这就是DOM的真正威力：对页面内容进行刷新却不需要再浏览器里刷新页面。
+
+第四章 案例研究：Javascript图片库
+事件处理函数的工作机制：在给某个元素添加了事件处理函数后，一旦事件发生，相应的JS代码会得到执行。被调用的JS代码可以返回一个值，这个值将被传递给那个事件处理函数。例如，我们可以给某个链接添加一个onclick事件处理函数，并让这个处理函数所触发的JS代码返回布尔值true或false。这样一来，当这个链接被点击时，如果那段JS代码返回的值是true，onclick事件处理函数就被认为“这个链接被点击了“；反之，如果返回值是false，onclick事件处理函数就被认为”这个链接没有被点击“。
+添加事件处理函数的语法：event=”Javscript statement(s)” 
+DOM节点的三个重要属性：（1）nodeName，节点名称;（2）nodeValue节点值；（3）nodeType节点类型。
+nodeName属性，只读，总是返回一个大写字母的值：
+  元素节点的nodeName与标签名相同；
+  属性节点的nodeName是属性的名称；
+  文本节点的nodeName永远是#text；
+  文档节点的nodeName永远是#document。
+nodeValue属性：
+  元素节点的nodeValue是undefined或null；
+  文本节点的nodeValue是文本自身；
+  属性节点的nodeValue是属性的值。
+nodeType属性，只读：
+  元素类型  节点类型
+元素     1
+属性     2
+文本     3
+注释     8
+文档     9
+注意：在用nodeValue属性获得对象如p的值时，得到的并不是包含在这个段落里的文本。<p>元素本身的nodeValue属性是一个空值。应该获取p元素第一个子节点的nodeValue属性值。
+
+第五章
+调用JS函数：
+（1）”javascript:”伪协议，<a href=”javascript:popup(‘http://www.example.com/;’)”></a>
+（2）内嵌的事件处理函数，<a href=”#” onclick=”popup(‘http://www.example.com/’);
+return false;”></a>
+<a href=”http://www.example.com/” onclick=”popup(this.href);return false;”></a>
+平稳退化，但不足：每当需要打开新窗口时 ，不得不把JS代码嵌入标记文档中。
+渐进增强，就是用一些额外的信息层去包裹原始数据。
+在外部Javascript文件里把一个事件添加到HTML文档中的某个元素上：element.event=action…
+对象检测，if(method) {statements}。在使用对象检测时，要删掉方法名后面的圆括号，否则，测试的将是方法的结果，无论方法是否存在。例如，if(!getElementById || !getElementByTagName) return false;
+
+性能考虑
+尽量少访问DOM和尽量减少标记
+合并和放置脚本
+  脚本放在文档的<head>区域的一个问题，导致浏览器无法并行加载其他文件（如图像或其他脚本）。一般来说，根据HTTP规范，浏览器每次从同一个域名中最多只能同时下载两个文件。而在下载脚本期间，浏览器不会下载其他任何文件，即使是来自不同域名的文件也不会下载，所有其他资源都要等脚本加载完毕后才能下载。
+压缩脚本，把脚本文件中不必要的字节，如空格和注释，统统删除。
+
+第六章
+如果想用JS给某个网页添加一些行为，就不应该让JS对网页的结构有任何依赖。
+共享onload事件
+最好不要使用onkeypress事件

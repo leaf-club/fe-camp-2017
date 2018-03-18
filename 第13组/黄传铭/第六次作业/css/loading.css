@@ -1,0 +1,536 @@
+/* loading1 */
+.loading1{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    height: 200px;
+}
+.loading1>div{
+    width: 10px;
+    height: 40px;
+    background: #90ee90;
+    margin-left: 15px;
+    border-radius: -4%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 80px;
+}
+/* 定义竖条动画帧 */
+@keyframes loading1-show1{
+    from{
+        height: 40px;
+    }
+    12.5%{
+        height: 60px;
+        margin-top: 73px;
+        background: #add8e5;
+    }
+    100%{
+        height: 40px;
+    }
+}
+.loading1>div:nth-child(1){
+    animation: loading1-show1 0.5s ease-in-out infinite;
+}
+.loading1>div:nth-child(2){
+    animation: loading1-show1 0.5s ease-in-out infinite;
+    animation-delay:0.1s;
+}
+.loading1>div:nth-child(3){
+    animation: loading1-show1 0.5s ease-in-out infinite;
+    animation-delay:0.2s;
+}
+.loading1>div:nth-child(4){
+    animation: loading1-show1 0.5s ease-in-out infinite;
+    animation-delay:0.3s;
+}
+.loading1>div:nth-child(5){
+    animation: loading1-show1 0.5s ease-in-out infinite;
+    animation-delay:0.4s;
+}
+/* loading2 */
+.loading2{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+/* 定义圆的大小，背景等 */
+.loading2>div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+/* 定义动画 */
+@keyframes loading2-show1{
+    from{
+        background: #ffffff;
+    }
+    12.5%{
+        background: #93ee98;
+    }
+    100%{
+        background: white;
+    }
+}
+.loading2>div:nth-child(1){
+    animation: loading2-show1 0.5s ease-in-out infinite;
+}
+.loading2>div:nth-child(2){
+    animation: loading2-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+.loading2>div:nth-child(3){
+    animation: loading2-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+.loading2>div:nth-child(4){
+    animation: loading2-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+.loading2>div:nth-child(5){
+    animation: loading2-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+/* loading3 */
+.loading3{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+/* 定义圆的大小，背景等 */
+.loading3>div{
+    width: 10px;
+    height: 10px;
+    background: #a0f3a3;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+/* 定义动画 */
+@keyframes loading3-show1{
+    from{
+        background: #a0f3a3;
+    }
+    12.5%{
+        background: #46f04c;
+        transform: scale(2, 2);
+    }
+    100%{
+        background: #a0f3a3;
+        
+    }
+}
+.loading3>div:nth-child(1){
+    animation: loading3-show1 0.5s ease-in-out infinite;
+}
+.loading3>div:nth-child(2){
+    animation: loading3-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+.loading3>div:nth-child(3){
+    animation: loading3-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+.loading3>div:nth-child(4){
+    animation: loading3-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+.loading3>div:nth-child(5){
+    animation: loading3-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+/* loading5 */
+.loading4{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+}
+.square{
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+    background:  #46f04c;
+}
+/* 定义动画 */
+@keyframes loading4-show1{
+    from{
+        background: #ffffff;
+    }
+    50%{
+        background: #46f04c;
+       
+    }
+    100%{
+        background: white;
+        transform: rotate(90deg);
+        transform-origin : 100% 100%;
+    }
+}
+.loading4>div:nth-child(1){
+    animation: loading4-show1 0.5s ease-in-out infinite;
+}
+.loading4>div:nth-child(2){
+    animation: loading4-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.1s;
+}
+.loading4>div:nth-child(3){
+    animation: loading4-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+.loading4>div:nth-child(4){
+    animation: loading4-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.3s;
+}
+.loading4>div:nth-child(5){
+    animation: loading4-show1 0.5s ease-in-out infinite;
+    animation-delay: 0.4s;
+}
+/* loading5 */
+.loading5{
+    height: 200px;
+    justify-content: center;
+}
+.loading5>div{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #a0f3a3;
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 100px;  
+}
+@keyframes loading5-show1{
+    from{
+        background: #a0f3a3;
+    }
+    12.5%{
+        background: #46f04c;
+       
+    }
+    100%{
+        background: #a0f3a3;
+    }
+}
+.loading5>div:nth-child(1){
+    animation: loading5-show1 0.8s ease-in-out infinite;
+}
+.loading5>div:nth-child(2){
+    animation: loading5-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.1s;
+    transform: rotate(45deg);
+    transform-origin: 400% 45%;
+}
+.loading5>div:nth-child(3){
+    animation: loading5-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.2s;
+    transform: rotate(90deg);
+    transform-origin: 400% 45%;
+}
+.loading5>div:nth-child(4){
+    animation: loading5-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.3s;
+    transform: rotate(135deg);
+    transform-origin: 400% 45%;
+}
+.loading5>div:nth-child(5){
+    animation: loading5-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.4s;
+    transform: rotate(180deg);
+    transform-origin: 400% 45%;
+}
+.loading5>div:nth-child(6){
+    animation: loading5-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.5s;
+    transform: rotate(225deg);
+    transform-origin: 400% 45%;
+}
+.loading5>div:nth-child(7){
+    animation: loading5-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.6s;
+    transform: rotate(270deg);
+    transform-origin: 400% 45%;
+}
+.loading5>div:nth-child(8){
+    animation: loading5-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.7s;
+    transform: rotate(315deg);
+    transform-origin: 400% 45%;
+}
+/* loading6 */
+.loading6{
+    height: 200px;
+    justify-content: center;
+}
+.loading6>div{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #a0f3a3;
+    position: absolute;
+    margin-left: 43%;
+    margin-top: 100px;  
+    transform-origin: 80px 15px;
+}
+loading6>div>div{
+    position: absolute;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #a0f3a3;
+    position: absolute;
+}
+@keyframes loading6-show1{
+    from{
+        background: #a0f3a3;
+    }
+    12.5%{
+        background: #46f04c;
+        width: 30px;
+        height: 30px;
+    }
+    100%{
+        background: #a0f3a3;
+    }
+}
+.loading6>div:nth-child(1){
+    animation: loading6-show1 0.8s ease-in-out infinite;
+}
+.loading6>div:nth-child(2){
+    animation: loading6-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.1s;
+    transform: rotate(45deg);
+}
+.loading6>div:nth-child(3){
+    animation: loading6-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.2s;
+    transform: rotate(90deg);
+}
+.loading6>div:nth-child(4){
+    animation: loading6-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.3s;
+    transform: rotate(135deg);
+}
+.loading6>div:nth-child(5){
+    animation: loading6-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.4s;
+    transform: rotate(180deg);
+}
+.loading6>div:nth-child(6){
+    animation: loading6-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.5s;
+    transform: rotate(225deg);
+}
+.loading6>div:nth-child(7){
+    animation: loading6-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.6s;
+    transform: rotate(270deg);
+}
+.loading6>div:nth-child(8){
+    animation: loading6-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.7s;
+    transform: rotate(315deg);
+}
+/* loading7 */
+.loading7{
+    position: absolute;
+    margin-left: 36%;
+    height: 200px;
+    margin-top: 30px;
+}
+.loading7>.box1{
+    width: 200px;
+    height: 10px;
+    background: #add8e6;
+    border-radius: 50px;
+    overflow: hidden;
+}
+.loading7>.box1>.box2{
+    width: 200px;
+    height: 10px;
+    background: #6df06d;
+    border-radius: 50px;
+}
+@keyframes loading7-show{
+    from{
+        margin-left: 200px;
+    }
+    to{
+        margin-left: -200px;    
+    }
+}
+.loading7>.box1>.box2{
+    animation: loading7-show 2s ease-out reverse infinite;
+    animation-fill-mode:forwards;
+}
+/* loading8 */
+.loading8{
+    height: 200px;
+    margin-left: 34%;
+    margin-top: 200px;  
+}
+.loading8>div{
+    width: 60px;
+    height: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: #a0f3a3;
+    position: absolute;
+    transform-origin: 200% 45%;
+}
+@keyframes loading8-show1{
+    from{
+        background: #a0f3a3;
+    }
+    12.5%{
+        background: #46f04c;
+    }
+    100%{
+        background: #a0f3a3;
+    }
+}
+.loading8
+>div:nth-child(1){
+    animation: loading8-show1 0.8s ease-in-out infinite;
+}
+.loading8>div:nth-child(2){
+    animation: loading8-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.1s;
+    transform: rotate(45deg);
+    
+}
+.loading8>div:nth-child(3){
+    animation: loading8-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.2s;
+    transform: rotate(90deg);
+  
+}
+.loading8>div:nth-child(4){
+    animation: loading8-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.3s;
+    transform: rotate(135deg);
+   
+}
+.loading8>div:nth-child(5){
+    animation: loading8-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.4s;
+    transform: rotate(180deg);
+   
+}
+.loading8>div:nth-child(6){
+    animation: loading8-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.5s;
+    transform: rotate(225deg);
+  
+}
+.loading8>div:nth-child(7){
+    animation: loading8-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.6s;
+    transform: rotate(270deg);
+   
+}
+.loading8>div:nth-child(8){
+    animation: loading8-show1 0.8s ease-in-out infinite;
+    animation-delay: 0.7s;
+    transform: rotate(315deg);
+}
+/* loading9 */
+.loading9{
+    height: 200px;
+    justify-content: center;
+    margin-left: 41%;
+    margin-top: 100px; 
+}
+.loading9>div{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #a0f3a3;
+    position: absolute;
+    transform-origin: 300% 45%; 
+}
+@keyframes loading9-show1{
+    from{
+        background: #ffffff;
+    }
+    12.5%{
+        background: #46f04c;
+        transform: rotate(90deg);
+    }
+    75%{
+        background: #89fa8d;
+        transform: rotate(270deg);
+    }
+    100%{
+        background: #ffffff;
+        transform: rotate(360deg);
+    }
+}
+@keyframes loading9-show2{
+    from{
+        background: #ffffff;
+    }
+    15.5%{
+        background: #46f04c;
+        transform: rotate(65deg);
+    }
+    75%{
+        background: #46f04c;
+        transform: rotate(245deg);
+    }
+    100%{
+        background: #ffffff;
+        transform: rotate(335deg);
+    }
+}
+@keyframes loading9-show3{
+    from{
+        background: #ffffff;
+    }
+    15.5%{
+        background: #46f04c;
+        transform: rotate(40deg);
+    }
+    75%{
+        background: #46f04c;
+        transform: rotate(220deg);
+    }
+    100%{
+        background: #ffffff;
+        transform: rotate(310deg);
+    }
+}
+@keyframes loading9-show4{
+    from{
+        background: #ffffff;
+    }
+    15.5%{
+        background: #46f04c;
+        transform: rotate(15deg);
+    }
+    75%{
+        background: #46f04c;
+        transform: rotate(195deg);
+    }
+    100%{
+        background: #ffffff;
+        transform: rotate(285deg);
+    }
+}
+.loading9>div:nth-child(1){
+    animation: loading9-show1 1.5s ease infinite;
+}
+.loading9>div:nth-child(2){
+    animation: loading9-show2 1.5s ease infinite;
+}
+.loading9>div:nth-child(3){
+    animation: loading9-show3 1.5s ease infinite;
+}
+.loading9>div:nth-child(4){
+    animation: loading9-show4 1.5s ease infinite;
+}
+

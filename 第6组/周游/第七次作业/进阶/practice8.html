@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>浏览器对象</title>  
+  <meta http-equiv="Content-Type" content="text/html; charset=gkb"/>   
+ </head>
+ <body>
+  <!--先编写好网页布局-->
+  <h3>操作成功</h3>
+  <span id="sss">5</span><span>秒后返回主页</span>
+  <a href="javascript:back();">返回</a>
+  
+ 
+  <script type="text/javascript">  
+ var sss=document.getElementById("sss").innerHTML;
+   //获取显示秒数的元素，通过定时器来更改秒数。
+   setInterval("newtime()",1000);
+ function newtime(){
+     sss--;
+     document.getElementById("sss").innerHTML=sss;
+     if(sss==0){
+         location.assign("https://www.imooc.com");
+     }
+ }
+ function back(){
+     window.history.back();
+ }
+   //通过window的location和history对象来控制网页的跳转。
+   
+ </script> 
+</body>
+</html>

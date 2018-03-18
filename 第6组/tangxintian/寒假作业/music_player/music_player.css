@@ -1,0 +1,342 @@
+body, button, dd, dl, dt, fieldset, form, h1, h2, h3, h4, h5, h6, hr, html, input,  li, ol, p, pre, td, textarea, th, ul{
+    margin: 0;
+    padding: 0;
+}
+li{list-style: none;}
+a{
+    color: #333;
+    text-decoration: none;
+}
+.bg_player,.bg_player_mask,body{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    background-color: rgb(17, 44, 67);
+    min-width: 1100px;
+    height: 600px;
+    font-size:14px;
+}
+.player{
+    height: 100%;
+    margin: 0 7%;
+    position: relative;
+    z-index: 3;
+}
+.player, .player a{
+    color: rgba(225,225,225,0.8);
+}
+.player_bd{
+    position: relative;
+    top: 11%;
+    bottom: 18%;
+    width: 100%;
+    min-height: 328px;
+    cursor: default;
+    margin-top: 70px;
+}
+.player_style_normal{margin-right: 440px;}
+
+.mod_btn{
+    border-radius: 2px;
+    font-size: 14px;
+    margin-right: 6px;
+    padding: 0 23px;
+    height: 38px;
+    line-height: 38px;
+    display: inline-block;
+    white-space: nowrap;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.player .mod_btn{
+    opacity: .8;
+    border:1px solid rgba(255,255,255,.2) ;
+}
+.player .mod_btn,.player .mod_btn:active, .player .mod_btn:hover{
+    background-color: transparent;
+    color: #fff;
+}
+.sb_viewport{
+    overflow: hidden;
+}
+.sb_main{
+    position: relative;
+}
+.sb_overview{
+    margin-right: 0;
+    overflow: hidden;
+}
+.songlist{
+    margin-right: 0;
+    font-size: 14px;
+    overflow: hidden;
+}
+.player_songlist__line{
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    opacity: .02;
+}
+.songlist__header{
+    padding-left: 62px;
+    background-color: transparent;
+    color: inherit;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+}
+.songlist__header_name,
+.songlist__songname{
+    width: 68%;
+    float: left;
+    position: relative;
+    white-space: normal;
+}
+.songlist__header_author, .songlist__artist{
+    width: 26%;
+    float: left;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.songlist__header_time, .songlist__time{
+    position: absolute;
+    top: 0;
+    right: 38px;
+    width: 50px;
+}
+.songlist__list{
+    overflow: hidden;
+    clear: both;
+}.songlist__item{
+     padding-left: 62px;
+     overflow: hidden;
+     position: relative;
+     clear: both;
+     font-size: 0;
+     padding-right: 100px;
+ }
+ .songlist__number{
+     left: 16px;
+     color: inherit;
+     text-align: right;
+     position: absolute;
+     top: 0;
+     width: 36px;
+ }
+ .songlist__number--playing{
+     position: absolute;
+     top: 50%;
+     left: 40px;
+     margin-top: -5px;
+     width: 10px;
+     height: 10px;
+     background: url("pic/wave.gif")0 0 no-repeat;
+ }
+ .songlist__songname_txt{
+     float: left;
+     overflow: hidden;
+     -ms-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+     margin-right: 8px;
+     white-space: nowrap;
+ }
+ .songlist__time{
+     position: absolute;
+     top: 0;
+     right: 38px;
+     width: 50px;
+     color: inherit;
+ }
+ .songlist__artist,
+ .songlist__number,
+ .songlist__songname,
+ .songlist__time
+ {
+     line-height: 50px;
+     height: 50px;
+     overflow: hidden;
+     -ms-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     font-size: 14px;
+ }
+.song_info{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 340px;
+    height: 1000%;
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+}
+.song_info__cover{
+    position: relative;
+    display: block;
+    width: 186px;
+    height: 186px;
+    margin: auto;
+}
+.song_info__name, .song_info__singer{
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    height: 28px;
+}
+.song_info__name{
+    margin-top: 15px;
+}
+.player__ft{
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    height: 11%;
+}
+.btn_big_prev,
+.btn_big_play,
+.btn_big_next,
+.btn_big_voice,
+.btn_big_style_order,
+.btn_big_style_random,
+.btn_big_style_single,
+.btn_big_style_list
+{
+    position: absolute;
+    background-image: url(pic/player.png);
+    opacity: 0.8;
+}
+.btn_big_prev{
+    top:4px;
+    left: 0;
+    width: 19px;
+    height: 20px;
+    background-position: 0 -30px;
+}
+.btn_big_play{
+    top: 0;
+    left: 65px;
+    width: 21px;
+    height: 29px;
+    background-position: 0 0;
+}
+.btn_big_next{
+    top: 4px;
+    left: 132px;
+    width: 19px;
+    height: 20px;
+    background-position: 0 -52px;
+}
+.player_music{
+    width: 400px;
+    position: relative;
+    margin: 0 448px 0 208px;
+}
+.player_music__info{
+    padding-right: 90px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.player_music__time{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.player_progress{
+    padding-top: 6px;
+    height: 8px;
+}
+.player_progress__inner{
+    position: relative;
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    cursor: pointer;
+}
+.player_progress__load{
+    height: 3px;
+    background: rgba(255,255,255,0.2);
+    width: 101%;
+}
+.player_progress__play{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: rgba(255,255,255,0.7);
+}
+.player_progress__dot{
+    top: -4px;
+    right: -4px;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    display: block;
+    position: relative;
+}
+.player_voice{
+    position: absolute;
+    top: -3px;
+    left: 700px;
+    width: 80px;
+    padding: 13px;
+}
+.btn_big_voice{
+    width: 26px;
+    height: 21px;
+    background-position: 0 -144px;
+    top: 4px;
+    left: -15px;
+}
+#spanvolumeop{
+    right: -80px;
+}
+.btn_big_style_order{
+    width: 23px;
+    height: 20px;
+    background-position: 0 -260px;
+    top: 0px;
+    left: 640px;
+}
+.btn_big_style_random{
+    top: 4px;
+    left: 640px;
+    width: 25px;
+    height: 19px;
+    background-position: 0 -74px;
+}
+.btn_big_style_single{
+    top: 4px;
+    left: 640px;
+    width: 26px;
+    height: 25px;
+    background-position: 0 -232px;
+}
+.btn_big_style_list{
+    top: 4px;
+    left: 640px;
+    width: 26px;
+    height: 25px;
+    background-position: 0 -205px;
+}
+.btn_big_play--pause{
+    background-position: -30px 0;
+}
+
+.bg_player_mask{
+    background-color: rgba(0,0,0,0.35);
+    z-index: 2;
+}
+.bg_player_mask,.bg_player{
+    position: absolute;
+    top: 0;
+    left: 0;
+}

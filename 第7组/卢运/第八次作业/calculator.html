@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简易计算器</title>
+    <link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+
+<body >
+    <div class="cal">
+        <div class="screen">
+            <input type="text" id="screen" value="">
+        </div>
+        <h3>简易计算器</h3>
+        <div style="clear:both;"></div>
+        <div class="btn">
+            <div class="one">
+                <input type="button" id="btnc" onclick="clean()" value="C">
+                <input type="button" id="btndel" onclick="del()" value="Del">
+                <input type="button" id="btnpoi" onclick="show(this)" value=".">
+                <input type="button" id="+" onclick="show(this)" value="+">
+            </div>
+            <div class="one">
+                <input type="button" id="btn7" onclick="show(this)" value="7">
+                <input type="button" id="btn8" onclick="show(this)" value="8">
+                <input type="button" id="btn9" onclick="show(this)" value="9">
+                <input type="button" id="btn-" onclick="show(this)" value="-">
+            </div>
+            <div class="one">
+                <input type="button" id="btn4" onclick="show(this)" value="4">
+                <input type="button" id="btn5" onclick="show(this)" value="5">
+                <input type="button" id="btn6" onclick="show(this)" value="6">
+                <input type="button" id="btn*" onclick="show(this)" value="*">
+            </div>
+            <div class="one">
+                <input type="button" id="btn1" onclick="show(this)" value="1">
+                <input type="button" id="btn2" onclick="show(this)" value="2">
+                <input type="button" id="btn3" onclick="show(this)" value="3">
+                <input type="button" id="btn/" onclick="show(this)" value="/">
+            </div>
+            <div class="one">
+                <input type="button" id="btn0" onclick="show(this)" value="0">
+                <input type="button" id="btneva" onclick="eva()" value="=">
+            </div>
+        </div>
+    </div>
+    <script>
+        var oScreen=document.getElementById('screen');
+        var result="";
+        function show(node){
+            result += node.value;
+            oScreen.value = result;
+        }
+        function eva() {
+            result = eval(oScreen.value);
+            oScreen.value = result;
+        }
+        function clean(){
+            result = "";  
+            oScreen.value = result;
+        }
+        function del(){
+            result = oScreen.value;
+            result = result.substring(0,result.length-1);
+            oScreen.value = result;   
+        }
+    </script>
+</body>
+
+</html>

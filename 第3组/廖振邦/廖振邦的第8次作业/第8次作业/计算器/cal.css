@@ -1,0 +1,46 @@
+*{
+    padding:0;
+    margin:0;
+}
+.cal{
+    width:500px;
+    height:550px;
+    margin:auto;
+    background: rgb(32, 31, 31);
+   
+}
+#show{
+    margin-left:30px;
+    margin-top:10px;
+    color:white;
+    width:90%;
+    height:50px;
+    background: rgb(32, 31, 31);
+    border:rgb(32, 31, 31);
+font-size:30px;
+
+}
+#but{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+#but input{
+    font-size: 20px;
+    color:white;
+    margin:20px;
+    width:80px;
+    height:60px;
+    background: rgba(88, 86, 86, 0.2);
+    border:rgba(88, 86, 86, 0.2);    
+    cursor: pointer;
+}
+#nosee{
+    visibility: hidden;
+}
+#but #big{
+    width:320px;
+}
+#but .blue{
+    background: blue;
+}

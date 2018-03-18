@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+#tab-list{
+    width: 275px;
+    height: 190px;
+    margin: 20px auto;
+}
+#tab{
+    border-bottom: 2px solid #8b458b;
+    height: 32px;
+}
+#tab li{
+    display: inline-block;
+    width: 60px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #999;
+    border-bottom: none;
+    margin-left: 5px;
+}
+#tab li.active{
+    border-top:2px solid #8B4513;
+    border-bottom:2px solid #FFFFFF;
+}
+#tab-list div{
+    border: 1px solid #8B4513;
+    border-top: none; 
+}
+#tab-list div li{
+    height:30px;
+    line-height: 30px;
+    text-indent: 8px;
+}
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}

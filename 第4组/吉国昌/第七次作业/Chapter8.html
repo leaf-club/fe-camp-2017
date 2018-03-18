@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>浏览器对象</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<body>
+  <!--先编写好网页布局-->
+  <h1 style="margin-left:20px;">操作成功</h1>
+  <h1 style="margin-left:20px;font-weight:500;">&nbsp
+    <span>5</span>&nbsp秒后回到主页&nbsp
+    <a href="javascript:history.back();">返回</a>
+  </h1>
+  <script type="text/javascript">  
+    //获取显示秒数的元素，通过定时器来更改秒数。
+    var sec = document.getElementsByTagName('span')[0];
+    var a = document.getElementsByTagName('a')[0];
+    //通过window的location和history对象来控制网页的跳转。
+    function countdown() {
+      sec.innerHTML = Number(sec.innerHTML) - 1 + '';
+      if (Number(sec.innerHTML) == 0) {
+        clearInterval(i);
+        location.assign('http://www.imooc.com');
+      }
+    }
+    var i = setInterval(countdown, 1000);
+  </script>
+</body>
+
+</html>

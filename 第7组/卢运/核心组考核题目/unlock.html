@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="unlock.css">
+    <title>IPone数字解锁</title>
+</head>
+
+<body>
+    <div class="wap" id="wap">
+        <h3>Touch ID or Enter passcode</h3>
+        <div class="cycle">
+            <span id="cycle1" class="cyc"></span>
+            <span id="cycle2" class="cyc"></span>
+            <span id="cycle3" class="cyc"></span>
+            <span id="cycle4" class="cyc"></span>
+            <span id="cycle5" class="cyc"></span>
+            <span id="cycle6" class="cyc"></span>
+        </div>
+        <div class="allnum">
+            <div class="btn">
+                <span class="num">1</span>
+                <span class="letter"></span>
+            </div>
+            <div class="btn">
+                <span class="num">2</span>
+                <span class="letter">ABC</span>
+            </div>
+            <div class="btn3">
+                <span class="num">3</span>
+                <span class="letter">DEF</span>
+            </div>
+            <div class="btn">
+                <span class="num">4</span>
+                <span class="letter">GHI</span>
+            </div>
+            <div class="btn">
+                <span class="num">5</span>
+                <span class="letter">ABC</span>
+            </div>
+            <div class="btn6">
+                <span class="num">6</span>
+                <span class="letter">MNO</span>
+            </div>
+            <div class="btn">
+                <span class="num">7</span>
+                <span class="letter">PQRS</span>
+            </div>
+            <div class="btn">
+                <span class="num">8</span>
+                <span class="letter">TUV</span>
+            </div>
+            <div class="btn9">
+                <span class="num">9</span>
+                <span class="letter">WXYZ</span>
+            </div>
+            <div class="btn btn0">
+                <span class="num">0</span>
+                <span class="letter"></span>
+            </div>
+        </div>
+        <div class="emer">
+            <span>Emergency</span>
+            <span id="del">Delete</span>
+        </div>
+    </div>
+    <script>
+        var time = 0,//累计按键次数
+            test = "",//储存当前输入密码
+            oWap = document.getElementById("wap"),
+            oDiv = oWap.querySelectorAll(".cycle span"),
+            div = oWap.querySelectorAll(".allnum div"),
+            del = document.getElementById("del");
+        localStorage.setItem('code','123456');//储存正确密码
+        function tocyc() {
+            oDiv[time].style.backgroundColor = 'rgb(134,134,134)';
+        }//小圆圈响应
+        function check() {
+            if (test == localStorage.getItem('code')) {
+                alert('密码正确');
+            }
+            else {
+                alert('密码错误');
+            }
+        }//密码检测
+        del.onclick = function () {
+            if (test != '') {
+                time -= 1;
+                oDiv[time].style.backgroundColor = 'rgb(188,188,188)';
+                test = test.substring(0, test.length - 1);
+            }
+        }//实现删除按键功能
+        for (var i = 0; i < div.length; i++) {
+            div[i].onmousedown = function () {
+                tocyc();
+                this.style.backgroundColor = 'rgb(134,134,134)';
+            }
+            div[i].onmouseup = function () {
+                this.style.backgroundColor = 'rgb(188,188,188)';
+            }
+            div[i].onclick = function () {
+                time++;
+                var x = this.childNodes[1].innerHTML;
+                test += x;
+                if (time > 5) {
+                    check();
+                    test = "";
+                    time = 0;
+                    for (var i = 0; i < oDiv.length; i++)
+                        oDiv[i].style.backgroundColor = 'rgb(188,188,188)';
+                    //输入密码达6位是进行check并初始化
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

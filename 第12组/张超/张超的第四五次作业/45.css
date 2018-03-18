@@ -1,0 +1,118 @@
+html,body{width: 100%;
+position: relative;
+margin: 0 auto;
+padding: 0;
+font: 18px;
+
+}
+a{text-decoration: none;}
+
+.nav{font: 18px black "宋体";
+    width: 100%;
+    height: 100px;
+    margin: 0;
+padding: 0;}
+.title{position: absolute;
+    left: 5px;
+    top: 22px;
+    display: block;
+}
+.nav1{width: 600px;
+height: 30px;
+
+position: absolute;
+left: 12%;
+top:22px;
+
+}
+.nav1 li{float: left;
+    margin: 0 30px;
+   
+    padding: 0;
+
+list-style: none;
+
+}
+.form1{display: block;
+width:450px;
+float: right;
+position: absolute;
+top: 30px;
+left:63%;
+margin:  0;
+
+}
+form1 a{text-decoration: none;}
+.form2,.form3,.form4{display: block;
+float: right;
+margin: 8px 7px;
+padding: 0;
+text-decoration: none;
+}
+.nav2{width: 100%;
+height: 50px;
+margin: 10px 0px;
+padding: 0;
+position: relative;
+}
+.nav2 dt{float: left;
+margin: 0 50px;
+padding: 0;
+list-style: none;
+
+display: block;
+}
+.nav2 dd{ display: none;
+    z-index: 1;
+}
+.nav2 dd:hover{display: block;
+   
+    background: orange;
+   
+}
+.nav2 li{ display: none;
+    z-index: 2;
+}
+.nav2 li:hover{display: block;
+   
+    background: orange;
+   
+}
+
+.nav2 ul li{
+font: 10px;
+display: inline-block;
+margin: 2em;
+position: absolute;left:5em;
+top: 0em;
+} 
+.main{width: 100%;
+margin: 0 ;
+padding: 0;
+position: relative;
+}
+.main div{margin: 4%;
+padding: 0;
+width:17%;
+height: 100px;
+font:20px;
+background: white;
+float: left;
+text-align: center ;
+vertical-align: bottom;
+
+
+}
+.main img{width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+}
+footer{clear: both;
+    font: 10px;
+text-align: center;
+margin: 0;
+padding: 0;
+width: 100%;
+height: 50px;
+}

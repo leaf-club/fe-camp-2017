@@ -1,0 +1,40 @@
+<!DOCTYPE  HTML>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>系好安全带,准备启航</title>
+
+<script type="text/javascript">
+
+  //通过javascript的日期对象来得到当前的日期，并输出。
+  var weekday = new Array("星期日" ,"星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+  var mytime = new Date();
+  var myyear = mytime.getFullYear()+"年";
+  var mymonth = mytime.getMonth()+1+"月";
+  var mydate = mytime.getDate() +"日";
+  var myday = day[mytime.getDay()];
+  var printTime =myyear+mymonth+mydate+","+myday;
+  document.write(printTime+ "<br>");//打印时间
+    
+  //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+  var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+  var scoreArr = scoreStr.split(";");
+  document.write("成绩单："+scoreArr + "<br>");
+
+  //从数组中将成绩撮出来，然后求和取整，并输出。
+  var score = [];
+  var sum = 0;
+  for (var i = 0, max = scoreArr.length; i < max; i++) {
+    sum+= parseInt(scoreArr[i].substr(scoreArr[i].indexOf(":")+1));
+}
+    
+    document.write("班级总分为："+ sum);
+    document.write("，班级平均分为（保留整数）：" + Math.round(sum/scoreArr.length))
+
+
+
+</script>
+</head>
+<body>
+</body>
+</html>

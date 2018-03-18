@@ -1,0 +1,83 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+#all{
+    width: 350px;
+    height: 500px;
+    margin: 0 auto;
+    position: relative;
+    background-color: rgb(199, 199, 199);
+    color: #ffff;
+}
+#top{
+    position: relative;
+    text-align: center;
+    top: 8%;
+}
+.show{
+    position: relative;
+    text-align: center;
+    width: 200px;
+    height: 2%;
+    margin: 0 auto;
+    top: 9%;
+}
+.show div{
+    width: 5%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid #ffff;
+    margin-right: 7%;
+    background-color:  rgb(199, 199, 199);
+    display: inline-block;
+    position: relative;
+}
+.btn{
+    position: relative;
+    text-align: center;
+    width: 90%;
+    height: 63%;
+    top: 20%;
+    margin: 0 auto;     
+}
+.btn>div{
+    width:20%;
+    margin: 2.5% 4%;
+    height: 20%;
+    display: inline-block;
+    border: 1px solid #ffff;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+div.on{
+    background-color: rgb(156, 156, 156);
+}
+.num{
+    font-size: 1.5em;
+    margin-top: 10%;
+}
+.letter{
+    font-size: 0.5em;
+}
+.bottom{
+    bottom: 8%;
+    position: absolute;
+    width: 100%;
+}
+#left{
+    position: absolute;
+    left: 10%;
+}
+#right{
+    position: absolute;
+    right: 10%;
+}
+small{
+    position: absolute;
+    top: 20%;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+}

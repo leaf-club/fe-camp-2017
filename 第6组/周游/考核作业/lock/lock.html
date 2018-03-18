@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>屏幕解锁</title>
+    <link rel="stylesheet" href="lock.css">
+</head>
+<body>
+    <div id="all">
+        <div id="top">Touch ID or Enter passcode</div>
+        <div class="show">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="btn">
+            <div>
+                <div class="num">1</div>
+                <div class="letter"></div>
+            </div>
+            <div>
+                <div class="num">2</div>
+                <div class="letter">ABC</div>
+            </div>
+            <div>
+                <div class="num">3</div>
+                <div class="letter">DEF</div>
+            </div>
+            <div>
+                <div class="num">4</div>
+                <div class="letter">GHI</div>
+            </div>
+            <div>
+                <div class="num">5</div>
+                <div class="letter">JKL</div>
+            </div>
+            <div>
+                <div class="num">6</div>
+                <div class="letter">MNO</div>
+            </div>
+            <div>
+                <div class="num">7</div>
+                <div class="letter">PQRS</div>
+            </div>
+            <div>
+                <div class="num">8</div>
+                <div class="letter">TUV</div>
+            </div>
+            <div>
+                <div class="num">9</div>
+                <div class="letter">WXYZ</div>
+            </div>
+            
+            <div>
+                <div class="num">0</div>
+                <div class="letter"></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div id="left">Emergency</div>
+            <div id="right">back</div>
+        </div>
+    </div>
+    <script>
+        var btn=document.querySelectorAll('.btn>div'),
+            show=document.querySelectorAll('.show>div'),
+            right=document.getElementById('right'),
+            p='1,2,3,4,5,6',
+            sp=new Array(),
+            small=document.createElement('small'),
+            all=document.getElementById('all');
+        for(var i=0;i<btn.length;i++){
+            //添加点击事件
+            btn[i].addEventListener('click',function(){
+                this.className='on';
+                small.innerText='';//显示后再次输入时清空small
+                sp[sp.length]=this.firstChild.nextSibling.innerText;
+                show[sp.length-1].className='on';
+                //右下角变化
+                if(sp.length>0){
+                    right.innerText='Delete';
+                }
+                //验证密码
+                if(sp.length==6){
+                    setTimeout('pass()',200);
+                    }
+            })
+            //添加移开事件
+            btn[i].addEventListener('mouseout',function(){
+                this.className='';
+            })
+        }
+        //删除事件
+            right.onclick=function(){
+                if(right.innerText=='Delete'){
+                sp=sp.slice(0,sp.length-1);
+                show[sp.length].className='';
+                }
+                if(sp.length==0)
+                right.innerText='Back';
+            }
+        //验证函数
+        function pass(){
+                var mystr=sp.toString();
+                if(p==mystr){
+                    all.style.display='none';
+                    document.write('<div align="center">' + 'Welcome!' + '</div>');
+                    sp=[];
+                }
+                else {
+                    sp=[];
+                    for(let j=0;j<6;j++)
+                    show[j].className=''; 
+                    all.insertBefore(small,all.childNodes[5]);
+                    small.innerText='密码错误！';
+                    right.innerText='Back';
+                }
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body{
+    background-attachment: fixed;
+    background: url(image/iu.jpg) no-repeat; 
+    background-position: 0px 0px;
+    padding: 177px;
+    padding-bottom: 250px;
+    margin: 0px;
+    width: auto;
+    height: 100%;
+    background-size: 100% 100%;
+}
+table{
+    margin: 10px 10px 10px 10px;
+    opacity: 0.7;
+    background: url(image/logo.png) no-repeat;
+    background-size: 438px 140px;
+    font-family: cursive;
+    font-weight: bolder;
+    border-radius: 24px;
+}

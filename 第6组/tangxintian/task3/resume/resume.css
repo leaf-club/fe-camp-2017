@@ -1,0 +1,94 @@
+@font-face{
+  font-family: Museo
+  url(Museo300-Regular.otf)
+}
+body,html{
+  margin: 0;
+  padding: 0;
+  font-family: Museo,"微软雅黑"
+}
+article,.header span {
+  position: relative;
+  left: 400px;
+  width: 478px;
+}
+aside{
+  position: absolute;
+  top: 0px;
+  left: 50px;
+  background: url(bg.png);
+  box-shadow: -2px 0 10px, 2px 0 10px;
+  height: 100%;
+}
+aside section{
+  position: relative;
+  top: 380px;
+}
+footer{
+  display: block;
+  height: 100px;
+  background: url(bg.png);
+  box-shadow: 0px -5px 10px -5px;
+}
+.wrapper{
+  width: 978px;
+  margin: 0 auto;
+  position: relative;
+  background-color: #eea;
+  padding-top: 75px;
+}
+.header{
+  background: url(bg.png); 
+  height: 150px;
+  z-index: 100;
+  box-shadow: 0 1px 5px 0px, 0 -1px 5px;
+}
+.header img{
+  position: absolute;
+  top: 93px;
+  left: 50px;
+  z-index: 2;
+  box-shadow: 0 0 10px;
+}
+.header span{
+  font-size: 2em;
+  display: block;
+}
+.header span:first-child{
+  font-size: 3em;
+}
+.item h3{
+  letter-spacing: 5px;
+  font-size: 1.5em;
+}
+.item .top{
+  border-top: 3px solid #E4D1B0;
+}
+.item .top section{
+  margin-bottom: 5px;
+  padding-top: 5px;
+}
+.item .top section p{
+  margin: 2px;
+}
+article section:last-child{
+  margin-bottom: 40px; 
+}
+aside section span{
+  display: inline-block;
+  background-color: #000;
+  color: rgba(255,255,255,0.5);
+  width: 100%;
+  height: 38px;
+  line-height: 38px;
+  font-size: 1.5em;
+  text-align: center;
+}
+aside section div{
+  text-align: center;
+  padding: 0 10px;
+  font-weight: 700;
+}
+aside section:first-child div{
+  text-align: left;
+}
