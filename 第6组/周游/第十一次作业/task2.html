@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    input{
+        display: block;
+        width: 500px;
+        margin: 20px auto;
+        height: 30px;
+        line-height: 30px;
+        font-size: 25px;
+    }
+    #tip{
+        width: 500px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 25px;
+        margin: 10px auto;
+        text-align: center;
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        width: 100px;
+        height: 50px;
+        font-size: 25px;
+    }
+    </style>
+</head>
+<body>
+    <input type="text" value="" placeholder='请输入兴趣爱好，以逗号隔开'>
+    <div id="tip"></div>
+    <button>提交</button>
+    <script>
+    var input=document.getElementsByTagName('input'),
+        tip=document.getElementById('tip'),
+        btn=document.getElementsByTagName('button'); 
+    function test(str){
+        var arr=[],
+            arr0=[];
+        arr=str.split(',');
+        for(var i=0;i<arr.length;i++){
+            for(var j=0;j<arr.length;j++){
+                if(i!==j&&arr[i]===arr[j]){
+                    arr[i]='';
+                }
+            }
+            if(arr[i]){
+                arr0.push(arr[i]);
+            }
+        }
+        
+        return arr0;
+    }
+    btn[0].addEventListener('click',function(){
+        var str1=input[0].value;
+        tip.innerHTML=test(str1);
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>倒计时</title>
+</head>
+<body>
+  <script>
+  var dateNow=new Date();
+  var dates=[],//创建促销活动日期数组
+      d_amount=[];//距离活动日期的天数
+  //函数获取2018年5月所有星期三的日期
+  function getDates(){
+    //建立2018年5月的日期；
+    var ymFirst=new Date(Date.UTC(2018,4,1)),//Tue May 01 2018 08:00:00 GMT+0800 (中国标准时间)
+        ymLast=new Date(Date.UTC(2018,5,0)),//Thu May 31 2018 08:00:00 GMT+0800 (中国标准时间)
+        daysCount=ymLast.getDate();//该月的总天数 
+    //循环该月所有天数
+    for(var i=0;i<daysCount;i++){
+      //创建局部变量，遍历日期
+      var dateLocal=new Date(Date.UTC(2018,4,i));
+      if(dateLocal.getDay()==3){//如果是星期三，则添加该日期到dates数组内
+        dates.push(dateLocal);
+      }
+    }
+    return dates;//返回五月所有星期三的日期
+  }
+  //计算每个活动日期距离当前日期的天数，并返回数组
+  function countDays(){
+    var //dateNowAdjusted=dateNow.getDate(),//设定当前时间
+        d_Dates=dates.map(function(item,index,array){
+          return Math.ceil((item-dateNow)/86400000);//返回dates数组中每项对应的天数,向上取整
+        });
+    d_Dates.forEach(function(item,index,array){
+      d_amount.push(item);
+    });
+    return d_amount;
+  }
+  //调用函数
+  getDates();
+  countDays();
+  //将信息书写到页面中
+  (function information(){
+    document.write("设定2018年五月的每个星期三为促销活动日期，则日期信息如下："+"<br/>[");
+    for(var i=0;i<d_amount.length;i++){
+      document.write("{<br />");        //换行符\n不起作用
+      document.write("dates: '"+dates[i].getFullYear()+"/"+parseInt(dates[i].getMonth()+1)+
+      "/"+dates[i].getDate()+"'<br />");
+      document.write("daysBefore: "+d_amount[i]+"<br />");
+      if(i<d_amount.length-1){
+        document.write("},<br />");
+      }
+    }
+    document.write("}]");
+  })();
+  </script>
+</body>
+</html>

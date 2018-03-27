@@ -1,0 +1,26 @@
+html,body{
+   padding:0;
+   margin:0;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+.message{
+    width:100%;
+    border:1px black solid;
+    line-height: 30px;
+}
+.musics{
+    width:100%;
+}
+.musics tr,th{
+    font-weight:lighter;
+    text-align: left;
+}
+.musics tr:nth-child(odd){
+    background: #ccc;
+}
+.musics a:hover{
+   color:blueviolet;
+}

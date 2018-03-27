@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var ti = new Date("2017");
+        var myarr = new Array();
+        var j = 0,y;
+        for(var i=1;i<29;i++){
+            var x = new Date(2017,1,i)
+            if(x.getDay()==3){
+                y = Math.round((x-ti)/(3600*1000*24));
+                myarr[j] = "{\ndate: 2017/2/" + i +",\ndaysBefore:" + y + "\n}\n";
+                j++;     
+            }
+        }
+        document.write(myarr);
+    </script>
+</body>
+</html>

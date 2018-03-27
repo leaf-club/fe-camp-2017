@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>shoppingCard</title>
+  <style type="text/css">
+    #tip{height:150px;height:20px;line-height: 20px;font-size: 14px;color: red;}
+  </style>
+</head>
+<body>
+  <form action="">
+    Please enter your password:
+    <input type="text" name="password">
+    <div id="tip"></div>
+    <input type="button" name="submit" value="submit">
+  </form>
+  <script>
+  //函数定义
+  function process(){
+    var password=document.getElementsByName("password")[0].value,//innerHTML无法获取表单内的值
+        result=password.replace(/-/g,'').toLocaleUpperCase();
+    //判断密码格式，并返回相应信息
+    verifiedResult=verifyFormat(result);
+  }
+  function verifyFormat(pwd){
+    var tip=document.getElementById('tip');
+    if(pwd.length!=20){
+      tip.innerHTML="异常：无效的密码格式";
+    }else{
+      tip.innerHTML='密码：'+pwd;
+      return pwd;
+    }
+  }
+  //获取节点，添加事件
+  var submit=document.getElementsByName("submit")[0];
+  submit.addEventListener('click',process);
+  </script>
+</body>
+</html>

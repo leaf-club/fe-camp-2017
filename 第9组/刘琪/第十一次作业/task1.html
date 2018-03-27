@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>task 1</title>
+  <style type="text/css">
+    #tip{height:150px;height:20px;line-height: 20px;font-size: 14px;color: red;}
+  </style>
+</head>
+<body>
+    <form action="">
+      输入数组:
+      <input type="text" name="input"><br />
+      输入目标值：
+      <input type="text" name="input">
+      <div id="tip"></div>
+      <input type="button" name="submit" value="submit">
+    </form>
+  <script>
+    var submit=document.getElementsByName("submit")[0];
+    var tip=document.getElementById("tip");
+    var twoSum = function(nums, target) {
+      var result=new Array(2);
+      nums.forEach(function(item,index,array){
+          for(var i=0;i<nums.length;i++){
+            if(i!=index&&parseInt(item)+parseInt(nums[i])==target){
+              result=[index,i];
+            }
+          }
+      });
+      return result;
+    };
+    function show(){
+      var nums=document.getElementsByName("input")[0].value,
+          target=document.getElementsByName("input")[1].value;
+          nums=nums.split(',');
+      tip.innerHTML=twoSum(nums,target);
+    };
+    submit.addEventListener("click",show);
+  </script>
+</body>
+</html>

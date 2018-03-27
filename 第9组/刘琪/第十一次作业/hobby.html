@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hobby</title>
+  <style type="text/css">
+    #tip{height:150px;height:20px;line-height: 20px;font-size: 14px;color: red;}
+  </style>
+</head>
+<body>
+  <form action="">
+    兴趣爱好:
+    <input type="text" name="hobby">
+    <div id="tip"></div>
+    <input type="button" name="submit" value="submit">
+  </form>
+  <script>
+  //定义去重函数
+  function process(){
+    var hobby=document.getElementsByName("hobby")[0].value,
+        aHobby=hobby.split(',');//分成数组
+    //去重
+    resettedHobby=reset(aHobby);
+  }
+  function reset(a){
+    var n=[];//去重后的新数组
+    for(var i=0;i<a.length;i++){
+      //如果a[i]不在n里面，则n.push(a[i])；否则，跳过
+      if(n.indexOf(a[i])===-1){
+        n.push(a[i]);
+      }
+    }
+    tip.innerHTML=n;
+    return n;
+  }
+  //获取节点，添加事件
+  var submit=document.getElementsByName("submit")[0],
+      tip=document.getElementById("tip");
+  submit.addEventListener('click',process);
+  </script>
+</body>
+</html>
