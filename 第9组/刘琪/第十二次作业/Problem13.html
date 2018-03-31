@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var romanToInt = function(s) {
+    var arr=s.split(''),ans=0;
+    var temp=arr.map(function(item,index,array){switch(item){
+        case 'I':
+            return 1;break;
+        case 'V':
+            return 5;break;
+        case 'X':
+            return 10;break;
+        case 'L':
+            return 50;break;
+        case 'C':
+            return 100;break;
+        case 'D':
+            return 500;break;
+        case 'M':
+            return 1000;break;
+    }});
+    for(var i=0;i<temp.length;i++){
+        temp[i]=temp[i]<temp[i+1]?-temp[i]:temp[i];
+        ans+=temp[i];
+    }
+    return ans;
+};
+  </script>
+</body>
+</html>
