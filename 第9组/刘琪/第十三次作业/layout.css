@@ -1,0 +1,54 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #aaa;
+}
+button{
+  background: transparent;
+  border: 0px ;
+  margin: 50px 10px;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+#container{
+  width: 61.8%;
+  margin: 50px auto;
+  z-index: 0;
+}
+#modalFrame{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
+  background: rgb(19, 187, 164);
+  color: white;
+  text-align: center;
+}
+/* 模块框的隐藏和显现样式 */
+.hide0{
+  opacity: 0;
+  z-index: -1;
+}
+.hide{
+  z-index: -1;
+  opacity: 0;
+  animation: hide 0.3s;
+}
+.show{
+  z-index: 1;
+  animation: show 0.3s;
+}
+#modalFrame section{
+  margin: 10px auto;
+}
+/* 模态框动画 */
+@keyframes hide{
+  from{opacity: 1;}
+  to{opacity: 0;}
+}
+@keyframes show{
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
