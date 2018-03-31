@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>document</title>
+</head>
+<body>
+<input type="text" id="input">
+<input type="submit" onclick="remove()">
+</body>
+<script>
+    function remove(){
+        var My_input = document.getElementById('input').value,
+            temp = My_input.split(","),
+            out = [];
+            for (var i in temp){
+                if (out.indexOf(temp[i]) === -1){
+                    out.push(temp[i]);
+                }
+            }
+        alert(out);
+    }
+</script>
+</html>

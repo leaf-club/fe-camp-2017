@@ -1,0 +1,22 @@
+html,body{
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: center;
+}
+.btn div{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    display: inline-block;
+    font-size: 20px;
+    border: 1px solid black;
+    margin: 0 30px;
+    cursor: pointer;
+}
+#remind{
+    margin-top: 30px;
+    font-family: '隶书';
+    font-size: 18px;
+}
