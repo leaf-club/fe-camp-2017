@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模态框</title>
+    <link rel="stylesheet" type="text/css" href="modal.css">
+</head>
+<body>
+  <button type="button" data-target="modal">
+    启动模态框
+  </button>
+
+  <!-- Modal -->
+    <div class="modal fade" id="modal">
+      <div class="modal_box">
+        <div class="modal_header">
+          <h4 class="modal_title">模态框标题</h4> 
+          <button class="modal_close" data-dismiss="close" type="button">&times;</button>
+        </div>
+        <div class="modal_body">正文</div>
+        <div class="modal_footer">
+          <button data-dismiss="close" type="button">关闭</button>
+          <button type="button">保存修改</button>
+        </div>
+      </div>
+    </div>
+    <script src="base.js"></script>
+    <script src="modal.js"></script>
+    <script>
+      let modal = new Modal('modal');
+    </script>
+</body>
+</html>
