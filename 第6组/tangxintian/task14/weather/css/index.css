@@ -9,7 +9,7 @@ h2 {
 .search {
     position: absolute;
     left: 45%;
-    top: 50px;
+    top: 53px;
 }
 
 .search input:first-child {
@@ -36,8 +36,9 @@ h2 {
 
 main {
     width: 1000px;
-    margin: 0 auto;
+    margin: 40px auto;
     display: flex;
+    justify-content:center;
 }
 
 main section {

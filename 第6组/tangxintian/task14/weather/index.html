@@ -11,7 +11,7 @@
 <body>
   <h2 class="location">Yahool Weather</h2>
   <div class="search">
-    <input type="text" id="city" value="武汉">
+    <input type="text" id="city" value="武汉" title="请输入想查询的城市名称">
     <input type="submit" id="submit"value="Go" title="搜索！">
   </div>
   <main></main>
@@ -36,7 +36,7 @@
         }
       }).done(res =>{
         // console.log(res);
-        if(res !== null){
+          if(res.query.results !== null){
           let condition = res.query.results.channel.item.condition;
           let forecast = res.query.results.channel.item.forecast;
           var weatherHtml = '<section class="selected">\
@@ -65,7 +65,7 @@
           })
         $('.location').text(res.query.results.channel.description);
         }else{
-          weatherHtml = "<p>城市不存在</p>";
+          weatherHtml = "<section><p>城市不存在</p></section>";
         }
     $('main').empty();
      $(weatherHtml).appendTo("main");
