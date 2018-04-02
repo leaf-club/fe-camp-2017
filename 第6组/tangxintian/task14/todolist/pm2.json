@@ -1,0 +1,15 @@
+{
+  "apps": [{
+    "name": "todolist",
+    "script": "production.js",
+    "cwd": "E:\My_Create\Web\fe-camp-2017\第6组\tangxintian\task14\todolist",
+    "exec_mode": "fork",
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}
