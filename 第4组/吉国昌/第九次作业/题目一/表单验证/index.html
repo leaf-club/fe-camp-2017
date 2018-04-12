@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery validation demo</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div id="wrapper">
+    <main>
+      <div id="form-header">
+        <p>账号注册</p>
+      </div>
+      <div id="form">
+        <form id="demoForm" action="">
+          <div class="formgroup">
+            <label for="username">用户名</label>
+            <input type="text" name="username" id="username" placeholder="请输入用户名">
+          </div>
+          <div class="formgroup">
+            <label for="password">密码</label>
+            <input type="password" name="password" id="password" placeholder="请输入密码">
+          </div>
+          <div class="formgroup">
+            <label for="re-password">确认密码</label>
+            <input type="password" name="re-password" id="re-password" placeholder="请再次输入密码">
+          </div>
+          <div class="formgroup">
+            <label for="email">邮箱</label>
+            <input type="email" name="email" id="email" placeholder="请输入邮箱">
+          </div>
+          <div class="formgroup">
+            <input type="submit" value="注册" id="submit">
+            <input type="button" value="重置" id="reset">
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+  <script src="jquery.min.js"></script>
+  <script src="jquery.validate.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
