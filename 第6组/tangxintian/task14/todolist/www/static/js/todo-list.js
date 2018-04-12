@@ -33,6 +33,7 @@ function Todo() {
     input.addEventListener('keypress', function(e) {
       if (e.keyCode === 13) {
         that.add(input.value);
+        input.value = '';
         that.render('all-js');
       }
     });
@@ -82,16 +83,18 @@ function Todo() {
     }
     data.forEach(function(item) {
       var li = document.createElement('li');
-      var btn1 = document.createElement('button');
-      var btn2 = document.createElement('button');
+      var btn1 = document.createElement('input');
+      btn1.setAttribute('type', 'checkbox');
+      var btn2 = document.createElement('a');
       var span = document.createElement('span');
       if (item.state) {
         li.className = 'done-css';
+        btn1.setAttribute('checked', 'checked');
       } else {
         li.className = 'todo-css';
       }
       btn1.innerHTML = '切换';
-      btn2.innerHTML = '删除';
+      btn2.innerHTML = '-';
       span.innerHTML = item.name;
 
       var that = this;
