@@ -1,0 +1,146 @@
+/* 界面部分 */
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+}
+#warpper {
+  width: 100%;
+  height: 100%;
+  background: url('../imgs/bg.jpg');
+  background-size: cover;
+}
+#box {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.075);
+}
+#box.active {
+  background: rgba(255, 255, 255, 0.3);
+  transition: all 0.25s ease-in-out;
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+#title {
+  width: 450px;
+  height: 300px;
+  font-size: 54px;
+  font-weight: 700;
+  margin: auto;
+  text-align: center;
+  position: relative;
+  top: 20%;
+  color: white;
+}
+/* 表单部分 */
+form {
+  width: 600px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -300px;
+  display: flex;
+}
+form.active {
+  top: 180px;
+  transition: all 0.25s ease-in-out;
+}
+input {
+  width: 470px;
+  height: 100%;
+  border: 0px;
+  padding: 0px;
+  padding-left: 30px;
+  font-size: 25px;
+  line-height: 60px;
+  outline: none;
+  letter-spacing: 1px;
+  border-radius: 7px 0 0 7px;
+}
+#button {
+  width: 100px;
+  height: 60px;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  background: url('../imgs/search.png') no-repeat;
+  background-size: 45px 45px;
+  background-position: center;
+  background-color: #38f; 
+  border-radius: 0 7px 7px 0;
+  outline: none;
+}
+#button:hover {
+  cursor: pointer;
+}
+/* 返回数据显示 */
+svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -70px;
+  margin-left: -50px;
+}
+div.contents {
+  width: 1000px;
+  display: flex;
+  margin: auto;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  margin-left: -500px;
+}
+section {
+  background-color: white;
+  margin-right: 10px;
+  border-radius: 10px;
+  padding: 1em;
+  width: 150px;
+  border: 3px solid lightblue;
+}
+section.selected {
+  width: 200px;
+}
+section.selected p>span:first-child {
+  display: block;
+  float: left;
+  font-size: 2.3em;
+  margin-right: 10px;
+}
+section.selected span.detail span {
+  display: block;
+}
+section i.wi {
+  font-size: 3em;
+  margin: .3em 0;
+}
+div.error {
+  width: 500px;
+  height: 100px;
+  margin: auto;
+  text-align: center;
+  color: red;
+  font-size: 26px;
+  line-height: 100px;
+  position: relative;
+  top: 45%;
+  border: grey;
+  border-radius: 20px;
+  background-color: lightyellow; 
+}
+div.tag {
+  /* width: 400px; */
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
+  font-weight: 700;
+  position: relative;
+  top: 25%;
+  color: white;
+  text-align: center;
+}
