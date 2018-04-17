@@ -1,32 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
-  <title>云备忘录</title>
-  <link rel="stylesheet" href="/static/css/todo-list.css">
+  <title>ToDoList</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+  <script type="text/javascript" src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 
 <body>
-  <div class="todo">
-    <header>
-      <section>
+  <header>
+    <section>
+      <form action="javascript:add()" method="POST">
         <label for="title">ToDoList</label>
-        <input type="text" id="thing" name="title" placeholder="添加待办事项">
-      </section>
-    </header>
-    <section>
-      <ul id="list"></ul>
+        <button id="btn" class="btn" type="submit">提交</button>
+        <input type="text" id="title" name="title" placeholder="添加ToDo">
+      </form>
     </section>
-    <section>
-      <div class="btn_box">
-        <botton class="all" id="all-js">全部</botton>
-        <botton class="todo" id="todo-js">未完成</botton>
-        <botton class="done" id=done-js>已完成</botton>
-      </div>
-    </section>
-  </div>
+  </header>
+  <section>
+    <h2>正在进行
+      <span id="todocount">
+        {{ todoCount }}
+      </span>
+    </h2>
+    <ol id="todolist" class="list">
+      {% for item in todoList %}
+      <li>
+        <input type="checkbox" onchange="update({{ item.id }}, 1)" />
+        <p id="p-{{item.id}}" onclick="edit({{ item.id }})">{{ item.title }}</p>
+        <a href="javascript:remove({{ item.id }})">-</a>
+      </li>
+      {% endfor %}
+    </ol>
+    <h2>已经完成
+      <span id="donecount">
+        {{ doneCount }}
+      </span>
+    </h2>
+    <ul id="donelist" class="list">
+      {% for item in doneList %}
+      <li>
+        <input type="checkbox" checked="checked" onchange="update({{ item.id }}, 0)" />
+        <p id="p-{{item.id}}" onclick="edit({{ item.id }})">{{ item.title }}</p>
+        <a href="javascript:remove({{ item.id }})">-</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </section>
+  <footer>Copyright &copy 2017
+    <a href="javascript:clear()">clear</a>
+  </footer>
+
+  <script type="text/javascript" src="/static/js/index.js"></script>
 </body>
-<script src="/static/js/todo-list.js"></script>
 
 </html>
