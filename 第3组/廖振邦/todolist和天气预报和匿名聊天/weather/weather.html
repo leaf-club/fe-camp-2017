@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/weather-icons.min.css">
+    <style>
+    .demo{
+        display: flex;
+        border:1px solid black;
+    }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="demo">
+      
+    </div>
+    <input type="text" name="city" id="city">
+    <input type="button" value="确定">
+</body>
+<script src="jquery-3.2.1.js"></script>
+<script>
+    var arr = [];
+    var s="";
+
+   function get(){
+        $.ajax({
+        url: 'https://query.yahooapis.com/v1/public/yql',
+        type: 'get',
+        data: {
+            q: 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="wuhan")',
+            format: 'json',
+            env: 'store://datatables.org/alltableswithkeys'
+        },
+        success: function (result) {
+            arr = result.query.results.channel.item.forecast;
+        console.log(result);
+        s="";
+            for (let i = 0; i < 8; i++) {
+               s+= '<div class="weather' + i + '" style="margin:10px"><p>' + arr[i].date + '&nbsp&nbsp' + arr[i].day + '</p><i class="wi wi-yahoo-'+ arr[i].code + '"></i> <p>' + ((arr[i].low-32)/1.8).toFixed(2) +'°C'+ '-' + ((arr[i].high-32)/1.8).toFixed(2) + '°C</p></div>'
+            }
+         
+          $(".demo").html(s);
+        }
+        
+    })
+   }
+       $("input[type=button]").click(function(){
+           var message=$("#city").text();//返回的数据都是武汉的天气呀,不知道啥意思
+         
+           get(); 
+       })
+    get();
+    
+
+</script>
+
+</html>

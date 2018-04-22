@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/static/css/index.css">
+  <title>chat</title>
+</head>
+<body>
+  <div class="main">
+    <ul class="chat"></ul>
+    <form action="/index/post" class="form" method="post"  >
+      <input type="hidden" name="username" id="username" value='{{username}}'>
+    <input type="text" name="text" id="text" value="">
+    <input type="submit" value="确定" id="button">
+     <input type="button" value="清除" id="clear">
+    </form>
+   
+  </div>
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="/static/js/index.js"></script>
+</body>
+</html>

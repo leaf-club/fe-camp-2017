@@ -1,0 +1,16 @@
+{
+  "apps": [{
+    "name": "C:UserswwwC:Userswwws",
+    "script": "www/production.js",
+    "cwd": "C:\Users\www\s",
+    "exec_mode": "cluster",
+    "instances": 0,
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}

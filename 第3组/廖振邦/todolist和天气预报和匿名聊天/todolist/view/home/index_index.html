@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ToDoList</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/index.css">
+    <script type="text/javascript" src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <form action="javascript:add()" method="POST">
+            <label for="title">ToDoList</label>
+            <button id="btn" class="btn" type="submit">提交</button>
+            <input type="text" id="title" name="title" placeholder="添加ToDo">
+        </form>
+    </header>
+    <section>
+        <h2>正在进行
+            <span id="todocount">
+                {{ todoCount }}
+            </span>
+        </h2>
+        <ol id="todolist" class="list">
+            {% for item in todoList %}
+            <li>
+                <input type="checkbox" onchange="update({{ item.id }}, 1)" />
+                <p id="p-{{item.id}}" onclick="edit({{ item.id }})">{{ item.title }}</p>
+                <a href="javascript:remove({{ item.id }})">-</a>
+            </li>
+            {% endfor %}
+        </ol>
+        <h2>已经完成
+            <span id="donecount">
+                {{ doneCount }}
+            </span>
+        </h2>
+        <ul id="donelist" class="list">
+            {% for item in doneList %}
+            <li>
+                <input type="checkbox" onchange="update({{ item.id }}, 0)" />
+                <p id="p-{{item.id}}" onclick="edit({{ item.id }})">{{ item.title }}</p>
+                <a href="javascript:remove({{ item.id }})">-</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+    <footer>Copyright &copy 2017
+        <a href="javascript:clear()">clear</a>
+    </footer>
+
+    <script type="text/javascript" src="/static/js/index.js"></script>
+</body>
+
+</html>
