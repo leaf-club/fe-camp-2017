@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>天气</title>
+  <link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+  <h2 class="location">Yahool Weather</h2>
+  <div class="search">
+    <input type="text" id="city" value="武汉" title="请输入想查询的城市名称">
+    <input type="submit" id="submit"value="Go" title="搜索！">
+  </div>
+  <main></main>
+</body>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    function change(F) {
+      var C = parseInt(( F - 32 ) / 1.8);
+      return C;
+    }
+  </script>
+  <script >
+    $('#submit').click(function(){
+      var cityname =$('#city').val();
+      $('#city').val('')
+      $.ajax({
+        url: 'https://query.yahooapis.com/v1/public/yql',
+        data: {
+          q: 'select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="'+cityname+'")',
+          format: 'json',
+          env: 'store://datatables.org/alltableswithkeys'
+        }
+      }).done(res =>{
+        // console.log(res);
+          if(res.query.results !== null){
+          let condition = res.query.results.channel.item.condition;
+          let forecast = res.query.results.channel.item.forecast;
+          var weatherHtml = '<section class="selected">\
+            <h3>'+ condition.date + '</h3>\
+            <i class="wi wi-yahoo-'+ condition.code + '"></i>\
+            <p>\
+            <span>'+ change(condition.temp) + '</span>\
+            <span class="detail">\
+            <span>℃</span>\
+                <span>'+ condition.text + '</span>\
+              </span>\
+            </p>\
+            <p>'+ change(forecast[0].low) + '~' + change(forecast[0].high) + '℃</p>\
+            <p>'+ forecast[0].text + '</p>\
+            </section>';
+                $.each(forecast, (index, value) => {
+                  if (index !== 0 && index < 5) {
+                    weatherHtml += '<section>\
+            <p>'+ value.day + '</p>\
+            <p>'+ value.date + '</p>\
+            <i class="wi wi-yahoo-'+ value.code + '"></i>\
+            <p>'+ change(value.low) + '~' + change(value.high) + '℃</p>\
+            <p>'+ value.text + '</p>\
+            </section>'
+            }
+          })
+        $('.location').text(res.query.results.channel.description);
+        }else{
+          weatherHtml = "<section><p>城市不存在</p></section>";
+        }
+    $('main').empty();
+     $(weatherHtml).appendTo("main");
+    })
+    }
+    )
+  </script>
+</html>

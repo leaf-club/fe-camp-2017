@@ -6,7 +6,7 @@ var arrayHelper = {
             if (item.id !== idx) {
                 ret.push(item);
             }
-        })
+        });
         return ret;
     },
     changeStateById: function (array, idx) {
@@ -16,7 +16,7 @@ var arrayHelper = {
                 item.state = !item.state;
             }
             ret.push(item);
-        })
+        });
         return ret;
     }
 };
@@ -27,21 +27,21 @@ function Todo() {
     this.thingDone = [];
     this.el = document.querySelector('#list');
     this.init = function () {
-        var
-            input = document.querySelector('#thing'),
-            btnBox = document.querySelector('.btn_box');
+        var input = document.querySelector('#thing');
+        var btnBox = document.querySelector('.btn_box');
         var that = this;
         input.addEventListener('keypress', function (e) {
             if (e.keyCode === 13) {
                 that.add(input.value);
-                that.render("all-js");
+                input.value = '';
+                that.render('all-js');
             }
         });
         btnBox.addEventListener('click', function (e) {
             var id = e.target.id;
             that.fresh();
             that.render(id);
-        })
+        });
     };
     this.add = function (name) {
         this.things.push({
@@ -49,24 +49,24 @@ function Todo() {
             time: Date.now(),
             name: name,
             state: false
-        })
+        });
         id++;
     };
     this.delete = function (id) {
         this.things = arrayHelper.removeById(this.things, id);
-    }
+    };
     this.changeState = function (id) {
         this.things = arrayHelper.changeStateById(this.things, id);
-    }
+    };
     this.fresh = function () {
         this.thingTodo = this.things.filter(function (item) {
-            return item.state == false;
+            return item.state === false;
         });
         this.thingDone = this.things.filter(function (item) {
-            return item.state == true;
+            return item.state === true;
         });
         this.things = this.thingTodo.concat(this.thingDone);
-    }
+    };
     this.render = function (id) {
         var data = [];
         this.el.innerHTML = '';
@@ -82,20 +82,19 @@ function Todo() {
                 break;
         }
         data.forEach(function (item) {
-
-            var
-                li = document.createElement('li'),
-                btn1 = document.createElement('button'),
-                btn2 = document.createElement('button'),
-                span = document.createElement('span');
+            var li = document.createElement('li');
+            var btn1 = document.createElement('input');
+            btn1.setAttribute('type', 'checkbox');
+            var btn2 = document.createElement('a');
+            var span = document.createElement('span');
             if (item.state) {
                 li.className = 'done-css';
-            }
-            else {
+                btn1.setAttribute('checked', 'checked');
+            } else {
                 li.className = 'todo-css';
             }
             btn1.innerHTML = '切换';
-            btn2.innerHTML = '删除';
+            btn2.innerHTML = '-';
             span.innerHTML = item.name;
 
             var that = this;
@@ -113,7 +112,7 @@ function Todo() {
             li.appendChild(btn2);
             this.el.appendChild(li);
         }.bind(this));
-    }
+    };
 }
 
 var todo = new Todo();
